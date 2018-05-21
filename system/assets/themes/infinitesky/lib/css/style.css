@@ -1470,14 +1470,12 @@ p.entry-meta {
   .footer-widgets .footer-widget-area h3.widget-title {
     font-size: 1em;
     font-weight: 700;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #666; }
   .footer-widgets .footer-widget-area a {
     color: #666; }
   .footer-widgets .footer-widget-area a:hover {
     color: #666; }
-  .footer-widgets .footer-widget-area .msd-connected h3.widget-title {
-    width: auto;
-    display: inline-block; }
   .footer-widgets .footer-widget-area .connected-social {
     display: inline-block; }
     .footer-widgets .footer-widget-area .connected-social .social-media {
