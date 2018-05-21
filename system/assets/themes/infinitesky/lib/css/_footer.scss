@@ -23,6 +23,7 @@
       font-size: 1em;
       font-weight: 700;
       text-transform: uppercase;
+      color: $dkgrey;
     }
     a {
       color: $dkgrey;
@@ -30,12 +31,6 @@
 
     a:hover {
       color: $dkgrey;
-    }
-    .msd-connected{
-      h3.widget-title{
-        width: auto;
-        display: inline-block;
-      }
     }
     .connected-social {
       display: inline-block;
