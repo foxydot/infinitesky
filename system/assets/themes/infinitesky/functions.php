@@ -55,9 +55,9 @@ add_theme_support( 'genesis-responsive-viewport' );
 
 //* Add support for structural wraps
 add_theme_support( 'genesis-structural-wraps', array(
-    'menu-primary',
     'menu-secondary',
-    'footer',
+    'footer-widgets',
+    'footer'
 ) );
 
 /***Tools Plugin**/
@@ -90,7 +90,7 @@ if(class_exists('MSDLab_Genesis_Tweaks')){
     $options = array(
         'preheader' => 'genesis_header_right'
     );
-    $gtweaks = new MSDLab_Genesis_Tweaks($options);
+    //$gtweaks = new MSDLab_Genesis_Tweaks($options);
 }
 if(class_exists('MSDLab_Subtitle_Support')){
     global $subtitle_support;
@@ -111,8 +111,6 @@ add_filter('genesis_search_button_text', 'msdlab_search_button'); //customize th
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_header', 'genesis_do_subnav' );
 
-remove_action('genesis_header','genesis_do_header' );
-add_action('genesis_header','msdlab_do_header' );
 
 //add_action('genesis_header','msdlab_header_right' );
 

@@ -44,7 +44,7 @@ class MSDLab_Genesis_Bootstrap
             'menu-primary',
             'menu-secondary',
             'footer-widgets',
-            'footer',
+            'footer'
         );
         foreach($wraps AS $context) {
             add_filter("genesis_structural_wrap-{$context}", array(&$this, 'msdlab_bootstrap_wraps'), 10);
