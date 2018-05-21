@@ -4,15 +4,12 @@
 .footer-widgets {
   .footer-widget-area {
     &.footer-widgets-1 {
-      background-color: $dkgrey;
-      color: $offwhite;
-    }
-    &.footer-widgets-2 {
       background-color: $white;
       color: $dkgrey;
       .widget{
         img {
           max-height: 85px;
+          margin: 4em auto 2em;
         }
       }
     }
@@ -28,11 +25,11 @@
       text-transform: uppercase;
     }
     a {
-      color: $offwhite;
+      color: $dkgrey;
     }
 
     a:hover {
-      color: $offwhite;
+      color: $dkgrey;
     }
     .msd-connected{
       h3.widget-title{
@@ -54,15 +51,14 @@
           }
         }
         a.fa {
-          background: $white;
-          color: $orange;
+          background: $dkgrey;
+          color: $white;
           border-radius: 100%;
           font-size: 6vw;
           height: 9vw;
           line-height: 1.5;
           margin: 2vw;
           width: 9vw;
-          border: 2px solid $orange;
         }
         a.fa.last-child {
           margin-right: 0;
@@ -130,13 +126,19 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-footer {
-  background: $dkgrey;
-  color: $offwhite;
+  background: $white;
+  color: $dkgrey;
   @include sansserif(0.8);
   font-size: 2.5vw;
   line-height: 1.5;
   text-align: center;
-  padding: 2em 0;
+  padding: 0 0 2em;
+  a{
+    color: $dkgrey;
+  }
+  div.legal,nav{
+    display: inline-block;
+  }
 }
 
 .site-footer p {

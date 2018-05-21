@@ -286,11 +286,11 @@ function msdlab_do_social_footer(){
         $address = '<span itemprop="streetAddress">'.get_option('msdsocial_street').'</span>, <span itemprop="addressLocality">'.get_option('msdsocial_city').'</span>, <span itemprop="addressRegion">'.get_option('msdsocial_state').'</span> <span itemprop="postalCode">'.get_option('msdsocial_zip').'</span><br />'.$msd_social->get_digits(true,'').' &middot; <a href="mailto:'.antispambot(get_option('msdsocial_email')).'">'.antispambot(get_option('msdsocial_email')).'</a>';
         $copyright .= 'COPYRIGHT &copy;'.date('Y').' '.$msd_social->get_bizname().'';
     } else {
-        $copyright .= 'COPYRIGHT &copy;'.date('Y').' '.get_bloginfo('name').'';
+        $copyright .= '&copy;'.date('Y').' '.get_bloginfo('name').'. All Rights Reserved. ';
     }
     print '<div class="row">';
     //print '<div class="social">'.$msd_social->social_media().'</div>';
-    print '<div class="identity">'.$msd_social->get_bizname().', '.get_bloginfo('description').'</div>';
+    //print '<div class="identity">'.$msd_social->get_bizname().', '.get_bloginfo('description').'</div>';
     print '<div class="legal">'.$copyright.'</div>';
     print '<nav class="footer-menu" itemtype="http://schema.org/SiteNavigationElement" itemscope="itemscope" role="navigation">'.$footer_menu.'</nav>';
     print '</div>';
