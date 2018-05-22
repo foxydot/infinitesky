@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .site-header {
-  padding: 0;
+  padding: 5px;
   transition: all 0.8s;
   border: 0;
   margin: 0 !important;
@@ -79,6 +79,7 @@
 --------------------------------------------- */
 
 .site-header .widget-area, .pre-header .widget-area {
+  display: none;
   float: right;
   text-align: right;
   clear: right;

@@ -13,13 +13,13 @@
   .menu-toggle,
   .sub-menu-toggle {
     border-width: 0;
-    background-color: $white;
-    color: $dkgrey;
-    display: block;
+    color: $white;
+    display: inline-block;
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
     visibility: visible;
+    background: transparent;
   }
 
   .menu-toggle:focus,
@@ -27,7 +27,6 @@
   .sub-menu-toggle:focus,
   .sub-menu-toggle:hover {
     background: transparent;
-    color: $linkred;
     border-width: 0;
   }
 
@@ -35,14 +34,18 @@
     line-height: 20px;
     position: relative;
     z-index: 1000;
-    width: 100%;
+    float: right;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .menu-toggle::before {
-    font-size: 1.5em;
+    font-size: 3em;
     margin-right: 10px;
     text-rendering: auto;
     vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em;
   }
 
   .sub-menu-toggle {
@@ -282,7 +285,6 @@
 --------------------------------------------- */
 
 .nav-primary {
-  float: right;
   margin-top: 0;
   text-transform: uppercase;
   .menu{

@@ -921,7 +921,7 @@ img.alignright,
 /* # Site Header
 ---------------------------------------------------------------------------------------------------- */
 .site-header {
-  padding: 0;
+  padding: 5px;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   border: 0;
@@ -987,6 +987,7 @@ img.alignright,
 /* Widget Area
 --------------------------------------------- */
 .site-header .widget-area, .pre-header .widget-area {
+  display: none;
   float: right;
   text-align: right;
   clear: right;
@@ -1048,30 +1049,33 @@ img.alignright,
   .menu-toggle,
   .sub-menu-toggle {
     border-width: 0;
-    background-color: #FFF;
-    color: #666;
-    display: block;
+    color: #FFF;
+    display: inline-block;
     margin: 0 auto;
     overflow: hidden;
     text-align: center;
-    visibility: visible; }
+    visibility: visible;
+    background: transparent; }
   .menu-toggle:focus,
   .menu-toggle:hover,
   .sub-menu-toggle:focus,
   .sub-menu-toggle:hover {
     background: transparent;
-    color: #b1536f;
     border-width: 0; }
   .menu-toggle {
     line-height: 20px;
     position: relative;
     z-index: 1000;
-    width: 100%; }
+    float: right;
+    padding-right: 0;
+    padding-left: 0; }
   .menu-toggle::before {
-    font-size: 1.5em;
+    font-size: 3em;
     margin-right: 10px;
     text-rendering: auto;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em; }
   .sub-menu-toggle {
     float: right;
     padding: 10px;
@@ -1259,7 +1263,6 @@ img.alignright,
 /* ## After Header Navigation
 --------------------------------------------- */
 .nav-primary {
-  float: right;
   margin-top: 0;
   text-transform: uppercase; }
   .nav-primary .menu {
@@ -1748,6 +1751,8 @@ p.entry-meta {
   ---------------------------------------------------------------------------------------------------- */
   .site-header .title-area, .site-header .nav-primary {
     padding: 3em; }
+  .site-header .widget-area {
+    display: block; }
   /* ## Title Area
   --------------------------------------------- */
   /* Widget Area
@@ -1819,6 +1824,8 @@ p.entry-meta {
     min-height: 450px; }
   /* # Nav
   ---------------------------------------------------------------------------------------------------- */
+  .nav-primary {
+    float: right; }
   /* # Content
   ----------------------------------------------------------------------------------------------------- */
   .entry {
