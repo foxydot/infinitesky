@@ -30,9 +30,7 @@ include_once( get_stylesheet_directory() . '/lib/inc/helper-functions.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/msd-functions.php' ); //should this go to plugin?
 include_once( get_stylesheet_directory() . '/lib/inc/fixed-header-support.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/page-banner-support.php' );
-include_once( get_stylesheet_directory() . '/lib/inc/sidebar-content-support.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
-new MSDLab_Sidebar_Content_Support(array());
 new MSDLab_Page_Banner_Support(array());
 
 // Child theme (do not remove).
@@ -207,3 +205,24 @@ function genesis_msdlab_child_comments_gravatar( $args ) {
 include_once( get_stylesheet_directory() . '/lib/inc/sectioned-page-output.php' );
 
 remove_theme_support( 'genesis-inpost-layouts' );
+
+
+/**
+ * Remove Genesis Page Templates
+ *
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/remove-genesis-page-templates
+ *
+ * @param array $page_templates
+ * @return array
+ */
+function be_remove_genesis_page_templates( $page_templates ) {
+    unset( $page_templates['page_archive.php'] );
+    unset( $page_templates['page_blog.php'] );
+    return $page_templates;
+}
+add_filter( 'theme_page_templates', 'be_remove_genesis_page_templates' );
+
+add_filter('default_page_template_title', function() {
+    return __('Tertiary Page', 'genesis');
+});

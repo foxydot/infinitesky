@@ -1272,6 +1272,11 @@ img.alignright,
       color: #FFF;
       font-size: 1.2em;
       padding: 0.5em 1em; }
+    .nav-primary .menu li.menu-item .sub-menu {
+      background-color: #666666;
+      width: 22em; }
+      .nav-primary .menu li.menu-item .sub-menu .menu-item, .nav-primary .menu li.menu-item .sub-menu a {
+        width: 100%; }
 
 /* ## Foooter Widget Nav */
 .footer-widgets .footer-widget-area .widget_nav_menu .menu {
@@ -1722,6 +1727,11 @@ p.entry-meta {
   .content-sidebar .content,
   .content-sidebar-sidebar .content,
   .sidebar-content-sidebar .content {
+    float: left;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .full-width-content .content {
     float: left;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
