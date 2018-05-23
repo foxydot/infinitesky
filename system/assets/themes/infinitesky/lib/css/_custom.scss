@@ -1,56 +1,24 @@
-.entry-subtitle{
-  @include sansserif(1.8);
-  font-weight: 700;
-  color: $orange;
+h2.chapter-title{
+  color: $white;
   text-transform: uppercase;
-}
-.intro-text{
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 1.4;
-  color: $dkgrey;
+  font-weight: 400;
+  border-bottom: 2px solid $orange;
+  display: inline-block;
 }
 
-.symple-tabs{
-  .ui-tabs-nav{
-    li.ui-tabs-active a{
-      background-color: $orange;
-      color: $white !important;
-    }
-  }
+.entry-subtitle{
+  font-size: 2.4em;
+  font-weight: 400;
+  color: $white;
 }
 
 ///TEMPLATES///
 
-.site-inner{}
-.page-template-default, page-template-secondary{
-  main.content{
-    margin-top: 2em;
-    border-left: 1px solid $medgrey;
-    article{
-      padding-top: 0;
+.site-inner{
+  .content-sidebar-wrap{
+    background: $white;
+    main.content{
+      padding: 3em;
     }
-  }
-  .sidebar.sidebar-primary{
-    .manual-sidebar{
-      margin-top: 2em;
-      @include sansserif(1.2);
-      .sidebarcontent{}
-      .sidebarintro{}
-      h4{
-        font-size: 1.2em;
-        color: $orange;
-        text-transform: uppercase;
-      }
-      h5{
-        @include sansserif(1);
-        font-weight: 700;
-      }
-    }
-  }
-}
-.page-template-landing-page{
-  .intro-text{
-    padding: 2em 0 0;
   }
 }

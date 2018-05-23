@@ -91,51 +91,32 @@ function msdlab_post_info_filter($post_info) {
  */
 
 function msdlab_maybe_move_title(){
-    global $post;
+    global $post,$subtitle_support;
     $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
     if(is_page() && $template_file=='default'){
         remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
-        add_action('msdlab_title_area','msdlab_do_section_title');
+        remove_action('genesis_entry_header',array(&$subtitle_support,'msdlab_do_post_subtitle')); //move the title out of the content area
+        add_action('msdlab_title_area','msdlab_do_chapter_title');
+        add_action('msdlab_title_area','genesis_do_post_title');
+        add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));
         add_action('genesis_after_header','msdlab_do_title_area');
     }
 }
-function msdlab_do_section_title(){
+function msdlab_do_chapter_title(){
     if(is_front_page()){
     } elseif(is_page()){
         global $post;
         $myid = $post->ID;
-        $lvl = 2;
-        if(get_section_title()!=$post->post_title){
-            add_action('genesis_entry_header','genesis_do_post_title',5);
-            $lvl = 2;
-        }
-        $background = strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($myid,'full').')"':'';
-        print '<div class="banner clearfix"'.$background.'>';
-        print '<div class="texturize">';
-        print '<div class="gradient">';
-        print '<div class="wrap">';
-        print '<h'.$lvl.' class="section-title">';
+        //add support for header
+        print '<h2 class="chapter-title">';
         print get_section_title();
-        print '</h'.$lvl.'>';
-        print '</div>';
-        print '</div>';
-        print '</div>';
-        print '</div>';
+        print '</h2>';
     } elseif(is_home() || is_single()) {
         $blog_home = get_post(get_option( 'page_for_posts' ));
         $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
-        $background = strlen(msdlab_get_thumbnail_url($myid,'full'))>0?' style="background-image:url('.msdlab_get_thumbnail_url($blog_home->ID,'full').')"':'';
-        print '<div class="banner clearfix"'.$background.'>';
-        print '<div class="texturize">';
-        print '<div class="gradient">';
-        print '<div class="wrap">';
-        print '<h2 class="section-title">';
+        print '<h2 class="chapter-title">';
         print $title;
         print '</h2>';
-        print '</div>';
-        print '</div>';
-        print '</div>';
-        print '</div>';
     } else {
         genesis_do_post_title();
     }
@@ -145,15 +126,15 @@ function msdlab_do_title_area(){
     global $post;
     $postid = is_admin()?$_GET['post']:$post->ID;
     $template_file = get_post_meta($postid,'_wp_page_template',TRUE);
-    if ($template_file == 'page-sectioned.php') {
         print '<div id="page-title-area" class="page-title-area">';
+        print '<div class="texturize">';
+        print '<div class="gradient">';
+        print '<div class="container">';
         do_action('msdlab_title_area');
         print '</div>';
-    } else {
-        print '<div id="page-title-area" class="page-title-area">';
-        do_action('msdlab_title_area');
         print '</div>';
-    }
+        print '</div>';
+        print '</div>';
 }
 
 /**

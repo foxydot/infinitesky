@@ -8,7 +8,7 @@
   transition: all 0.8s;
   border: 0;
   margin: 0 !important;
-  background-color: $dkgrey;
+  background-color: $medgrey;
 }
 
 /* ## Title Area
@@ -95,50 +95,28 @@
 }
 
 .header-buffer{
-  min-height: 280px;
+  min-height: 5.6em;
 }
 
 .page-title-area{
-  font-size: 1.4em;
-  .banner{
-    .wrap, .container {
-      .gradient {
-        .bannertext {
-          .entry-title {
-            @include serif(4);
-            color: $dkgrey;
-            text-transform: none;
-            a {
-              color: $dkgrey;
-            }
-          }
-        }
-      }
-    }
-    &.has-background {
-      .wrap, .container {
-        background-repeat: no-repeat;
-        background-size: cover;
-        .gradient {
-          //background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
-          background-attachment: fixed;
-          padding: 8em 0;
-          min-height: 45vw;
-          position: relative;
-          text-align: center;
-          .bannertext {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            .entry-title {
-              @include serif(4);
-              color: $offwhite;
-              text-transform: none;
-              a {
-                color: $offwhite;
-              }
-            }
+  background-image: url(../images/blue-sky1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  .texturize{
+    .gradient{
+      //background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.73) 17%,rgba(0,0,0,0.66) 35%,rgba(0,0,0,0.55) 62%,rgba(0,0,0,0.4) 100%);
+      background-attachment: fixed;
+      padding: 2em 0 0;
+      min-height: 45vw;
+      position: relative;
+      .container{
+        .entry-title {
+          font-size: 5em;
+          color: $white;
+          text-transform: none;
+          font-weight: 700;
+          a {
+            color: $white;
           }
         }
       }

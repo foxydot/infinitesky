@@ -170,22 +170,16 @@
     text-align: right;
   }
 
-  .page-title-area {
-    background: $white;
-    .banner.has-background {
-      .texturize {
-        .gradient {
-          min-height: 400px;
-        }
-      }
-    }
-  }
 
   .page-title-area{
-    .banner.has-background{
-      .wrap{
-        .gradient {
-          min-height: 450px;
+    margin-bottom: -150px;
+    .texturize{
+      .gradient{
+        min-height: 300px;
+        padding-bottom: 150px;
+        .container{
+          .entry-title {
+          }
         }
       }
     }

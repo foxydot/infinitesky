@@ -2,7 +2,7 @@
 if (!class_exists('MSDTeamCPT')) {
     class MSDTeamCPT {
         //Properties
-        var $cpt = 'team';
+        var $cpt = 'team_member';
         //Methods
         /**
          * PHP 4 Compatible Constructor

@@ -21,7 +21,7 @@
 }
 
 @mixin customheader($size:1){
-  @include serif($size);
+  @include sansserif($size);
 }
 
 @mixin fontawesome {
@@ -59,9 +59,9 @@ $dkbrown: darken($brown, 20%);
 /* Neutrals */
 $white: #FFF;
 $offwhite: #FCFCFC;
-$ltgrey: #CCC;
-$medgrey: #999;
-$dkgrey: #666;
+$ltgrey: #D1D3D4;
+$medgrey: #666;
+$dkgrey: #333;
 $black: #000;
 
 /* Default Colors */
