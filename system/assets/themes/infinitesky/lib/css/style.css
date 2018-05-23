@@ -1253,7 +1253,7 @@ img.alignright,
       font-size: 1.2em;
       padding: 0.5em 1em; }
     .nav-primary .menu li.menu-item .sub-menu {
-      background-color: #d1d3d4;
+      background-color: rgba(102, 102, 102, 0.8);
       width: 22em; }
       .nav-primary .menu li.menu-item .sub-menu .menu-item, .nav-primary .menu li.menu-item .sub-menu a {
         width: 100%; }
