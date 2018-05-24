@@ -93,13 +93,19 @@ function msdlab_post_info_filter($post_info) {
 function msdlab_maybe_move_title(){
     global $post,$subtitle_support;
     $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
-    if(is_page() && $template_file=='default'){
-        remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
-        remove_action('genesis_entry_header',array(&$subtitle_support,'msdlab_do_post_subtitle')); //move the title out of the content area
-        add_action('msdlab_title_area','msdlab_do_chapter_title');
-        add_action('msdlab_title_area','genesis_do_post_title');
-        add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));
-        add_action('genesis_after_header','msdlab_do_title_area');
+    error_log($template_file);
+    if(is_page()){
+        switch($template_file){
+            case 'default':
+            default:
+            remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
+            remove_action('genesis_entry_header',array(&$subtitle_support,'msdlab_do_post_subtitle')); //move the title out of the content area
+            add_action('msdlab_title_area','msdlab_do_chapter_title');
+            add_action('msdlab_title_area','genesis_do_post_title');
+            add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));
+            add_action('genesis_after_header','msdlab_do_title_area');
+                break;
+        }
     }
 }
 function msdlab_do_chapter_title(){
