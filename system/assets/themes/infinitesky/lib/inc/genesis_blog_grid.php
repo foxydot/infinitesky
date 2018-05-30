@@ -25,7 +25,7 @@ function be_grid_loop_pagination( $query = false ) {
         'features_on_front' => 1,
         'teasers_on_front' => 6,
         'features_inside' => 0,
-        'teasers_inside' => 8,
+        'teasers_inside' => 9,
     );
 }
 
@@ -94,7 +94,7 @@ function be_grid_loop_post_classes( $classes ) {
             // Teasers
         } else {
             $classes[] = 'genesis-teaser';
-            $classes[] = 'col-sm-6';
+            $classes[] = 'col-sm-4';
             $classes[] = 'col-xs-12';
         }
 
@@ -109,7 +109,7 @@ function be_grid_loop_post_classes( $classes ) {
             // Teasers
         } else {
             $classes[] = 'genesis-teaser';
-            $classes[] = 'col-sm-6';
+            $classes[] = 'col-sm-4';
             $classes[] = 'col-xs-12';
         }
 

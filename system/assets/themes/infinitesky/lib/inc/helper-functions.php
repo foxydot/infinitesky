@@ -93,36 +93,88 @@ function msdlab_post_info_filter($post_info) {
 function msdlab_maybe_move_title(){
     global $post,$subtitle_support;
     $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
-    error_log($template_file);
-    if(is_page()){
-        switch($template_file){
-            case 'default':
-            default:
+    switch($template_file){
+        case 'default':
+        default:
+            remove_all_actions('genesis_archive_title_descriptions');
             remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
             remove_action('genesis_entry_header',array(&$subtitle_support,'msdlab_do_post_subtitle')); //move the title out of the content area
             add_action('msdlab_title_area','msdlab_do_chapter_title');
-            add_action('msdlab_title_area','genesis_do_post_title');
+            add_action('msdlab_title_area','msdlab_do_post_title');
             add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));
             add_action('genesis_after_header','msdlab_do_title_area');
-                break;
-        }
+            break;
+
     }
 }
+
 function msdlab_do_chapter_title(){
     if(is_front_page()){
     } elseif(is_page()){
         global $post;
-        $myid = $post->ID;
-        //add support for header
         print '<h2 class="chapter-title">';
         print get_section_title();
         print '</h2>';
     } elseif(is_home() || is_single()) {
         $blog_home = get_post(get_option( 'page_for_posts' ));
-        $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
+        $parent = get_post(get_topmost_parent($blog_home->ID));
+        $title = apply_filters( 'genesis_post_title_text', $parent->post_title );//* Wrap in H1 on singular pages
         print '<h2 class="chapter-title">';
         print $title;
         print '</h2>';
+    }
+}
+
+function msdlab_do_post_title(){
+    if(is_front_page()){
+    } elseif(is_home() || (is_single() && is_cpt('post'))) {
+        $blog_home = get_post(get_option( 'page_for_posts' ));
+        $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
+        if ( 0 === mb_strlen( $title ) ) {
+            return;
+        }
+
+        // Link it, if necessary.
+        if ( ! is_singular() && apply_filters( 'genesis_link_post_title', true ) ) {
+            $title = genesis_markup( array(
+                'open'    => '<a %s>',
+                'close'   => '</a>',
+                'content' => $title,
+                'context' => 'entry-title-link',
+                'echo'    => false,
+            ) );
+        }
+
+        // Wrap in H1 on singular pages.
+        $wrap = is_singular() ? 'h1' : 'h2';
+
+        // Also, if HTML5 with semantic headings, wrap in H1.
+        $wrap = genesis_html5() && genesis_get_seo_option( 'semantic_headings' ) ? 'h1' : $wrap;
+
+        /**
+         * Entry title wrapping element.
+         *
+         * The wrapping element for the entry title.
+         *
+         * @since 2.2.3
+         *
+         * @param string $wrap The wrapping element (h1, h2, p, etc.).
+         */
+        $wrap = apply_filters( 'genesis_entry_title_wrap', $wrap );
+
+        // Build the output.
+        $output = genesis_markup( array(
+            'open'    => "<{$wrap} %s>",
+            'close'   => "</{$wrap}>",
+            'content' => $title,
+            'context' => 'entry-title',
+            'params'  => array(
+                'wrap'  => $wrap,
+            ),
+            'echo'    => false,
+        ) );
+
+        echo apply_filters( 'genesis_post_title_output', $output, $wrap, $title ) . "\n";
     } else {
         genesis_do_post_title();
     }
@@ -131,16 +183,15 @@ function msdlab_do_chapter_title(){
 function msdlab_do_title_area(){
     global $post;
     $postid = is_admin()?$_GET['post']:$post->ID;
-    $template_file = get_post_meta($postid,'_wp_page_template',TRUE);
-        print '<div id="page-title-area" class="page-title-area">';
-        print '<div class="texturize">';
-        print '<div class="gradient">';
-        print '<div class="container">';
-        do_action('msdlab_title_area');
-        print '</div>';
-        print '</div>';
-        print '</div>';
-        print '</div>';
+    print '<div id="page-title-area" class="page-title-area">';
+    print '<div class="texturize">';
+    print '<div class="gradient">';
+    print '<div class="container">';
+    do_action('msdlab_title_area');
+    print '</div>';
+    print '</div>';
+    print '</div>';
+    print '</div>';
 }
 
 /**
