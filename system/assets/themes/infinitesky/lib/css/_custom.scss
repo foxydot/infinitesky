@@ -1,3 +1,5 @@
+
+
 h2.chapter-title{
   color: $white;
   text-transform: uppercase;
@@ -12,13 +14,53 @@ h2.chapter-title{
   color: $white;
 }
 
+article.type-post{
+    .entry-header, .entry-content, .entry-footer {
+      padding-left: 2em;
+      padding-right: 2em;
+      .readmore-button {
+        background-color: $blue;
+        color: $white;
+        padding: 0.5em 1em;
+        margin-right: -2em;
+        &:hover {
+          background-color: $dkblue;
+          color: $white;
+        }
+      }
+    }
+    .entry-header {
+      padding-top: 2em;
+      .entry-meta{
+        span.post-author,span.post-date{
+          display: block;
+        }
+        span.post-author{
+          color: $orange;
+          text-transform: uppercase;
+          margin-bottom: 1em;
+        }
+      }
+    }
+}
+
+.genesis-blog-grid{
+  .genesis-teaser{
+    padding-left: 15px;
+    padding-right: 15px;
+    .entry-wrap {
+      background: rgba($ltgrey, 0.6);
+      min-height: 100%;
+    }
+  }
+}
+
 ///TEMPLATES///
 
 .site-inner{
   .content-sidebar-wrap{
     background: $white;
     main.content{
-      padding: 3em;
     }
   }
 }

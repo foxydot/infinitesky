@@ -82,7 +82,8 @@ function msdlab_breadcrumb_args($args) {
 }
 
 function msdlab_post_info_filter($post_info) {
-    $post_info = 'Posted [post_date]';
+    $post_info = '<span class="post-author">Posted by [post_author]</span>
+    <span class="post-date">[post_date]</span>';
     return $post_info;
 }
 

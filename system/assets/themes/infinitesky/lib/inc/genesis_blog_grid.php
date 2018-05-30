@@ -60,6 +60,65 @@ function be_grid_loop_query_args( $query ) {
 }
 add_action( 'pre_get_posts', 'be_grid_loop_query_args');
 
+
+add_action('genesis_before_entry','msdlab_maybe_wrap_bootstrap_open');
+add_action('genesis_after_entry','msdlab_maybe_wrap_bootstrap_close');
+
+function msdlab_maybe_wrap_bootstrap_open(){
+    global $wp_query;
+
+    // Only run on main query
+    if( ! $wp_query->is_main_query() )
+        return false;
+    // Only run on grid loop
+    $grid_args = be_grid_loop_pagination();
+    if( !$grid_args || ! $wp_query->is_main_query() )
+        return false;
+
+    if(!is_cpt('post'))
+        return false;
+    // First Page Classes
+    if( !$wp_query->query_vars['paged'] ) {
+        // Features
+        if( $wp_query->current_post == $grid_args['features_on_front'] ) {
+            print '<div class="row">';
+        } else {
+            return false;
+        }
+        // Inner Pages
+    } else {
+        // Features
+        if( $wp_query->current_post == $grid_args['features_inside'] ) {
+            print '<div class="row">';
+        } else {
+            return false;
+        }
+
+    }
+}
+
+function msdlab_maybe_wrap_bootstrap_close(){
+    global $wp_query;
+
+    // Only run on main query
+    if( ! $wp_query->is_main_query() )
+        return false;
+    // Only run on grid loop
+    $grid_args = be_grid_loop_pagination();
+    if( !$grid_args || ! $wp_query->is_main_query() )
+        return false;
+
+    if(!is_cpt('post'))
+        return false;
+
+
+    if( (($wp_query->current_post +1) == ($wp_query->post_count)) ) {
+        print '</div>';
+    }
+}
+
+
+
 /**
  * Grid Loop Post Classes
  *
@@ -192,7 +251,8 @@ function msdlab_switch_content() {
         remove_action('genesis_entry_content', 'genesis_do_post_image',8);
         remove_action( 'genesis_entry_header', 'msdlab_do_post_subtitle', 13);
         remove_action( 'genesis_entry_header', 'genesis_do_post_title');
-        add_action( 'genesis_entry_header', 'msdlab_grid_loop_header');
+        add_action( 'genesis_entry_header', 'msdlab_grid_loop_header',1);
+        add_action( 'genesis_entry_footer', 'msdlab_grid_loop_footer',100);
         add_action( 'genesis_entry_header', 'genesis_do_post_title');
         add_action('genesis_entry_content', 'msdlab_grid_loop_content');
     }
@@ -202,7 +262,7 @@ function msdlab_grid_loop_content() {
     global $_genesis_loop_args;
     if ( in_array( 'genesis-feature', get_post_class() ) ) {
         the_excerpt();
-        printf( '<a href="%s" title="%s" class="readmore-button alignright">%s</a>', get_permalink(), the_title_attribute('echo=0'), 'Continue Reading >' );
+        printf( '<a href="%s" title="%s" class="readmore-button alignright">%s</a>', get_permalink(), the_title_attribute('echo=0'), 'Read more >' );
 
     }
     else {
@@ -211,13 +271,23 @@ function msdlab_grid_loop_content() {
 }
 
 function msdlab_grid_loop_header() {
-    global $_genesis_loop_args;
     if ( in_array( 'genesis-feature', get_post_class() ) ) {
         printf( '<a href="%s" title="%s" class="featured_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
 
     }
     else {
+        if(in_array( 'genesis-teaser', get_post_class() )){
+            print '<div class="entry-wrap">';
+        }
         printf( '<a href="%s" title="%s" class="grid_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
+    }
+}
+
+
+function msdlab_grid_loop_footer() {
+    if ( in_array( 'genesis-teaser', get_post_class() ) ) {
+        print '</div>';
+
     }
 }
 function msdlab_get_comments_number(){ //not used

@@ -63,11 +63,12 @@ function pagename_body_class($classes) {
 
 add_filter('body_class','section_body_class');
 function section_body_class($classes) {
-	global $post;
-	$post_data = get_post(get_topmost_parent($post->ID));
-	$classes[] = 'partition-'.$post_data->post_name;
-	return $classes;
+    global $post;
+    $post_data = get_post(get_topmost_parent($post->ID));
+    $classes[] = 'partition-'.$post_data->post_name;
+    return $classes;
 }
+
 add_filter('body_class','category_body_class');
 function category_body_class($classes) {
     global $post;
@@ -77,22 +78,6 @@ function category_body_class($classes) {
 		$classes[] = 'category-'.$cat->slug;
 	}
     return $classes;
-}
-
-// add classes for subdomain
-if(is_multisite()){
-	add_filter('body_class','subdomain_body_class');
-	function subdomain_body_class($classes) {
-		global $subdomain;
-		$site = get_current_site()->domain;
-		$url = get_bloginfo('url');
-		$sub = preg_replace('@http://@i','',$url);
-		$sub = preg_replace('@'.$site.'@i','',$sub);
-		$sub = preg_replace('@\.@i','',$sub);
-		$classes[] = 'site-'.$sub;
-		$subdomain = $sub;
-		return $classes;
-	}
 }
 
 add_action('template_redirect','set_section');

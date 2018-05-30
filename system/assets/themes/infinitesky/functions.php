@@ -141,7 +141,7 @@ add_filter( 'excerpt_length', 'msdlab_excerpt_length', 999 );
 add_filter('excerpt_more', 'msdlab_read_more_link');
 add_filter( 'the_content_more_link', 'msdlab_read_more_link' );
 
-remove_action( 'genesis_entry_header', 'genesis_post_info', 12 ); //remove the info (date, posted by,etc.)
+//remove_action( 'genesis_entry_header', 'genesis_post_info', 12 ); //remove the info (date, posted by,etc.)
 remove_action( 'genesis_entry_footer', 'genesis_post_meta'); //remove the meta (filed under, tags, etc.)
 
 //add_filter( 'genesis_next_link_text', 'msdlab_older_link_text', 20);
@@ -174,6 +174,8 @@ add_image_size('headshot-sm', 115, 115, TRUE);
 add_image_size('medlg', 400, 300, array('center','top'));
 add_image_size('facebook', 200, 200, TRUE);
 add_image_size('linkedin', 180, 110, TRUE);
+add_image_size('child_full', 1170, 400, TRUE);
+add_image_size('child_thumbnail', 370, 370, TRUE);
 
 /* Display a custom favicon */
 add_filter( 'genesis_pre_load_favicon', 'msdlab_favicon_filter' );

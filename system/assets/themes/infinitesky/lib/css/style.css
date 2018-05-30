@@ -398,7 +398,7 @@ input[type="reset"],
 input[type="submit"],
 .button,
 a.btn {
-  background-color: #ff6600;
+  background-color: #0099ff;
   border: 0;
   color: #FCFCFC;
   cursor: pointer;
@@ -421,7 +421,7 @@ input[type="submit"]:hover,
 .button:hover,
 a.btn:focus,
 a.btn:hover {
-  background-color: #993d00;
+  background-color: #005c99;
   color: #FCFCFC; }
 
 .entry-content .button:focus,
@@ -874,8 +874,8 @@ img.alignright,
   margin-top: 24px; }
 
 .sidebar .featured-content {
-  border-top: 1px solid #3f829c;
-  border-bottom: 1px solid #3f829c; }
+  border-top: 1px solid #0099ff;
+  border-bottom: 1px solid #0099ff; }
   .sidebar .featured-content .entry-content {
     font-size: 0.9em; }
 
@@ -890,10 +890,10 @@ img.alignright,
   margin: 0 -1em 0 0;
   max-width: 101%; }
   .site-inner .gform_wrapper .gform_heading .gform_description {
-    color: #3f829c;
+    color: #0099ff;
     font-weight: 600; }
     .site-inner .gform_wrapper .gform_heading .gform_description a {
-      color: #3f829c; }
+      color: #0099ff; }
   .site-inner .gform_wrapper .gform_body li.gfield {
     background: #FFF;
     margin-bottom: 0.5em; }
@@ -994,6 +994,10 @@ img.alignright,
   line-height: 1; }
   .site-header .widget-area .widget, .pre-header .widget-area .widget {
     display: inline-block; }
+    .site-header .widget-area .widget a.button, .pre-header .widget-area .widget a.button {
+      background-color: #ff6600; }
+      .site-header .widget-area .widget a.button:hover, .pre-header .widget-area .widget a.button:hover {
+        background-color: #993d00; }
 
 .site-header .widget-area {
   float: right;
@@ -1208,7 +1212,7 @@ img.alignright,
         content: '\f002';
         position: relative;
         left: 1em;
-        color: #3f829c; }
+        color: #0099ff; }
       .nav-secondary li.right.search .search-form input[type="search"] {
         -webkit-transition-property: width;
         transition-property: width;
@@ -1363,7 +1367,8 @@ p.entry-meta {
 --------------------------------------------- */
 .pagination {
   clear: both;
-  margin: 40px 0; }
+  margin: 40px 0;
+  display: block; }
 
 .adjacent-entry-pagination {
   margin-bottom: 0; }
@@ -1372,8 +1377,8 @@ p.entry-meta {
   display: inline; }
 
 .archive-pagination a {
-  background-color: #fff;
-  color: #666;
+  background-color: #0099ff;
+  color: #FFF;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -1385,7 +1390,7 @@ p.entry-meta {
 .archive-pagination a:focus,
 .archive-pagination a:hover,
 .archive-pagination .active a {
-  background-color: #ff6600;
+  background-color: #0099ff;
   color: #FCFCFC; }
 
 /* ## Comments
@@ -1618,14 +1623,42 @@ h2.chapter-title {
   font-weight: 400;
   color: #FFF; }
 
+article.type-post .entry-header, article.type-post .entry-content, article.type-post .entry-footer {
+  padding-left: 2em;
+  padding-right: 2em; }
+  article.type-post .entry-header .readmore-button, article.type-post .entry-content .readmore-button, article.type-post .entry-footer .readmore-button {
+    background-color: #0099ff;
+    color: #FFF;
+    padding: 0.5em 1em;
+    margin-right: -2em; }
+    article.type-post .entry-header .readmore-button:hover, article.type-post .entry-content .readmore-button:hover, article.type-post .entry-footer .readmore-button:hover {
+      background-color: #005c99;
+      color: #FFF; }
+
+article.type-post .entry-header {
+  padding-top: 2em; }
+  article.type-post .entry-header .entry-meta span.post-author, article.type-post .entry-header .entry-meta span.post-date {
+    display: block; }
+  article.type-post .entry-header .entry-meta span.post-author {
+    color: #ff6600;
+    text-transform: uppercase;
+    margin-bottom: 1em; }
+
+.genesis-blog-grid .genesis-teaser {
+  padding-left: 15px;
+  padding-right: 15px; }
+  .genesis-blog-grid .genesis-teaser .entry-wrap {
+    background: rgba(209, 211, 212, 0.6);
+    min-height: 100%; }
+
 .site-inner .content-sidebar-wrap {
   background: #FFF; }
-  .site-inner .content-sidebar-wrap main.content {
-    padding: 3em; }
 
 @media only screen and (min-width: 768px) {
   .header-buffer {
     min-height: 10em; }
+  .page-title-area .texturize .gradient .container .entry-title {
+    max-width: 40%; }
   /* Accessible Menu
   --------------------------------------------- */
   .menu .menu-item:focus {

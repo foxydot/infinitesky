@@ -76,6 +76,7 @@ p.entry-meta {
 .pagination {
   clear: both;
   margin: 40px 0;
+  display: block;
 }
 
 .adjacent-entry-pagination {
@@ -87,8 +88,8 @@ p.entry-meta {
 }
 
 .archive-pagination a {
-  background-color: #fff;
-  color: $medgrey;
+  background-color: $blue;
+  color: $white;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -101,7 +102,7 @@ p.entry-meta {
 .archive-pagination a:focus,
 .archive-pagination a:hover,
 .archive-pagination .active a {
-  background-color: $orange;
+  background-color: $blue;
   color: $offwhite;
 }
 
