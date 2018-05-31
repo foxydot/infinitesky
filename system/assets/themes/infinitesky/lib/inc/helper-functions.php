@@ -98,13 +98,15 @@ function msdlab_maybe_move_title(){
         case 'default':
         default:
             remove_all_actions('genesis_archive_title_descriptions');
-            remove_action('genesis_entry_header','genesis_do_post_title'); //move the title out of the content area
-            remove_action('genesis_entry_header',array(&$subtitle_support,'msdlab_do_post_subtitle')); //move the title out of the content area
             add_action('msdlab_title_area','msdlab_do_chapter_title');
             add_action('msdlab_title_area','msdlab_do_post_title');
-            add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));
             add_action('genesis_after_header','msdlab_do_title_area');
-            break;
+        if(!is_single() && !is_cpt('post')) {
+                remove_action('genesis_entry_header', 'genesis_do_post_title'); //move the title out of the content area
+                remove_action('genesis_entry_header', array(&$subtitle_support, 'msdlab_do_post_subtitle')); //move the title out of the content area
+                add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));
+            }
+        break;
 
     }
 }
@@ -201,7 +203,7 @@ function msdlab_do_title_area(){
 function msd_post_image() {
     global $post;
     //setup thumbnail image args to be used with genesis_get_image();
-    $size = 'medium'; // Change this to whatever add_image_size you want
+    $size = 'child_full'; // Change this to whatever add_image_size you want
     $default_attr = array(
         'class' => "attachment-$size $size alignright",
         'alt'   => $post->post_title,

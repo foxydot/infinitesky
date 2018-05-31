@@ -272,6 +272,7 @@ function msdlab_grid_loop_content() {
 
 function msdlab_grid_loop_header() {
     if ( in_array( 'genesis-feature', get_post_class() ) ) {
+        print '<div class="entry-wrap">';
         printf( '<a href="%s" title="%s" class="featured_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
 
     }
@@ -285,9 +286,8 @@ function msdlab_grid_loop_header() {
 
 
 function msdlab_grid_loop_footer() {
-    if ( in_array( 'genesis-teaser', get_post_class() ) ) {
-        print '</div>';
-
+    if ( in_array( 'genesis-feature', get_post_class() ) || in_array( 'genesis-teaser', get_post_class() ) ) {
+        print '<hr class="clear" /></div>';
     }
 }
 function msdlab_get_comments_number(){ //not used
@@ -303,14 +303,4 @@ function msdlab_add_blog_grid_body_class($classes){
         $classes[] = 'genesis-blog-grid';
     }
     return $classes;
-}
-
-//add_filter( 'genesis_pre_get_option_site_layout', 'msdlab_add_sidebar_to_single_posts' );
-
-function msdlab_add_sidebar_to_single_posts($layout){
-    global $post;
-    if(is_single() && $post->post_type == "post"){
-        $layout = 'content_sidebar';
-    }
-    return $layout;
 }

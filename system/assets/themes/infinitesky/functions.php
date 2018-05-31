@@ -29,9 +29,7 @@ function genesis_msdlab_child_localization_setup(){
 include_once( get_stylesheet_directory() . '/lib/inc/helper-functions.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/msd-functions.php' ); //should this go to plugin?
 include_once( get_stylesheet_directory() . '/lib/inc/fixed-header-support.php' );
-include_once( get_stylesheet_directory() . '/lib/inc/page-banner-support.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
-new MSDLab_Page_Banner_Support(array());
 
 // Child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'FionasWorld' );
@@ -135,7 +133,7 @@ add_action('genesis_after_header',array('MSDLab_Fixed_Header_Support','do_header
 add_action('genesis_after_header','msdlab_do_title_area');
 
 remove_action('genesis_entry_content', 'genesis_do_post_image',8);
-add_action('genesis_entry_content','msd_post_image',8);//add the image above the entry
+add_action('genesis_entry_header','msd_post_image',4);//add the image above the entry
 
 add_filter( 'excerpt_length', 'msdlab_excerpt_length', 999 );
 add_filter('excerpt_more', 'msdlab_read_more_link');

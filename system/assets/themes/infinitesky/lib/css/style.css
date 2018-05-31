@@ -1611,6 +1611,10 @@ p.entry-meta {
   .sectioned-page-wrapper .section.left-align .section-body {
     text-align: left; }
 
+hr.clear {
+  border-color: rgba(102, 102, 102, 0);
+  margin: 0; }
+
 h2.chapter-title {
   color: #FFF;
   text-transform: uppercase;
@@ -1637,6 +1641,10 @@ article.type-post .entry-header, article.type-post .entry-content, article.type-
 
 article.type-post .entry-header {
   padding-top: 2em; }
+  article.type-post .entry-header .entry-subtitle {
+    text-transform: none;
+    color: #0099ff;
+    font-size: 2em; }
   article.type-post .entry-header .entry-meta span.post-author, article.type-post .entry-header .entry-meta span.post-date {
     display: block; }
   article.type-post .entry-header .entry-meta span.post-author {
@@ -1644,12 +1652,17 @@ article.type-post .entry-header {
     text-transform: uppercase;
     margin-bottom: 1em; }
 
+.single article.type-post {
+  background: rgba(209, 211, 212, 0.6);
+  padding-bottom: 2em; }
+
 .genesis-blog-grid .genesis-teaser {
   padding-left: 15px;
   padding-right: 15px; }
-  .genesis-blog-grid .genesis-teaser .entry-wrap {
-    background: rgba(209, 211, 212, 0.6);
-    min-height: 100%; }
+
+.genesis-blog-grid .entry-wrap {
+  background: rgba(209, 211, 212, 0.6);
+  min-height: 100%; }
 
 .site-inner .content-sidebar-wrap {
   background: #FFF; }
@@ -1813,7 +1826,7 @@ article.type-post .entry-header {
   .page-title-area {
     margin-bottom: -150px; }
     .page-title-area .texturize .gradient {
-      min-height: 300px;
+      min-height: 400px;
       padding-bottom: 150px; }
   /* # Nav
   ---------------------------------------------------------------------------------------------------- */
