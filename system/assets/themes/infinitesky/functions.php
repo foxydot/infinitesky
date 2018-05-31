@@ -30,6 +30,8 @@ include_once( get_stylesheet_directory() . '/lib/inc/helper-functions.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/msd-functions.php' ); //should this go to plugin?
 include_once( get_stylesheet_directory() . '/lib/inc/fixed-header-support.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
+include_once( get_stylesheet_directory() . '/lib/inc/custom-class-support.php' );
+new MSDLab_Custom_Class_Support();
 
 // Child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'FionasWorld' );

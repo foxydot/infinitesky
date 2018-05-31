@@ -2,10 +2,10 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
+  background-color: $white;
+  color: $dkgrey;
   .footer-widget-area {
     &.footer-widgets-1 {
-      background-color: $white;
-      color: $dkgrey;
       .widget{
         img {
           max-height: 85px;

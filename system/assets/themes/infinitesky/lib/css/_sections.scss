@@ -6,6 +6,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    margin-bottom: 3em;
+    &.full-width-bkg{
+      margin-bottom: 0;
+    }
     .section-title{
       margin-bottom: 4em;
       h3 {
@@ -41,9 +45,6 @@
     p,li{
     }
   }
-  .section.border-top .container{border-top: 1px solid $medgrey;padding-top: 1em; margin-top: 1em;}
-  .section.column-border .section-content:not(.last-child){border-right: 1px solid $medgrey;padding-right: 1em;}
-
   .section.overlay{
     padding: 0;
     .overlay{
@@ -52,34 +53,103 @@
       padding: 8em 0;
     }
   }
+  .section.bkg-white{
+    &.full-width-bkg {
+      background-color: $white;
+    }
+    .section-body{
+      .container{
+        background-color: $white;
+      }
+    }
+  }
   .section.bkg-dkgrey{
-    background-color: $dkgrey;
+    &.full-width-bkg {
+      background-color: $dkgrey;
+    }
+    .section-body{
+      .container{
+        background-color: $dkgrey;
+      }
+    }
   }
   .section.bkg-ltgrey{
-    background-color: $ltgrey;
+    &.full-width-bkg {
+      background-color: $ltgrey;
+    }
+    .section-body{
+      .container{
+        background-color: $ltgrey;
+      }
+    }
   }
-.section.bkg-orange{
-  background-color: $orange;
-}
-.section.bkg-green{
-  background-color: $green;
-}
-  .section.bkg-white{
-    background-color: $offwhite;
+  .section.bkg-orange{
+    &.full-width-bkg {
+      background-color: $orange;
+    }
+    .section-body{
+      .container{
+        background-color: $orange;
+      }
+    }
   }
-  .section.text-dkgrey{
-    color: $dkgrey;
-  }
-  .section.text-green{
-    color: $green;
-  }
-  .section.text-white{
-    color: $offwhite;
+  .section.bkg-blue{
+    &.full-width-bkg {
+      background-color: $blue;
+    }
+    .section-body{
+      .container{
+        background-color: $blue;
+      }
+    }
   }
   .section.left-align{
     .section-body{
       text-align: left;
     }
+  }
+
+  .section.border-top {
+    &.full-width-bkg {
+      border-top: 4px solid $orange;
+    }
+    .section-body{
+      .container{
+        border-top: 4px solid $orange;
+      }
+    }
+    }
+  .section.border-bottom {
+    &.full-width-bkg {
+      border-bottom: 4px solid $orange;padding-bottom: 1em; margin-bottom: 1em;  }
+    .section-body{
+      .container{
+        border-bottom: 4px solid $orange;padding-bottom: 1em; margin-bottom: 1em;      }
+    }}
+  .section.column-border .section-content:not(.last-child){border-right: 1px solid $orange;padding-right: 1em;}
+
+  .section.bkg-logo-right{
+    .section-body{
+      .container{
+        background-color: transparent;
+        background: url(../images/content-right.svg) top left no-repeat;
+        background-size: 100% auto;
+        padding-left: 30%;
+      }
+    }
+  }
+  .section.bkg-logo-left{
+     .section-body{
+       .container{
+         background-color: transparent;
+         background: url(../images/content-left.svg) top right no-repeat;
+         background-size: 100% auto;
+         padding-right: 30%;
+       }
+     }
+   }
+  .section.section-space{
+    min-height: 12em;
   }
 }
 

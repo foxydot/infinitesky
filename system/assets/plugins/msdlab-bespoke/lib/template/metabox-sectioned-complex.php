@@ -46,12 +46,21 @@
 -webkit-column-gap: 1em;
 column-count: 2;
 column-gap: 1em;">
-                <?php $items = array('Callout with Green Waves' => 'green-waves','Callout with Green Background' => 'green-callout','Callout with Gray Waves' => 'gray-callout',
-                    'Add an orange exclamation point' => 'orange-bang','Add an black exclamation point' => 'black-bang',
-                    'Border above columns'=>'border-top','Border below columns'=>'border-bottom','Border between columns'=>'column-border',
-                    'Dark grey background' => 'bkg-dkgrey', 'Light grey background' => 'bkg-ltgrey','Green background' => 'bkg-green',
-                    'Dark grey text' => 'text-dkgrey','Green text' => 'text-green', 'White text' => 'text-white',
-                    'Center titles' => 'cntr-titles',); ?>
+                <?php $items = array(
+                    'Full width background' => 'full-width-bkg',
+                    'Logo Background (left)' => 'bkg-logo-right',
+                    'Logo Background (right)' => 'bkg-logo-left',
+                    'White background' => 'bkg-white',
+                    'Light grey background' => 'bkg-ltgrey',
+                    'Dark grey background' => 'bkg-dkgrey',
+                    'Orange background' => 'bkg-orange',
+                    'Blue background' => 'bkg-blue',
+                    'Border top'=>'border-top',
+                    'Border bottom'=>'border-bottom',
+                    'Border between columns'=>'column-border',
+                    'Center titles' => 'cntr-titles',
+                    );
+                ?>
                 <?php foreach ($items as $i => $item): ?>
                     <?php $mb->the_field('css-classes', WPALCHEMY_FIELD_HINT_CHECKBOX_MULTI); ?>
                     <input type="checkbox" name="<?php $mb->the_name(); ?>" value="<?php echo $item; ?>"<?php $mb->the_checkbox_state($item); ?>/> <?php echo $i; ?><br/>
