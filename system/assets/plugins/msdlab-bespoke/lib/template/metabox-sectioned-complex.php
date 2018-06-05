@@ -59,12 +59,20 @@ column-gap: 1em;">
                     'Border bottom'=>'border-bottom',
                     'Border between columns'=>'column-border',
                     'Center titles' => 'cntr-titles',
+                    'Align Buttons Bottom' => 'align-buttons-bottom',
                     );
                 ?>
                 <?php foreach ($items as $i => $item): ?>
                     <?php $mb->the_field('css-classes', WPALCHEMY_FIELD_HINT_CHECKBOX_MULTI); ?>
                     <input type="checkbox" name="<?php $mb->the_name(); ?>" value="<?php echo $item; ?>"<?php $mb->the_checkbox_state($item); ?>/> <?php echo $i; ?><br/>
                 <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="cell">
+            <?php $mb->the_field('custom-css-classes'); ?>
+            <label>Custom Classes</label>
+            <div class="input_container">
+                <input type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>"/><br />
             </div>
         </div>
         </div>

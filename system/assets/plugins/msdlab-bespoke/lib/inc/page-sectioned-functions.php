@@ -81,6 +81,7 @@ class MSDSectionedPage{
             'section',
             'section-'.$slug,
             implode(" ",$section['css-classes']),
+            $section['custom-css-classes'],
             'section-'.$eo,
             'clearfix',
         ));

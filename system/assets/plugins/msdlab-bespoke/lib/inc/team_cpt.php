@@ -33,9 +33,12 @@ if (!class_exists('MSDTeamCPT')) {
             //Filters
             //add_filter( 'pre_get_posts', array(&$this,'custom_query') );
             add_filter( 'enter_title_here', array(&$this,'change_default_title') );
+            add_filter( 'genesis_attr_team_member', array(&$this,'custom_add_team_member_attr') );
 
-            //Shortcode
-            add_shortcode('team',array(&$this,'shortcode_handler'));
+            //Shortcodes
+            add_shortcode('teammembers', array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
+            add_shortcode('team-members', array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
+            add_shortcode('team',array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
         }
 
 
@@ -117,31 +120,33 @@ if (!class_exists('MSDTeamCPT')) {
         }
 
 
-        function register_metaboxes(){
-            global $team_info,$contact_info;
-            $team_info = new WPAlchemy_MetaBox(array
-            (
-                'id' => '_team_information',
-                'title' => 'Team Member Info',
-                'types' => array($this->cpt),
-                'context' => 'normal',
-                'priority' => 'high',
-                'template' => plugin_dir_path(dirname(__FILE__)).'/template/metabox-team.php',
-                'autosave' => TRUE,
-                'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
-                'prefix' => '_team_' // defaults to NULL
-            ));
+        function register_metaboxes()
+        {
+            global $additional_info, $contact_info;
             $contact_info = new WPAlchemy_MetaBox(array
             (
-                'id' => '_contact_information',
+                'id' => '_contact_info',
                 'title' => 'Contact Info',
-                'types' => array($this->cpt),
-                'context' => 'normal',
-                'priority' => 'high',
-                'template' => plugin_dir_path(dirname(__FILE__)).'/template/metabox-contact.php',
+                'types' => array('location', 'team_member'), // added only for pages and to custom post type "events"
+                'context' => 'normal', // same as above, defaults to "normal"
+                'priority' => 'high', // same as above, defaults to "high"
+                'template' => WP_PLUGIN_DIR . '/' . plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php') . 'lib/template/contact-info.php',
                 'autosave' => TRUE,
                 'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
-                'prefix' => '_contact_' // defaults to NULL
+                'prefix' => '_team_member_' // defaults to NULL
+            ));
+
+            $additional_info = new WPAlchemy_MetaBox(array
+            (
+                'id' => '_additional_information',
+                'title' => 'Additional Information',
+                'types' => array('team_member'),
+                'context' => 'normal',
+                'priority' => 'high',
+                'template' => WP_PLUGIN_DIR . '/' . plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php') . 'lib/template/additional-information.php',
+                'autosave' => TRUE,
+                'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
+                'prefix' => '_team_member_' // defaults to NULL
             ));
         }
 
@@ -335,92 +340,138 @@ if (!class_exists('MSDTeamCPT')) {
             return $posts;
         }
 
-        function shortcode_handler($atts){
-            extract(shortcode_atts(array(
-                'type' => 'grid',
-            ), $atts));
-            $ret = '';
-            $fullteam = $this->get_all_team_members();
-            foreach($fullteam AS $team) {
-                $ret .= $this->team_display($team);
-            }
-            return '<div class="team-display-'.$type.'">'.$ret.'</div>';
+        function msdlab_team_member_special_loop_shortcode_handler($atts){
+            $args = shortcode_atts( array(
+            ), $atts );
+            remove_filter('the_content','wpautop',12);
+            return $this->msdlab_team_member_special($args);
         }
-
-        function team_display($team,$attr = array()){
-            global $post,$team_info,$contact_info;
-            extract($attr);
-            $headshot = get_the_post_thumbnail($team->ID,'medium',array( 'class' => 'addborder' ));
-            $team_info->the_meta($team->ID);
-            $jobtitle = $team_info->get_the_value('jobtitle');
-            if($jobtitle != ''){
-                $jobtitle = '<h4 class="jobtitle">'.$jobtitle.'</h4>';
-            }
-            $team_contact_info = '';
-            $contact_info->the_meta($team->ID);
-            $contact_info->the_field('phone');
-            if($contact_info->get_the_value() != ''){
-                $team_contact_info .= '<li class="phone"><i class="fa fa-phone"></i> '.msd_str_fmt($contact_info->get_the_value(),'phone').'</li>';
-            }
-
-            $contact_info->the_field('mobile');
-            if($contact_info->get_the_value() != ''){
-                $team_contact_info .= '<li class="mobile"><i class="fa fa-mobile-phone"></i> '.msd_str_fmt($contact_info->get_the_value(),'phone').'</li>';
-            }
-
-            $contact_info->the_field('bio_sheet');
-            if($contact_info->get_the_value() != ''){
-                $team_contact_info .= '<li class="vcard"><a href="'.$contact_info->get_the_value().'"><i class="fa fa-download-alt"></i> Download Bio</a></li>';
-            }
-
-            $contact_info->the_field('email');
-            if($contact_info->get_the_value() != ''){
-                //$team_contact_info .= '<li class="email"><a href="mailto:'.antispambot($contact_info->get_the_value()).'" class="email"><i class="fa fa-envelope"></i>'.antispambot($contact_info->get_the_value()).'</a></li>';
-                $team_contact_info .= '<li class="email"><a href="mailto:'.antispambot($contact_info->get_the_value()).'" class="email"><i class="fa fa-envelope"></i></a></li>';
-            }
-
-            $social = array();
-            $social_metas = array(
-                'twitter' => array(
-                    'class' => 'fa fa-twitter',
-                    'text'  => 'Twitter',
-                ),
-                'linked_in' => array(
-                    'class' => 'fa fa-linkedin',
-                    'text'  => 'Connect',
-                ),
-                'facebook' => array(
-                    'class' => 'fa fa-facebook',
-                    'text'  => 'Friend',
-                ),
+        function msdlab_team_member_special($args){
+            global $post,$contact_info;
+            $origpost = $post;
+            $defaults = array(
+                'posts_per_page' => -1,
+                'post_type' => 'team_member',
+                'orderby' => 'meta_value',
+                'meta_key' => '_team_member__team_last_name',
+                'order' => ASC
             );
+            $args = array_merge($defaults,$args);
+            //set up result array
+            $results = array();
+            $results = get_posts($args);
+            //format result
+            $i = 0;
+            foreach($results AS $result){
+                $post = $result;
+                $i++;
+                //$ret .= $i .' '.$post->post_title.'<br />';
+                $titlearray = explode(" ",$post->post_title);
+                $firstname = $titlearray[0];
+                $firstname = (substr($firstname, -1) == 's')?$firstname."'":$firstname."'s";
+                $contact_info->the_meta($result->ID);
+                $ret[] = genesis_markup( array(
+                    'html5'   => '<article %s>',
+                    'xhtml'   => '<div class="team_member type-team_member status-publish has-post-thumbnail entry">',
+                    'context' => 'team_member',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<div class="wrap">',
+                    'xhtml' => '<div class="wrap">',
+                    'echo' => false,
+                ) );
 
-            foreach($social_metas AS $k=>$v){
-                $contact_info->the_field($k);
-                if($contact_info->get_the_value() != ''){
-                    $social[$k] = '<li class="'.$k.'"><a href="'.$contact_info->get_the_value().'" title="'.$v['text'].'"><i class="'.$v['class'].'"></i></a></li>';
+                $ret[] = genesis_markup( array(
+                    'html5' => '<main>',
+                    'xhtml' => '<div class="main">',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<header>',
+                    'xhtml' => '<div class="header">',
+                    'echo' => false,
+                ) );
+                $ret[] = get_the_post_thumbnail($result->ID,'team-headshot',array('itemprop'=>'image'));
+                $ret[] = '<h3 class="entry-title" itemprop="name">'.$post->post_title.'</h3>
+                            <h4 class="team-title" itemprop="jobTitle">'.$contact_info->get_the_value('_team_title').'</h4>';
+
+                $ret[] = genesis_markup( array(
+                    'html5' => '</header>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<content>',
+                    'xhtml' => '<div class="content">',
+                    'echo' => false,
+                ) );
+                $ret[] = msdlab_get_excerpt($post->ID,40,'');
+                $ret[] = genesis_markup( array(
+                    'html5' => '</content>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<footer>',
+                    'xhtml' => '<div class="footer">',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<aside>',
+                    'xhtml' => '<div class="aside">',
+                    'echo' => false,
+                ) );
+                $ret[] = '
+                                <ul>';
+                if($contact_info->get_the_value('_team_linked_in')){
+                    $ret[] = '<li class="linkedin"><a href="'.$contact_info->get_the_value('_team_linked_in').'" target="_linkedin"><span class="fa-stack fa-lg pull-right">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span></a></li>';
                 }
+                if($contact_info->get_the_value('_team_user_id')!=0){
+                    $ret[] = '<li class="insights-header"><a href="'.get_permalink($result->ID).'#insights"><span class="fa-stack fa-lg pull-left">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>'.$firstname.' Insights</a></li>';
+                }
+
+                $ret[] = '</ul>';
+
+                $ret[] = genesis_markup( array(
+                    'html5' => '</aside>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                if($contact_info->get_the_value('_team_position')=='true'){ $ret[] = '
+                           <a href="'.get_permalink($post->ID).'" class="readmore button">Read More ></a>';
+                }
+                $ret[] = genesis_markup( array(
+                    'html5' => '</footer>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '</main>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '</div>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '</article>',
+                    'xhtml' => '</div>',
+                    'context' => 'team_member',
+                    'echo' => false,
+                ) );
             }
-
-            $social_str = implode("\n",$social);
-
-            $teamstr[] = '
-            <div class="team '.$team->post_name.' row">
-                <div class="headshot col-md-2">
-                    '.$headshot.'
-                </div>
-                <div class="info col-md-8">
-                    <h3 class="name">'.$team->post_title.'</h3>
-                    '.$jobtitle;
-            $teamstr[] = '
-                    <ul class="team_member-contact-info">
-                    '.$team_contact_info.$social_str.'
-                    </ul>
-                        <div class="bio">'.$team->post_content.'</div>';
-            $teamstr[] = '
-                </div>
-            </div>';
-            return implode("\n",$teamstr);
+            //return
+            $post = $origpost;
+            return implode("\n",$ret);
         }
 
         function sort_by_lastname( $a, $b ) {
@@ -429,6 +480,21 @@ if (!class_exists('MSDTeamCPT')) {
 
         function print_shortcode_handler(){
             print $this->shortcode_handler(array());
+        }
+
+        /**
+         * Callback for dynamic Genesis 'genesis_attr_$context' filter.
+         *
+         * Add custom attributes for the custom filter.
+         *
+         * @param array $attributes The element attributes
+         * @return array $attributes The element attributes
+         */
+        function custom_add_team_member_attr( $attributes ){
+            $attributes['class'] .= 'col-xs-12 col-sm-6 col-md-4';
+            $attributes['itemtype']  = 'http://schema.org/Person';
+            // return the attributes
+            return $attributes;
         }
     } //End Class
 } //End if class exists statement
