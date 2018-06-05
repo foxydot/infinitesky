@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
 		$(this).children('label').before($(this).children('.ginput_container'));
 	});
 
-	$('.genesis-teaser').matchHeight();
+    $('.genesis-teaser').matchHeight();
+    $('.equalize').matchHeight();
 
 });

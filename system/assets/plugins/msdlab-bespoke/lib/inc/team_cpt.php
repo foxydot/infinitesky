@@ -39,6 +39,9 @@ if (!class_exists('MSDTeamCPT')) {
             add_shortcode('teammembers', array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
             add_shortcode('team-members', array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
             add_shortcode('team',array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
+
+            add_image_size('team-headshot',360,360, array('center','top'));
+
         }
 
 
@@ -365,7 +368,6 @@ if (!class_exists('MSDTeamCPT')) {
             foreach($results AS $result){
                 $post = $result;
                 $i++;
-                //$ret .= $i .' '.$post->post_title.'<br />';
                 $titlearray = explode(" ",$post->post_title);
                 $firstname = $titlearray[0];
                 $firstname = (substr($firstname, -1) == 's')?$firstname."'":$firstname."'s";
@@ -387,12 +389,13 @@ if (!class_exists('MSDTeamCPT')) {
                     'xhtml' => '<div class="main">',
                     'echo' => false,
                 ) );
+                $ret[] = get_the_post_thumbnail($result->ID,'team-headshot',array('itemprop'=>'image'));
+
                 $ret[] = genesis_markup( array(
                     'html5' => '<header>',
                     'xhtml' => '<div class="header">',
                     'echo' => false,
                 ) );
-                $ret[] = get_the_post_thumbnail($result->ID,'team-headshot',array('itemprop'=>'image'));
                 $ret[] = '<h3 class="entry-title" itemprop="name">'.$post->post_title.'</h3>
                             <h4 class="team-title" itemprop="jobTitle">'.$contact_info->get_the_value('_team_title').'</h4>';
 
@@ -417,33 +420,21 @@ if (!class_exists('MSDTeamCPT')) {
                     'xhtml' => '<div class="footer">',
                     'echo' => false,
                 ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '<aside>',
-                    'xhtml' => '<div class="aside">',
-                    'echo' => false,
-                ) );
                 $ret[] = '
                                 <ul>';
                 if($contact_info->get_the_value('_team_linked_in')){
-                    $ret[] = '<li class="linkedin"><a href="'.$contact_info->get_the_value('_team_linked_in').'" target="_linkedin"><span class="fa-stack fa-lg pull-right">
-          <i class="fa fa-square fa-stack-2x"></i>
-          <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-        </span></a></li>';
+                    $ret[] = '<li class="linkedin"><a href="'.$contact_info->get_the_value('_team_linked_in').'" target="_linkedin">
+          <i class="fa fa-linkedin"><span class="screen-reader-text">LinkedIn</span></i>
+        </a></li>';
                 }
                 if($contact_info->get_the_value('_team_user_id')!=0){
-                    $ret[] = '<li class="insights-header"><a href="'.get_permalink($result->ID).'#insights"><span class="fa-stack fa-lg pull-left">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-        </span>'.$firstname.' Insights</a></li>';
+                    $ret[] = '<li class="insights-header"><a href="'.get_permalink($result->ID).'#insights">
+          <i class="fa fa-rss"><span class="screen-reader-text">'.$firstname.' Insights</span></i>
+        </a></li>';
                 }
 
                 $ret[] = '</ul>';
 
-                $ret[] = genesis_markup( array(
-                    'html5' => '</aside>',
-                    'xhtml' => '</div>',
-                    'echo' => false,
-                ) );
                 if($contact_info->get_the_value('_team_position')=='true'){ $ret[] = '
                            <a href="'.get_permalink($post->ID).'" class="readmore button">Read More ></a>';
                 }
@@ -491,7 +482,7 @@ if (!class_exists('MSDTeamCPT')) {
          * @return array $attributes The element attributes
          */
         function custom_add_team_member_attr( $attributes ){
-            $attributes['class'] .= 'col-xs-12 col-sm-6 col-md-4';
+            $attributes['class'] .= ' equalize col-xs-12 col-sm-6 col-md-4';
             $attributes['itemtype']  = 'http://schema.org/Person';
             // return the attributes
             return $attributes;

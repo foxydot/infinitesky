@@ -72,15 +72,15 @@ article.type-post{
 
 ///TEMPLATES///
 
+.page-title-area {
+  background-image: url(../images/blue-sky1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;}
 
 //--DEFAULT--//
 .page-template-default {
-  .page-title-area {
-    background-image: url(../images/blue-sky1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;}
+  .page-title-area {}
   .site-inner {
-    background: $white;
     .content-sidebar-wrap {
       main.content {
       }
@@ -90,9 +90,11 @@ article.type-post{
 
 //--Secondary--//
 .page-template-template-secondary {
-  background-image: url(../images/blue-sky1.jpg);
   background-repeat: repeat-y;
   background-size: 100% auto;
+  .page-title-area {
+    background: none;
+  }
   .site-inner {
     .content-sidebar-wrap {
       main.content {
@@ -118,6 +120,61 @@ article.type-post{
           background: url(../images/content-left.svg) top right no-repeat;
           background-size: 100% auto;
           padding-right: 30%;
+        }
+      }
+    }
+  }
+}
+
+//--Team--//
+article.team_member{
+  margin-bottom: 2em;
+  >.wrap{
+    background: $ltgrey;
+    height: 100%;
+    position: relative;
+    main{
+      header{
+        padding: 1em;
+        .entry-title{
+          font-size: 2em;
+          margin: 0;
+        }
+        .team-title{
+          font-size: 1.6em;
+          font-weight: 700;
+          color: $orange;
+        }
+      }
+      content{
+        padding: 0 1em;
+        display: block;
+        margin-bottom: 8em;
+      }
+      footer{
+        position: absolute;
+        bottom:0;
+        padding: 1em 0;
+        width: 100%;
+        ul{
+          float:left;
+          margin: 0 0 0 1em;
+          li{
+            list-style: none outside none;
+            float: left;
+            a{
+              display: inline-block;
+              color: $dkgrey;
+              font-size: 2em;
+              padding: 0 0.25em;
+              &:hover{
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+        .readmore{
+          float:right;
         }
       }
     }
