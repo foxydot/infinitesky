@@ -79,6 +79,18 @@
     }
   }
   .section.bkg-white,.section.bkg-logo-right,.section.bkg-logo-left {
+    .container {
+      position: relative;
+      a.btn, a.button {
+        position: absolute;
+        bottom: 1em;
+        right: 0;
+        text-decoration: none;
+        &:after {
+          content: ' >';
+        }
+      }
+    }
   }
     .section.bkg-dkgrey{
     &.full-width-bkg {
