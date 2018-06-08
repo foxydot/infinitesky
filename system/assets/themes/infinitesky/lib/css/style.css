@@ -1658,9 +1658,13 @@ p.entry-meta {
   .sectioned-page-wrapper .section.left-align .section-body {
     text-align: left; }
   .sectioned-page-wrapper .section.border-top.full-width-bkg {
-    border-top: 4px solid #ff6600; }
+    border-top: 4px solid #ff6600;
+    padding-top: 1em;
+    margin-top: 2em; }
   .sectioned-page-wrapper .section.border-top .section-body .container {
-    border-top: 4px solid #ff6600; }
+    border-top: 4px solid #ff6600;
+    padding-top: 1em;
+    margin-top: 2em; }
   .sectioned-page-wrapper .section.border-bottom.full-width-bkg {
     border-bottom: 4px solid #ff6600;
     padding-bottom: 1em;
@@ -1799,6 +1803,49 @@ article.team_member {
               opacity: 0.8; }
       article.team_member > .wrap main footer .readmore {
         float: right; }
+
+.rollbox-set .rollbox {
+  text-align: center;
+  margin-bottom: 1em; }
+  .rollbox-set .rollbox .rollbox-wrapper {
+    background-color: #D1D3D4; }
+    .rollbox-set .rollbox .rollbox-wrapper img.icon {
+      max-width: 50%;
+      display: block;
+      margin: 0 auto; }
+    .rollbox-set .rollbox .rollbox-wrapper a {
+      display: block;
+      padding: 1em;
+      color: #333;
+      text-decoration: none !important; }
+    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on a {
+      color: #FFF; }
+    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on img.icon {
+      display: none; }
+
+@media only screen and (min-width: 1024px) {
+  .rollbox-set .rollbox .rollbox-wrapper {
+    position: relative;
+    min-height: 14em; }
+    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on {
+      color: #FFF;
+      background: #ff6600;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      overflow: hidden;
+      -webkit-transition: all 1s ease-in-out;
+      transition: all 1s ease-in-out; }
+      .rollbox-set .rollbox .rollbox-wrapper .rollbox-on .rollbox-wrapper-on {
+        padding: 1em; }
+        .rollbox-set .rollbox .rollbox-wrapper .rollbox-on .rollbox-wrapper-on img.icon {
+          display: block; }
+  .rollbox-set .rollbox:hover .rollbox-wrapper .rollbox-on {
+    height: 100%;
+    top: 0; } }
 
 @media only screen and (min-width: 768px) {
   .header-buffer {

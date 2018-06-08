@@ -47,16 +47,16 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             ), $atts ));
             switch($this->size){
                 case 4:
-                    $class = 'rollbox col-md-3 col-sm-6 col-xs-3';
+                    $class = 'rollbox col-md-3 col-sm-6 col-xs-12';
                     break;
                 case 3:
                 default:
-                    $class = 'rollbox col-md-4 col-sm-6 col-xs-3';
+                    $class = 'rollbox col-md-4 col-sm-6 col-xs-12';
                     break;
             }
-            $content = preg_replace('/\[on\]/','<div class="rollbox-on"><i class="icon icon-'.$icon.'"><span class="screen-reader-text">'.$icon.' icon</span></i>',$content);
-            $content = preg_replace('/\[\/on\]/','</div>',$content);
-            $content = '<div class="'.$class.'"><div class="rollbox_wrapper"><a href="'.$url.'"><i class="icon icon-'.$icon.'"><span class="screen-reader-text">'.$icon.' icon</span></i>'.$content.'</a></div></div>';
+            $content = preg_replace('/\[on\]/','<div class="rollbox-on"><div class="rollbox-wrapper-on"><img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />',$content);
+            $content = preg_replace('/\[\/on\]/','</div></div>',$content);
+            $content = '<div class="'.$class.'"><div class="rollbox-wrapper"><a href="'.$url.'"><img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />'.$content.'</a></div></div>';
             return $content;
         }
     }
