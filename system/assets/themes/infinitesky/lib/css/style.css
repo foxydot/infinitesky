@@ -1649,7 +1649,9 @@ p.entry-meta {
       display: inline-block; }
       .sectioned-page-wrapper .section ul li {
         text-align: left;
-        margin-bottom: 0.5em; }
+        margin-bottom: 0.5em;
+        text-indent: -1.5em;
+        margin-left: 1.5em; }
         .sectioned-page-wrapper .section ul li:before {
           margin-bottom: -0.25em;
           display: inline-block;
@@ -1898,7 +1900,7 @@ article.team_member {
   .header-buffer {
     min-height: 10em; }
   .page-title-area .texturize .gradient .container .entry-title {
-    max-width: 40%; }
+    max-width: 80%; }
   /* Accessible Menu
   --------------------------------------------- */
   .menu .menu-item:focus {
