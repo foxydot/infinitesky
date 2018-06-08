@@ -133,7 +133,7 @@ if (!class_exists('MSDTeamCPT')) {
                 'types' => array('location', 'team_member'), // added only for pages and to custom post type "events"
                 'context' => 'normal', // same as above, defaults to "normal"
                 'priority' => 'high', // same as above, defaults to "high"
-                'template' => WP_PLUGIN_DIR . '/' . plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php') . 'lib/template/contact-info.php',
+                'template' => plugin_dir_path(dirname(__FILE__)).'/template/contact-info.php',
                 'autosave' => TRUE,
                 'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
                 'prefix' => '_team_member_' // defaults to NULL
@@ -146,7 +146,7 @@ if (!class_exists('MSDTeamCPT')) {
                 'types' => array('team_member'),
                 'context' => 'normal',
                 'priority' => 'high',
-                'template' => WP_PLUGIN_DIR . '/' . plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php') . 'lib/template/additional-information.php',
+                'template' => plugin_dir_path(dirname(__FILE__)).'/template/additional-information.php',
                 'autosave' => TRUE,
                 'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
                 'prefix' => '_team_member_' // defaults to NULL
@@ -357,7 +357,7 @@ if (!class_exists('MSDTeamCPT')) {
                 'post_type' => 'team_member',
                 'orderby' => 'meta_value',
                 'meta_key' => '_team_member__team_last_name',
-                'order' => ASC
+                'order' => 'ASC'
             );
             $args = array_merge($defaults,$args);
             //set up result array
