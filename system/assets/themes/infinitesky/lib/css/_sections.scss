@@ -181,6 +181,22 @@
        }
      }
    }
+  .section.no-h-padding{
+    .section-body{
+      .container{
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+  .section.no-v-padding{
+    .section-body{
+      .container{
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
   .section.section-space{
     min-height: 12em;
   }

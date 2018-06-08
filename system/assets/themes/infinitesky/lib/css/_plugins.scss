@@ -67,42 +67,88 @@
 --------------------------------------------- */
 .site-inner {
   .gform_wrapper {
-    margin: 0 -1em 0 0;
     max-width: 101%;
+    background-color: $ltgrey;
+    padding: 3em 5em;
+    border-top: 4px solid $orange;
+    position: relative;
     .gform_heading {
+      .gform_title{
+        display: inline;
+        font-weight: 700;
+        font-size: 1.6em;
+      }
       .gform_description {
-        color: $blue;
-        font-weight: 600;
-        a{
-          color: $blue;
-        }
+        display: inline;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 1.6em;
       }
     }
     .gform_body {
-      li.gfield {
-        background: $white;
-        margin-bottom: 0.5em;
-        label {
-          padding: 0 1em;
-          font-size: 0.7em;
-          font-weight: 400;
-        }
-        .ginput_container {
-          input, textarea {
-            border: 0;
-            background: $white;
+      ul.gform_fields {
+        li.gfield {
+          margin-bottom: 0.5em;
+          label {
+            display: none;
           }
-        }
-        &.white {
-          background: none;
+          .ginput_container {
+            font-size: 1.2em;
+            ul.gfield_checkbox{
+              li{
+                display: none;
+                input[type="checkbox"]{
+                  appearance: none;
+                  background-color: $white;
+                  border: 0px solid $white;
+                  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+                  padding: 12px;
+                  display: inline-block;
+                  position: relative;
+                  &:checked:after {
+                    @include fontawesome();
+                    content: '\f00c';
+                    font-size: 26px;
+                    position: absolute;
+                    color: $orange;
+                    top:0;
+                    left: 0;
+                  }
+                }
+                label{
+                  display: inline-block;
+                  margin-left: 4em;
+                  padding: 0.25em;
+                  width: 90%;
+                  font-weight: 400;
+                }
+                &:hover{
+                  label{
+                    background: $white;
+                  }
+                }
+              }
+            }
+            input[type="text"]{
+              position: absolute;
+              bottom: 1.3em;
+              right: 10em;
+            }
+          }
         }
       }
     }
     .gform_footer {
+      position: absolute;
+      bottom: 1em;
+      right:0;
+      text-align: right;
+      display: inline-block;
+      width: auto;
       input.button,
       input[type=submit] {
-        width: 50%;
-        display: block;
+        display: inline-block;
+        margin: 0 !important;
       }
     }
   }
