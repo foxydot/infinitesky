@@ -34,7 +34,7 @@ include_once( get_stylesheet_directory() . '/lib/inc/custom-class-support.php' )
 new MSDLab_Custom_Class_Support();
 
 // Child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'FionasWorld' );
+define( 'CHILD_THEME_NAME', 'InfinitieSky' );
 define( 'CHILD_THEME_URL', 'http://msdlab.com/' );
 define( 'CHILD_THEME_VERSION', '2.3.0' );
 

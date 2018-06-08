@@ -67,7 +67,7 @@ class MSDSectionedPage{
         }
         $subtitle = $section['content-area-subtitle'] !=''?apply_filters('msdlab_sectioned_page_output_subtitle','<h4 class="section-subtitle">'.$section['content-area-subtitle'].'</h4>'):'';
         $wrapped_title = trim($title) != ''?apply_filters('msdlab_sectioned_page_output_title','<div class="section-title">
-            <h3 class="container wrap">
+            <h3>
                 '.$title.'
             </h3>
             '.$subtitle.'                
@@ -88,13 +88,12 @@ class MSDSectionedPage{
         //think about filtering the classes here
         $ret = '
         <div id="'.$slug.'" class="'.implode(' ', $classes).'"'.$background.'>
-        
-                '.$wrapped_title.'
             <div class="section-body">
                 <div class="container">
+                    '.$wrapped_title.'
                     '.$featured_image.'
                     '.$header.'
-                    <div class="row column-holder">'.$content.'</div>
+                    <div>'.$content.'</div>
                     '.$footer.'
                 </div>
             </div>
@@ -177,10 +176,9 @@ class MSDSectionedPage{
         //think about filtering the classes here
         $ret = '
         <div id="'.$slug.'" class="'.implode(' ', $classes).'"'.$background.'>
-        
-                '.$wrapped_title.'
             <div class="section-body">
                 <div class="container">
+                    '.$wrapped_title.'
                     '.$featured_image.'
                     '.$header.'
                     '.$central_content.'

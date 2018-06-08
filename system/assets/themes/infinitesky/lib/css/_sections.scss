@@ -11,14 +11,24 @@
       margin-bottom: 0;
     }
     .section-title{
-      margin-bottom: 4em;
+      margin: 0;
       h3 {
-        text-transform: uppercase;
+        margin-bottom: 0;
+        font-size: 1.8em;
+        font-weight: 600;
+        &:after{
+          margin: 0.5em 0 1em;
+          display: block;
+          height: 4px;
+          max-width: 20%;
+          background-color: $orange;
+          content: '';
+        }
       }
     }
     .section-body{
-      .wrap{
-        padding: 2rem 0;
+      .container{
+        padding: 3em 5em;
         img{}
         a,a:link,a:visited{
           text-decoration: underline;
@@ -35,9 +45,14 @@
         text-align: left;
         margin-bottom: 0.5em;
         &:before{
-          @include fontawesome;
-          content: '\f058';
-          color: $orange;
+          margin-bottom: -0.25em;
+          display: inline-block;
+          background-image: url(../images/orange-bug.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 1em;
+          width: 1em;
+          content: '';
           margin-right: 0.5em;
         }
       }
@@ -57,13 +72,15 @@
     &.full-width-bkg {
       background-color: $white;
     }
-    .section-body{
+    .section-title,.section-body{
       .container{
         background-color: $white;
       }
     }
   }
-  .section.bkg-dkgrey{
+  .section.bkg-white,.section.bkg-logo-right,.section.bkg-logo-left {
+  }
+    .section.bkg-dkgrey{
     &.full-width-bkg {
       background-color: $dkgrey;
     }
