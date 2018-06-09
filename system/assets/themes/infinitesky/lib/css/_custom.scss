@@ -89,7 +89,7 @@ article.type-post{
 }
 
 //--Secondary--//
-.page-template-template-secondary {
+.home,.page-template-template-secondary {
   background-image: url(../images/blue-sky1.jpg);
   background-repeat: repeat-y;
   background-size: 100% auto;
@@ -110,6 +110,7 @@ article.type-post{
           background: url(../images/content-right.svg) top left no-repeat;
           background-size: 100% auto;
           padding-left: 30%;
+          padding-bottom: 0;
         }
       }
     }
@@ -121,6 +122,7 @@ article.type-post{
           background: url(../images/content-left.svg) top right no-repeat;
           background-size: 100% auto;
           padding-right: 30%;
+          padding-bottom: 0;
         }
       }
     }

@@ -140,7 +140,7 @@ class MSDSectionedPage{
         }
         $subtitle = $section['content-area-subtitle'] !=''?apply_filters('msdlab_sectioned_page_output_subtitle','<h4 class="section-subtitle wrap container">'.$section['content-area-subtitle'].'</h4>'):'';
         $wrapped_title = trim($title) != ''?apply_filters('msdlab_sectioned_page_output_title','<div class="section-title">
-            <h3 class="container">
+            <h3>
                 '.$title.'
             </h3>
             '.$subtitle.'                

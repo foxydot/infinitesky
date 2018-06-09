@@ -908,7 +908,8 @@ img.alignright,
     .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container {
       font-size: 1.2em; }
       .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li {
-        display: none; }
+        display: none;
+        text-indent: 0 !important; }
         .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li input[type="checkbox"] {
           -webkit-appearance: none;
              -moz-appearance: none;
@@ -1698,6 +1699,18 @@ p.entry-meta {
     background-color: #0099ff; }
   .sectioned-page-wrapper .section.bkg-blue .section-body .container {
     background-color: #0099ff; }
+  .sectioned-page-wrapper .section.bkg-dna.full-width-bkg {
+    background-image: url(../images/dna.svg);
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: auto 80%; }
+    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-body .container {
+      background: none; }
+  .sectioned-page-wrapper .section.bkg-dna .section-body .container {
+    background-image: url(../images/dna.svg);
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: auto 80%; }
   .sectioned-page-wrapper .section.left-align .section-body {
     text-align: left; }
   .sectioned-page-wrapper .section.border-top.full-width-bkg {
@@ -1796,22 +1809,24 @@ article.type-post .entry-header {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.page-template-template-secondary {
+.home, .page-template-template-secondary {
   background-image: url(../images/blue-sky1.jpg);
   background-repeat: repeat-y;
   background-size: 100% auto; }
-  .page-template-template-secondary .page-title-area {
+  .home .page-title-area, .page-template-template-secondary .page-title-area {
     background: none; }
-  .page-template-template-secondary .site-inner .content-sidebar-wrap main.content {
+  .home .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary .site-inner .content-sidebar-wrap main.content {
     padding: 2em; }
-  .page-template-template-secondary.content-right .site-inner .content-sidebar-wrap main.content {
+  .home.content-right .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.content-right .site-inner .content-sidebar-wrap main.content {
     background: url(../images/content-right.svg) top left no-repeat;
     background-size: 100% auto;
-    padding-left: 30%; }
-  .page-template-template-secondary.content-left .site-inner .content-sidebar-wrap main.content {
+    padding-left: 30%;
+    padding-bottom: 0; }
+  .home.content-left .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.content-left .site-inner .content-sidebar-wrap main.content {
     background: url(../images/content-left.svg) top right no-repeat;
     background-size: 100% auto;
-    padding-right: 30%; }
+    padding-right: 30%;
+    padding-bottom: 0; }
 
 article.team_member {
   margin-bottom: 2em; }

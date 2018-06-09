@@ -134,6 +134,27 @@
       }
     }
   }
+  .section.bkg-dna{
+    &.full-width-bkg {
+      background-image: url(../images/dna.svg);
+      background-position: center center;
+      background-repeat: repeat-x;
+      background-size: auto 80%;
+      .section-body{
+        .container{
+          background: none;
+        }
+      }
+    }
+    .section-body{
+      .container{
+        background-image: url(../images/dna.svg);
+        background-position: center center;
+        background-repeat: repeat-x;
+        background-size: auto 80%;
+      }
+    }
+  }
   .section.left-align{
     .section-body{
       text-align: left;

@@ -97,6 +97,7 @@
             ul.gfield_checkbox{
               li{
                 display: none;
+                text-indent: 0 !important;
                 input[type="checkbox"]{
                   appearance: none;
                   background-color: $white;
