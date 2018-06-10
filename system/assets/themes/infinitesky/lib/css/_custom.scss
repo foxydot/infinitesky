@@ -94,7 +94,17 @@ article.type-post{
   background-repeat: repeat-y;
   background-size: 100% auto;
   .page-title-area {
-    background: none;
+    background-image: none;
+    .texturize {
+      .gradient {
+        .container {
+          padding-right: 20%;
+          background-repeat: no-repeat;
+          background-position: right center;
+          background-size: 15% auto;
+        }
+      }
+    }
   }
   .site-inner {
     .content-sidebar-wrap {
@@ -125,6 +135,16 @@ article.type-post{
           padding-bottom: 0;
         }
       }
+    }
+  }
+  &.transform{
+    .page-title-area .texturize .gradient .container{
+      background-image: url(../images/icon_core-values-wht.svg);
+    }
+  }
+  &.operate{
+    .page-title-area .texturize .gradient .container{
+      background-image: url(../images/icon_operational-excellence-white.svg);
     }
   }
 }
@@ -163,8 +183,14 @@ article.team_member{
           float:left;
           margin: 0 0 0 1em;
           li{
+            text-indent: 0;
             list-style: none outside none;
-            float: left;
+            display: inline-block;
+            margin: 0;
+            &:before{
+              display: none;
+              background-image: none;
+            }
             a{
               display: inline-block;
               color: $dkgrey;

@@ -1814,7 +1814,12 @@ article.type-post .entry-header {
   background-repeat: repeat-y;
   background-size: 100% auto; }
   .home .page-title-area, .page-template-template-secondary .page-title-area {
-    background: none; }
+    background-image: none; }
+    .home .page-title-area .texturize .gradient .container, .page-template-template-secondary .page-title-area .texturize .gradient .container {
+      padding-right: 20%;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 15% auto; }
   .home .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary .site-inner .content-sidebar-wrap main.content {
     padding: 2em; }
   .home.content-right .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.content-right .site-inner .content-sidebar-wrap main.content {
@@ -1827,6 +1832,10 @@ article.type-post .entry-header {
     background-size: 100% auto;
     padding-right: 30%;
     padding-bottom: 0; }
+  .home.transform .page-title-area .texturize .gradient .container, .page-template-template-secondary.transform .page-title-area .texturize .gradient .container {
+    background-image: url(../images/icon_core-values-wht.svg); }
+  .home.operate .page-title-area .texturize .gradient .container, .page-template-template-secondary.operate .page-title-area .texturize .gradient .container {
+    background-image: url(../images/icon_operational-excellence-white.svg); }
 
 article.team_member {
   margin-bottom: 2em; }
@@ -1856,8 +1865,13 @@ article.team_member {
         float: left;
         margin: 0 0 0 1em; }
         article.team_member > .wrap main footer ul li {
+          text-indent: 0;
           list-style: none outside none;
-          float: left; }
+          display: inline-block;
+          margin: 0; }
+          article.team_member > .wrap main footer ul li:before {
+            display: none;
+            background-image: none; }
           article.team_member > .wrap main footer ul li a {
             display: inline-block;
             color: #333;
