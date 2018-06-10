@@ -1,11 +1,122 @@
 @import "bootstrap-overrides.scss";
 @import "mixins.scss";
 
+.page-title-area{
+  margin-top:3em;
+  .texturize{
+    .gradient{
+      .container{
+        background-color: transparent;
+        background: url(../images/content-left.svg) top right no-repeat;
+        background-size: 100% auto;
+        padding: 4em 35% 4em 5em;
+        h1.entry-title{
+          color: $medgrey;
+          line-height: 1.2;
+          margin-bottom: 0.3em;
+          position: relative;
+          &:before{
+            content: '';
+            display: inline-block;
+            height: 0.5em;
+            width: 0.75em;
+            background-color: $orange;
+            position: absolute;
+            left: -1em;
+            top: 0.5em;
+          }
+        }
+        h2.entry-subtitle{
+          color: $orange;
+          font-weight: 700;
+          font-size: 4.2em;
+        }
+      }
+    }
+  }
+}
+.content-sidebar-wrap{display: none;}
+.sectioned-page-wrapper{
+  .section{
+    .section-body {
+      .container {
+        .section-content{
+          ul{
+            width: auto;
+            margin: 0 30%;
+          }
+        }
+      }
+    }
+    &.section-transform-and-operate{
+      .section-body{
+        .container{
+          padding: 1em 0 2em 0;
+          .row{
+            .section-content{
+              border-top: 4px solid $orange;
+              background-color: rgba($blue,0.8);
+              color: $white;
+              margin: 0 1em;
+              padding: 1.5em 7em 4em 1.5em;
+              background-position: bottom right;
+              background-repeat: no-repeat;
+              background-size: 20% auto;
+              h2{
+                font-weight: 700;
+                position: relative;
+              }
+              &.column-1{
+                background-image: url(../images/icon_core-values-wht.svg);
+                h2:after{
+                  content: '\f0a9';
+                  @include fontawesome;
+                  position: absolute;
+                  bottom: 0;
+                  right: -2em;
+                }
+              }
+              &.column-2{
+                background-color: rgba($medgrey,0.8);
+                background-image: url(../images/icon_operate.svg);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.section-where-we-focus{
+      .section-body {
+        .container {
+          background-image: url(../images/icon_focus.svg);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 15% auto;
+          .section-title h3:after{
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+}
 
 
 @media only screen and (min-width: 768px) {
-
+  .sectioned-page-wrapper{
+    .section.section-transform-and-operate{
+      .section-body{
+        .container{
+          .row{
+            .section-content{
+              width: calc(50% - 2em);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 992px) {
 }

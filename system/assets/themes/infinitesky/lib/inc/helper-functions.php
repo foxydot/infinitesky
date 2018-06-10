@@ -129,8 +129,7 @@ function msdlab_do_chapter_title(){
 }
 
 function msdlab_do_post_title(){
-    if(is_front_page()){
-    } elseif(is_home() || (is_single() && is_cpt('post'))) {
+    if(is_home() || (is_single() && is_cpt('post'))) {
         $blog_home = get_post(get_option( 'page_for_posts' ));
         $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
         if ( 0 === mb_strlen( $title ) ) {
