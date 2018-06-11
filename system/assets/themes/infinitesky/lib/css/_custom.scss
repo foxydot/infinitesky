@@ -210,6 +210,39 @@ article.team_member{
   }
 }
 
+//Solutions
+
+.sectioned-page-wrapper{
+  .section{
+    &.section-what-how{
+      .section-content {
+        background-image: url(../images/icon_focus.svg);
+        background-position: top left;
+        background-size: 5em auto;
+        background-repeat: no-repeat;
+        padding-left: 6em
+      }
+    }
+    &.section-ready-to-transform,&.section-ready-to-operate{
+      .container {
+        background-position: 0.5em 0.5em;
+        background-size: 4.25em auto;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &.section-ready-to-transform .container{
+      background-image: url(../images/icon_focus.svg);
+    }
+    &.section-ready-to-operate .container{
+      background-image: url(../images/icon_maximize-DMP.svg);
+      h2{
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 .rollbox-set{
   .rollbox{
     text-align: center;

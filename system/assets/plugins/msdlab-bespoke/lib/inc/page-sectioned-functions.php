@@ -93,7 +93,7 @@ class MSDSectionedPage{
                     '.$wrapped_title.'
                     '.$featured_image.'
                     '.$header.'
-                    <div>'.$content.'</div>
+                    <div class="section-content">'.$content.'</div>
                     '.$footer.'
                 </div>
             </div>

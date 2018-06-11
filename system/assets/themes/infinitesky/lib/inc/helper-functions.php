@@ -378,3 +378,16 @@ function sk_excerpts_search_page() {
 function sk_show_excerpts() {
     return 'excerpts';
 }
+
+add_shortcode('icon','msdlab_icon_sc_callback');
+function msdlab_icon_sc_callback($atts){
+    extract(shortcode_atts( array(
+        'img' => false,
+        'classes' => '',
+    ), $atts ));
+    if(!$img){return false;}
+    $img_url = get_stylesheet_directory_uri().'/lib/images/icon_'.$img.'.svg';
+    $classes .= key_exists('clear',$atts)?' clear':'';
+    $ret = '<div class="icon '.$classes.'" style="background-image:url('.$img_url.')"><span class="screen-reader-text">'.$img.'</span></div>';
+    return $ret;
+}

@@ -19,19 +19,19 @@
 /* Neutrals */
 /* Default Colors */
 /* Social Colors */
-.page-title-area {
+.home .page-title-area {
   margin-top: 3em; }
-  .page-title-area .texturize .gradient .container {
+  .home .page-title-area .texturize .gradient .container {
     background-color: transparent;
     background: url(../images/content-left.svg) top right no-repeat;
     background-size: 100% auto;
     padding: 4em 35% 4em 5em; }
-    .page-title-area .texturize .gradient .container h1.entry-title {
+    .home .page-title-area .texturize .gradient .container h1.entry-title {
       color: #666;
       line-height: 1.2;
       margin-bottom: 0.3em;
       position: relative; }
-      .page-title-area .texturize .gradient .container h1.entry-title:before {
+      .home .page-title-area .texturize .gradient .container h1.entry-title:before {
         content: '';
         display: inline-block;
         height: 0.5em;
@@ -40,21 +40,21 @@
         position: absolute;
         left: -1em;
         top: 0.5em; }
-    .page-title-area .texturize .gradient .container h2.entry-subtitle {
+    .home .page-title-area .texturize .gradient .container h2.entry-subtitle {
       color: #ff6600;
       font-weight: 700;
       font-size: 4.2em; }
 
-.content-sidebar-wrap {
+.home .content-sidebar-wrap {
   display: none; }
 
-.sectioned-page-wrapper .section .section-body .container .section-content ul {
+.home .sectioned-page-wrapper .section .section-body .container .section-content ul {
   width: auto;
   margin: 0 30%; }
 
-.sectioned-page-wrapper .section.section-transform-and-operate .section-body .container {
+.home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container {
   padding: 1em 0 2em 0; }
-  .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
+  .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
     border-top: 4px solid #ff6600;
     background-color: rgba(0, 153, 255, 0.8);
     color: #FFF;
@@ -63,27 +63,27 @@
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 20% auto; }
-    .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content h2 {
+    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content h2 {
       font-weight: 700;
       position: relative; }
-    .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 {
+    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 {
       background-image: url(../images/icon_core-values-wht.svg); }
-      .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 h2:after {
+      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 h2:after {
         content: '\f0a9';
         font-family: FontAwesome;
         position: absolute;
         bottom: 0;
         right: -2em; }
-    .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 {
+    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 {
       background-color: rgba(102, 102, 102, 0.8);
       background-image: url(../images/icon_operate.svg); }
 
-.sectioned-page-wrapper .section.section-where-we-focus .section-body .container {
+.home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container {
   background-image: url(../images/icon_focus.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 15% auto; }
-  .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-title h3:after {
+  .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-title h3:after {
     height: 0; }
 
 @media only screen and (min-width: 768px) {
