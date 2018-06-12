@@ -1824,7 +1824,7 @@ article.type-post .entry-header {
       background-position: right center;
       background-size: 15% auto; }
   .home .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary .site-inner .content-sidebar-wrap main.content {
-    padding: 2em; }
+    padding: 3em 5em; }
   .home.content-right .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.content-right .site-inner .content-sidebar-wrap main.content {
     background: url(../images/content-right.svg) top left no-repeat;
     background-size: 100% auto;
@@ -1905,24 +1905,69 @@ article.team_member {
   .sectioned-page-wrapper .section.section-ready-to-operate .container h2 {
     font-weight: 700; }
 
+.sectioned-page-wrapper .section ul li.icon:before {
+  height: 2em;
+  width: 2em; }
+
+.sectioned-page-wrapper .section ul li.icon.icon_media:before {
+  background-image: url(../images/icon_media.svg); }
+
+.sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
+  background-image: url(../images/icon_entertainment.svg); }
+
+.sectioned-page-wrapper .section ul li.icon.icon_television:before {
+  background-image: url(../images/icon_television.svg); }
+
+.sectioned-page-wrapper .section ul li.icon.icon_business-mag:before {
+  background-image: url(../images/icon_business-mag.svg); }
+
+.sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
+  background-image: url(../images/icon_interactive.svg); }
+
+.sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
+  background-image: url(../images/icon_newspaper.svg); }
+
+.sectioned-page-wrapper .section ul li.icon.icon_global-entertainment:before {
+  background-image: url(../images/icon_global-entertainment.svg); }
+
 .rollbox-set .rollbox {
   text-align: center;
   margin-bottom: 1em; }
   .rollbox-set .rollbox .rollbox-wrapper {
-    background-color: #D1D3D4; }
+    background-color: #D1D3D4;
+    padding: 1em; }
     .rollbox-set .rollbox .rollbox-wrapper img.icon {
       max-width: 50%;
       display: block;
       margin: 0 auto; }
     .rollbox-set .rollbox .rollbox-wrapper a {
       display: block;
-      padding: 1em;
       color: #333;
       text-decoration: none !important; }
+    .rollbox-set .rollbox .rollbox-wrapper h2 {
+      color: #ff6600;
+      font-weight: 800;
+      margin-bottom: 0;
+      font-size: 3em; }
+    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on .rollbox-wrapper-on {
+      padding: 1em; }
     .rollbox-set .rollbox .rollbox-wrapper .rollbox-on a {
       color: #FFF; }
     .rollbox-set .rollbox .rollbox-wrapper .rollbox-on img.icon {
       display: none; }
+
+.page-template-template-secondary.content-left.media-publishing .site-inner .content-sidebar-wrap main.content {
+  padding-right: 39%;
+  min-height: 18.5em; }
+
+.page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-what-we-deliver .section-title h3:after {
+  display: none; }
+
+.page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-ready-to-advance .container {
+  background-position: 0.5em 0.5em;
+  background-size: 4.25em auto;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon_maximize-DMP.svg); }
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {

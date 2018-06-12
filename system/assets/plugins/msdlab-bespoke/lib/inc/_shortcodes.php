@@ -42,8 +42,8 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
 
         function rollbox_shortcode_handler($atts,$content){
             extract(shortcode_atts( array(
-                'url' => '#',
-                'icon' => '',
+                'url' => false,
+                'icon' => false,
             ), $atts ));
             switch($this->size){
                 case 4:
@@ -56,7 +56,13 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             }
             $content = preg_replace('/\[on\]/','<div class="rollbox-on"><div class="rollbox-wrapper-on"><img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />',$content);
             $content = preg_replace('/\[\/on\]/','</div></div>',$content);
-            $content = '<div class="'.$class.'"><div class="rollbox-wrapper"><a href="'.$url.'"><img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />'.$content.'</a></div></div>';
+            if($icon){
+                $content = '<img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />'.$content;
+            }
+            if($url){
+                $content = '<a href="'.$url.'">'.$content.'</a>';
+            }
+            $content = '<div class="'.$class.'"><div class="rollbox-wrapper">'.$content.'</div></div>';
             return $content;
         }
     }

@@ -109,7 +109,7 @@ article.type-post{
   .site-inner {
     .content-sidebar-wrap {
       main.content {
-        padding: 2em;
+        padding: 3em 5em;
       }
     }
   }
@@ -240,6 +240,21 @@ article.team_member{
         font-weight: 700;
       }
     }
+    ul{
+      li.icon{
+        &:before{
+          height: 2em;
+          width: 2em;
+        }
+        &.icon_media:before{background-image:url(../images/icon_media.svg);}
+        &.icon_entertainment:before{background-image:url(../images/icon_entertainment.svg);}
+        &.icon_television:before{background-image:url(../images/icon_television.svg);}
+        &.icon_business-mag:before{background-image:url(../images/icon_business-mag.svg);}
+        &.icon_interactive:before{background-image:url(../images/icon_interactive.svg);}
+        &.icon_newspaper:before{background-image:url(../images/icon_newspaper.svg);}
+        &.icon_global-entertainment:before{background-image:url(../images/icon_global-entertainment.svg);}
+      }
+    }
   }
 }
 
@@ -249,6 +264,7 @@ article.team_member{
     margin-bottom: 1em;
     .rollbox-wrapper{
       background-color: $ltgrey;
+      padding: 1em;
       img.icon{
         max-width: 50%;
         display: block;
@@ -256,16 +272,53 @@ article.team_member{
       }
       a{
         display: block;
-        padding: 1em;
         color: $dkgrey;
         text-decoration: none !important;
       }
+      h2{
+        color: $orange;
+        font-weight: 800;
+        margin-bottom: 0;
+        font-size: 3em;
+      }
       .rollbox-on{
+        .rollbox-wrapper-on{
+          padding: 1em;
+        }
         a{
           color: $white;
         }
         img.icon{
           display: none;
+        }
+      }
+    }
+  }
+}
+
+// INDUSTRIES
+
+.page-template-template-secondary.content-left {
+  &.media-publishing {
+    .site-inner .content-sidebar-wrap main.content {
+      padding-right: 39%;
+      min-height: 18.5em;
+    }
+    .sectioned-page-wrapper{
+      .section.section-what-we-deliver{
+        .section-title h3:after{
+          display: none;
+        }
+        .column-holder .section-content{
+
+        }
+      }
+      .section.section-ready-to-advance{
+        .container{
+          background-position: 0.5em 0.5em;
+          background-size: 4.25em auto;
+          background-repeat: no-repeat;
+          background-image: url(../images/icon_maximize-DMP.svg);
         }
       }
     }
