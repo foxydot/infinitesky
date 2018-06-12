@@ -525,7 +525,9 @@ th:first-child {
 --------------------------------------------- */
 .site-inner {
   clear: both;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  z-index: 200;
+  position: relative; }
 
 /* ## Column Widths and Positions
 --------------------------------------------- */
@@ -1811,6 +1813,9 @@ article.type-post .entry-header {
   background-image: url(../images/blue-sky1.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
+
+.page-template-default .site-inner .content-sidebar-wrap main.content {
+  width: 100%; }
 
 .home, .page-template-template-secondary {
   background-image: url(../images/blue-sky1.jpg);

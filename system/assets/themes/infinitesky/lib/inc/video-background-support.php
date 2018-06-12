@@ -17,6 +17,7 @@ if (!class_exists('MSDLab_Video_Background_Support')) {
         }
 
         function do_video_background(){
+            if(is_admin()){return;}
             if(wp_is_mobile()){return;}
             if(!is_front_page() && get_section() != 'solutions'){return;}
             $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest.mp4';

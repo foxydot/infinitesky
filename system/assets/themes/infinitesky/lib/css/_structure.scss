@@ -7,6 +7,8 @@
 .site-inner {
   clear: both;
   word-wrap: break-word;
+  z-index: 200;
+  position: relative;
 }
 
 .landing-page .site-inner {
