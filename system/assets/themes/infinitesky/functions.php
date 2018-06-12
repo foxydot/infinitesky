@@ -33,6 +33,10 @@ include_once( get_stylesheet_directory() . '/lib/inc/genesis_blog_grid.php' );
 include_once( get_stylesheet_directory() . '/lib/inc/custom-class-support.php' );
 new MSDLab_Custom_Class_Support();
 
+require_once( get_stylesheet_directory() . '/lib/inc/video-background-support.php' );
+new MSDLab_Video_Background_Support(array());
+
+
 // Child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'InfinitieSky' );
 define( 'CHILD_THEME_URL', 'http://msdlab.com/' );
