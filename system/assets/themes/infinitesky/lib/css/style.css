@@ -1814,9 +1814,6 @@ article.type-post .entry-header {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.page-template-default .site-inner .content-sidebar-wrap main.content {
-  width: 100%; }
-
 .home, .page-template-template-secondary {
   background-image: url(../images/blue-sky1.jpg);
   background-repeat: repeat-y;
@@ -1834,12 +1831,14 @@ article.type-post .entry-header {
     background: url(../images/content-right.svg) top left no-repeat;
     background-size: 100% auto;
     padding-left: 30%;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    min-height: 18.5em; }
   .home.content-left .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.content-left .site-inner .content-sidebar-wrap main.content {
     background: url(../images/content-left.svg) top right no-repeat;
     background-size: 100% auto;
     padding-right: 30%;
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    min-height: 18.5em; }
   .home.transform .page-title-area .texturize .gradient .container, .page-template-template-secondary.transform .page-title-area .texturize .gradient .container {
     background-image: url(../images/icon_core-values-wht.svg); }
   .home.operate .page-title-area .texturize .gradient .container, .page-template-template-secondary.operate .page-title-area .texturize .gradient .container {
@@ -1983,6 +1982,12 @@ article.team_member {
     font-size: 2.5em;
     font-weight: 700; }
 
+.page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-awards .container {
+  background-position: 0.5em 3em;
+  background-size: 4.25em auto;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon_operational-excellence-color.svg); }
+
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {
     position: relative;
@@ -2069,7 +2074,7 @@ article.team_member {
         -ms-flex-order: 1;
             order: 1; }
   .full-width-content .content {
-    float: left;
+    float: none;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }

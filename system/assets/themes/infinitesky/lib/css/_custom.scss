@@ -121,6 +121,7 @@ article.type-post{
           background-size: 100% auto;
           padding-left: 30%;
           padding-bottom: 0;
+          min-height: 18.5em;
         }
       }
     }
@@ -133,6 +134,7 @@ article.type-post{
           background-size: 100% auto;
           padding-right: 30%;
           padding-bottom: 0;
+          min-height: 18.5em;
         }
       }
     }
@@ -335,6 +337,14 @@ article.team_member{
           }
         }
       }
+    }
+  }
+  .sectioned-page-wrapper{
+    .section.section-awards .container{
+      background-position: 0.5em 3em;
+      background-size: 4.25em auto;
+      background-repeat: no-repeat;
+      background-image: url(../images/icon_operational-excellence-color.svg);
     }
   }
 }
