@@ -319,6 +319,20 @@ article.team_member{
           background-size: 4.25em auto;
           background-repeat: no-repeat;
           background-image: url(../images/icon_maximize-DMP.svg);
+          .section-title{
+            h3{
+              font-size: 2.5em;
+              &:after{
+                display: none;
+              }
+            }
+            .section-subtitle{
+              color: $orange;
+              text-transform: none;
+              font-size: 2.5em;
+              font-weight: 700;
+            }
+          }
         }
       }
     }

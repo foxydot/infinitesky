@@ -1968,6 +1968,15 @@ article.team_member {
   background-size: 4.25em auto;
   background-repeat: no-repeat;
   background-image: url(../images/icon_maximize-DMP.svg); }
+  .page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-ready-to-advance .container .section-title h3 {
+    font-size: 2.5em; }
+    .page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-ready-to-advance .container .section-title h3:after {
+      display: none; }
+  .page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-ready-to-advance .container .section-title .section-subtitle {
+    color: #ff6600;
+    text-transform: none;
+    font-size: 2.5em;
+    font-weight: 700; }
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {
