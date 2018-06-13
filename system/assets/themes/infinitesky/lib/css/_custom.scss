@@ -340,11 +340,17 @@ article.team_member{
     }
   }
   .sectioned-page-wrapper{
-    .section.section-awards .container{
+    .section.section-awards{
+      margin-bottom: 0;
+      .container{
       background-position: 0.5em 3em;
       background-size: 4.25em auto;
       background-repeat: no-repeat;
       background-image: url(../images/icon_operational-excellence-color.svg);
+    }
+    }
+    .section.section-core-values{
+      margin-bottom: 3em;
     }
   }
 }

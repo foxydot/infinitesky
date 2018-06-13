@@ -1982,11 +1982,16 @@ article.team_member {
     font-size: 2.5em;
     font-weight: 700; }
 
-.page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-awards .container {
-  background-position: 0.5em 3em;
-  background-size: 4.25em auto;
-  background-repeat: no-repeat;
-  background-image: url(../images/icon_operational-excellence-color.svg); }
+.page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-awards {
+  margin-bottom: 0; }
+  .page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-awards .container {
+    background-position: 0.5em 3em;
+    background-size: 4.25em auto;
+    background-repeat: no-repeat;
+    background-image: url(../images/icon_operational-excellence-color.svg); }
+
+.page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-core-values {
+  margin-bottom: 3em; }
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {
