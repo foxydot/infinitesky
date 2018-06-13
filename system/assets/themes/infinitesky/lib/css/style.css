@@ -1646,8 +1646,12 @@ p.entry-meta {
           content: ''; }
     .sectioned-page-wrapper .section .section-body .container {
       padding: 3em 5em; }
-      .sectioned-page-wrapper .section .section-body .container a, .sectioned-page-wrapper .section .section-body .container a:link, .sectioned-page-wrapper .section .section-body .container a:visited {
+      .sectioned-page-wrapper .section .section-body .container .section-content img {
+        margin-bottom: 0; }
+      .sectioned-page-wrapper .section .section-body .container .section-content a, .sectioned-page-wrapper .section .section-body .container .section-content a:link, .sectioned-page-wrapper .section .section-body .container .section-content a:visited {
         text-decoration: underline; }
+      .sectioned-page-wrapper .section .section-body .container .section-content p.last-child {
+        margin-bottom: 0; }
     .sectioned-page-wrapper .section .section-body .section-footer-area {
       margin-top: 4em; }
     .sectioned-page-wrapper .section ul {
@@ -1744,7 +1748,9 @@ p.entry-meta {
             justify-content: center; }
     .sectioned-page-wrapper .section.column-border .column-holder .section-content:not(.last-child) {
       border-right: 1px solid #ff6600;
-      padding-right: 1em; }
+      padding-right: 3em; }
+    .sectioned-page-wrapper .section.column-border .column-holder .section-content:not(.first-child) {
+      padding-left: 3em; }
   .sectioned-page-wrapper .section.bkg-logo-right .section-body .container {
     background-color: transparent;
     background: url(../images/content-right.svg) top left no-repeat;
@@ -1780,13 +1786,18 @@ p.entry-meta {
       .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper {
         position: absolute;
         bottom: 1em;
-        width: 100%; }
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center; }
         .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper .btn {
           position: relative;
-          margin: 0 auto;
-          right: 3em;
-          left: 3em;
-          bottom: initial; }
+          bottom: initial;
+          right: initial; }
+      .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content.first-child .btn_wrapper {
+        left: -15px; }
+      .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content.last-child .btn_wrapper {
+        right: -15px; }
   .sectioned-page-wrapper .section.section-space {
     min-height: 12em; }
 

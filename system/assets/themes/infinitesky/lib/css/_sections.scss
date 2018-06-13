@@ -29,9 +29,16 @@
     .section-body{
       .container{
         padding: 3em 5em;
-        img{}
-        a,a:link,a:visited{
-          text-decoration: underline;
+        .section-content{
+          img{
+            margin-bottom: 0;
+          }
+          a,a:link,a:visited{
+            text-decoration: underline;
+          }
+          p.last-child{
+            margin-bottom:0;
+          }
         }
       }
       .section-footer-area{
@@ -187,7 +194,13 @@
     .column-holder {
       display: inline-flex;
       justify-content: center;
-      .section-content:not(.last-child){border-right: 1px solid $orange;padding-right: 1em;}
+      .section-content:not(.last-child){
+        border-right: 1px solid $orange;
+        padding-right: 3em;
+      }
+      .section-content:not(.first-child){
+        padding-left: 3em;
+      }
     }
   }
 
@@ -246,14 +259,21 @@
             .btn-wrapper{
               position: absolute;
               bottom: 1em;
+              left: 0;
+              right: 0;
               width: 100%;
+              text-align: center;
               .btn{
                 position: relative;
-                margin: 0 auto;
-                right: 3em;
-                left: 3em;
                 bottom: initial;
+                right: initial;
               }
+            }
+            &.first-child .btn_wrapper{
+              left: -15px;
+            }
+            &.last-child .btn_wrapper{
+              right: -15px;
             }
           }
         }
