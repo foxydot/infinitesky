@@ -186,6 +186,13 @@ article.type-post{
         }
       }
     }
+    &.section-hbd{
+      font-size: 1.4em;
+      h2{
+        color: $orange;
+        font-weight: 700;
+      }
+    }
   }
 }
 

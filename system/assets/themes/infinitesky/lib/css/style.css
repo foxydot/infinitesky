@@ -1734,9 +1734,16 @@ p.entry-meta {
     border-bottom: 4px solid #ff6600;
     padding-bottom: 1em;
     margin-bottom: 1em; }
-  .sectioned-page-wrapper .section.column-border .section-content:not(.last-child) {
-    border-right: 1px solid #ff6600;
-    padding-right: 1em; }
+  .sectioned-page-wrapper .section.column-border .column-holder {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .sectioned-page-wrapper .section.column-border .column-holder section-content:not(.last-child) {
+      border-right: 1px solid #ff6600;
+      padding-right: 1em; }
   .sectioned-page-wrapper .section.bkg-logo-right .section-body .container {
     background-color: transparent;
     background: url(../images/content-right.svg) top left no-repeat;
@@ -1753,21 +1760,21 @@ p.entry-meta {
   .sectioned-page-wrapper .section.no-v-padding .section-body .container {
     padding-top: 0;
     padding-bottom: 0; }
-  .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder {
+  .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder .section-content {
+    .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content {
       padding-bottom: 3em;
       position: relative; }
-      .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder .section-content .btn-wrapper {
+      .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper {
         position: absolute;
         bottom: 1em;
         width: 100%; }
-        .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper .btn, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder .section-content .btn-wrapper .btn {
+        .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper .btn {
           position: relative;
           margin: 0 auto;
           right: 3em;
@@ -1884,6 +1891,12 @@ article.type-post .entry-header {
     height: 0.25em;
     max-width: 10%;
     margin-top: 0; }
+
+.sectioned-page-wrapper .section.section-hbd {
+  font-size: 1.4em; }
+  .sectioned-page-wrapper .section.section-hbd h2 {
+    color: #ff6600;
+    font-weight: 700; }
 
 article.team_member {
   margin-bottom: 2em; }

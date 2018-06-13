@@ -182,7 +182,13 @@
       .container{
         border-bottom: 4px solid $orange;padding-bottom: 1em; margin-bottom: 1em;      }
     }}
-  .section.column-border .section-content:not(.last-child){border-right: 1px solid $orange;padding-right: 1em;}
+  .section.column-border {
+    .column-holder {
+      display: inline-flex;
+      justify-content: center;
+      section-content:not(.last-child){border-right: 1px solid $orange;padding-right: 1em;}
+    }
+  }
 
   .section.bkg-logo-right{
     .section-body{
@@ -220,7 +226,7 @@
       }
     }
   }
-  .section.align-buttons-bottom,.section.column-border{
+  .section.align-buttons-bottom{
     .section-body{
       .container{
         .column-holder{
