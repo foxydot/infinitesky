@@ -75,7 +75,9 @@ article.type-post{
 .page-title-area {
   background-image: url(../images/blue-sky1.jpg);
   background-repeat: no-repeat;
-  background-size: cover;}
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 //--DEFAULT--//
 .page-template-default{
@@ -127,8 +129,9 @@ article.type-post{
 //--Secondary--//
 .home,.page-template-template-secondary {
   background-image: url(../images/blue-sky1.jpg);
-  background-repeat: repeat-y;
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   .page-title-area {
     background-image: none;
     .texturize {
@@ -233,6 +236,32 @@ article.type-post{
       ul{
         column-count: 2;
         column-gap: 3em;
+      }
+    }
+  }
+}
+
+body.core-values{
+  iframe{
+    width: 100%;
+    height: auto;
+  }
+  .sectioned-page-wrapper {
+    .section {
+      .section-content{
+        h3 {
+          margin-bottom: 0;
+          font-size: 1.8em;
+          font-weight: 600;
+          &:after {
+            margin: 0.5em 0 1em;
+            display: block;
+            height: 4px;
+            max-width: 20%;
+            background-color: $orange;
+            content: '';
+          }
+        }
       }
     }
   }
