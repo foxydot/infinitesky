@@ -186,7 +186,7 @@
     .column-holder {
       display: inline-flex;
       justify-content: center;
-      section-content:not(.last-child){border-right: 1px solid $orange;padding-right: 1em;}
+      .section-content:not(.last-child){border-right: 1px solid $orange;padding-right: 1em;}
     }
   }
 

@@ -1741,7 +1741,7 @@ p.entry-meta {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .sectioned-page-wrapper .section.column-border .column-holder section-content:not(.last-child) {
+    .sectioned-page-wrapper .section.column-border .column-holder .section-content:not(.last-child) {
       border-right: 1px solid #ff6600;
       padding-right: 1em; }
   .sectioned-page-wrapper .section.bkg-logo-right .section-body .container {
