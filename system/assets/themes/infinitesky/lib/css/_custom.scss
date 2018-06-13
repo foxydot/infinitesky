@@ -80,6 +80,13 @@ article.type-post{
 //--DEFAULT--//
 .page-template-default{
   .page-title-area {}
+  .site-inner {
+    .content-sidebar-wrap {
+      main.content {
+        padding: 3em 5em;
+      }
+    }
+  }
   &.bkg-white {
     .site-inner {
       .content-sidebar-wrap {
