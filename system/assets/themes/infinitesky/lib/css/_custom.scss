@@ -151,6 +151,44 @@ article.type-post{
   }
 }
 
+//company
+
+.sectioned-page-wrapper {
+  .section {
+    &.section-locations{
+      .column-1{
+        h2{
+          color: $orange;
+          font-weight: 700;
+          font-size: 2.8em;
+        }
+      }
+      .column-2{
+        ul{
+          column-count: 2;
+          column-gap: 5em;
+          li::before{
+            display: none;
+          }
+        }
+      }
+    }
+    &.section-company-news{
+      .section-title{
+        h3{
+          font-size: 3.6em;
+          font-weight: 300;
+          &:after{
+            height: 0.25em;
+            max-width: 10%;
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 //--Team--//
 article.team_member{
   margin-bottom: 2em;
@@ -353,6 +391,15 @@ article.team_member{
       margin-bottom: 3em;
     }
   }
+}
+
+.icon-shortcode{
+  display: inline-block;
+  min-height: 4.5em;
+  min-width: 4.5em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (min-width: 1024px) {

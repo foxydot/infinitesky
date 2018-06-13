@@ -1753,6 +1753,26 @@ p.entry-meta {
   .sectioned-page-wrapper .section.no-v-padding .section-body .container {
     padding-top: 0;
     padding-bottom: 0; }
+  .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder .section-content {
+      padding-bottom: 3em;
+      position: relative; }
+      .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder .section-content .btn-wrapper {
+        position: absolute;
+        bottom: 1em;
+        width: 100%; }
+        .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper .btn, .sectioned-page-wrapper .section.column-border .section-body .container .column-holder .section-content .btn-wrapper .btn {
+          position: relative;
+          margin: 0 auto;
+          right: 3em;
+          left: 3em;
+          bottom: initial; }
   .sectioned-page-wrapper .section.section-space {
     min-height: 12em; }
 
@@ -1843,6 +1863,27 @@ article.type-post .entry-header {
     background-image: url(../images/icon_core-values-wht.svg); }
   .home.operate .page-title-area .texturize .gradient .container, .page-template-template-secondary.operate .page-title-area .texturize .gradient .container {
     background-image: url(../images/icon_operational-excellence-white.svg); }
+
+.sectioned-page-wrapper .section.section-locations .column-1 h2 {
+  color: #ff6600;
+  font-weight: 700;
+  font-size: 2.8em; }
+
+.sectioned-page-wrapper .section.section-locations .column-2 ul {
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 5em;
+          column-gap: 5em; }
+  .sectioned-page-wrapper .section.section-locations .column-2 ul li::before {
+    display: none; }
+
+.sectioned-page-wrapper .section.section-company-news .section-title h3 {
+  font-size: 3.6em;
+  font-weight: 300; }
+  .sectioned-page-wrapper .section.section-company-news .section-title h3:after {
+    height: 0.25em;
+    max-width: 10%;
+    margin-top: 0; }
 
 article.team_member {
   margin-bottom: 2em; }
@@ -1992,6 +2033,14 @@ article.team_member {
 
 .page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-core-values {
   margin-bottom: 3em; }
+
+.icon-shortcode {
+  display: inline-block;
+  min-height: 4.5em;
+  min-width: 4.5em;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {
