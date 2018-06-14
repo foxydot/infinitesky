@@ -1713,9 +1713,29 @@ p.entry-meta {
     background-image: url(../images/dna.svg);
     background-position: center center;
     background-repeat: repeat-x;
-    background-size: auto 80%; }
+    background-size: auto 80%;
+    font-size: 1.4em;
+    text-align: center;
+    color: #FFF; }
     .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-body .container {
       background: none; }
+    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-title h3 {
+      font-weight: 300;
+      font-size: 3em; }
+      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-title h3:after {
+        display: none; }
+    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content {
+      position: relative; }
+      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper {
+        width: 100%;
+        position: absolute;
+        bottom: -4.2em;
+        text-align: center; }
+        .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper a.btn {
+          text-decoration: none;
+          background-color: rgba(51, 51, 51, 0.8); }
+          .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper a.btn:hover {
+            background-color: rgba(51, 51, 51, 0.5); }
   .sectioned-page-wrapper .section.bkg-dna .section-body .container {
     background-image: url(../images/dna.svg);
     background-position: center center;
@@ -1953,28 +1973,6 @@ article.type-post .entry-header {
   color: #333;
   font-size: 1.2em;
   text-transform: none; }
-
-.sectioned-page-wrapper .section.section-dna {
-  font-size: 1.4em;
-  text-align: center;
-  color: #FFF; }
-  .sectioned-page-wrapper .section.section-dna .section-title h3 {
-    font-weight: 300;
-    font-size: 3em; }
-    .sectioned-page-wrapper .section.section-dna .section-title h3:after {
-      display: none; }
-  .sectioned-page-wrapper .section.section-dna .section-content {
-    position: relative; }
-    .sectioned-page-wrapper .section.section-dna .section-content .btn-wrapper {
-      width: 100%;
-      position: absolute;
-      bottom: -4.2em;
-      text-align: center; }
-      .sectioned-page-wrapper .section.section-dna .section-content .btn-wrapper a.btn {
-        text-decoration: none;
-        background-color: rgba(51, 51, 51, 0.8); }
-        .sectioned-page-wrapper .section.section-dna .section-content .btn-wrapper a.btn:hover {
-          background-color: rgba(51, 51, 51, 0.5); }
 
 .sectioned-page-wrapper .section.section-additional-charities ul {
   -webkit-column-count: 2;

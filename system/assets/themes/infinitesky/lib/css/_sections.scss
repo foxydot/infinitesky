@@ -153,6 +153,34 @@
           background: none;
         }
       }
+      font-size: 1.4em;
+      text-align: center;
+      color: $white;
+      .section-title{
+        h3{
+          font-weight: 300;
+          font-size: 3em;
+          &:after{
+            display: none;
+          }
+        }
+      }
+      .section-content{
+        position: relative;
+        .btn-wrapper{
+          width: 100%;
+          position: absolute;
+          bottom: -4.2em;
+          text-align: center;
+          a.btn{
+            text-decoration: none;
+            background-color: rgba($dkgrey,0.8);
+            &:hover{
+              background-color: rgba($dkgrey,0.5);
+            }
+          }
+        }
+      }
     }
     .section-body{
       .container{

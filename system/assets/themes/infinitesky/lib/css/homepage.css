@@ -58,10 +58,17 @@
     padding: 1.5em 7em 4em 1.5em;
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 20% auto; }
+    background-size: 20% auto;
+    position: relative; }
     .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content h2 {
       font-weight: 700;
       position: relative; }
+    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content a.cover-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
     .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 {
       background-image: url(../images/icon_core-values-wht.svg); }
       .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 h2:after {
@@ -72,7 +79,13 @@
         right: -2em; }
     .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 {
       background-color: rgba(102, 102, 102, 0.8);
-      background-image: url(../images/icon_operate.svg); }
+      background-image: url(../images/icon_operational-excellence-white.svg); }
+      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 h2:after {
+        content: '\f0a9';
+        font-family: FontAwesome;
+        position: absolute;
+        bottom: 0;
+        right: -2em; }
 
 .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container {
   background-image: url(../images/icon_focus.svg);
