@@ -42,6 +42,6 @@ jQuery(document).ready(function($) {
     $('.genesis-teaser').matchHeight();
     $('.equalize').matchHeight();
 
-    $('.sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn').wrap('<div class="btn-wrapper"></div>');
+    $('.sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .section-content .btn').wrap('<div class="btn-wrapper"></div>');
 
 });

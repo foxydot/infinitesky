@@ -232,6 +232,52 @@ article.type-post{
         font-weight: 700;
       }
     }
+    &.section-featured-content{
+      .section-content{
+        h4{
+          font-weight: 700;
+          color: $orange;
+          font-size: 1.4em;
+          text-transform: none;
+        }
+        h3{
+          font-weight: 700;
+          color: $dkgrey;
+          font-size: 1.2em;
+          text-transform: none;
+        }
+      }
+    }
+    &.section-dna{
+      font-size: 1.4em;
+      text-align: center;
+      color: $white;
+      .section-title{
+        h3{
+          font-weight: 300;
+          font-size: 3em;
+          &:after{
+            display: none;
+          }
+        }
+      }
+      .section-content{
+        position: relative;
+        .btn-wrapper{
+          width: 100%;
+          position: absolute;
+          bottom: -4.2em;
+          text-align: center;
+          a.btn{
+            text-decoration: none;
+            background-color: rgba($dkgrey,0.8);
+            &:hover{
+              background-color: rgba($dkgrey,0.5);
+            }
+          }
+        }
+      }
+    }
     &.section-additional-charities{
       ul{
         column-count: 2;

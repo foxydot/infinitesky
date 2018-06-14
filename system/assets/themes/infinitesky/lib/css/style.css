@@ -1793,7 +1793,8 @@ p.entry-meta {
         .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content .btn-wrapper .btn {
           position: relative;
           bottom: initial;
-          right: initial; }
+          right: initial;
+          text-decoration: none; }
       .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content.first-child .btn_wrapper {
         left: -15px; }
       .sectioned-page-wrapper .section.align-buttons-bottom .section-body .container .column-holder .section-content.last-child .btn_wrapper {
@@ -1937,6 +1938,40 @@ article.type-post .entry-header {
   .sectioned-page-wrapper .section.section-hbd h2 {
     color: #ff6600;
     font-weight: 700; }
+
+.sectioned-page-wrapper .section.section-featured-content .section-content h4 {
+  font-weight: 700;
+  color: #ff6600;
+  font-size: 1.4em;
+  text-transform: none; }
+
+.sectioned-page-wrapper .section.section-featured-content .section-content h3 {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.2em;
+  text-transform: none; }
+
+.sectioned-page-wrapper .section.section-dna {
+  font-size: 1.4em;
+  text-align: center;
+  color: #FFF; }
+  .sectioned-page-wrapper .section.section-dna .section-title h3 {
+    font-weight: 300;
+    font-size: 3em; }
+    .sectioned-page-wrapper .section.section-dna .section-title h3:after {
+      display: none; }
+  .sectioned-page-wrapper .section.section-dna .section-content {
+    position: relative; }
+    .sectioned-page-wrapper .section.section-dna .section-content .btn-wrapper {
+      width: 100%;
+      position: absolute;
+      bottom: -4.2em;
+      text-align: center; }
+      .sectioned-page-wrapper .section.section-dna .section-content .btn-wrapper a.btn {
+        text-decoration: none;
+        background-color: rgba(51, 51, 51, 0.8); }
+        .sectioned-page-wrapper .section.section-dna .section-content .btn-wrapper a.btn:hover {
+          background-color: rgba(51, 51, 51, 0.5); }
 
 .sectioned-page-wrapper .section.section-additional-charities ul {
   -webkit-column-count: 2;
