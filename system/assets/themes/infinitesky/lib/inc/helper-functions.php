@@ -94,7 +94,15 @@ function msdlab_post_info_filter($post_info) {
 function msdlab_maybe_move_title(){
     global $post,$subtitle_support;
     $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
+    if(!$template_file && is_archive()){
+        $qo = get_queried_object();
+        $template_file = $qo->name;
+    }
     switch($template_file){
+        case 'msd_news':
+            add_action('msdlab_title_area','msdlab_do_chapter_title');
+            add_action('msdlab_title_area','msdlab_do_post_title');
+            add_action('genesis_after_header','msdlab_do_title_area');
         case 'default':
         default:
             remove_all_actions('genesis_archive_title_descriptions');
@@ -113,11 +121,15 @@ function msdlab_maybe_move_title(){
 
 function msdlab_do_chapter_title(){
     if(is_front_page()){
-    } elseif(is_page()){
+    } elseif(is_page()) {
         global $post;
         print '<h2 class="chapter-title">';
         print get_section_title();
         print '</h2>';
+    } elseif(is_archive()) {
+        if(is_cpt('msd_news')){
+            print '<h2 class="chapter-title">Company</h2>';
+        }
     } elseif(is_home() || is_single()) {
         $blog_home = get_post(get_option( 'page_for_posts' ));
         $parent = get_post(get_topmost_parent($blog_home->ID));
@@ -129,29 +141,33 @@ function msdlab_do_chapter_title(){
 }
 
 function msdlab_do_post_title(){
-    if(is_home() || (is_single() && is_cpt('post'))) {
-        $blog_home = get_post(get_option( 'page_for_posts' ));
-        $title = apply_filters( 'genesis_post_title_text', $blog_home->post_title );//* Wrap in H1 on singular pages
-        if ( 0 === mb_strlen( $title ) ) {
-            return;
+    if(is_home() || (is_single() && is_cpt('post')) || is_archive()) {
+        if(is_home() || (is_single() && is_cpt('post'))) {
+            $blog_home = get_post(get_option('page_for_posts'));
+            $title = apply_filters('genesis_post_title_text', $blog_home->post_title);//* Wrap in H1 on singular pages
+            if (0 === mb_strlen($title)) {
+                return;
+            }
+        } elseif(is_archive()) {
+            $title = genesis_get_cpt_option( 'headline' );
         }
 
         // Link it, if necessary.
-        if ( ! is_singular() && apply_filters( 'genesis_link_post_title', true ) ) {
-            $title = genesis_markup( array(
-                'open'    => '<a %s>',
-                'close'   => '</a>',
+        if (!is_singular() && apply_filters('genesis_link_post_title', true)) {
+            $title = genesis_markup(array(
+                'open' => '<a %s>',
+                'close' => '</a>',
                 'content' => $title,
                 'context' => 'entry-title-link',
-                'echo'    => false,
-            ) );
+                'echo' => false,
+            ));
         }
 
         // Wrap in H1 on singular pages.
         $wrap = is_singular() ? 'h1' : 'h2';
 
         // Also, if HTML5 with semantic headings, wrap in H1.
-        $wrap = genesis_html5() && genesis_get_seo_option( 'semantic_headings' ) ? 'h1' : $wrap;
+        $wrap = genesis_html5() && genesis_get_seo_option('semantic_headings') ? 'h1' : $wrap;
 
         /**
          * Entry title wrapping element.
@@ -162,21 +178,21 @@ function msdlab_do_post_title(){
          *
          * @param string $wrap The wrapping element (h1, h2, p, etc.).
          */
-        $wrap = apply_filters( 'genesis_entry_title_wrap', $wrap );
+        $wrap = apply_filters('genesis_entry_title_wrap', $wrap);
 
         // Build the output.
-        $output = genesis_markup( array(
-            'open'    => "<{$wrap} %s>",
-            'close'   => "</{$wrap}>",
+        $output = genesis_markup(array(
+            'open' => "<{$wrap} %s>",
+            'close' => "</{$wrap}>",
             'content' => $title,
             'context' => 'entry-title',
-            'params'  => array(
-                'wrap'  => $wrap,
+            'params' => array(
+                'wrap' => $wrap,
             ),
-            'echo'    => false,
-        ) );
+            'echo' => false,
+        ));
 
-        echo apply_filters( 'genesis_post_title_output', $output, $wrap, $title ) . "\n";
+        echo apply_filters('genesis_post_title_output', $output, $wrap, $title) . "\n";
     } else {
         genesis_do_post_title();
     }

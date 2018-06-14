@@ -24,15 +24,16 @@ if (!class_exists('MSDNewsCPT')) {
 			add_action('admin_footer',array(&$this,'info_footer_hook') );
 			// important: note the priority of 99, the js needs to be placed after tinymce loads
 			add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
-            //add_action('template_redirect', array(&$this,'my_theme_redirect'));
             //add_action('admin_head', array(&$this,'codex_custom_help_tab'));
+            add_action( 'template_redirect', array(&$this,'hide_single_news') );
 
 			
 			//Filters
 			add_filter( 'pre_get_posts', array(&$this,'custom_query') );
 			add_filter( 'enter_title_here', array(&$this,'change_default_title') );
+			add_filter('template_include', array(&$this,'my_theme_redirect'),99);
 
-			//Shortcodes
+            //Shortcodes
             add_shortcode('news', array(&$this,'news_shortcode_handler'));
 
 			//add cols to manage panel
@@ -231,8 +232,11 @@ if (!class_exists('MSDNewsCPT')) {
 		}
 
 
-        function my_theme_redirect() {
+        function my_theme_redirect($return_template) {
             global $wp;
+            if(!is_cpt($this->cpt)){
+                return $return_template;
+            }
             //A Specific Custom Post Type
                 if(is_single() && $wp->query_vars["post_type"] == $this->cpt){
                     $templatefilename = 'single-'.$this->cpt.'.php';
@@ -248,8 +252,9 @@ if (!class_exists('MSDNewsCPT')) {
                 } else {
                     $return_template = plugin_dir_path(dirname(__FILE__)) . 'template/' . $templatefilename;
                 }
-                do_theme_redirect($return_template);
             }
+
+            return $return_template;
         }
 
         function codex_custom_help_tab() {
@@ -483,6 +488,53 @@ if (!class_exists('MSDNewsCPT')) {
                 } else {
                     //display for aggregate here
                 }
+            }
+        }
+        function special_loop(){
+            global $post;
+            if ( have_posts() ) :
+                do_action( 'genesis_before_while' );
+                print '<ul class="publication-list news-display">';
+                while ( have_posts() ) : the_post();
+                    $url = get_post_meta($post->ID,'_news_newsurl',1);
+                    $excerpt = $post->post_excerpt?$post->post_excerpt:msd_trim_headline($post->post_content);
+                    $link = strlen($url)>4?msdlab_http_sanity_check($url):get_permalink($post->ID);
+                    $background = msdlab_get_thumbnail_url($post->ID,'medium');
+                    print '
+    <li>
+        <div class="col-sm-8">
+            <div class="news-info">
+            <h3><a href="'.$link.'">'.$post->post_title.' ></a></h3>
+                <div>
+                    '.date('F j, Y',strtotime($post->post_date)).'
+                    <div class="excerpt">'.$excerpt.'</div>
+                    '.do_shortcode('[button url="'.$link.'"]Read More[/button]').'
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="news-logo">
+                <a href="'.$link.'" style="background-image:url('.$background.')">&nbsp;
+                </a>
+            </div>
+        </div>
+    </li>';
+                endwhile;
+                print '</ul>';
+                do_action( 'genesis_after_endwhile' );
+            endif;
+        }
+
+
+        function hide_single_news(){
+            if(!is_single())
+                return;
+            if(get_query_var('post_type') == $this->cpt){
+                global $wp_query;
+                wp_redirect(get_post_meta($wp_query->post->ID,'_news_newsurl',true));
+                return;
+            } else {
+                return;
             }
         }
   } //End Class
