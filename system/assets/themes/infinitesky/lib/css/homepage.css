@@ -59,7 +59,8 @@
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 20% auto;
-    position: relative; }
+    position: relative;
+    min-height: 16em; }
     .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content h2 {
       font-weight: 700;
       position: relative; }
