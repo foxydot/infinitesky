@@ -29,7 +29,7 @@ if (!class_exists('MSDNewsCPT')) {
 
 			
 			//Filters
-			add_filter( 'pre_get_posts', array(&$this,'custom_query') );
+			//add_filter( 'pre_get_posts', array(&$this,'custom_query') );
 			add_filter( 'enter_title_here', array(&$this,'change_default_title') );
 			add_filter('template_include', array(&$this,'my_theme_redirect'),99);
 

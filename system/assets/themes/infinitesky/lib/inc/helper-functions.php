@@ -102,6 +102,7 @@ function msdlab_maybe_move_title(){
         case 'msd_news':
             add_action('msdlab_title_area','msdlab_do_chapter_title');
             add_action('msdlab_title_area','msdlab_do_post_title');
+            add_action('msdlab_title_area','msdlab_archive_description');
             add_action('genesis_after_header','msdlab_do_title_area');
         case 'default':
         default:
@@ -117,6 +118,17 @@ function msdlab_maybe_move_title(){
         break;
 
     }
+}
+
+function msdlab_archive_description(){
+    if(!is_archive()){return;}
+
+    $subtitle = genesis_get_cpt_option( 'intro_text' );
+    if ( strlen( $subtitle ) == 0 )
+        return;
+
+    $subtitle = sprintf( '<h2 class="entry-subtitle">%s</h2>', apply_filters( 'genesis_post_title_text', $subtitle ) );
+    echo apply_filters( 'genesis_post_title_output', $subtitle ) . "\n";
 }
 
 function msdlab_do_chapter_title(){

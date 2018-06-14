@@ -54,6 +54,10 @@ class MSDLabClientCustom
         if(class_exists('MSDSectionedPage')){
             $this->section_class = new MSDSectionedPage();
         }
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/casestudy_cpt.php');
+        if(class_exists('MSDCaseStudyCPT')){
+            $this->casestudy_class = new MSDCaseStudyCPT();
+        }
 
         register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
         register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
