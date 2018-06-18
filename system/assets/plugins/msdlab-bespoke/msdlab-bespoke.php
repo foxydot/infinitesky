@@ -58,6 +58,10 @@ class MSDLabClientCustom
         if(class_exists('MSDCaseStudyCPT')){
             $this->casestudy_class = new MSDCaseStudyCPT();
         }
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/quote_cpt.php');
+        if(class_exists('MSDQuoteCPT')){
+            $this->quote_class = new MSDQuoteCPT();
+        }
 
         register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
         register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );

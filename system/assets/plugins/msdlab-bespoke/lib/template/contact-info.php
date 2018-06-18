@@ -1,5 +1,5 @@
 <?php global $wpalchemy_media_access; ?>
-<ul class="team_meta_control gform_fields top_label description_below" id="gform_fields_4">
+<ul class="" id="gform_fields_4">
 	<?php $mb->the_field('_team_last_name'); ?>
     <li class="gfield"
         id="field_team_last_name"><label for="<?php $mb->the_name(); ?>" class="gfield_label">Last Name (for alphabetizing)
