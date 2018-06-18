@@ -8,4 +8,13 @@ function msdlab_add_press_scripts() {
 remove_action('genesis_loop','genesis_do_loop');
 add_action('genesis_loop',array('MSDNewsCPT','special_loop'));
 add_action('wp_enqueue_scripts', 'msdlab_add_press_scripts');
+
+add_action('wp_enqueue_scripts', 'msdlab_add_press_styles');
+
+
+function msdlab_add_press_styles() {
+    if(!is_admin()){
+        wp_enqueue_style('msd-team-style',get_stylesheet_directory_uri().'/lib/css/press.css');
+    }
+}
 genesis();
