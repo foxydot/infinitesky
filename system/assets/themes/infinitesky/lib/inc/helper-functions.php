@@ -110,7 +110,7 @@ function msdlab_maybe_move_title(){
             add_action('msdlab_title_area','msdlab_do_chapter_title');
             add_action('msdlab_title_area','msdlab_do_post_title');
             add_action('genesis_after_header','msdlab_do_title_area');
-        if(!is_single() && !is_cpt('post')) {
+        if(!is_single() && (!is_cpt('post') || !is_cpt('msd_casestudy'))) {
                 remove_action('genesis_entry_header', 'genesis_do_post_title'); //move the title out of the content area
                 remove_action('genesis_entry_header', array(&$subtitle_support, 'msdlab_do_post_subtitle')); //move the title out of the content area
                 add_action('msdlab_title_area',array(&$subtitle_support,'msdlab_do_post_subtitle'));

@@ -1,0 +1,48 @@
+@import url("//fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
+@import url("//fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@media print {
+  a[href]:after {
+    content: "" !important; }
+  div.pre-header, #sticky-wrapper, header.site-header, aside.sidebar {
+    display: none !important; }
+  div.print-header {
+    margin-bottom: 1em; }
+  main.content {
+    width: 100% !important; }
+    main.content p {
+      page-break-inside: avoid; } }
+
+/* Import Fonts
+------------------------------------------------------------ */
+/* Font Stacks */
+/* Colors */
+/* Neutrals */
+/* Default Colors */
+/* Social Colors */
+.post-type-archive-msd_news .site-inner .container .news-display li {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 4px solid #ff6600; }
+  .post-type-archive-msd_news .site-inner .container .news-display li:after {
+    content: " ";
+    display: table;
+    clear: both;
+    zoom: 1; }
+  .post-type-archive-msd_news .site-inner .container .news-display li .news-info {
+    padding-bottom: 3em;
+    position: relative; }
+    .post-type-archive-msd_news .site-inner .container .news-display li .news-info h3 {
+      font-size: 1.6em; }
+    .post-type-archive-msd_news .site-inner .container .news-display li .news-info a.btn {
+      position: absolute;
+      bottom: 0;
+      right: 2em; }
+  .post-type-archive-msd_news .site-inner .container .news-display li .news-logo {
+    position: relative; }
+    .post-type-archive-msd_news .site-inner .container .news-display li .news-logo a {
+      display: block;
+      width: 100%;
+      min-height: 15em;
+      background-position: center top;
+      background-size: contain;
+      background-repeat: no-repeat; }

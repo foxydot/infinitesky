@@ -1,0 +1,62 @@
+@import "bootstrap-overrides.scss";
+@import "mixins.scss";
+
+.post-type-archive-msd_casestudy,.tax-msd_practice-area{
+  .site-inner{
+    .container{
+      article {
+          margin-bottom: 2em;
+          padding-bottom: 2em;
+          border-bottom: 4px solid $orange;
+          &:after{
+            content: " ";
+            display: table;
+            clear:both;
+            zoom: 1;
+          }
+          .news-info {
+            padding-bottom: 3em;
+            position: relative;
+            h3 {
+              font-size: 1.6em;
+            }
+            a.btn {
+              position: absolute;
+              bottom: 0;
+              right: 2em;
+            }
+          }
+          .news-logo{
+            position: relative;
+            a{
+              display: block;
+              width: 100%;
+              min-height: 15em;
+              background-position: center top;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+@media only screen and (min-width: 768px) {
+  .sectioned-page-wrapper{
+    .section.section-transform-and-operate{
+      .section-body{
+        .container{
+          .row{
+            .section-content{
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+}
