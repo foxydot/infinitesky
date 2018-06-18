@@ -162,3 +162,15 @@ if(!function_exists('msd_str_fmt')){
         return $ret;
     }
 }
+if(!function_exists('do_theme_redirect')) {
+    function do_theme_redirect($url)
+    {
+        global $post, $wp_query;
+        if (have_posts()) {
+            include($url);
+            die();
+        } else {
+            $wp_query->is_404 = true;
+        }
+    }
+}

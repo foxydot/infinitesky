@@ -34,7 +34,7 @@ class MSDSectionedPage{
         (
             'id' => '_sectioned_page',
             'title' => 'Page Sections',
-            'types' => array('page'),
+            'types' => array('page','team_member'),
             'context' => 'normal', // same as above, defaults to "normal"
             'priority' => 'high', // same as above, defaults to "high"
             'template' => plugin_dir_path(__DIR__).'template/metabox-sectioned-page.php',

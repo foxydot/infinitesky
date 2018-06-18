@@ -27,7 +27,7 @@ if (!class_exists('MSDTeamCPT')) {
             add_action('admin_footer',array(&$this,'info_footer_hook') );
             // important: note the priority of 99, the js needs to be placed after tinymce loads
             add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
-            add_action('template_redirect', array(&$this,'my_theme_redirect'));
+            //add_action('template_redirect', array(&$this,'my_theme_redirect'));
             add_action('admin_head', array(&$this,'codex_custom_help_tab'));
 
             //Filters
@@ -125,7 +125,7 @@ if (!class_exists('MSDTeamCPT')) {
 
         function register_metaboxes()
         {
-            global $additional_info, $contact_info;
+            global $contact_info;
             $contact_info = new WPAlchemy_MetaBox(array
             (
                 'id' => '_contact_info',
@@ -139,18 +139,6 @@ if (!class_exists('MSDTeamCPT')) {
                 'prefix' => '_team_member_' // defaults to NULL
             ));
 
-            $additional_info = new WPAlchemy_MetaBox(array
-            (
-                'id' => '_additional_information',
-                'title' => 'Additional Information',
-                'types' => array('team_member'),
-                'context' => 'normal',
-                'priority' => 'high',
-                'template' => plugin_dir_path(dirname(__FILE__)).'/template/additional-information.php',
-                'autosave' => TRUE,
-                'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
-                'prefix' => '_team_member_' // defaults to NULL
-            ));
         }
 
 

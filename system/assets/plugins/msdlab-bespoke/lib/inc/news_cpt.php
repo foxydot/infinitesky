@@ -537,5 +537,24 @@ if (!class_exists('MSDNewsCPT')) {
                 return;
             }
         }
+
+        function get_news_items_for_team_member($team_id){
+            global $news;
+            $args = array(
+                'post_type' => 'msd_news',
+                'numberposts' => 5,
+                'order' => 'DESC',
+                'orderby' => 'post_date',
+                'meta_query' => array(
+                    array(
+                        'key' => '_news_team_members',
+                        'value' => '"'.$team_id.'"',
+                        'compare' => 'LIKE',
+                    )
+                )
+            );
+            $the_news = get_posts($args);
+            return($the_news);
+        }
   } //End Class
 } //End if class exists statement
