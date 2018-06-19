@@ -433,6 +433,27 @@ article.team_member{
   }
 }
 
+//video library
+.video-library{
+  ul.grid{
+    li.video-item{
+      &:before{
+        display: none;
+      }
+      text-indent: 0;
+      margin-left: 0;
+      margin-bottom: 2em;
+      .lazyYT-container{
+        border: 1px solid $ltgrey;
+      }
+      h4{
+        text-transform: none;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
 //Solutions
 
 .sectioned-page-wrapper{

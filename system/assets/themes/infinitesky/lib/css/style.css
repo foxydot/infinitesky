@@ -2096,6 +2096,18 @@ article.team_member {
       article.team_member > .wrap main footer .readmore {
         float: right; }
 
+.video-library ul.grid li.video-item {
+  text-indent: 0;
+  margin-left: 0;
+  margin-bottom: 2em; }
+  .video-library ul.grid li.video-item:before {
+    display: none; }
+  .video-library ul.grid li.video-item .lazyYT-container {
+    border: 1px solid #D1D3D4; }
+  .video-library ul.grid li.video-item h4 {
+    text-transform: none;
+    font-size: 1.2em; }
+
 .sectioned-page-wrapper .section.section-what-how .section-content {
   background-image: url(../images/icon_focus.svg);
   background-position: top left;
