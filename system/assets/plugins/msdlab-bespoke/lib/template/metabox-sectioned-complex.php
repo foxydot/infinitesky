@@ -60,6 +60,7 @@ column-gap: 1em;">
                     'Border between columns'=>'column-border',
                     'Center titles' => 'cntr-titles',
                     'Align Buttons Bottom' => 'align-buttons-bottom',
+                    'Call to Action' => 'cta'
                     );
                 ?>
                 <?php foreach ($items as $i => $item): ?>
