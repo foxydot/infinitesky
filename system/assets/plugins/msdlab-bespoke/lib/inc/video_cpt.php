@@ -23,6 +23,8 @@ class MSDVideoCPT {
 
         add_action( 'init', array(&$this,'register_cpt_video') );
         add_action( 'init', array(&$this,'register_taxonomy_video_tags') );
+        add_action( 'init', array(&$this,'register_metaboxes') );
+
         add_action( 'init', array(&$this,'register_thumbnail') );
         add_action( 'init', array(&$this,'register_scripts') );
         add_action( 'template_redirect', array(&$this,'hide_single_video') );
@@ -40,8 +42,8 @@ class MSDVideoCPT {
         add_filter( 'the_content', array(&$this,'add_lazy_src_to_allowed_attributes') );
         add_filter( 'enter_title_here', array(&$this,'change_default_title') );
         wp_enqueue_script('bootstrap-jquery','//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js',array('jquery'));
-        wp_enqueue_script('lazy-bootstrap-carousel',plugin_dir_path(dirname(__FILE__)).'/js/lazy-bootstrap-carousel.js',array('jquery','bootstrap-jquery'));
-        wp_enqueue_script('msd-video-jquery',plugin_dir_path(dirname(__FILE__)).'/js/msd-video.jquery.js',array('jquery','bootstrap-jquery'));
+        wp_enqueue_script('lazy-bootstrap-carousel',plugin_dir_url(dirname(__FILE__)).'/js/lazy-bootstrap-carousel.js',array('jquery','bootstrap-jquery'));
+        wp_enqueue_script('msd-video-jquery',plugin_dir_url(dirname(__FILE__)).'/js/msd-video.jquery.js',array('jquery','bootstrap-jquery'));
         if($screen->post_type == 'msd_video')
             add_action('admin_footer',array(&$this,'info_footer_hook') );
 
@@ -123,10 +125,29 @@ class MSDVideoCPT {
             'query_var' => true,
             'can_export' => true,
             'rewrite' => array('slug'=>'video','with_front'=>false),
-            'capability_type' => 'post'
+            'capability_type' => 'post',
+            'menu_icon' => 'dashicons-format-video',
         );
     
         register_post_type( $this->cpt, $args );
+    }
+
+
+
+    function register_metaboxes(){
+        global $video;
+        $video = new WPAlchemy_MetaBox(array
+        (
+            'id' => '_video',
+            'title' => 'Video Information',
+            'types' => array('msd_video'),
+            'context' => 'normal',
+            'priority' => 'high',
+            'template' => WP_PLUGIN_DIR.'/'.plugin_dir_path('msd-custom-cpt/msd-custom-cpt.php').'lib/template/video-information.php',
+            'autosave' => TRUE,
+            'mode' => WPALCHEMY_MODE_EXTRACT, // defaults to WPALCHEMY_MODE_ARRAY
+            'prefix' => '_video_' // defaults to NULL
+        ));
     }
 
     function add_admin_scripts() {
