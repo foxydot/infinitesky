@@ -62,6 +62,10 @@ class MSDLabClientCustom
         if(class_exists('MSDQuoteCPT')){
             $this->quote_class = new MSDQuoteCPT();
         }
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/video_cpt.php');
+        if(class_exists('MSDVideoCPT')){
+            $this->video_class = new MSDVideoCPT();
+        }
 
         register_activation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
         register_deactivation_hook( __FILE__, create_function('','flush_rewrite_rules();') );
