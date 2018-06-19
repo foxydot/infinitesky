@@ -94,12 +94,18 @@ function msdlab_post_info_filter($post_info) {
 function msdlab_maybe_move_title(){
     global $post,$subtitle_support;
     $template_file = get_post_meta($post->ID,'_wp_page_template',TRUE);
-    if(!$template_file && is_archive()){
+    if(!$template_file){
         $qo = get_queried_object();
-        $template_file = $qo->name;
+        if(is_archive()){
+            $template_file = $qo->name;
+        }
+        if(is_a($qo,'WP_Post')){
+            $template_file = $qo->post_type;
+        }
     }
     switch($template_file){
         case 'msd_news':
+        case 'msd_casestudy':
             add_action('msdlab_title_area','msdlab_do_chapter_title');
             add_action('msdlab_title_area','msdlab_do_post_title');
             add_action('msdlab_title_area','msdlab_archive_description');
