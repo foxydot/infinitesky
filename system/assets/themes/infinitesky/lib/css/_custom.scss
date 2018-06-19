@@ -92,11 +92,11 @@ article.type-post{
   }
 }
 .page-template-default{
-  .page-title-area {}
   .site-inner {
     .content-sidebar-wrap {
       main.content {
         padding: 3em 5em;
+        background-color: $white;
       }
     }
   }
@@ -317,6 +317,36 @@ body.core-values{
           background-image: linear-gradient(to right, $dkgrey 0%,$dkgrey 49.99%,$white 50%,$white 100%);
           .column-2{
             color: $dkgrey;
+          }
+        }
+      }
+    }
+  }
+}
+body.testimonials{
+  main.content{
+    ul.quote-widget-list{
+      li.single-quote{
+        border-bottom: 4px solid $orange;
+        padding-bottom: 2em;
+        margin-bottom: 2em;
+        text-indent: 0;
+        &:before{
+          content: '';
+          background: none;
+          height:0;
+          width:0;
+        }
+        .quote-content{
+          font-size: 2em;
+          font-weight: 400;
+          color: $medgrey;
+        }
+        .quote-attribution{
+          text-align: right;
+          font-style: italic;
+          &:before{
+            content: '- ';
           }
         }
       }

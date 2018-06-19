@@ -92,7 +92,7 @@ if (!class_exists('MSDQuoteCPT')) {
                 'labels' => $labels,
                 'hierarchical' => false,
                 'description' => 'Quote',
-                'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'genesis-cpt-archives-settings' ),
+                'supports' => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail' ),
                 'taxonomies' => array( 'quote_category'),
                 'public' => true,
                 'show_ui' => true,
@@ -102,10 +102,10 @@ if (!class_exists('MSDQuoteCPT')) {
                 'show_in_nav_menus' => true,
                 'publicly_queryable' => true,
                 'exclude_from_search' => true,
-                'has_archive' => true,
+                'has_archive' => false,
                 'query_var' => true,
                 'can_export' => true,
-                'rewrite' => array('slug'=>'about/press','with_front'=>false),
+                'rewrite' => array('slug'=>'about/quotes','with_front'=>false),
                 'capability_type' => 'post',
                 'menu_icon' => 'dashicons-format-quote',
             );
@@ -243,7 +243,7 @@ if (!class_exists('MSDQuoteCPT')) {
             }
         }
 
-        function quote_shortcode_handler($atts, $content){
+        function quote_shortcode_handler($atts){
             extract(shortcode_atts( array(
                 'title' => 'Quotes',
                 'count' => 5,
@@ -255,7 +255,6 @@ if (!class_exists('MSDQuoteCPT')) {
 
             );
             if(${$this->cpt.'_category'}) {
-                $class = $this->cpt.'_category'.${$this->cpt.'_category'};
                 $args['tax_query'] = array(
                     array(
                         'taxonomy' => $this->cpt.'_category',
@@ -263,35 +262,25 @@ if (!class_exists('MSDQuoteCPT')) {
                         'terms'    => ${$this->cpt.'_category'},
                     ),
                 );
-            } else {
-                $class = $this->cpt.'_all';
-                $args['tax_query'] = array(
-                    array(
-                        'taxonomy' => 'quote_category',
-                        'field'    => 'slug',
-                        'terms'    => $allowed_terms,
-                    ),
-                );
             }
-
             $recents = new WP_Query($args);
             if($recents->have_posts()) {
-                global $post;
-                $ret[] = '<section class="widget quote-widget clearfix '.$class.'">
-<h3 class="widgettitle widget-title">' . $title . ' </h3>
-<div class="wrap">
-<dl class="quote-widget-list">';
+                global $quote_info;
+                $ret[] = '<ul class="quote-widget-list">';
 //start loop
                 ob_start();
                 while($recents->have_posts()) {
                     $recents->the_post();
-                    print '<li><div class="quote-content">'.$post->get_the_content().'</div><div class="quote-attribution"></div></li>';
+                    $quote_info->the_meta();
+                    print '<li class="single-quote animated fadeInUp">
+<div class="quote-content">'.get_the_content().'</div>
+<div class="quote-attribution">'.$quote_info->get_the_value("attribute").'</div>
+</li>';
                 } //end loop
                 $ret[] = ob_get_contents();
                 ob_end_clean();
-                $ret[] = '</dl></div></section>';
+                $ret[] = '</ul>';
             } //end loop check
-
             wp_reset_postdata();
 
             return implode("\n",$ret);

@@ -34,7 +34,6 @@ if (!class_exists('MSDNewsCPT')) {
 			add_filter('template_include', array(&$this,'my_theme_redirect'),99);
 
             //Shortcodes
-            add_shortcode('news', array(&$this,'news_shortcode_handler'));
 
 			//add cols to manage panel
             add_filter( 'manage_edit-'.$this->cpt.'_columns', array(&$this,'my_edit_columns' ));
@@ -413,71 +412,6 @@ if (!class_exists('MSDNewsCPT')) {
             } else {
                 return $title;
             }
-        }
-
-        function news_shortcode_handler($atts, $content){
-            extract(shortcode_atts( array(
-                'title' => 'News',
-                'count' => 5,
-                $this->cpt.'_category' => false,
-                $this->cpt.'_tag' => false,
-            ), $atts ));
-            $allowed_terms = array('articles-of-interest','members-in-the-news','quote-of-the-day','state-single-payer-news');
-                $args = array(
-                    'post_type' => 'news',
-                    'showposts' => $count,
-
-                );
-                if(${$this->cpt.'_category'}) {
-                    $class = $this->cpt.'_category'.${$this->cpt.'_category'};
-                    $args['tax_query'] = array(
-                        array(
-                            'taxonomy' => $this->cpt.'_category',
-                            'field'    => 'slug',
-                            'terms'    => ${$this->cpt.'_category'},
-                        ),
-                    );
-                } elseif (${$this->cpt.'_tag'}) {
-                    $class = $this->cpt.'_tag'.${$this->cpt.'_tag'};
-                    $args['tax_query'] = array(
-                        array(
-                            'taxonomy' => $this->cpt.'_tag',
-                            'field'    => 'slug',
-                            'terms'    => ${$this->cpt.'_tag'},
-                        ),
-                    );
-                } else {
-                    $class = $this->cpt.'_all';
-                    $args['tax_query'] = array(
-                        array(
-                            'taxonomy' => 'news_category',
-                            'field'    => 'slug',
-                            'terms'    => $allowed_terms,
-                        ),
-                    );
-                }
-
-                $recents = new WP_Query($args);
-                if($recents->have_posts()) {
-                    global $post;
-                    $ret[] = '<section class="widget news-widget clearfix '.$class.'">
-<h3 class="widgettitle widget-title">' . $title . ' </h3>
-<div class="wrap">
-<dl class="news-widget-list">';
-//start loop
-                    ob_start();
-                    while($recents->have_posts()) {
-                        $recents->the_post();
-                        print '<dt><span class="news-category">'.get_the_term_list($post->ID,$this->cpt.'_category').'</span> <span class="date">'.get_the_date().'</span></dt><dd><a href="'.get_the_permalink().'">'.get_the_title().'</a></dd>';
-                    } //end loop
-                    $ret[] = ob_get_contents();
-                    ob_end_clean();
-                    $ret[] = '</dl></div></section>';
-                } //end loop check
-
-            wp_reset_postdata();
-
-            return implode("\n",$ret);
         }
 
         function cpt_display(){
