@@ -20,7 +20,37 @@ if (!class_exists('MSDLab_Video_Background_Support')) {
             if(is_admin()){return;}
             if(wp_is_mobile()){return;}
             if(!is_front_page() && get_section() != 'solutions'){return;}
-            $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest.mp4';
+            $select = $_GET['bkg'];
+            switch($select){
+                case 9:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/Day-Loop-Final.mp4';
+                    break;
+                case 8:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/AdobeStock_133304947_Video_HD_Preview.mp4';
+                    break;
+                case 7:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/AdobeStock_115600019_Video_HD_Preview.mp4';
+                    break;
+                case 6:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/AdobeStock_31821334_Video_HD_Preview.mp4';
+                    break;
+                case 5:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/12370370-preview.mp4';
+                    break;
+                case 4:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest_1.15.mp4';
+                    break;
+                case 3:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest_1min.mp4';
+                    break;
+                case 2:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest_45sec.mp4';
+                    break;
+                case 1:
+                default:
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest.mp4';
+                    break;
+            }
             print '<!-- The video -->
 <video autoplay muted loop id="bkgVideo">
   <source src="'.$videosrc.'" type="video/mp4">

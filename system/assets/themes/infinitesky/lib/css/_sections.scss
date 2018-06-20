@@ -191,6 +191,28 @@
       }
     }
   }
+  .section.cta{
+    margin-top: 2em;
+    .container{
+      background-position: 0.5em 0.5em;
+      background-size: 4.25em auto;
+      background-repeat: no-repeat;
+      .section-title{
+        h3{
+          font-size: 2.5em;
+          &:after{
+            display: none;
+          }
+        }
+        .section-subtitle{
+          color: $orange;
+          text-transform: none;
+          font-size: 2.5em;
+          font-weight: 700;
+        }
+      }
+    }
+  }
   .section.left-align{
     .section-body{
       text-align: left;
