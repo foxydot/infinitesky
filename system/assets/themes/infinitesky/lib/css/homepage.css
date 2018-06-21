@@ -69,7 +69,8 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      text-decoration: none; }
     .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 {
       background-image: url(../images/icon_core-values-wht.svg); }
       .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 h2:after {
