@@ -23,7 +23,7 @@ if (!class_exists('MSDLab_Video_Background_Support')) {
             $select = $_GET['bkg'];
             switch($select){
                 case 9:
-                    $videosrc = get_stylesheet_directory_uri().'/lib/images/Day-Loop-Final.mp4';
+                    $videosrc = 'http://susans.msdlab2.com/system/assets/themes/blue_sky_day/lib/images/Day-Loop-Final.mp4';
                     break;
                 case 8:
                     $videosrc = get_stylesheet_directory_uri().'/lib/images/AdobeStock_133304947_Video_HD_Preview.mp4';
