@@ -55,7 +55,7 @@ class MSDCaseStudyCPT {
             'show_tagcloud' => false,
             'hierarchical' => true,
     
-            'rewrite' => array('slug'=>'case-study/by-solution','with_front'=>true),
+            'rewrite' => array('slug'=>'thought-leadership/case-study/by-solution','with_front'=>true),
             'query_var' => true
         );
     
@@ -87,7 +87,7 @@ class MSDCaseStudyCPT {
             'show_tagcloud' => false,
             'hierarchical' => true,
     
-            'rewrite' => array('slug'=>'case-study/by-industry','with_front'=>true),
+            'rewrite' => array('slug'=>'thought-leadership/case-study/by-industry','with_front'=>true),
             'query_var' => true
         );
     
@@ -120,7 +120,7 @@ class MSDCaseStudyCPT {
             'show_tagcloud' => false,
             'hierarchical' => true,
     
-            'rewrite' => array('slug'=>'case-study/by-function','with_front'=>true),
+            'rewrite' => array('slug'=>'thought-leadership/case-study/by-function','with_front'=>true),
             'query_var' => true
         );
     

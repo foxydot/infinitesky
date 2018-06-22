@@ -129,6 +129,53 @@ article.type-post{
   }
 }
 
+.single-msd_casestudy {
+  .site-inner {
+    .content-sidebar-wrap {
+      main.content {
+        background-color: transparent;
+        background: url(../images/content-right.svg) top left no-repeat;
+        background-size: 100% auto;
+        .entry-header {
+          display: inline-block;
+          float: left;
+          min-height: 16em;
+          min-width: 16em;
+        }
+        .entry-content{
+          h2{
+            font-size: 1.6em;
+            color: $orange;
+            font-weight: 700;
+          }
+          .sidecar{
+            background-color: rgba($ltgrey,0.5);
+            padding: 2em;
+            float: right;
+            margin: 2em 0 2em 2em;
+            .wrapper{
+              min-height: 16em;
+              min-width: 25%;
+              text-align: center;
+              h6{
+                font-size: 1em;
+                font-weight: 600;
+                margin-bottom: 0;
+              }
+              a{
+                display: block;
+              }
+            }
+          }
+        }
+        .btn.all-case-studies{
+          float: right;
+        }
+      }
+    }
+  }
+}
+
 //--Secondary--//
 .home,.page-template-template-secondary,.team_member-template-default {
   background-image: url(../images/blue-sky1.jpg);
@@ -329,7 +376,6 @@ body.core-values{
         margin-bottom: 2em;
         text-indent: 0;
         &.last-child{
-
           border-bottom: 0;
           padding-bottom: 0;
           margin-bottom: 2em;
@@ -352,6 +398,26 @@ body.core-values{
             content: '- ';
           }
         }
+      }
+    }
+
+    blockquote{
+      margin: 0;
+      font-style: normal;
+      border: 0;
+      font-size: initial;
+      &:before{
+        content: '';
+      }
+      p {
+        font-size: 2em;
+        font-weight: 400;
+        color: $medgrey;
+      }
+      p.last-child{
+        font-size: 1em;
+        text-align: right;
+        font-style: italic;
       }
     }
 

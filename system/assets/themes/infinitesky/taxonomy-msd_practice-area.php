@@ -33,16 +33,13 @@ function msdlab_case_study_title($content){
     return $content;
 }
 
-function msdlab_npp_navigation_links() {
-    previous_post_link('<div class="prev-link page-nav"><i class="fa fa-arrow-left"></i> %link</div>', 'Previous', true, '', 'msd_practice-area'); 
-    next_post_link('<div class="next-link page-nav">%link <i class="fa fa-arrow-right"></i></div>', 'Next', true, '', 'msd_practice-area');
-}
-
 remove_action('genesis_entry_header','genesis_post_info',12);
 remove_action('genesis_before_entry','msd_post_image');//add the image above the entry
 remove_action('genesis_entry_content','genesis_do_post_content');
 add_action('genesis_entry_content',array('MSDCaseStudyCPT','msdlab_do_casestudy_excerpt')); //not 100% sure this is right
 remove_action('genesis_entry_footer','genesis_post_meta');
+remove_action('genesis_after_endwhile','msdlab_prev_next_post_nav');
+
 
 add_action('genesis_entry_content','msd_post_image',5);
 genesis();
