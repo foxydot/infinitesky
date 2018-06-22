@@ -230,12 +230,12 @@ article.type-post{
   }
   &.transform{
     .page-title-area .texturize .gradient .container{
-      background-image: url(../images/icon_core-values-wht.svg);
+      background-image: url(../images/icons/core-values-w.svg);
     }
   }
   &.operate{
     .page-title-area .texturize .gradient .container{
-      background-image: url(../images/icon_operational-excellence-white.svg);
+      background-image: url(../images/icons/operational-excellence-w.svg);
     }
   }
 }
@@ -482,24 +482,6 @@ article.team_member{
   }
 }
 
-//press & casestudy archive
-.post-type-archive-msd_casestudy{
-  .site-inner{
-    main.content{
-      .article{
-        header{
-          a{
-
-          }
-        }
-        content{
-
-        }
-      }
-    }
-  }
-}
-
 //video library
 .video-library{
   ul.grid{
@@ -527,7 +509,7 @@ article.team_member{
   .section{
     &.section-what-how{
       .section-content {
-        background-image: url(../images/icon_focus.svg);
+        background-image: url(../images/icons/focus.svg);
         background-position: top left;
         background-size: 5em auto;
         background-repeat: no-repeat;
@@ -543,10 +525,10 @@ article.team_member{
     }
 
     &.section-ready-to-transform .container{
-      background-image: url(../images/icon_transform.svg);
+      background-image: url(../images/icons/transform.svg);
     }
     &.section-ready-to-operate .container{
-      background-image: url(../images/icon_maximize-DMP.svg);
+      background-image: url(../images/icons/maximize-DMP.svg);
       h2{
         font-weight: 700;
       }
@@ -557,13 +539,13 @@ article.team_member{
           height: 2em;
           width: 2em;
         }
-        &.icon_media:before{background-image:url(../images/icon_media.svg);}
-        &.icon_entertainment:before{background-image:url(../images/icon_entertainment.svg);}
-        &.icon_television:before{background-image:url(../images/icon_television.svg);}
-        &.icon_business-mag:before{background-image:url(../images/icon_business-mag.svg);}
-        &.icon_interactive:before{background-image:url(../images/icon_interactive.svg);}
-        &.icon_newspaper:before{background-image:url(../images/icon_newspaper.svg);}
-        &.icon_global-entertainment:before{background-image:url(../images/icon_global-entertainment.svg);}
+        &.icon_media:before{background-image:url(../images/icons/media.svg);}
+        &.icon_entertainment:before{background-image:url(../images/icons/entertainment.svg);}
+        &.icon_television:before{background-image:url(../images/icons/television.svg);}
+        &.icon_business-mag:before{background-image:url(../images/icons/business-mag.svg);}
+        &.icon_interactive:before{background-image:url(../images/icons/interactive.svg);}
+        &.icon_newspaper:before{background-image:url(../images/icons/newspaper.svg);}
+        &.icon_global-entertainment:before{background-image:url(../images/icons/global-entertainment.svg);}
       }
     }
   }
@@ -626,7 +608,7 @@ article.team_member{
       }
       .section.section-ready-to-advance{
         .container{
-          background-image: url(../images/icon_maximize-DMP.svg);
+          background-image: url(../images/icons/maximize-DMP.svg);
         }
       }
     }
@@ -638,7 +620,7 @@ article.team_member{
       background-position: 0.5em 3em;
       background-size: 4.25em auto;
       background-repeat: no-repeat;
-      background-image: url(../images/icon_operational-excellence-color.svg);
+      background-image: url(../images/icons/operational-excellence-color.svg);
     }
     }
     .section.section-core-values{

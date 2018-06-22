@@ -5,38 +5,33 @@
   .site-inner{
     .container{
       article {
-          margin-bottom: 2em;
-          padding-bottom: 2em;
-          border-bottom: 4px solid $orange;
+        padding: 1em;
           &:after{
             content: " ";
             display: table;
             clear:both;
             zoom: 1;
           }
-          .news-info {
-            padding-bottom: 3em;
-            position: relative;
-            h3 {
-              font-size: 1.6em;
-            }
-            a.btn {
-              position: absolute;
-              bottom: 0;
-              right: 2em;
-            }
+        .wrapper{
+          background: $ltgrey;
+          padding: 1em;
+          min-height: 27em;
+          position: relative;
+          padding-bottom: 3em;
+        }
+        header{
+          text-align: center;
+        }
+        content{
+          h3.entry-title{
+            font-size: 1.4em;
           }
-          .news-logo{
-            position: relative;
-            a{
-              display: block;
-              width: 100%;
-              min-height: 15em;
-              background-position: center top;
-              background-size: contain;
-              background-repeat: no-repeat;
-            }
+          .readmore{
+            position: absolute;
+            right: 0;
+            bottom: 1em;
           }
+        }
         }
       }
     }

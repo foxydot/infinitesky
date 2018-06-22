@@ -5,7 +5,7 @@
  */
 
 class MSDCaseStudyCPT {
-
+    var $cpt = 'msd_casestudy';
 	/**
     * PHP 4 Compatible Constructor
     */
@@ -25,6 +25,10 @@ class MSDCaseStudyCPT {
         //Shortcodes
         add_shortcode( 'case-studies', array(&$this,'list_case_studies') );
         add_shortcode('casestudies',  array(&$this,'msdlab_casestudies_special_loop_shortcode_handler'));
+
+        //add cols to manage panel
+        add_filter( 'manage_edit-'.$this->cpt.'_columns', array(&$this,'my_edit_columns' ));
+        add_action( 'manage_'.$this->cpt.'_posts_custom_column', array(&$this,'my_manage_columns'), 10, 2 );
     }
 	
     public function register_taxonomies() {
@@ -191,8 +195,88 @@ class MSDCaseStudyCPT {
 	     }
 		
 		return '<ul class="publication-list case-studies">'.$publication_list.'</ul><div class="clear"></div>';
-	}	
-    
+	}
+
+
+    function my_edit_columns( $columns ) {
+
+        $columns = array(
+            'cb' => '<input type="checkbox" />',
+            'title' => __( 'Title' ),
+            'msd_practice-area' => __( 'Solutions' ),
+            'msd_industries' => __( 'Industries' ),
+            'msd_functions' => __( 'Functions' ),
+            'author' => __( 'Author' ),
+            'date' => __( 'Date' )
+        );
+
+        return $columns;
+    }
+
+    function my_manage_columns( $column, $post_id ) {
+        global $post;
+
+        switch( $column ) {
+            /* If displaying the 'logo' column. */
+            case 'msd_practice-area' :
+            case 'msd_industries' :
+            case 'msd_functions' :
+                $taxonomy = $column;
+                if ( $taxonomy ) {
+                    $taxonomy_object = get_taxonomy( $taxonomy );
+                    $terms = get_the_terms( $post->ID, $taxonomy );
+                    if ( is_array( $terms ) ) {
+                        $out = array();
+                        foreach ( $terms as $t ) {
+                            $posts_in_term_qv = array();
+                            if ( 'post' != $post->post_type ) {
+                                $posts_in_term_qv['post_type'] = $post->post_type;
+                            }
+                            if ( $taxonomy_object->query_var ) {
+                                $posts_in_term_qv[ $taxonomy_object->query_var ] = $t->slug;
+                            } else {
+                                $posts_in_term_qv['taxonomy'] = $taxonomy;
+                                $posts_in_term_qv['term'] = $t->slug;
+                            }
+
+                            $label = esc_html( sanitize_term_field( 'name', $t->name, $t->term_id, $taxonomy, 'display' ) );
+                            $out[] = $this->get_edit_link( $posts_in_term_qv, $label );
+                        }
+                        /* translators: used between list items, there is a space after the comma */
+                        echo join( __( ', ' ), $out );
+                    } else {
+                        echo '<span aria-hidden="true">&#8212;</span><span class="screen-reader-text">' . $taxonomy_object->labels->no_terms . '</span>';
+                    }
+                }
+                break;
+            case 'post_id':
+                echo $post->ID;
+                break;
+            default :
+                break;
+        }
+    }
+
+
+    function get_edit_link( $args, $label, $class = '' ) {
+        $url = add_query_arg( $args, 'edit.php' );
+
+        $class_html = '';
+        if ( ! empty( $class ) ) {
+            $class_html = sprintf(
+                ' class="%s"',
+                esc_attr( $class )
+            );
+        }
+
+        return sprintf(
+            '<a href="%s"%s>%s</a>',
+            esc_url( $url ),
+            $class_html,
+            $label
+        );
+    }
+
     function msdlab_casestudies_special_loop(){
         $args = array(
         );
@@ -209,61 +293,68 @@ class MSDCaseStudyCPT {
         global $post,$case_study_key;
         $origpost = $post;
         $defaults = array(
-            'posts_per_page' => 1,
+            'posts_per_page' => -1,
             'post_type' => 'msd_casestudy',
         );
         $args = array_merge($defaults,$args);
         //set up result array
-        $results = array();
-        //get all practice areas
-        $terms = get_terms('msd_practice-area');
-        //do a query for each practice area?
-        foreach($terms AS $term){
-            $args['msd_practice-area'] = $term->slug;
-            $this_result = get_posts($args);
-            $results[$term->slug] = $this_result;
-            $results[$term->slug]['term'] = $term;
-        }
+        $results = new WP_Query($args);
         //format result
-        foreach($results AS $case_study_key => $result){
-            $post = $result[0];
-            $ret .= genesis_markup( array(
+        if($results->have_posts()){
+            while($results->have_posts()){
+                $results->the_post();
+                $terms = wp_get_post_terms(get_the_ID(),'msd_industry');
+                $term = $terms[0];
+                $ret .= genesis_markup( array(
                     'html5'   => '<article %s>',
                     'xhtml'   => sprintf( '<div class="%s">', implode( ' ', get_post_class() ) ),
                     'context' => 'casestudy',
                     'echo' => false,
                 ) );
                 $ret .= genesis_markup( array(
-                        'html5' => '<header>',
-                        'xhtml' => '<div class="header">',
-                        'echo' => false,
-                    ) ); 
-                    $ret .= '<a href="'.get_term_link($result['term']).'">More '.$result['term']->name.' ></a>';
+                    'html5' => '<div class="wrapper">',
+                    'xhtml' => '<div class="wrapper">',
+                    'echo' => false,
+                ) );
                 $ret .= genesis_markup( array(
-                        'html5' => '</header>',
-                        'xhtml' => '</div>',
-                        'echo' => false,
-                    ) ); 
+                    'html5' => '<header>',
+                    'xhtml' => '<div class="header">',
+                    'echo' => false,
+                ) );
+                if($term)
+                $ret .= '<a class="icon icon-'.$term->slug.'" href="'.get_term_link($term->term_id).'"><span class="screen-reader-text">More '.$term->name.' ></span></a>';
                 $ret .= genesis_markup( array(
-                        'html5' => '<content>',
-                        'xhtml' => '<div class="content">',
-                        'echo' => false,
-                    ) ); 
-                    $ret .= '<i class="icon-'.$case_study_key.'"></i>
+                    'html5' => '</header>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret .= genesis_markup( array(
+                    'html5' => '<content>',
+                    'xhtml' => '<div class="content">',
+                    'echo' => false,
+                ) );
+                $ret .= '<i class="icon-'.$case_study_key.'"></i>
                         <h3 class="entry-title">'.$post->post_title.'</h3>
-                        <div class="entry-content">'.msdlab_excerpt($post->ID).'</div>
-                        <a href="'.get_permalink($post->ID).'" class="readmore">Read More ></a>';
+                        <div class="entry-content">'.msdlab_get_excerpt($post->ID,20,'...').'</div>
+                        <a href="'.get_permalink($post->ID).'" class="readmore button btn">Read More ></a>';
                 $ret .= genesis_markup( array(
-                        'html5' => '</content>',
-                        'xhtml' => '</div>',
-                        'echo' => false,
-                    ) ); 
-            $ret .= genesis_markup( array(
+                    'html5' => '</div>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret .= genesis_markup( array(
+                    'html5' => '</content>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret .= genesis_markup( array(
                     'html5' => '</article>',
                     'xhtml' => '</div>',
                     'context' => 'casestudy',
                     'echo' => false,
                 ) );
+            }
+            wp_reset_postdata();
         }
         //return
         $post = $origpost;
@@ -279,7 +370,9 @@ class MSDCaseStudyCPT {
      */
     function custom_add_casestudy_attr( $attributes ){
             global $case_study_key;
-            $attributes['class']     = join( ' ', get_post_class(array($case_study_key,'icon-'.$case_study_key)) );
+            //ts_data($case_study_key);
+        $attributes['class']     .= join( ' ', get_post_class(array($case_study_key,'icon-'.$case_study_key)) );
+        $attributes['class']     .= ' col-md-4 col-sm-6 col-xs-12';
             $attributes['itemtype']  = 'http://schema.org/CreativeWork';
             $attributes['itemprop']  = 'caseStudy';
             // return the attributes

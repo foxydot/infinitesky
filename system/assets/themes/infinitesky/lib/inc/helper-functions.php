@@ -419,7 +419,6 @@ function msdlab_icon_sc_callback($atts){
         'img' => false,
     ), $atts ));
     if(!$img){return false;}
-    $img_url = get_stylesheet_directory_uri().'/lib/images/icon_'.$img.'.svg';
-    $ret = '<span class="icon-shortcode" style="background-image:url('.$img_url.')"><span class="screen-reader-text">'.$img.'</span></span>';
+    $ret = '<span class="icon icon-'.$img.'"><span class="screen-reader-text">'.$img.'</span></span>';
     return $ret;
 }

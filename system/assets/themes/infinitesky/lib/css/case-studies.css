@@ -20,29 +20,23 @@
 /* Default Colors */
 /* Social Colors */
 .post-type-archive-msd_casestudy .site-inner .container article, .tax-msd_practice-area .site-inner .container article {
-  margin-bottom: 2em;
-  padding-bottom: 2em;
-  border-bottom: 4px solid #ff6600; }
+  padding: 1em; }
   .post-type-archive-msd_casestudy .site-inner .container article:after, .tax-msd_practice-area .site-inner .container article:after {
     content: " ";
     display: table;
     clear: both;
     zoom: 1; }
-  .post-type-archive-msd_casestudy .site-inner .container article .news-info, .tax-msd_practice-area .site-inner .container article .news-info {
-    padding-bottom: 3em;
-    position: relative; }
-    .post-type-archive-msd_casestudy .site-inner .container article .news-info h3, .tax-msd_practice-area .site-inner .container article .news-info h3 {
-      font-size: 1.6em; }
-    .post-type-archive-msd_casestudy .site-inner .container article .news-info a.btn, .tax-msd_practice-area .site-inner .container article .news-info a.btn {
-      position: absolute;
-      bottom: 0;
-      right: 2em; }
-  .post-type-archive-msd_casestudy .site-inner .container article .news-logo, .tax-msd_practice-area .site-inner .container article .news-logo {
-    position: relative; }
-    .post-type-archive-msd_casestudy .site-inner .container article .news-logo a, .tax-msd_practice-area .site-inner .container article .news-logo a {
-      display: block;
-      width: 100%;
-      min-height: 15em;
-      background-position: center top;
-      background-size: contain;
-      background-repeat: no-repeat; }
+  .post-type-archive-msd_casestudy .site-inner .container article .wrapper, .tax-msd_practice-area .site-inner .container article .wrapper {
+    background: #D1D3D4;
+    padding: 1em;
+    min-height: 27em;
+    position: relative;
+    padding-bottom: 3em; }
+  .post-type-archive-msd_casestudy .site-inner .container article header, .tax-msd_practice-area .site-inner .container article header {
+    text-align: center; }
+  .post-type-archive-msd_casestudy .site-inner .container article content h3.entry-title, .tax-msd_practice-area .site-inner .container article content h3.entry-title {
+    font-size: 1.4em; }
+  .post-type-archive-msd_casestudy .site-inner .container article content .readmore, .tax-msd_practice-area .site-inner .container article content .readmore {
+    position: absolute;
+    right: 0;
+    bottom: 1em; }

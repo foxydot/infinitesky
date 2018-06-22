@@ -1846,6 +1846,138 @@ p.entry-meta {
   .sectioned-page-wrapper .section.section-space {
     min-height: 12em; }
 
+.icon {
+  display: inline-block;
+  min-height: 4.5em;
+  min-width: 4.5em;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; }
+  .icon.icon-agile-enablement {
+    background-image: url(../images/icons/agile-enablement.svg); }
+    .icon.icon-agile-enablement.icon-white {
+      background-image: url(../images/icons/agile-enablement-w.svg); }
+  .icon.icon-agile-portfolio-mgmt {
+    background-image: url(../images/icons/agile-portfolio-mgmt.svg); }
+    .icon.icon-agile-portfolio-mgmt.icon-white {
+      background-image: url(../images/icons/agile-portfolio-mgmt-w.svg); }
+  .icon.icon-agile-process-improvement {
+    background-image: url(../images/icons/agile-process-improvement.svg); }
+    .icon.icon-agile-process-improvement.icon-white {
+      background-image: url(../images/icons/agile-process-improvement-w.svg); }
+  .icon.icon-business-mag {
+    background-image: url(../images/icons/business-mag.svg); }
+    .icon.icon-business-mag.icon-white {
+      background-image: url(../images/icons/business-mag-w.svg); }
+  .icon.icon-careers {
+    background-image: url(../images/icons/careers.svg); }
+    .icon.icon-careers.icon-white {
+      background-image: url(../images/icons/careers-w.svg); }
+  .icon.icon-cloud-migration {
+    background-image: url(../images/icons/cloud-migration.svg); }
+    .icon.icon-cloud-migration.icon-white {
+      background-image: url(../images/icons/cloud-migration-w.svg); }
+  .icon.icon-communications {
+    background-image: url(../images/icons/communications.svg); }
+    .icon.icon-communications.icon-white {
+      background-image: url(../images/icons/communications-w.svg); }
+  .icon.icon-core-values {
+    background-image: url(../images/icons/core-values.svg); }
+    .icon.icon-core-values.icon-white {
+      background-image: url(../images/icons/core-values-w.svg); }
+  .icon.icon-cpg {
+    background-image: url(../images/icons/cpg.svg); }
+    .icon.icon-cpg.icon-white {
+      background-image: url(../images/icons/cpg-w.svg); }
+  .icon.icon-cultural-change {
+    background-image: url(../images/icons/cultural-change.svg); }
+    .icon.icon-cultural-change.icon-white {
+      background-image: url(../images/icons/cultural-change-w.svg); }
+  .icon.icon-digital-organization {
+    background-image: url(../images/icons/digital-organization.svg); }
+    .icon.icon-digital-organization.icon-white {
+      background-image: url(../images/icons/digital-organization-w.svg); }
+  .icon.icon-entertainment {
+    background-image: url(../images/icons/entertainment.svg); }
+    .icon.icon-entertainment.icon-white {
+      background-image: url(../images/icons/entertainment-w.svg); }
+  .icon.icon-financial-services, .icon.icon-banking {
+    background-image: url(../images/icons/financial-services.svg); }
+    .icon.icon-financial-services.icon-white, .icon.icon-banking.icon-white {
+      background-image: url(../images/icons/financial-services-w.svg); }
+  .icon.icon-focus {
+    background-image: url(../images/icons/focus.svg); }
+    .icon.icon-focus.icon-white {
+      background-image: url(../images/icons/focus-w.svg); }
+  .icon.icon-global-entertainment {
+    background-image: url(../images/icons/global-entertainment.svg); }
+    .icon.icon-global-entertainment.icon-white {
+      background-image: url(../images/icons/global-entertainment-w.svg); }
+  .icon.icon-high-performance {
+    background-image: url(../images/icons/high-performance.svg); }
+    .icon.icon-high-performance.icon-white {
+      background-image: url(../images/icons/high-performance-w.svg); }
+  .icon.icon-interactive {
+    background-image: url(../images/icons/interactive.svg); }
+    .icon.icon-interactive.icon-white {
+      background-image: url(../images/icons/interactive-w.svg); }
+  .icon.icon-maximize-dmp {
+    background-image: url(../images/icons/maximize-dmp.svg); }
+    .icon.icon-maximize-dmp.icon-white {
+      background-image: url(../images/icons/maximize-dmp-w.svg); }
+  .icon.icon-media {
+    background-image: url(../images/icons/media.svg); }
+    .icon.icon-media.icon-white {
+      background-image: url(../images/icons/media-w.svg); }
+  .icon.icon-mortgage-provider {
+    background-image: url(../images/icons/mortgage-provider.svg); }
+    .icon.icon-mortgage-provider.icon-white {
+      background-image: url(../images/icons/mortgage-provider-w.svg); }
+  .icon.icon-network-provider {
+    background-image: url(../images/icons/network-provider.svg); }
+    .icon.icon-network-provider.icon-white {
+      background-image: url(../images/icons/network-provider-w.svg); }
+  .icon.icon-newspaper {
+    background-image: url(../images/icons/newspaper.svg); }
+    .icon.icon-newspaper.icon-white {
+      background-image: url(../images/icons/newspaper-w.svg); }
+  .icon.icon-online-publisher {
+    background-image: url(../images/icons/online-publisher.svg); }
+    .icon.icon-online-publisher.icon-white {
+      background-image: url(../images/icons/online-publisher-w.svg); }
+  .icon.icon-operate {
+    background-image: url(../images/icons/operate.svg); }
+    .icon.icon-operate.icon-white {
+      background-image: url(../images/icons/operate-w.svg); }
+  .icon.icon-operational-excellence {
+    background-image: url(../images/icons/operational-excellence.svg); }
+    .icon.icon-operational-excellence.icon-white {
+      background-image: url(../images/icons/operational-excellence-w.svg); }
+  .icon.icon-our-team {
+    background-image: url(../images/icons/our-team.svg); }
+    .icon.icon-our-team.icon-white {
+      background-image: url(../images/icons/our-team-w.svg); }
+  .icon.icon-publisher {
+    background-image: url(../images/icons/publisher.svg); }
+    .icon.icon-publisher.icon-white {
+      background-image: url(../images/icons/publisher-w.svg); }
+  .icon.icon-retail {
+    background-image: url(../images/icons/retail.svg); }
+    .icon.icon-retail.icon-white {
+      background-image: url(../images/icons/retail-w.svg); }
+  .icon.icon-television {
+    background-image: url(../images/icons/television.svg); }
+    .icon.icon-television.icon-white {
+      background-image: url(../images/icons/television-w.svg); }
+  .icon.icon-transform {
+    background-image: url(../images/icons/transform.svg); }
+    .icon.icon-transform.icon-white {
+      background-image: url(../images/icons/transform-w.svg); }
+  .icon.icon-transportation {
+    background-image: url(../images/icons/transportation.svg); }
+    .icon.icon-transportation.icon-white {
+      background-image: url(../images/icons/transportation-w.svg); }
+
 hr.clear {
   border-color: rgba(102, 102, 102, 0);
   margin: 0; }
@@ -1987,9 +2119,9 @@ article.type-post .entry-header {
     padding-bottom: 0;
     min-height: 18.5em; }
   .home.transform .page-title-area .texturize .gradient .container, .page-template-template-secondary.transform .page-title-area .texturize .gradient .container, .team_member-template-default.transform .page-title-area .texturize .gradient .container {
-    background-image: url(../images/icon_core-values-wht.svg); }
+    background-image: url(../images/icons/core-values-w.svg); }
   .home.operate .page-title-area .texturize .gradient .container, .page-template-template-secondary.operate .page-title-area .texturize .gradient .container, .team_member-template-default.operate .page-title-area .texturize .gradient .container {
-    background-image: url(../images/icon_operational-excellence-white.svg); }
+    background-image: url(../images/icons/operational-excellence-w.svg); }
 
 .sectioned-page-wrapper .section.section-locations .column-1 h2 {
   color: #ff6600;
@@ -2184,7 +2316,7 @@ article.team_member {
     font-size: 1.2em; }
 
 .sectioned-page-wrapper .section.section-what-how .section-content {
-  background-image: url(../images/icon_focus.svg);
+  background-image: url(../images/icons/focus.svg);
   background-position: top left;
   background-size: 5em auto;
   background-repeat: no-repeat;
@@ -2196,10 +2328,10 @@ article.team_member {
   background-repeat: no-repeat; }
 
 .sectioned-page-wrapper .section.section-ready-to-transform .container {
-  background-image: url(../images/icon_transform.svg); }
+  background-image: url(../images/icons/transform.svg); }
 
 .sectioned-page-wrapper .section.section-ready-to-operate .container {
-  background-image: url(../images/icon_maximize-DMP.svg); }
+  background-image: url(../images/icons/maximize-DMP.svg); }
   .sectioned-page-wrapper .section.section-ready-to-operate .container h2 {
     font-weight: 700; }
 
@@ -2208,25 +2340,25 @@ article.team_member {
   width: 2em; }
 
 .sectioned-page-wrapper .section ul li.icon.icon_media:before {
-  background-image: url(../images/icon_media.svg); }
+  background-image: url(../images/icons/media.svg); }
 
 .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
-  background-image: url(../images/icon_entertainment.svg); }
+  background-image: url(../images/icons/entertainment.svg); }
 
 .sectioned-page-wrapper .section ul li.icon.icon_television:before {
-  background-image: url(../images/icon_television.svg); }
+  background-image: url(../images/icons/television.svg); }
 
 .sectioned-page-wrapper .section ul li.icon.icon_business-mag:before {
-  background-image: url(../images/icon_business-mag.svg); }
+  background-image: url(../images/icons/business-mag.svg); }
 
 .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
-  background-image: url(../images/icon_interactive.svg); }
+  background-image: url(../images/icons/interactive.svg); }
 
 .sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
-  background-image: url(../images/icon_newspaper.svg); }
+  background-image: url(../images/icons/newspaper.svg); }
 
 .sectioned-page-wrapper .section ul li.icon.icon_global-entertainment:before {
-  background-image: url(../images/icon_global-entertainment.svg); }
+  background-image: url(../images/icons/global-entertainment.svg); }
 
 .rollbox-set .rollbox {
   text-align: center;
@@ -2262,7 +2394,7 @@ article.team_member {
   display: none; }
 
 .page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-ready-to-advance .container {
-  background-image: url(../images/icon_maximize-DMP.svg); }
+  background-image: url(../images/icons/maximize-DMP.svg); }
 
 .page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-awards {
   margin-bottom: 0; }
@@ -2270,7 +2402,7 @@ article.team_member {
     background-position: 0.5em 3em;
     background-size: 4.25em auto;
     background-repeat: no-repeat;
-    background-image: url(../images/icon_operational-excellence-color.svg); }
+    background-image: url(../images/icons/operational-excellence-color.svg); }
 
 .page-template-template-secondary.content-left .sectioned-page-wrapper .section.section-core-values {
   margin-bottom: 3em; }

@@ -1,0 +1,224 @@
+.icon{
+  display: inline-block;
+  min-height: 4.5em;
+  min-width: 4.5em;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &.icon-agile-enablement{
+    background-image: url(../images/icons/agile-enablement.svg);
+    &.icon-white{
+      background-image: url(../images/icons/agile-enablement-w.svg);
+    }
+  }
+
+  &.icon-agile-portfolio-mgmt{
+    background-image: url(../images/icons/agile-portfolio-mgmt.svg);
+    &.icon-white{
+      background-image: url(../images/icons/agile-portfolio-mgmt-w.svg);
+    }
+  }
+
+  &.icon-agile-process-improvement{
+    background-image: url(../images/icons/agile-process-improvement.svg);
+    &.icon-white{
+      background-image: url(../images/icons/agile-process-improvement-w.svg);
+    }
+  }
+
+  &.icon-business-mag{
+    background-image: url(../images/icons/business-mag.svg);
+    &.icon-white{
+      background-image: url(../images/icons/business-mag-w.svg);
+    }
+  }
+
+  &.icon-careers{
+    background-image: url(../images/icons/careers.svg);
+    &.icon-white{
+      background-image: url(../images/icons/careers-w.svg);
+    }
+  }
+
+  &.icon-cloud-migration{
+    background-image: url(../images/icons/cloud-migration.svg);
+    &.icon-white{
+      background-image: url(../images/icons/cloud-migration-w.svg);
+    }
+  }
+
+  &.icon-communications{
+    background-image: url(../images/icons/communications.svg);
+    &.icon-white{
+      background-image: url(../images/icons/communications-w.svg);
+    }
+  }
+
+  &.icon-core-values{
+    background-image: url(../images/icons/core-values.svg);
+    &.icon-white{
+      background-image: url(../images/icons/core-values-w.svg);
+    }
+  }
+
+  &.icon-cpg{
+    background-image: url(../images/icons/cpg.svg);
+    &.icon-white{
+      background-image: url(../images/icons/cpg-w.svg);
+    }
+  }
+
+  &.icon-cultural-change{
+    background-image: url(../images/icons/cultural-change.svg);
+    &.icon-white{
+      background-image: url(../images/icons/cultural-change-w.svg);
+    }
+  }
+
+  &.icon-digital-organization{
+    background-image: url(../images/icons/digital-organization.svg);
+    &.icon-white{
+      background-image: url(../images/icons/digital-organization-w.svg);
+    }
+  }
+
+  &.icon-entertainment{
+    background-image: url(../images/icons/entertainment.svg);
+    &.icon-white{
+      background-image: url(../images/icons/entertainment-w.svg);
+    }
+  }
+
+  &.icon-financial-services,&.icon-banking{
+    background-image: url(../images/icons/financial-services.svg);
+    &.icon-white{
+      background-image: url(../images/icons/financial-services-w.svg);
+    }
+  }
+
+  &.icon-focus{
+    background-image: url(../images/icons/focus.svg);
+    &.icon-white{
+      background-image: url(../images/icons/focus-w.svg);
+    }
+  }
+
+  &.icon-global-entertainment{
+    background-image: url(../images/icons/global-entertainment.svg);
+    &.icon-white{
+      background-image: url(../images/icons/global-entertainment-w.svg);
+    }
+  }
+
+  &.icon-high-performance{
+    background-image: url(../images/icons/high-performance.svg);
+    &.icon-white{
+      background-image: url(../images/icons/high-performance-w.svg);
+    }
+  }
+
+  &.icon-interactive{
+    background-image: url(../images/icons/interactive.svg);
+    &.icon-white{
+      background-image: url(../images/icons/interactive-w.svg);
+    }
+  }
+
+  &.icon-maximize-dmp{
+    background-image: url(../images/icons/maximize-dmp.svg);
+    &.icon-white{
+      background-image: url(../images/icons/maximize-dmp-w.svg);
+    }
+  }
+
+  &.icon-media{
+    background-image: url(../images/icons/media.svg);
+    &.icon-white{
+      background-image: url(../images/icons/media-w.svg);
+    }
+  }
+
+  &.icon-mortgage-provider{
+    background-image: url(../images/icons/mortgage-provider.svg);
+    &.icon-white{
+      background-image: url(../images/icons/mortgage-provider-w.svg);
+    }
+  }
+
+  &.icon-network-provider{
+    background-image: url(../images/icons/network-provider.svg);
+    &.icon-white{
+      background-image: url(../images/icons/network-provider-w.svg);
+    }
+  }
+
+  &.icon-newspaper{
+    background-image: url(../images/icons/newspaper.svg);
+    &.icon-white{
+      background-image: url(../images/icons/newspaper-w.svg);
+    }
+  }
+
+  &.icon-online-publisher{
+    background-image: url(../images/icons/online-publisher.svg);
+    &.icon-white{
+      background-image: url(../images/icons/online-publisher-w.svg);
+    }
+  }
+
+  &.icon-operate{
+    background-image: url(../images/icons/operate.svg);
+    &.icon-white{
+      background-image: url(../images/icons/operate-w.svg);
+    }
+  }
+
+  &.icon-operational-excellence{
+    background-image: url(../images/icons/operational-excellence.svg);
+    &.icon-white{
+      background-image: url(../images/icons/operational-excellence-w.svg);
+    }
+  }
+
+  &.icon-our-team{
+    background-image: url(../images/icons/our-team.svg);
+    &.icon-white{
+      background-image: url(../images/icons/our-team-w.svg);
+    }
+  }
+
+  &.icon-publisher{
+    background-image: url(../images/icons/publisher.svg);
+    &.icon-white{
+      background-image: url(../images/icons/publisher-w.svg);
+    }
+  }
+
+  &.icon-retail{
+    background-image: url(../images/icons/retail.svg);
+    &.icon-white{
+      background-image: url(../images/icons/retail-w.svg);
+    }
+  }
+
+  &.icon-television{
+    background-image: url(../images/icons/television.svg);
+    &.icon-white{
+      background-image: url(../images/icons/television-w.svg);
+    }
+  }
+
+  &.icon-transform{
+    background-image: url(../images/icons/transform.svg);
+    &.icon-white{
+      background-image: url(../images/icons/transform-w.svg);
+    }
+  }
+
+  &.icon-transportation{
+    background-image: url(../images/icons/transportation.svg);
+    &.icon-white{
+      background-image: url(../images/icons/transportation-w.svg);
+    }
+  }
+}

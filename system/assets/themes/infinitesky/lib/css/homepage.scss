@@ -69,7 +69,7 @@
                   text-decoration: none;
                 }
                 &.column-1 {
-                  background-image: url(../images/icon_core-values-wht.svg);
+                  background-image: url(../images/icons/core-values-w.svg);
                   h2:after {
                     content: '\f0a9';
                     @include fontawesome;
@@ -80,7 +80,7 @@
                 }
                 &.column-2 {
                   background-color: rgba($medgrey, 0.8);
-                  background-image: url(../images/icon_operational-excellence-white.svg);
+                  background-image: url(../images/icons/operational-excellence-w.svg);
                   h2:after {
                   content: '\f0a9';
                   @include fontawesome;
@@ -97,7 +97,7 @@
       &.section-where-we-focus {
         .section-body {
           .container {
-            background-image: url(../images/icon_focus.svg);
+            background-image: url(../images/icons/focus.svg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: 15% auto;
