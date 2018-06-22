@@ -213,6 +213,25 @@
       }
     }
   }
+  .section.quote{
+    .container{
+      .section-content{
+        em,strong{
+          display: block;
+        }
+        em{
+          font-style: normal;
+          font-size: 2em;
+          font-weight: 700;
+        }
+        strong{
+          font-style: normal;
+          font-size: 1em;
+          font-weight: 400;
+        }
+      }
+    }
+  }
   .section.left-align{
     .section-body{
       text-align: left;

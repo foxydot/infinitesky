@@ -17,7 +17,6 @@ h2.chapter-title{
   color: $white;
 }
 
-
 article.type-post{
     .entry-header, .entry-content, .entry-footer {
       padding-left: 2em;
@@ -323,14 +322,18 @@ body.core-values{
     }
   }
 }
-body.testimonials{
-  main.content{
     ul.quote-widget-list{
       li.single-quote{
         border-bottom: 4px solid $orange;
         padding-bottom: 2em;
         margin-bottom: 2em;
         text-indent: 0;
+        &.last-child{
+
+          border-bottom: 0;
+          padding-bottom: 0;
+          margin-bottom: 2em;
+        }
         &:before{
           content: '';
           background: none;
@@ -351,8 +354,6 @@ body.testimonials{
         }
       }
     }
-  }
-}
 
 //--Team--//
 article.team_member{

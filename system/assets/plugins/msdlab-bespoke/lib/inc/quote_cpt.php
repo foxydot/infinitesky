@@ -185,9 +185,9 @@ if (!class_exists('MSDQuoteCPT')) {
 
             $columns = array(
                 'cb' => '<input type="checkbox" />',
+                'post_id' => __( 'ID' ),
                 'title' => __( 'Title' ),
                 $this->cpt.'_category' => __( 'Categories' ),
-                $this->cpt.'_tag' => __( 'Tags' ),
                 'author' => __( 'Author' ),
                 'date' => __( 'Date' )
             );
@@ -229,9 +229,31 @@ if (!class_exists('MSDQuoteCPT')) {
                         }
                     }
                     break;
+                case 'post_id':
+                    echo $post->ID;
+                    break;
                 default :
                     break;
             }
+        }
+
+        function get_edit_link( $args, $label, $class = '' ) {
+            $url = add_query_arg( $args, 'edit.php' );
+
+            $class_html = '';
+            if ( ! empty( $class ) ) {
+                $class_html = sprintf(
+                    ' class="%s"',
+                    esc_attr( $class )
+                );
+            }
+
+            return sprintf(
+                '<a href="%s"%s>%s</a>',
+                esc_url( $url ),
+                $class_html,
+                $label
+            );
         }
 
         function change_default_title( $title ){
@@ -247,6 +269,7 @@ if (!class_exists('MSDQuoteCPT')) {
             extract(shortcode_atts( array(
                 'title' => 'Quotes',
                 'count' => 5,
+                'id' => false,
                 $this->cpt.'_category' => false,
             ), $atts ));
             $args = array(
@@ -262,6 +285,10 @@ if (!class_exists('MSDQuoteCPT')) {
                         'terms'    => ${$this->cpt.'_category'},
                     ),
                 );
+            }
+            if($id){
+                $ids = explode(',',$id);
+                $args['post__in'] = $ids;
             }
             $recents = new WP_Query($args);
             if($recents->have_posts()) {
