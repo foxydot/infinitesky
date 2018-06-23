@@ -55,7 +55,7 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
                     $class = 'rollbox col-md-4 col-sm-6 col-xs-12';
                     break;
             }
-            $content = preg_replace('/\[on\]/','<div class="rollbox-on"><div class="rollbox-wrapper-on"><img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />',$content);
+            $content = preg_replace('/\[on\]/','<div class="rollbox-on"><div class="rollbox-wrapper-on"><img src="'.get_stylesheet_directory_uri().'/lib/images/icons/'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />',$content);
             $content = preg_replace('/\[\/on\]/','</div></div>',$content);
             if($icon){
                 $content = '<img src="'.get_stylesheet_directory_uri().'/lib/images/icon_'.$icon.'.svg" class="icon" alt="'.$icon.' icon" />'.$content;
