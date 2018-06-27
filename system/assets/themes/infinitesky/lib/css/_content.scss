@@ -120,24 +120,6 @@ p.entry-meta {
   display: inline;
 }
 
-.archive-pagination a {
-  background-color: $blue;
-  color: $white;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 8px 12px;
-  text-decoration: none;
-}
-
-.archive-pagination a:focus,
-.archive-pagination a:hover,
-.archive-pagination .active a {
-  background-color: $blue;
-  color: $offwhite;
-}
 
 /* ## Comments
 --------------------------------------------- */

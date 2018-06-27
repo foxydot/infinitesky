@@ -272,8 +272,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
+.readmore-button,
 .button,
-a.btn{
+a.btn,
+.archive-pagination a{
   background-color: $btn_bkg;
   border: 0;
   color: $btn_txt;
@@ -284,22 +286,10 @@ a.btn{
   border-radius: 0;
   padding: 0.5em 2em;
   text-transform: uppercase;
-}
-
-button:focus,
-button:hover,
-input[type="button"]:focus,
-input[type="button"]:hover,
-input[type="reset"]:focus,
-input[type="reset"]:hover,
-input[type="submit"]:focus,
-input[type="submit"]:hover,
-.button:focus,
-.button:hover,
-a.btn:focus,
-a.btn:hover{
+  &:focus,&:hover{
   background-color: $btn_hvr_bkg;
   color: $btn_hvr_txt;
+}
 }
 
 .entry-content .button:focus,
