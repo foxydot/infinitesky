@@ -915,7 +915,8 @@ img.alignright,
       font-size: 1.2em; }
       .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li {
         display: none;
-        text-indent: 0 !important; }
+        text-indent: 0 !important;
+        margin-left: 1.5em !important; }
         .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li input[type="checkbox"] {
           -webkit-appearance: none;
              -moz-appearance: none;
@@ -2167,26 +2168,26 @@ body.core-values main.content {
     width: 100%;
     height: 100%; }
 
-body.core-values .sectioned-page-wrapper .section .section-content h3 {
-  margin-bottom: 0;
-  font-size: 1.8em;
-  font-weight: 600; }
-  body.core-values .sectioned-page-wrapper .section .section-content h3:after {
-    margin: 0.5em 0 1em;
-    display: block;
-    height: 4px;
-    max-width: 20%;
-    background-color: #ff6600;
-    content: ''; }
+body.core-values .sectioned-page-wrapper .section .section-content {
+  padding-left: 3em;
+  padding-right: 3em; }
+  body.core-values .sectioned-page-wrapper .section .section-content h3 {
+    margin-bottom: 0;
+    font-size: 1.8em;
+    font-weight: 600; }
+    body.core-values .sectioned-page-wrapper .section .section-content h3:after {
+      margin: 0.5em 0 1em;
+      display: block;
+      height: 4px;
+      max-width: 20%;
+      background-color: #ff6600;
+      content: ''; }
 
 body.core-values .sectioned-page-wrapper .section.zebra {
   background-image: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
   background-image: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
   body.core-values .sectioned-page-wrapper .section.zebra .container {
     background: none; }
-  body.core-values .sectioned-page-wrapper .section.zebra .section-content {
-    padding-left: 3em;
-    padding-right: 3em; }
   body.core-values .sectioned-page-wrapper .section.zebra.bkg-white {
     background-image: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
     background-image: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }

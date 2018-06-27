@@ -325,6 +325,8 @@ body.core-values{
   .sectioned-page-wrapper {
     .section {
       .section-content{
+        padding-left: 3em;
+        padding-right: 3em;
         h3 {
           margin-bottom: 0;
           font-size: 1.8em;
@@ -343,10 +345,6 @@ body.core-values{
         background-image: linear-gradient(to right, $white 0%,$white 49.99%,$ltgrey 50%,$ltgrey 100%);
         .container{
           background: none;
-        }
-        .section-content{
-          padding-left: 3em;
-          padding-right: 3em;
         }
         &.bkg-white{
           background-image: linear-gradient(to right, $white 0%,$white 49.99%,$ltgrey 50%,$ltgrey 100%);
