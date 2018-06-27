@@ -535,6 +535,9 @@ article.team_member{
     }
     ul{
       li.icon{
+        display: block;
+        min-height: 2em;
+        min-width: 2em;
         &:before{
           height: 2em;
           width: 2em;

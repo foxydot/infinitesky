@@ -2322,30 +2322,27 @@ article.team_member {
   .sectioned-page-wrapper .section.section-ready-to-operate .container h2 {
     font-weight: 700; }
 
-.sectioned-page-wrapper .section ul li.icon:before {
-  height: 2em;
-  width: 2em; }
-
-.sectioned-page-wrapper .section ul li.icon.icon_media:before {
-  background-image: url(../images/icons/media.svg); }
-
-.sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
-  background-image: url(../images/icons/entertainment.svg); }
-
-.sectioned-page-wrapper .section ul li.icon.icon_television:before {
-  background-image: url(../images/icons/television.svg); }
-
-.sectioned-page-wrapper .section ul li.icon.icon_business-mag:before {
-  background-image: url(../images/icons/business-mag.svg); }
-
-.sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
-  background-image: url(../images/icons/interactive.svg); }
-
-.sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
-  background-image: url(../images/icons/newspaper.svg); }
-
-.sectioned-page-wrapper .section ul li.icon.icon_global-entertainment:before {
-  background-image: url(../images/icons/global-entertainment.svg); }
+.sectioned-page-wrapper .section ul li.icon {
+  display: block;
+  min-height: 2em;
+  min-width: 2em; }
+  .sectioned-page-wrapper .section ul li.icon:before {
+    height: 2em;
+    width: 2em; }
+  .sectioned-page-wrapper .section ul li.icon.icon_media:before {
+    background-image: url(../images/icons/media.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
+    background-image: url(../images/icons/entertainment.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_television:before {
+    background-image: url(../images/icons/television.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_business-mag:before {
+    background-image: url(../images/icons/business-mag.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
+    background-image: url(../images/icons/interactive.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
+    background-image: url(../images/icons/newspaper.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_global-entertainment:before {
+    background-image: url(../images/icons/global-entertainment.svg); }
 
 .rollbox-set .rollbox {
   text-align: center;
