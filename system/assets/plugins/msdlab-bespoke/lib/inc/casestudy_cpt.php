@@ -204,8 +204,8 @@ class MSDCaseStudyCPT {
             'cb' => '<input type="checkbox" />',
             'title' => __( 'Title' ),
             'msd_practice-area' => __( 'Solutions' ),
-            'msd_industries' => __( 'Industries' ),
-            'msd_functions' => __( 'Functions' ),
+            'msd_industry' => __( 'Industries' ),
+            'msd_function' => __( 'Functions' ),
             'author' => __( 'Author' ),
             'date' => __( 'Date' )
         );
@@ -219,8 +219,8 @@ class MSDCaseStudyCPT {
         switch( $column ) {
             /* If displaying the 'logo' column. */
             case 'msd_practice-area' :
-            case 'msd_industries' :
-            case 'msd_functions' :
+            case 'msd_industry' :
+            case 'msd_function' :
                 $taxonomy = $column;
                 if ( $taxonomy ) {
                     $taxonomy_object = get_taxonomy( $taxonomy );
