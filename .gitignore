@@ -52,6 +52,11 @@ system/assets/themes/genesis
 system/wp-content/themes/twenty*
 system/wp-content/themes/genesis
 
+# Videos for size
+*.mp4
+*.mov
+*.3gp
+
 # Apple stuff
 .DS_Store
 .AppleDouble

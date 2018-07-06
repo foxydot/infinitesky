@@ -48,7 +48,7 @@ if (!class_exists('MSDLab_Video_Background_Support')) {
                     break;
                 case 1:
                 default:
-                    $videosrc = get_stylesheet_directory_uri().'/lib/images/bluest.mp4';
+                    $videosrc = get_stylesheet_directory_uri().'/lib/images/infinite_sky.mp4';
                     break;
             }
             print '<!-- The video -->
