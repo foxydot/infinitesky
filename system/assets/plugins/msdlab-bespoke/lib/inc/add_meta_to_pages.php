@@ -34,7 +34,7 @@ if(!class_exists('MSDLab_AddMetaToPages')){
             $columns = array(
                 'cb' => '<input type="checkbox" />',
                 'title' => __( 'Title' ),
-                $this->cpt.'_tag' => __( 'Tags' ),
+                'post_tag' => __( 'Tags' ),
                 'author' => __( 'Author' ),
                 'date' => __( 'Date' )
             );
@@ -46,7 +46,7 @@ if(!class_exists('MSDLab_AddMetaToPages')){
             global $post;
 
             switch( $column ) {
-                case $this->cpt.'_tag' :
+                case 'post_tag' :
                     $taxonomy = $column;
                     if ( $taxonomy ) {
                         $taxonomy_object = get_taxonomy( $taxonomy );
