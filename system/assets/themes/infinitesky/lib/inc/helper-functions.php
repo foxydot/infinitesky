@@ -142,7 +142,14 @@ function msdlab_do_chapter_title(){
     } elseif(is_page()) {
         global $post;
         print '<h2 class="chapter-title">';
-        print get_section_title();
+        if(get_section() == 'industries-functions'){
+            foreach (wp_get_post_terms($post->ID,'post_tag') AS $term ){
+                $terms[] = $term->name;
+            }
+            print implode(', ',$terms);
+        } else {
+            print get_section_title();
+        }
         print '</h2>';
     } elseif(is_archive()) {
         if(is_cpt('msd_news')){
