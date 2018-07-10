@@ -1390,7 +1390,7 @@ img.alignright,
     content: ''; }
 
 .entry-content ul {
-  margin: 0 auto;
+  margin: 0 auto 1em;
   display: inline-block; }
   .entry-content ul li {
     text-align: left;
@@ -1642,7 +1642,7 @@ p.entry-meta {
     .sectioned-page-wrapper .section .section-body .section-footer-area {
       margin-top: 4em; }
     .sectioned-page-wrapper .section ul {
-      margin: 0 auto;
+      margin: 0 auto 1em;
       display: inline-block; }
       .sectioned-page-wrapper .section ul li {
         text-align: left;

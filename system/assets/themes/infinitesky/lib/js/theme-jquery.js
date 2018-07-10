@@ -28,4 +28,5 @@ jQuery(document).ready(function($) {
 
     $('.section.align-buttons-bottom .section-content a.btn').wrap('<div class="btn-wrapper"></div>');
     $('.nav-primary .menu li.menu-item .sub-menu .menu-item.separator').html('<hr />');
+    $('ul').prev('p').css('margin-bottom','0');
 });
