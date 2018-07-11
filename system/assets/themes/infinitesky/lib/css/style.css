@@ -895,9 +895,9 @@ img.alignright,
 .site-inner .gform_wrapper {
   max-width: 101%;
   background-color: #D1D3D4;
-  padding: 3em 5em;
   border-top: 4px solid #ff6600;
-  position: relative; }
+  position: relative;
+  padding: 1em; }
   .site-inner .gform_wrapper .gform_heading .gform_title {
     display: inline;
     font-weight: 700;
@@ -908,7 +908,8 @@ img.alignright,
     font-weight: 400;
     font-size: 1.6em; }
   .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield {
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    text-indent: 0; }
     .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield label {
       display: none; }
     .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container {
@@ -938,23 +939,19 @@ img.alignright,
             left: 0; }
         .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li label {
           display: inline-block;
-          margin-left: 4em;
+          margin-left: 1em;
           padding: 0.25em;
           width: 90%;
           font-weight: 400; }
         .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li:hover label {
           background: #FFF; }
       .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container input[type="text"] {
-        position: absolute;
-        bottom: 1.3em;
-        right: 10em; }
+        position: relative;
+        margin: 0 auto; }
   .site-inner .gform_wrapper .gform_footer {
-    position: absolute;
-    bottom: 1em;
-    right: 0;
-    text-align: right;
-    display: inline-block;
-    width: auto; }
+    text-align: center;
+    display: block;
+    width: 100%; }
     .site-inner .gform_wrapper .gform_footer input.button,
     .site-inner .gform_wrapper .gform_footer input[type=submit] {
       display: inline-block;
@@ -1632,7 +1629,7 @@ p.entry-meta {
           background-color: #ff6600;
           content: ''; }
     .sectioned-page-wrapper .section .section-body .container {
-      padding: 3em 5em; }
+      padding: 1em 1em; }
       .sectioned-page-wrapper .section .section-body .container .section-content img {
         margin-bottom: 0; }
       .sectioned-page-wrapper .section .section-body .container .section-content a, .sectioned-page-wrapper .section .section-body .container .section-content a:link, .sectioned-page-wrapper .section .section-body .container .section-content a:visited {
@@ -2329,20 +2326,88 @@ article.team_member {
   .sectioned-page-wrapper .section ul li.icon:before {
     height: 2em;
     width: 2em; }
-  .sectioned-page-wrapper .section ul li.icon.icon_media:before {
-    background-image: url(../images/icons/media.svg); }
-  .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
-    background-image: url(../images/icons/entertainment.svg); }
-  .sectioned-page-wrapper .section ul li.icon.icon_television:before {
-    background-image: url(../images/icons/television.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_agile-enablement-w:before {
+    background-image: url(../images/icons/agile-enablement-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_agile-enablement:before {
+    background-image: url(../images/icons/agile-enablement.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_agile-portfolio-mgmt-w:before {
+    background-image: url(../images/icons/agile-portfolio-mgmt-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_agile-portfolio-mgmt:before {
+    background-image: url(../images/icons/agile-portfolio-mgmt.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_agile-process-improvement-w:before {
+    background-image: url(../images/icons/agile-process-improvement-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_agile-process-improvement:before {
+    background-image: url(../images/icons/agile-process-improvement.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_business-mag:before {
     background-image: url(../images/icons/business-mag.svg); }
-  .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
-    background-image: url(../images/icons/interactive.svg); }
-  .sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
-    background-image: url(../images/icons/newspaper.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_careers:before {
+    background-image: url(../images/icons/careers.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_cloud-migration-w:before {
+    background-image: url(../images/icons/cloud-migration-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_cloud-migration:before {
+    background-image: url(../images/icons/cloud-migration.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_communications:before {
+    background-image: url(../images/icons/communications.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_core-values-w:before {
+    background-image: url(../images/icons/core-values-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_core-values:before {
+    background-image: url(../images/icons/core-values.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_cpg:before {
+    background-image: url(../images/icons/cpg.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_cultural-change-w:before {
+    background-image: url(../images/icons/cultural-change-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_cultural-change:before {
+    background-image: url(../images/icons/cultural-change.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_digital-organization-w:before {
+    background-image: url(../images/icons/digital-organization-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_digital-organization:before {
+    background-image: url(../images/icons/digital-organization.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
+    background-image: url(../images/icons/entertainment.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_financial-services:before {
+    background-image: url(../images/icons/financial-services.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_focus:before {
+    background-image: url(../images/icons/focus.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_global-entertainment:before {
     background-image: url(../images/icons/global-entertainment.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_high-performance-w:before {
+    background-image: url(../images/icons/high-performance-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_high-performance:before {
+    background-image: url(../images/icons/high-performance.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
+    background-image: url(../images/icons/interactive.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_maximize-dmp:before {
+    background-image: url(../images/icons/maximize-dmp.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_media:before {
+    background-image: url(../images/icons/media.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_mortgage-provider:before {
+    background-image: url(../images/icons/mortgage-provider.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_network-provider:before {
+    background-image: url(../images/icons/network-provider.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
+    background-image: url(../images/icons/newspaper.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_online-publisher:before {
+    background-image: url(../images/icons/online-publisher.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_operate:before {
+    background-image: url(../images/icons/operate.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_operational-excellence-w:before {
+    background-image: url(../images/icons/operational-excellence-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_operational-excellence:before {
+    background-image: url(../images/icons/operational-excellence.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_our-team-w:before {
+    background-image: url(../images/icons/our-team-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_our-team:before {
+    background-image: url(../images/icons/our-team.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_publisher:before {
+    background-image: url(../images/icons/publisher.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_retail:before {
+    background-image: url(../images/icons/retail.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_television:before {
+    background-image: url(../images/icons/television.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_transform:before {
+    background-image: url(../images/icons/transform.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_transportation:before {
+    background-image: url(../images/icons/transportation.svg); }
 
 .rollbox-set .rollbox {
   text-align: center;
@@ -2456,7 +2521,44 @@ article.team_member {
   /* # Site Footer
   ---------------------------------------------------------------------------------------------------- */
   .site-footer {
-    font-size: 0.8em; } }
+    font-size: 0.8em; }
+  .sectioned-page-wrapper .section {
+    margin-bottom: 3em; }
+    .sectioned-page-wrapper .section .section-body .container {
+      padding: 3em 5em; }
+  /* ## Gravity Forms
+--------------------------------------------- */
+  .site-inner .gform_wrapper {
+    padding: 3em 5em; }
+    .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li {
+      margin-left: 1.5em !important; }
+      .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li input[type="checkbox"] {
+        padding: 12px; }
+      .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li label {
+        margin-left: 4em;
+        padding: 0.25em; }
+    .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container input[type="text"] {
+      position: absolute;
+      margin: 0;
+      bottom: 1.3em;
+      right: 10em; }
+    .site-inner .gform_wrapper .gform_footer {
+      position: absolute;
+      bottom: 1em;
+      right: 0;
+      text-align: right;
+      display: inline-block;
+      width: auto; }
+      .site-inner .gform_wrapper .gform_footer input.button,
+      .site-inner .gform_wrapper .gform_footer input[type=submit] {
+        display: inline-block;
+        margin: 0 !important; }
+  .site-inner .sidebar .gform_wrapper .gform_body li.gfield {
+    background: #eaf3fb; }
+    .site-inner .sidebar .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .sidebar .gform_wrapper .gform_body li.gfield .ginput_container textarea {
+      background: rgba(234, 243, 251, 0); }
+    .site-inner .sidebar .gform_wrapper .gform_body li.gfield.white {
+      background: none; } }
 
 @media only screen and (min-width: 1024px) {
   /* # Defaults

@@ -71,4 +71,79 @@
   .site-footer {
     font-size: 0.8em;
   }
+
+  .sectioned-page-wrapper {
+    .section {
+      margin-bottom: 3em;
+      .section-body {
+        .container {
+          padding: 3em 5em;
+        }
+      }
+    }
+  }
+
+  /* ## Gravity Forms
+--------------------------------------------- */
+  .site-inner {
+    .gform_wrapper {
+      padding: 3em 5em;
+      .gform_body {
+        ul.gform_fields {
+          li.gfield {
+            .ginput_container {
+              ul.gfield_checkbox{
+                li{
+                  margin-left: 1.5em !important;
+                  input[type="checkbox"]{
+                    padding: 12px;
+                  }
+                  label{
+                    margin-left: 4em;
+                    padding: 0.25em;
+                  }
+                }
+              }
+              input[type="text"]{
+                position: absolute;
+                margin: 0;
+                bottom: 1.3em;
+                right: 10em;
+              }
+            }
+          }
+        }
+      }
+      .gform_footer {
+        position: absolute;
+        bottom: 1em;
+        right:0;
+        text-align: right;
+        display: inline-block;
+        width: auto;
+        input.button,
+        input[type=submit] {
+          display: inline-block;
+          margin: 0 !important;
+        }
+      }
+    }
+    .sidebar{
+      .gform_wrapper {
+        .gform_body {
+          li.gfield {
+            background: rgb(234, 243, 251);
+            .ginput_container {
+              input, textarea {
+                background: rgba(234,243,251,0);
+              }
+            }
+            &.white {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

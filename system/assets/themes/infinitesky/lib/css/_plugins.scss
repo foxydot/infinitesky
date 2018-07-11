@@ -69,9 +69,9 @@
   .gform_wrapper {
     max-width: 101%;
     background-color: $ltgrey;
-    padding: 3em 5em;
     border-top: 4px solid $orange;
     position: relative;
+    padding: 1em;
     .gform_heading {
       .gform_title{
         display: inline;
@@ -89,6 +89,7 @@
       ul.gform_fields {
         li.gfield {
           margin-bottom: 0.5em;
+          text-indent: 0;
           label {
             display: none;
           }
@@ -119,7 +120,7 @@
                 }
                 label{
                   display: inline-block;
-                  margin-left: 4em;
+                  margin-left: 1em;
                   padding: 0.25em;
                   width: 90%;
                   font-weight: 400;
@@ -132,21 +133,17 @@
               }
             }
             input[type="text"]{
-              position: absolute;
-              bottom: 1.3em;
-              right: 10em;
+              position: relative;
+              margin: 0 auto;
             }
           }
         }
       }
     }
     .gform_footer {
-      position: absolute;
-      bottom: 1em;
-      right:0;
-      text-align: right;
-      display: inline-block;
-      width: auto;
+      text-align: center;
+      display: block;
+      width: 100%;
       input.button,
       input[type=submit] {
         display: inline-block;
