@@ -72,12 +72,34 @@
     font-size: 0.8em;
   }
 
+  //sections
   .sectioned-page-wrapper {
     .section {
       margin-bottom: 3em;
       .section-body {
         .container {
           padding: 3em 5em;
+        }
+      }
+    }
+    .section.column-border {
+      .column-holder {
+        display: inline-flex;
+        justify-content: center;
+      }
+    }
+    .section.align-buttons-bottom{
+      .section-body{
+        .container {
+          .column-holder {
+            display: inline-flex;
+            justify-content: center;
+            .btn-wrapper{
+              .btn {
+                margin: 0 4px;
+              }
+            }
+          }
         }
       }
     }

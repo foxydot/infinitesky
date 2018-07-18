@@ -261,8 +261,6 @@
     }}
   .section.column-border {
     .column-holder {
-      display: inline-flex;
-      justify-content: center;
       .section-content:not(.last-child){
         border-right: 1px solid $orange;
         padding-right: 3em;
@@ -320,8 +318,6 @@
     .section-body{
       .container{
         .column-holder{
-          display: inline-flex;
-          justify-content: center;
           .section-content{
             padding-bottom: 3em;
             position: relative;

@@ -29,4 +29,17 @@ jQuery(document).ready(function($) {
     $('.section.align-buttons-bottom .section-content a.btn').wrap('<div class="btn-wrapper"></div>');
     $('.nav-primary .menu li.menu-item .sub-menu .menu-item.separator').html('<hr />');
     $('ul').prev('p').css('margin-bottom','0');
+
+    if (typeof formshow !== 'undefined') {
+        // the variable is defined
+        var arrayLength = formshow.length;
+        console.log(arrayLength);
+        var classes = new Array();
+        for (var i = 0; i < arrayLength; i++) {
+            classes[i] = '.site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li.gchoice_1_1_' + formshow[i];
+        }
+        var string = '<style>' + classes.join() + '{display: block;}</style>';
+        $('.section-what-can-we-solve-with-you').append(string);
+
+    }
 });
