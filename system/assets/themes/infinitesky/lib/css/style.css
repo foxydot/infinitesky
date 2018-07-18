@@ -2360,8 +2360,16 @@ article.team_member {
     background-image: url(../images/icons/high-performance-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_high-performance:before {
     background-image: url(../images/icons/high-performance.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_implementation-w:before {
+    background-image: url(../images/icons/implementation-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_implementation:before {
+    background-image: url(../images/icons/implementation.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
     background-image: url(../images/icons/interactive.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_managed-services-w:before {
+    background-image: url(../images/icons/managed-services-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_managed-services:before {
+    background-image: url(../images/icons/managed-services.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_maximize-dmp:before {
     background-image: url(../images/icons/maximize-dmp.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_media:before {
@@ -2380,6 +2388,10 @@ article.team_member {
     background-image: url(../images/icons/operational-excellence-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_operational-excellence:before {
     background-image: url(../images/icons/operational-excellence.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_optimize-w:before {
+    background-image: url(../images/icons/optimize-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_optimize:before {
+    background-image: url(../images/icons/optimize.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_our-team-w:before {
     background-image: url(../images/icons/our-team-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_our-team:before {
@@ -2388,6 +2400,10 @@ article.team_member {
     background-image: url(../images/icons/publisher.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_retail:before {
     background-image: url(../images/icons/retail.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_strategy-w:before {
+    background-image: url(../images/icons/strategy-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_strategy:before {
+    background-image: url(../images/icons/strategy.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_television:before {
     background-image: url(../images/icons/television.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_transform:before {
