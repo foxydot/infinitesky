@@ -255,4 +255,43 @@
 
   .site-footer {
   }
+
+
+  body.core-values{
+    .sectioned-page-wrapper {
+      .section {
+        &.zebra{
+          background-image: linear-gradient(to right, $white 0%,$white 49.99%,$ltgrey 50%,$ltgrey 100%);
+          .container{
+            background: none;
+          }
+          .section-content{
+            padding-left: 3em;
+            padding-right: 3em;
+            &.column-1{
+              padding-bottom: 0em;
+            }
+            &.column-2{
+              padding-top: 0em;
+            }
+          }
+          &.bkg-white{
+            background-image: linear-gradient(to right, $white 0%,$white 49.99%,$ltgrey 50%,$ltgrey 100%);
+          }
+          &.bkg-ltgrey{
+            background-image: linear-gradient(to right, $ltgrey 0%,$ltgrey 49.99%,$medgrey 50%,$medgrey 100%);
+            .column-2{
+              color: $white;
+            }
+          }
+          &.bkg-dkgrey{
+            background-image: linear-gradient(to right, $dkgrey 0%,$dkgrey 49.99%,$white 50%,$white 100%);
+            .column-2{
+              color: $dkgrey;
+            }
+          }
+        }
+      }
+    }
+  }
 }

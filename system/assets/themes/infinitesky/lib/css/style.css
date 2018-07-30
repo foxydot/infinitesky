@@ -2167,24 +2167,28 @@ body.core-values .sectioned-page-wrapper .section .section-content {
       content: ''; }
 
 body.core-values .sectioned-page-wrapper .section.zebra {
-  background-image: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
-  background-image: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
+  background-image: linear-gradient(to bottom, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
   body.core-values .sectioned-page-wrapper .section.zebra .container {
     background: none; }
   body.core-values .sectioned-page-wrapper .section.zebra .section-content {
     padding-left: 3em;
     padding-right: 3em; }
+    body.core-values .sectioned-page-wrapper .section.zebra .section-content.column-1 {
+      padding-bottom: 3em; }
+    body.core-values .sectioned-page-wrapper .section.zebra .section-content.column-2 {
+      padding-top: 3em; }
   body.core-values .sectioned-page-wrapper .section.zebra.bkg-white {
-    background-image: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
-    background-image: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
+    background-image: linear-gradient(to bottom, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
   body.core-values .sectioned-page-wrapper .section.zebra.bkg-ltgrey {
-    background-image: -webkit-gradient(linear, left top, right top, from(#D1D3D4), color-stop(49.99%, #D1D3D4), color-stop(50%, #666), to(#666));
-    background-image: linear-gradient(to right, #D1D3D4 0%, #D1D3D4 49.99%, #666 50%, #666 100%); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#D1D3D4), color-stop(49.99%, #D1D3D4), color-stop(50%, #666), to(#666));
+    background-image: linear-gradient(to bottom, #D1D3D4 0%, #D1D3D4 49.99%, #666 50%, #666 100%); }
     body.core-values .sectioned-page-wrapper .section.zebra.bkg-ltgrey .column-2 {
       color: #FFF; }
   body.core-values .sectioned-page-wrapper .section.zebra.bkg-dkgrey {
-    background-image: -webkit-gradient(linear, left top, right top, from(#333), color-stop(49.99%, #333), color-stop(50%, #FFF), to(#FFF));
-    background-image: linear-gradient(to right, #333 0%, #333 49.99%, #FFF 50%, #FFF 100%); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#333), color-stop(49.99%, #333), color-stop(50%, #FFF), to(#FFF));
+    background-image: linear-gradient(to bottom, #333 0%, #333 49.99%, #FFF 50%, #FFF 100%); }
     body.core-values .sectioned-page-wrapper .section.zebra.bkg-dkgrey .column-2 {
       color: #333; }
 
@@ -2740,7 +2744,32 @@ article.team_member {
   .footer-widgets {
     padding-top: 2em; }
   /* # Site Footer
-  ---------------------------------------------------------------------------------------------------- */ }
+  ---------------------------------------------------------------------------------------------------- */
+  body.core-values .sectioned-page-wrapper .section.zebra {
+    background-image: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
+    background-image: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
+    body.core-values .sectioned-page-wrapper .section.zebra .container {
+      background: none; }
+    body.core-values .sectioned-page-wrapper .section.zebra .section-content {
+      padding-left: 3em;
+      padding-right: 3em; }
+      body.core-values .sectioned-page-wrapper .section.zebra .section-content.column-1 {
+        padding-bottom: 0em; }
+      body.core-values .sectioned-page-wrapper .section.zebra .section-content.column-2 {
+        padding-top: 0em; }
+    body.core-values .sectioned-page-wrapper .section.zebra.bkg-white {
+      background-image: -webkit-gradient(linear, left top, right top, from(#FFF), color-stop(49.99%, #FFF), color-stop(50%, #D1D3D4), to(#D1D3D4));
+      background-image: linear-gradient(to right, #FFF 0%, #FFF 49.99%, #D1D3D4 50%, #D1D3D4 100%); }
+    body.core-values .sectioned-page-wrapper .section.zebra.bkg-ltgrey {
+      background-image: -webkit-gradient(linear, left top, right top, from(#D1D3D4), color-stop(49.99%, #D1D3D4), color-stop(50%, #666), to(#666));
+      background-image: linear-gradient(to right, #D1D3D4 0%, #D1D3D4 49.99%, #666 50%, #666 100%); }
+      body.core-values .sectioned-page-wrapper .section.zebra.bkg-ltgrey .column-2 {
+        color: #FFF; }
+    body.core-values .sectioned-page-wrapper .section.zebra.bkg-dkgrey {
+      background-image: -webkit-gradient(linear, left top, right top, from(#333), color-stop(49.99%, #333), color-stop(50%, #FFF), to(#FFF));
+      background-image: linear-gradient(to right, #333 0%, #333 49.99%, #FFF 50%, #FFF 100%); }
+      body.core-values .sectioned-page-wrapper .section.zebra.bkg-dkgrey .column-2 {
+        color: #333; } }
 
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
