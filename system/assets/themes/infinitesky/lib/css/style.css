@@ -2056,6 +2056,10 @@ article.type-post .entry-header {
         margin-bottom: 0; }
       .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a {
         display: block; }
+        .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a.icon {
+          padding-top: 4.2em;
+          background-size: 4.2em auto;
+          background-position: center top; }
   .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .btn.all-case-studies {
     float: right; }
 

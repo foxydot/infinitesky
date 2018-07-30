@@ -162,6 +162,11 @@ article.type-post{
               }
               a{
                 display: block;
+                &.icon{
+                  padding-top: 4.2em;
+                  background-size: 4.2em auto;
+                  background-position: center top;
+                }
               }
             }
           }
