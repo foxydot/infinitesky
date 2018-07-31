@@ -38,7 +38,7 @@ if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     closedir($dir);
 }
 
-
+print '<textarea>';
 if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     while (false !== ($entry = readdir($dir))) {
         if ($entry != "." && $entry != "..") {
@@ -47,6 +47,7 @@ if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     }
     closedir($dir);
 }
+print '</textarea>';
 ?>
 </body>
 </html>

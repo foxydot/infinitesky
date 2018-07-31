@@ -2372,6 +2372,10 @@ article.team_member {
     background-image: url(../images/icons/implementation-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_implementation:before {
     background-image: url(../images/icons/implementation.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_independence-w:before {
+    background-image: url(../images/icons/independence-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_independence:before {
+    background-image: url(../images/icons/independence.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
     background-image: url(../images/icons/interactive.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_managed-services-w:before {
@@ -2404,6 +2408,10 @@ article.team_member {
     background-image: url(../images/icons/our-team-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_our-team:before {
     background-image: url(../images/icons/our-team.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_perspective-w:before {
+    background-image: url(../images/icons/perspective-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_perspective:before {
+    background-image: url(../images/icons/perspective.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_publisher:before {
     background-image: url(../images/icons/publisher.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_retail:before {
