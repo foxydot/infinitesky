@@ -121,7 +121,7 @@
       margin-left: 1rem;
       position: relative;
       whitespace: nowrap;
-      input[type="search"] {
+      input[type="search"],input[type="text"] {
         font-size: 1.4rem;
         width: 5em;
         background: transparent;
@@ -138,7 +138,7 @@
         }
       }
 
-      input[type="search"]::placeholder {
+      input[type="search"]::placeholder,input[type="text"]::placeholder {
         color: $white;
         opacity: 1;
       }
