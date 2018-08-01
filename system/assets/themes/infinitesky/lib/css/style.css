@@ -1158,7 +1158,7 @@ img.alignright,
 
 /* # Site Navigation
 ---------------------------------------------------------------------------------------------------- */
-.genesis-nav-menu {
+.genesis-nav-menu, .hs-menu-wrapper > ul {
   font-family: 'Lato', sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
@@ -1168,12 +1168,12 @@ img.alignright,
   font-weight: 500;
   line-height: 1;
   width: 100%; }
-  .genesis-nav-menu .menu-item {
+  .genesis-nav-menu .menu-item, .genesis-nav-menu .hs-menu-item, .hs-menu-wrapper > ul .menu-item, .hs-menu-wrapper > ul .hs-menu-item {
     display: inline-block;
     margin-bottom: 0;
     padding-bottom: 0;
     text-align: left; }
-  .genesis-nav-menu a {
+  .genesis-nav-menu a, .hs-menu-wrapper > ul a {
     color: #ff6600;
     display: block;
     padding: 0 0.5em;
@@ -1184,10 +1184,14 @@ img.alignright,
   .genesis-nav-menu a:hover,
   .genesis-nav-menu .current-menu-item > a,
   .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-  .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+  .genesis-nav-menu .sub-menu .current-menu-item > a:hover, .hs-menu-wrapper > ul a:focus,
+  .hs-menu-wrapper > ul a:hover,
+  .hs-menu-wrapper > ul .current-menu-item > a,
+  .hs-menu-wrapper > ul .sub-menu .current-menu-item > a:focus,
+  .hs-menu-wrapper > ul .sub-menu .current-menu-item > a:hover {
     color: #ff6600;
     text-decoration: none; }
-  .genesis-nav-menu .sub-menu {
+  .genesis-nav-menu .sub-menu, .genesis-nav-menu ul.hs-menu-children-wrapper, .hs-menu-wrapper > ul .sub-menu, .hs-menu-wrapper > ul ul.hs-menu-children-wrapper {
     left: -9999px;
     background-color: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -1195,7 +1199,7 @@ img.alignright,
     transition: opacity .4s ease-in-out;
     width: 200px;
     z-index: 99; }
-    .genesis-nav-menu .sub-menu a {
+    .genesis-nav-menu .sub-menu a, .genesis-nav-menu ul.hs-menu-children-wrapper a, .hs-menu-wrapper > ul .sub-menu a, .hs-menu-wrapper > ul ul.hs-menu-children-wrapper a {
       border-top: 0;
       font-size: 14px;
       font-size: 1.4rem;
@@ -1203,21 +1207,21 @@ img.alignright,
       position: relative;
       width: 200px;
       word-wrap: break-word; }
-    .genesis-nav-menu .sub-menu a::before {
+    .genesis-nav-menu .sub-menu a::before, .genesis-nav-menu ul.hs-menu-children-wrapper a::before, .hs-menu-wrapper > ul .sub-menu a::before, .hs-menu-wrapper > ul ul.hs-menu-children-wrapper a::before {
       content: ">";
       margin-right: 10px; }
-    .genesis-nav-menu .sub-menu .sub-menu {
+    .genesis-nav-menu .sub-menu .sub-menu, .genesis-nav-menu .sub-menu ul.hs-menu-children-wrapper, .genesis-nav-menu ul.hs-menu-children-wrapper .sub-menu, .genesis-nav-menu ul.hs-menu-children-wrapper ul.hs-menu-children-wrapper, .hs-menu-wrapper > ul .sub-menu .sub-menu, .hs-menu-wrapper > ul .sub-menu ul.hs-menu-children-wrapper, .hs-menu-wrapper > ul ul.hs-menu-children-wrapper .sub-menu, .hs-menu-wrapper > ul ul.hs-menu-children-wrapper ul.hs-menu-children-wrapper {
       margin: -56px 0 0 199px; }
-  .genesis-nav-menu .menu-item:hover {
+  .genesis-nav-menu .menu-item:hover, .genesis-nav-menu .hs-menu-item:hover, .hs-menu-wrapper > ul .menu-item:hover, .hs-menu-wrapper > ul .hs-menu-item:hover {
     position: static; }
-    .genesis-nav-menu .menu-item:hover > .sub-menu {
+    .genesis-nav-menu .menu-item:hover > .sub-menu, .genesis-nav-menu .menu-item:hover ul.hs-menu-children-wrapper, .genesis-nav-menu .hs-menu-item:hover > .sub-menu, .genesis-nav-menu .hs-menu-item:hover ul.hs-menu-children-wrapper, .hs-menu-wrapper > ul .menu-item:hover > .sub-menu, .hs-menu-wrapper > ul .menu-item:hover ul.hs-menu-children-wrapper, .hs-menu-wrapper > ul .hs-menu-item:hover > .sub-menu, .hs-menu-wrapper > ul .hs-menu-item:hover ul.hs-menu-children-wrapper {
       left: auto;
       opacity: 1; }
-  .genesis-nav-menu > .first > a {
+  .genesis-nav-menu > .first > a, .hs-menu-wrapper > ul > .first > a {
     padding-left: 0; }
-  .genesis-nav-menu > .last > a {
+  .genesis-nav-menu > .last > a, .hs-menu-wrapper > ul > .last > a {
     padding-right: 0; }
-  .genesis-nav-menu > .right {
+  .genesis-nav-menu > .right, .hs-menu-wrapper > ul > .right {
     display: inline-block; }
 
 /* ## Site Header Navigation
