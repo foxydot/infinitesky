@@ -392,6 +392,7 @@ input[type="radio"] {
 ::-webkit-input-placeholder {
   color: #333; }
 
+a.hs-button,
 button,
 input[type="button"],
 input[type="reset"],
@@ -410,7 +411,9 @@ a.btn,
   border-radius: 0;
   padding: 0.5em 2em;
   text-transform: uppercase; }
-  button:focus, button:hover,
+  a.hs-button:focus, a.hs-button:hover,
+  button:focus,
+  button:hover,
   input[type="button"]:focus,
   input[type="button"]:hover,
   input[type="reset"]:focus,
