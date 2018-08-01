@@ -287,20 +287,20 @@
 .nav-primary {
   margin-top: 0;
   text-transform: uppercase;
-  .menu{
+  .menu, .hs-menu-wrapper>ul{
     position: relative;
     text-align: center;
-    li.menu-item{
+    li.menu-item,li.hs-menu-item{
       a{
         color: $white;
         font-size: 1.2em;
         padding: 0.5em 1em;
         cursor: context-menu;
       }
-      .sub-menu{
+      .sub-menu,ul.hs-menu-children-wrapper{
         background-color: rgba($medgrey,0.8);
         width: 22em;
-        .menu-item, a{
+        .menu-item, a, hs-menu-item{
           width: 100%;
           a{
             cursor: pointer;
