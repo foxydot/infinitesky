@@ -181,7 +181,7 @@ add_image_size('child_thumbnail', 370, 370, TRUE);
 /* Display a custom favicon */
 add_filter( 'genesis_pre_load_favicon', 'msdlab_favicon_filter' );
 function msdlab_favicon_filter( $favicon_url ) {
-    return get_stylesheet_directory_uri().'/lib/img/favicon.ico';
+    return get_stylesheet_directory_uri().'/lib/images/favicon.ico';
 }
 
 /*** ORIG ***/
