@@ -1071,7 +1071,7 @@ img.alignright,
   .genesis-skip-link .skip-link-hidden {
     display: none;
     visibility: hidden; }
-  .mobile-trigger1,
+  .mobile-trigger1::before,
   .menu-toggle,
   .sub-menu-toggle {
     border-width: 0;
@@ -1082,13 +1082,18 @@ img.alignright,
     text-align: center;
     visibility: visible;
     background: transparent; }
+  .mobile-trigger1::before {
+    content: '\f0c9';
+    font-family: FontAwesome; }
+  .mobile-trigger1 span {
+    display: none; }
   .menu-toggle:focus,
   .menu-toggle:hover,
   .sub-menu-toggle:focus,
   .sub-menu-toggle:hover {
     background: transparent;
     border-width: 0; }
-  .mobile-trigger1,
+  .mobile-trigger1::before,
   .menu-toggle {
     line-height: 20px;
     position: relative;

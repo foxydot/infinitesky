@@ -9,7 +9,7 @@
     display: none;
     visibility: hidden;
   }
-  .mobile-trigger1,
+  .mobile-trigger1::before,
   .menu-toggle,
   .sub-menu-toggle {
     border-width: 0;
@@ -22,6 +22,14 @@
     background: transparent;
   }
 
+  .mobile-trigger1::before{
+    content: '\f0c9';
+    font-family: FontAwesome;
+  }
+  .mobile-trigger1 span{
+    display: none;
+  }
+
   .menu-toggle:focus,
   .menu-toggle:hover,
   .sub-menu-toggle:focus,
@@ -30,7 +38,7 @@
     border-width: 0;
   }
 
-  .mobile-trigger1,
+  .mobile-trigger1::before,
   .menu-toggle {
     line-height: 20px;
     position: relative;
