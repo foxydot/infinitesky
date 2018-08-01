@@ -1071,6 +1071,7 @@ img.alignright,
   .genesis-skip-link .skip-link-hidden {
     display: none;
     visibility: hidden; }
+  .mobile-trigger1,
   .menu-toggle,
   .sub-menu-toggle {
     border-width: 0;
@@ -1087,6 +1088,7 @@ img.alignright,
   .sub-menu-toggle:hover {
     background: transparent;
     border-width: 0; }
+  .mobile-trigger1,
   .menu-toggle {
     line-height: 20px;
     position: relative;
@@ -1094,6 +1096,7 @@ img.alignright,
     float: right;
     padding-right: 0;
     padding-left: 0; }
+  .mobile-trigger1::before,
   .menu-toggle::before {
     font-size: 3em;
     margin-right: 10px;

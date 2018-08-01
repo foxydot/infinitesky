@@ -11,6 +11,8 @@ add_action( 'msdlab_title_area', 'msdlab_do_search_title' );
 add_action( 'genesis_entry_header', 'genesis_do_post_title');
 remove_action( 'genesis_entry_header', 'genesis_post_info',12);
 add_action('genesis_entry_content','msdlab_read_search');
+
+remove_all_actions('genesis_after_content_sidebar_wrap');
 /**
  * Echo the title with the search term.
  *

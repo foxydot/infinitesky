@@ -9,7 +9,7 @@
     display: none;
     visibility: hidden;
   }
-
+  .mobile-trigger1,
   .menu-toggle,
   .sub-menu-toggle {
     border-width: 0;
@@ -30,6 +30,7 @@
     border-width: 0;
   }
 
+  .mobile-trigger1,
   .menu-toggle {
     line-height: 20px;
     position: relative;
@@ -39,6 +40,8 @@
     padding-left: 0;
   }
 
+
+  .mobile-trigger1::before,
   .menu-toggle::before {
     font-size: 3em;
     margin-right: 10px;
