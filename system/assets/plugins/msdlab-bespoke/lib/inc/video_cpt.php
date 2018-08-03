@@ -197,10 +197,10 @@ class MSDVideoCPT {
         ?>
             <style>
             <?php if (($_GET['post_type'] == 'msd_video') || ($post_type == 'msd_video')) : ?>
-            #icon-edit { background:transparent url('<?php echo get_stylesheet_directory_uri().'/lib/img/msd_video-over.png';?>') no-repeat; }      
+            #icon-edit { background:transparent url('<?php echo get_stylesheet_directory_uri().'/lib/images/msd_video-over.png';?>') no-repeat; }
             <?php endif; ?> 
-            #adminmenu #menu-posts-msd_video div.wp-menu-image{background:transparent url("<?php echo get_stylesheet_directory_uri().'/lib/img/msd_video.png';?>") no-repeat center center;}
-            #adminmenu #menu-posts-msd_video:hover div.wp-menu-image,#adminmenu #menu-posts-msd_profile.wp-has-current-submenu div.wp-menu-image{background:transparent url("<?php echo get_stylesheet_directory_uri().'/lib/img/msd_video-over.png';?>") no-repeat center center;} 
+            #adminmenu #menu-posts-msd_video div.wp-menu-image{background:transparent url("<?php echo get_stylesheet_directory_uri().'/lib/images/msd_video.png';?>") no-repeat center center;}
+            #adminmenu #menu-posts-msd_video:hover div.wp-menu-image,#adminmenu #menu-posts-msd_profile.wp-has-current-submenu div.wp-menu-image{background:transparent url("<?php echo get_stylesheet_directory_uri().'/lib/images/msd_video-over.png';?>") no-repeat center center;}
             </style>
             <?php
         }
