@@ -1876,9 +1876,9 @@ p.entry-meta {
     background-image: url(../images/icons/cpg.svg); }
     .icon.icon-cpg.icon-white, .icon.icon-cpg-retail.icon-white {
       background-image: url(../images/icons/cpg-w.svg); }
-  .icon.icon-cultural-change {
+  .icon.icon-cultural-change, .icon.icon-education {
     background-image: url(../images/icons/cultural-change.svg); }
-    .icon.icon-cultural-change.icon-white {
+    .icon.icon-cultural-change.icon-white, .icon.icon-education.icon-white {
       background-image: url(../images/icons/cultural-change-w.svg); }
   .icon.icon-digital-organization {
     background-image: url(../images/icons/digital-organization.svg); }
