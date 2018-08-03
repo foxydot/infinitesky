@@ -192,7 +192,9 @@ class MSDSectionedPage{
     }
 
     function sectioned_page_output(){
-        wp_enqueue_script('sticky',plugin_dir_url('msd-specialty-pages/msd-specialty-pages.php'). '/lib/js/jquery.sticky.js',array('jquery'),FALSE,TRUE);
+        $loc = dirname(dirname(__FILE__)) . '/msdlab-bespoke.php';
+        //error_log($loc);
+        wp_enqueue_script('sticky',plugin_dir_url($loc). '/lib/js/jquery.sticky.js',array('jquery'),FALSE,TRUE);
         global $post,$subtitle_metabox,$sectioned_page_metabox,$nav_ids;
         $i = 0;
         $meta = $sectioned_page_metabox->the_meta();
