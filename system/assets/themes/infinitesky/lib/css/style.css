@@ -2509,7 +2509,7 @@ a.hs-button {
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {
     position: relative;
-    min-height: 14em; }
+    min-height: 17em; }
     .rollbox-set .rollbox .rollbox-wrapper .rollbox-on {
       color: #FFF;
       background: #ff6600;
