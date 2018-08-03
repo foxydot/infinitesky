@@ -1864,17 +1864,17 @@ p.entry-meta {
     background-image: url(../images/icons/cloud-migration.svg); }
     .icon.icon-cloud-migration.icon-white {
       background-image: url(../images/icons/cloud-migration-w.svg); }
-  .icon.icon-communications {
+  .icon.icon-communications, .icon.icon-global-communications {
     background-image: url(../images/icons/communications.svg); }
-    .icon.icon-communications.icon-white {
+    .icon.icon-communications.icon-white, .icon.icon-global-communications.icon-white {
       background-image: url(../images/icons/communications-w.svg); }
   .icon.icon-core-values {
     background-image: url(../images/icons/core-values.svg); }
     .icon.icon-core-values.icon-white {
       background-image: url(../images/icons/core-values-w.svg); }
-  .icon.icon-cpg {
+  .icon.icon-cpg, .icon.icon-cpg-retail {
     background-image: url(../images/icons/cpg.svg); }
-    .icon.icon-cpg.icon-white {
+    .icon.icon-cpg.icon-white, .icon.icon-cpg-retail.icon-white {
       background-image: url(../images/icons/cpg-w.svg); }
   .icon.icon-cultural-change {
     background-image: url(../images/icons/cultural-change.svg); }
@@ -1916,13 +1916,13 @@ p.entry-meta {
     background-image: url(../images/icons/media.svg); }
     .icon.icon-media.icon-white {
       background-image: url(../images/icons/media-w.svg); }
-  .icon.icon-mortgage-provider {
+  .icon.icon-mortgage-provider, .icon.icon-mortgage {
     background-image: url(../images/icons/mortgage-provider.svg); }
-    .icon.icon-mortgage-provider.icon-white {
+    .icon.icon-mortgage-provider.icon-white, .icon.icon-mortgage.icon-white {
       background-image: url(../images/icons/mortgage-provider-w.svg); }
-  .icon.icon-network-provider {
+  .icon.icon-network-provider, .icon.icon-networking {
     background-image: url(../images/icons/network-provider.svg); }
-    .icon.icon-network-provider.icon-white {
+    .icon.icon-network-provider.icon-white, .icon.icon-networking.icon-white {
       background-image: url(../images/icons/network-provider-w.svg); }
   .icon.icon-newspaper {
     background-image: url(../images/icons/newspaper.svg); }
@@ -1944,9 +1944,9 @@ p.entry-meta {
     background-image: url(../images/icons/our-team.svg); }
     .icon.icon-our-team.icon-white {
       background-image: url(../images/icons/our-team-w.svg); }
-  .icon.icon-publisher {
+  .icon.icon-publisher, .icon.icon-print-publishing {
     background-image: url(../images/icons/publisher.svg); }
-    .icon.icon-publisher.icon-white {
+    .icon.icon-publisher.icon-white, .icon.icon-print-publishing.icon-white {
       background-image: url(../images/icons/publisher-w.svg); }
   .icon.icon-retail {
     background-image: url(../images/icons/retail.svg); }
@@ -1960,9 +1960,9 @@ p.entry-meta {
     background-image: url(../images/icons/transform.svg); }
     .icon.icon-transform.icon-white {
       background-image: url(../images/icons/transform-w.svg); }
-  .icon.icon-transportation {
+  .icon.icon-transportation, .icon.icon-logistics {
     background-image: url(../images/icons/transportation.svg); }
-    .icon.icon-transportation.icon-white {
+    .icon.icon-transportation.icon-white, .icon.icon-logistics.icon-white {
       background-image: url(../images/icons/transportation-w.svg); }
 
 hr.clear {

@@ -22,9 +22,6 @@ if (!class_exists('MSDLab_Video_Background_Support')) {
             if(!is_front_page() && get_section() != 'solutions'){return;}
             $select = $_GET['bkg'];
             switch($select){
-                case 9:
-                    $videosrc = 'http://susans.msdlab2.com/system/assets/themes/blue_sky_day/lib/images/Day-Loop-Final.mp4';
-                    break;
                 case 8:
                     $videosrc = get_stylesheet_directory_uri().'/lib/images/AdobeStock_133304947_Video_HD_Preview.mp4';
                     break;

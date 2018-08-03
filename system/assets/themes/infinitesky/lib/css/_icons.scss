@@ -47,7 +47,7 @@
     }
   }
 
-  &.icon-communications{
+  &.icon-communications,&.icon-global-communications{
     background-image: url(../images/icons/communications.svg);
     &.icon-white{
       background-image: url(../images/icons/communications-w.svg);
@@ -61,7 +61,7 @@
     }
   }
 
-  &.icon-cpg{
+  &.icon-cpg,&.icon-cpg-retail{
     background-image: url(../images/icons/cpg.svg);
     &.icon-white{
       background-image: url(../images/icons/cpg-w.svg);
@@ -138,14 +138,14 @@
     }
   }
 
-  &.icon-mortgage-provider{
+  &.icon-mortgage-provider,&.icon-mortgage{
     background-image: url(../images/icons/mortgage-provider.svg);
     &.icon-white{
       background-image: url(../images/icons/mortgage-provider-w.svg);
     }
   }
 
-  &.icon-network-provider{
+  &.icon-network-provider,&.icon-networking{
     background-image: url(../images/icons/network-provider.svg);
     &.icon-white{
       background-image: url(../images/icons/network-provider-w.svg);
@@ -187,7 +187,7 @@
     }
   }
 
-  &.icon-publisher{
+  &.icon-publisher,&.icon-print-publishing{
     background-image: url(../images/icons/publisher.svg);
     &.icon-white{
       background-image: url(../images/icons/publisher-w.svg);
@@ -215,7 +215,7 @@
     }
   }
 
-  &.icon-transportation{
+  &.icon-transportation,&.icon-logistics{
     background-image: url(../images/icons/transportation.svg);
     &.icon-white{
       background-image: url(../images/icons/transportation-w.svg);
