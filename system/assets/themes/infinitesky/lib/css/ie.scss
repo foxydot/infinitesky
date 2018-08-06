@@ -24,6 +24,11 @@
         }
       }
     }
+    .section.section-what-how{
+      .section-content {
+        background-image: url(../images/pngsforie/focus.png);
+      }
+    }
   }
 
   &.home {
@@ -32,6 +37,26 @@
         .gradient {
           .container {
             background: url(../images/pngsforie/content-left.png) top right no-repeat;
+          }
+        }
+      }
+    }
+    .sectioned-page-wrapper{
+      .section.section-transform-and-operate{
+        .section-body{
+          .container{
+            .row{
+              .section-content{
+                width: calc(50% - 2em);
+              }
+            }
+          }
+        }
+      }
+      .section.section-where-we-focus {
+        .section-body {
+          .container {
+            background-image: url(../images/pngsforie/focus.png);
           }
         }
       }
