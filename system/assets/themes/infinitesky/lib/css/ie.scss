@@ -3,3 +3,24 @@
  * <!--[if IE]>
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
+.sectioned-page-wrapper{
+  .section.bkg-dna{
+    &.full-width-bkg {
+      background-image: url(../images/pngsforie/dna.png);
+    }
+  }
+  .section.bkg-logo-right{
+    .section-body{
+      .container{
+        background: url(../images/pngsforie/content-right.png) top left no-repeat;
+      }
+    }
+  }
+  .section.bkg-logo-left{
+    .section-body{
+      .container{
+        background: url(../images/pngsforie/content-left.png) top right no-repeat;
+      }
+    }
+  }
+}
