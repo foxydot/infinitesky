@@ -24,6 +24,7 @@ function msdlab_add_styles() {
             $queue[] = 'msd-homepage-style';
         }
         if($is_IE){
+            print '<script>alert("IE sucks");</script>';
             wp_enqueue_style('ie-style',get_stylesheet_directory_uri().'/lib/css/ie.css',$queue);
             $queue[] = 'ie-style';
         }
