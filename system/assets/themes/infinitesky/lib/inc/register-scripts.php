@@ -26,10 +26,6 @@ function msdlab_add_styles() {
         if($is_IE){
             wp_enqueue_style('ie-style',get_stylesheet_directory_uri().'/lib/css/ie.css',$queue);
             $queue[] = 'ie-style';
-
-            wp_enqueue_style('ie8-style',get_template_directory_uri() . '/lib/css/ie8.css');
-            global $wp_styles;
-            $wp_styles->add_data( 'ie8-style', 'conditional', 'lte IE 8' );
         }
     }
 }
