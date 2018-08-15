@@ -1964,6 +1964,26 @@ p.entry-meta {
     background-image: url(../images/icons/transportation.svg); }
     .icon.icon-transportation.icon-white, .icon.icon-logistics.icon-white {
       background-image: url(../images/icons/transportation-w.svg); }
+  .icon.icon-dmp {
+    background-image: url(../images/icons/dmp.svg); }
+    .icon.icon-dmp.icon-white {
+      background-image: url(../images/icons/dmp-w.svg); }
+  .icon.icon-oms {
+    background-image: url(../images/icons/oms.svg); }
+    .icon.icon-oms.icon-white {
+      background-image: url(../images/icons/oms-w.svg); }
+  .icon.icon-pharma {
+    background-image: url(../images/icons/pharma.svg); }
+    .icon.icon-pharma.icon-white {
+      background-image: url(../images/icons/pharma-w.svg); }
+  .icon.icon-perspective {
+    background-image: url(../images/icons/perspective.svg); }
+    .icon.icon-perspective.icon-white {
+      background-image: url(../images/icons/perspective-w.svg); }
+  .icon.icon-independence {
+    background-image: url(../images/icons/independence.svg); }
+    .icon.icon-independence.icon-white {
+      background-image: url(../images/icons/independence-w.svg); }
 
 hr.clear {
   border-color: rgba(102, 102, 102, 0);
@@ -2372,6 +2392,10 @@ article.team_member {
     background-image: url(../images/icons/digital-organization-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_digital-organization:before {
     background-image: url(../images/icons/digital-organization.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_dmp-w:before {
+    background-image: url(../images/icons/dmp-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_dmp:before {
+    background-image: url(../images/icons/dmp.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
     background-image: url(../images/icons/entertainment.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_financial-services:before {
@@ -2408,6 +2432,10 @@ article.team_member {
     background-image: url(../images/icons/network-provider.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_newspaper:before {
     background-image: url(../images/icons/newspaper.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_oms-w:before {
+    background-image: url(../images/icons/oms-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_oms:before {
+    background-image: url(../images/icons/oms.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_online-publisher:before {
     background-image: url(../images/icons/online-publisher.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_operate:before {
@@ -2428,6 +2456,10 @@ article.team_member {
     background-image: url(../images/icons/perspective-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_perspective:before {
     background-image: url(../images/icons/perspective.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_pharma-w:before {
+    background-image: url(../images/icons/pharma-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_pharma:before {
+    background-image: url(../images/icons/pharma.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_publisher:before {
     background-image: url(../images/icons/publisher.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_retail:before {

@@ -221,4 +221,34 @@
       background-image: url(../images/icons/transportation-w.svg);
     }
   }
+  &.icon-dmp{
+    background-image: url(../images/icons/dmp.svg);
+    &.icon-white{
+      background-image: url(../images/icons/dmp-w.svg);
+    }
+  }
+  &.icon-oms{
+    background-image: url(../images/icons/oms.svg);
+    &.icon-white{
+      background-image: url(../images/icons/oms-w.svg);
+    }
+  }
+  &.icon-pharma{
+    background-image: url(../images/icons/pharma.svg);
+    &.icon-white{
+      background-image: url(../images/icons/pharma-w.svg);
+    }
+  }
+  &.icon-perspective{
+    background-image: url(../images/icons/perspective.svg);
+    &.icon-white{
+      background-image: url(../images/icons/perspective-w.svg);
+    }
+  }
+  &.icon-independence{
+    background-image: url(../images/icons/independence.svg);
+    &.icon-white{
+      background-image: url(../images/icons/independence-w.svg);
+    }
+  }
 }
