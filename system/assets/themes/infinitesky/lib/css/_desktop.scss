@@ -111,20 +111,27 @@
     line-height: 1;
     .widget {
       display: block;
+      position: static;
       a.button{
         font-size: 1.2em;
+      }
+      &.widget_custom_html{
+        position: relative;
+        top: 4em;
       }
     }
     .search-form {
       display: inline-block;
       padding: 0;
       margin-left: 1rem;
-      position: relative;
+      position: absolute;
       whitespace: nowrap;
+      top: 0;
+      right: 0;
       input[type="search"],input[type="text"] {
         font-size: 1.4rem;
         width: 5em;
-        background: transparent;
+        background: rgba($white,0);
         border: 0;
         line-height: 1;
         color: $dkgrey;
@@ -133,8 +140,10 @@
         padding: 0.2em 0.5em;
         margin-right: 0.5em;
         margin-bottom: 0.5em;
+        transition: all 1s ease-in-out;
         &:hover,&:focus{
-          background: $white;
+          background: rgba($white,1);
+          width: 25em;
         }
       }
 

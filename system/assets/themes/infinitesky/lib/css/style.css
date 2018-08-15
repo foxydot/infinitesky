@@ -2720,19 +2720,25 @@ a.hs-button {
     clear: right;
     line-height: 1; }
     .site-header .widget-area .widget, .pre-header .widget-area .widget {
-      display: block; }
+      display: block;
+      position: static; }
       .site-header .widget-area .widget a.button, .pre-header .widget-area .widget a.button {
         font-size: 1.2em; }
+      .site-header .widget-area .widget.widget_custom_html, .pre-header .widget-area .widget.widget_custom_html {
+        position: relative;
+        top: 4em; }
     .site-header .widget-area .search-form, .pre-header .widget-area .search-form {
       display: inline-block;
       padding: 0;
       margin-left: 1rem;
-      position: relative;
-      whitespace: nowrap; }
+      position: absolute;
+      whitespace: nowrap;
+      top: 0;
+      right: 0; }
       .site-header .widget-area .search-form input[type="search"], .site-header .widget-area .search-form input[type="text"], .pre-header .widget-area .search-form input[type="search"], .pre-header .widget-area .search-form input[type="text"] {
         font-size: 1.4rem;
         width: 5em;
-        background: transparent;
+        background: rgba(255, 255, 255, 0);
         border: 0;
         line-height: 1;
         color: #333;
@@ -2740,9 +2746,12 @@ a.hs-button {
         text-align: right;
         padding: 0.2em 0.5em;
         margin-right: 0.5em;
-        margin-bottom: 0.5em; }
+        margin-bottom: 0.5em;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out; }
         .site-header .widget-area .search-form input[type="search"]:hover, .site-header .widget-area .search-form input[type="search"]:focus, .site-header .widget-area .search-form input[type="text"]:hover, .site-header .widget-area .search-form input[type="text"]:focus, .pre-header .widget-area .search-form input[type="search"]:hover, .pre-header .widget-area .search-form input[type="search"]:focus, .pre-header .widget-area .search-form input[type="text"]:hover, .pre-header .widget-area .search-form input[type="text"]:focus {
-          background: #FFF; }
+          background: white;
+          width: 25em; }
       .site-header .widget-area .search-form input[type="search"]::-webkit-input-placeholder, .site-header .widget-area .search-form input[type="text"]::-webkit-input-placeholder, .pre-header .widget-area .search-form input[type="search"]::-webkit-input-placeholder, .pre-header .widget-area .search-form input[type="text"]::-webkit-input-placeholder {
         color: #FFF;
         opacity: 1; }
