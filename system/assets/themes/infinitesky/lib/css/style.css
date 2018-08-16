@@ -1852,6 +1852,10 @@ p.entry-meta {
     background-image: url(../images/icons/agile-process-improvement.svg); }
     .icon.icon-agile-process-improvement.icon-white {
       background-image: url(../images/icons/agile-process-improvement-w.svg); }
+  .icon.icon-biomedical {
+    background-image: url(../images/icons/biomedical.svg); }
+    .icon.icon-biomedical.icon-white {
+      background-image: url(../images/icons/biomedical-w.svg); }
   .icon.icon-business-mag {
     background-image: url(../images/icons/business-mag.svg); }
     .icon.icon-business-mag.icon-white {
@@ -1876,21 +1880,33 @@ p.entry-meta {
     background-image: url(../images/icons/cpg.svg); }
     .icon.icon-cpg.icon-white, .icon.icon-cpg-retail.icon-white {
       background-image: url(../images/icons/cpg-w.svg); }
-  .icon.icon-cultural-change, .icon.icon-education {
+  .icon.icon-cultural-change {
     background-image: url(../images/icons/cultural-change.svg); }
-    .icon.icon-cultural-change.icon-white, .icon.icon-education.icon-white {
+    .icon.icon-cultural-change.icon-white {
       background-image: url(../images/icons/cultural-change-w.svg); }
   .icon.icon-digital-organization {
     background-image: url(../images/icons/digital-organization.svg); }
     .icon.icon-digital-organization.icon-white {
       background-image: url(../images/icons/digital-organization-w.svg); }
+  .icon.icon-dmp {
+    background-image: url(../images/icons/dmp.svg); }
+    .icon.icon-dmp.icon-white {
+      background-image: url(../images/icons/dmp-w.svg); }
+  .icon.icon-educationsvg {
+    background-image: url(../images/icons/educationsvg.svg); }
+    .icon.icon-educationsvg.icon-white {
+      background-image: url(../images/icons/educationsvg-w.svg); }
   .icon.icon-entertainment {
     background-image: url(../images/icons/entertainment.svg); }
     .icon.icon-entertainment.icon-white {
       background-image: url(../images/icons/entertainment-w.svg); }
-  .icon.icon-financial-services, .icon.icon-banking {
+  .icon.icon-finance, .icon.icon-banking {
+    background-image: url(../images/icons/finance.svg); }
+    .icon.icon-finance.icon-white, .icon.icon-banking.icon-white {
+      background-image: url(../images/icons/finance-w.svg); }
+  .icon.icon-financial-services {
     background-image: url(../images/icons/financial-services.svg); }
-    .icon.icon-financial-services.icon-white, .icon.icon-banking.icon-white {
+    .icon.icon-financial-services.icon-white {
       background-image: url(../images/icons/financial-services-w.svg); }
   .icon.icon-focus {
     background-image: url(../images/icons/focus.svg); }
@@ -1904,17 +1920,37 @@ p.entry-meta {
     background-image: url(../images/icons/high-performance.svg); }
     .icon.icon-high-performance.icon-white {
       background-image: url(../images/icons/high-performance-w.svg); }
+  .icon.icon-implementation {
+    background-image: url(../images/icons/implementation.svg); }
+    .icon.icon-implementation.icon-white {
+      background-image: url(../images/icons/implementation-w.svg); }
+  .icon.icon-independence {
+    background-image: url(../images/icons/independence.svg); }
+    .icon.icon-independence.icon-white {
+      background-image: url(../images/icons/independence-w.svg); }
   .icon.icon-interactive {
     background-image: url(../images/icons/interactive.svg); }
     .icon.icon-interactive.icon-white {
       background-image: url(../images/icons/interactive-w.svg); }
+  .icon.icon-it {
+    background-image: url(../images/icons/it.svg); }
+    .icon.icon-it.icon-white {
+      background-image: url(../images/icons/it-w.svg); }
+  .icon.icon-managed-services {
+    background-image: url(../images/icons/managed-services.svg); }
+    .icon.icon-managed-services.icon-white {
+      background-image: url(../images/icons/managed-services-w.svg); }
+  .icon.icon-marketing {
+    background-image: url(../images/icons/marketing.svg); }
+    .icon.icon-marketing.icon-white {
+      background-image: url(../images/icons/marketing-w.svg); }
   .icon.icon-maximize-dmp {
     background-image: url(../images/icons/maximize-dmp.svg); }
     .icon.icon-maximize-dmp.icon-white {
       background-image: url(../images/icons/maximize-dmp-w.svg); }
-  .icon.icon-media, .icon.icon-media-publishing {
+  .icon.icon-media, .iconicon-media-publishing {
     background-image: url(../images/icons/media.svg); }
-    .icon.icon-media.icon-white, .icon.icon-media-publishing.icon-white {
+    .icon.icon-media.icon-white, .iconicon-media-publishing.icon-white {
       background-image: url(../images/icons/media-w.svg); }
   .icon.icon-mortgage-provider, .icon.icon-mortgage {
     background-image: url(../images/icons/mortgage-provider.svg); }
@@ -1928,6 +1964,10 @@ p.entry-meta {
     background-image: url(../images/icons/newspaper.svg); }
     .icon.icon-newspaper.icon-white {
       background-image: url(../images/icons/newspaper-w.svg); }
+  .icon.icon-oms {
+    background-image: url(../images/icons/oms.svg); }
+    .icon.icon-oms.icon-white {
+      background-image: url(../images/icons/oms-w.svg); }
   .icon.icon-online-publisher {
     background-image: url(../images/icons/online-publisher.svg); }
     .icon.icon-online-publisher.icon-white {
@@ -1940,10 +1980,26 @@ p.entry-meta {
     background-image: url(../images/icons/operational-excellence.svg); }
     .icon.icon-operational-excellence.icon-white {
       background-image: url(../images/icons/operational-excellence-w.svg); }
+  .icon.icon-operations {
+    background-image: url(../images/icons/operations.svg); }
+    .icon.icon-operations.icon-white {
+      background-image: url(../images/icons/operations-w.svg); }
+  .icon.icon-optimize {
+    background-image: url(../images/icons/optimize.svg); }
+    .icon.icon-optimize.icon-white {
+      background-image: url(../images/icons/optimize-w.svg); }
   .icon.icon-our-team {
     background-image: url(../images/icons/our-team.svg); }
     .icon.icon-our-team.icon-white {
       background-image: url(../images/icons/our-team-w.svg); }
+  .icon.icon-perspective {
+    background-image: url(../images/icons/perspective.svg); }
+    .icon.icon-perspective.icon-white {
+      background-image: url(../images/icons/perspective-w.svg); }
+  .icon.icon-pharma {
+    background-image: url(../images/icons/pharma.svg); }
+    .icon.icon-pharma.icon-white {
+      background-image: url(../images/icons/pharma-w.svg); }
   .icon.icon-publisher, .icon.icon-print-publishing {
     background-image: url(../images/icons/publisher.svg); }
     .icon.icon-publisher.icon-white, .icon.icon-print-publishing.icon-white {
@@ -1952,6 +2008,14 @@ p.entry-meta {
     background-image: url(../images/icons/retail.svg); }
     .icon.icon-retail.icon-white {
       background-image: url(../images/icons/retail-w.svg); }
+  .icon.icon-sales {
+    background-image: url(../images/icons/sales.svg); }
+    .icon.icon-sales.icon-white {
+      background-image: url(../images/icons/sales-w.svg); }
+  .icon.icon-strategy {
+    background-image: url(../images/icons/strategy.svg); }
+    .icon.icon-strategy.icon-white {
+      background-image: url(../images/icons/strategy-w.svg); }
   .icon.icon-television {
     background-image: url(../images/icons/television.svg); }
     .icon.icon-television.icon-white {
@@ -1964,26 +2028,6 @@ p.entry-meta {
     background-image: url(../images/icons/transportation.svg); }
     .icon.icon-transportation.icon-white, .icon.icon-logistics.icon-white {
       background-image: url(../images/icons/transportation-w.svg); }
-  .icon.icon-dmp {
-    background-image: url(../images/icons/dmp.svg); }
-    .icon.icon-dmp.icon-white {
-      background-image: url(../images/icons/dmp-w.svg); }
-  .icon.icon-oms {
-    background-image: url(../images/icons/oms.svg); }
-    .icon.icon-oms.icon-white {
-      background-image: url(../images/icons/oms-w.svg); }
-  .icon.icon-pharma {
-    background-image: url(../images/icons/pharma.svg); }
-    .icon.icon-pharma.icon-white {
-      background-image: url(../images/icons/pharma-w.svg); }
-  .icon.icon-perspective {
-    background-image: url(../images/icons/perspective.svg); }
-    .icon.icon-perspective.icon-white {
-      background-image: url(../images/icons/perspective-w.svg); }
-  .icon.icon-independence {
-    background-image: url(../images/icons/independence.svg); }
-    .icon.icon-independence.icon-white {
-      background-image: url(../images/icons/independence-w.svg); }
 
 hr.clear {
   border-color: rgba(102, 102, 102, 0);
@@ -2368,6 +2412,10 @@ article.team_member {
     background-image: url(../images/icons/agile-process-improvement-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_agile-process-improvement:before {
     background-image: url(../images/icons/agile-process-improvement.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_biomedical-w:before {
+    background-image: url(../images/icons/biomedical-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_biomedical:before {
+    background-image: url(../images/icons/biomedical.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_business-mag:before {
     background-image: url(../images/icons/business-mag.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_careers:before {
@@ -2396,8 +2444,16 @@ article.team_member {
     background-image: url(../images/icons/dmp-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_dmp:before {
     background-image: url(../images/icons/dmp.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_education-w:before {
+    background-image: url(../images/icons/education-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_educationsvg:before {
+    background-image: url(../images/icons/educationsvg.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
     background-image: url(../images/icons/entertainment.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_finance-w:before {
+    background-image: url(../images/icons/finance-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_finance:before {
+    background-image: url(../images/icons/finance.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_financial-services:before {
     background-image: url(../images/icons/financial-services.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_focus:before {
@@ -2418,10 +2474,18 @@ article.team_member {
     background-image: url(../images/icons/independence.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_interactive:before {
     background-image: url(../images/icons/interactive.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_it-w:before {
+    background-image: url(../images/icons/it-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_it:before {
+    background-image: url(../images/icons/it.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_managed-services-w:before {
     background-image: url(../images/icons/managed-services-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_managed-services:before {
     background-image: url(../images/icons/managed-services.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_marketing-w:before {
+    background-image: url(../images/icons/marketing-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_marketing:before {
+    background-image: url(../images/icons/marketing.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_maximize-dmp:before {
     background-image: url(../images/icons/maximize-dmp.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_media:before {
@@ -2444,6 +2508,10 @@ article.team_member {
     background-image: url(../images/icons/operational-excellence-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_operational-excellence:before {
     background-image: url(../images/icons/operational-excellence.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_operations-w:before {
+    background-image: url(../images/icons/operations-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_operations:before {
+    background-image: url(../images/icons/operations.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_optimize-w:before {
     background-image: url(../images/icons/optimize-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_optimize:before {
@@ -2464,6 +2532,10 @@ article.team_member {
     background-image: url(../images/icons/publisher.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_retail:before {
     background-image: url(../images/icons/retail.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_sales-w:before {
+    background-image: url(../images/icons/sales-w.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_sales:before {
+    background-image: url(../images/icons/sales.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_strategy-w:before {
     background-image: url(../images/icons/strategy-w.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_strategy:before {
