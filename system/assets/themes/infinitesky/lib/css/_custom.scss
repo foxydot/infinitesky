@@ -552,12 +552,15 @@ article.team_member{
         &:before{
           height: 2em;
           width: 2em;
-        }        &.icon_agile-enablement-w:before{background-image:url(../images/icons/agile-enablement-w.svg);}
+        }
+        &.icon_agile-enablement-w:before{background-image:url(../images/icons/agile-enablement-w.svg);}
         &.icon_agile-enablement:before{background-image:url(../images/icons/agile-enablement.svg);}
         &.icon_agile-portfolio-mgmt-w:before{background-image:url(../images/icons/agile-portfolio-mgmt-w.svg);}
         &.icon_agile-portfolio-mgmt:before{background-image:url(../images/icons/agile-portfolio-mgmt.svg);}
         &.icon_agile-process-improvement-w:before{background-image:url(../images/icons/agile-process-improvement-w.svg);}
         &.icon_agile-process-improvement:before{background-image:url(../images/icons/agile-process-improvement.svg);}
+        &.icon_biomedical-w:before{background-image:url(../images/icons/biomedical-w.svg);}
+        &.icon_biomedical:before{background-image:url(../images/icons/biomedical.svg);}
         &.icon_business-mag:before{background-image:url(../images/icons/business-mag.svg);}
         &.icon_careers:before{background-image:url(../images/icons/careers.svg);}
         &.icon_cloud-migration-w:before{background-image:url(../images/icons/cloud-migration-w.svg);}
@@ -572,7 +575,11 @@ article.team_member{
         &.icon_digital-organization:before{background-image:url(../images/icons/digital-organization.svg);}
         &.icon_dmp-w:before{background-image:url(../images/icons/dmp-w.svg);}
         &.icon_dmp:before{background-image:url(../images/icons/dmp.svg);}
+        &.icon_education-w:before{background-image:url(../images/icons/education-w.svg);}
+        &.icon_educationsvg:before{background-image:url(../images/icons/educationsvg.svg);}
         &.icon_entertainment:before{background-image:url(../images/icons/entertainment.svg);}
+        &.icon_finance-w:before{background-image:url(../images/icons/finance-w.svg);}
+        &.icon_finance:before{background-image:url(../images/icons/finance.svg);}
         &.icon_financial-services:before{background-image:url(../images/icons/financial-services.svg);}
         &.icon_focus:before{background-image:url(../images/icons/focus.svg);}
         &.icon_global-entertainment:before{background-image:url(../images/icons/global-entertainment.svg);}
@@ -583,8 +590,12 @@ article.team_member{
         &.icon_independence-w:before{background-image:url(../images/icons/independence-w.svg);}
         &.icon_independence:before{background-image:url(../images/icons/independence.svg);}
         &.icon_interactive:before{background-image:url(../images/icons/interactive.svg);}
+        &.icon_it-w:before{background-image:url(../images/icons/it-w.svg);}
+        &.icon_it:before{background-image:url(../images/icons/it.svg);}
         &.icon_managed-services-w:before{background-image:url(../images/icons/managed-services-w.svg);}
         &.icon_managed-services:before{background-image:url(../images/icons/managed-services.svg);}
+        &.icon_marketing-w:before{background-image:url(../images/icons/marketing-w.svg);}
+        &.icon_marketing:before{background-image:url(../images/icons/marketing.svg);}
         &.icon_maximize-dmp:before{background-image:url(../images/icons/maximize-dmp.svg);}
         &.icon_media:before{background-image:url(../images/icons/media.svg);}
         &.icon_mortgage-provider:before{background-image:url(../images/icons/mortgage-provider.svg);}
@@ -596,6 +607,8 @@ article.team_member{
         &.icon_operate:before{background-image:url(../images/icons/operate.svg);}
         &.icon_operational-excellence-w:before{background-image:url(../images/icons/operational-excellence-w.svg);}
         &.icon_operational-excellence:before{background-image:url(../images/icons/operational-excellence.svg);}
+        &.icon_operations-w:before{background-image:url(../images/icons/operations-w.svg);}
+        &.icon_operations:before{background-image:url(../images/icons/operations.svg);}
         &.icon_optimize-w:before{background-image:url(../images/icons/optimize-w.svg);}
         &.icon_optimize:before{background-image:url(../images/icons/optimize.svg);}
         &.icon_our-team-w:before{background-image:url(../images/icons/our-team-w.svg);}
@@ -606,11 +619,14 @@ article.team_member{
         &.icon_pharma:before{background-image:url(../images/icons/pharma.svg);}
         &.icon_publisher:before{background-image:url(../images/icons/publisher.svg);}
         &.icon_retail:before{background-image:url(../images/icons/retail.svg);}
+        &.icon_sales-w:before{background-image:url(../images/icons/sales-w.svg);}
+        &.icon_sales:before{background-image:url(../images/icons/sales.svg);}
         &.icon_strategy-w:before{background-image:url(../images/icons/strategy-w.svg);}
         &.icon_strategy:before{background-image:url(../images/icons/strategy.svg);}
         &.icon_television:before{background-image:url(../images/icons/television.svg);}
         &.icon_transform:before{background-image:url(../images/icons/transform.svg);}
         &.icon_transportation:before{background-image:url(../images/icons/transportation.svg);}
+
       }
     }
   }

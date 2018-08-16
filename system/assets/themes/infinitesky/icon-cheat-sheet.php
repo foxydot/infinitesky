@@ -48,6 +48,25 @@ if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     closedir($dir);
 }
 print '</textarea>';
+print '<textarea>';
+if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
+    while (false !== ($entry = readdir($dir))) {
+        if ($entry != "." && $entry != "..") {
+            if(!strstr($entry,'-w.svg')){
+                print '
+ &.icon-'.str_replace('.svg','',$entry).'{
+    background-image: url(../images/icons/'.str_replace('.svg','',$entry).'.svg);
+    &.icon-white{
+      background-image: url(../images/icons/'.str_replace('.svg','',$entry).'-w.svg);
+    }
+  }';
+
+            }
+        }
+    }
+    closedir($dir);
+}
+print '</textarea>';
 ?>
 </body>
 </html>
