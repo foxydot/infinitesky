@@ -920,7 +920,7 @@ img.alignright,
       .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li {
         display: none;
         text-indent: 0 !important;
-        margin-left: 1.5em !important; }
+        margin-left: 0 !important; }
         .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li input[type="checkbox"] {
           -webkit-appearance: none;
              -moz-appearance: none;
@@ -2703,13 +2703,11 @@ a.hs-button {
 --------------------------------------------- */
   .site-inner .gform_wrapper {
     padding: 3em 5em; }
-    .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li {
-      margin-left: 1.5em !important; }
-      .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li input[type="checkbox"] {
-        padding: 12px; }
-      .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li label {
-        margin-left: 4em;
-        padding: 0.25em; }
+    .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li input[type="checkbox"] {
+      padding: 12px; }
+    .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li label {
+      margin-left: 2em;
+      padding: 0.25em; }
     .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container input[type="text"] {
       position: absolute;
       margin: 0;
