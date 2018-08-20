@@ -134,6 +134,16 @@ article.type-post{
       }
     }
   }
+  &.bkg-clear{
+    .site-inner {
+      .content-sidebar-wrap {
+        main.content {
+          background-color: transparent !important;
+          padding: 0em !important;
+        }
+      }
+    }
+  }
 }
 
 .single-msd_casestudy {
