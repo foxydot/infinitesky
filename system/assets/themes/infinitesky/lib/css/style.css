@@ -2339,7 +2339,7 @@ article.team_member {
     article.team_member > .wrap main content {
       padding: 0 1em;
       display: block;
-      margin-bottom: 8em; }
+      padding-bottom: 8em; }
     article.team_member > .wrap main footer {
       position: absolute;
       bottom: 0;
