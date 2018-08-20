@@ -2088,11 +2088,11 @@ article.type-post .entry-header {
   background-size: cover;
   background-attachment: fixed; }
 
-.single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .testimonials .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news .site-inner .content-sidebar-wrap main.content, .search-results .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .testimonials .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news .site-inner .content-sidebar-wrap main.content, .search-results .site-inner .content-sidebar-wrap main.content, .page-template-default .site-inner .content-sidebar-wrap main.content {
   padding: 3em 5em;
   background-color: #FFF; }
 
-.single-msd_casestudy.content-right .site-inner .content-sidebar-wrap main.content, .testimonials.content-right .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-right .site-inner .content-sidebar-wrap main.content, .search-results.content-right .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy.content-right .site-inner .content-sidebar-wrap main.content, .testimonials.content-right .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-right .site-inner .content-sidebar-wrap main.content, .search-results.content-right .site-inner .content-sidebar-wrap main.content, .page-template-default.content-right .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
   background: url(../images/content-right.svg) top left no-repeat;
   background-size: 100% auto;
@@ -2100,13 +2100,16 @@ article.type-post .entry-header {
   padding-bottom: 0;
   min-height: 18.5em; }
 
-.single-msd_casestudy.content-left .site-inner .content-sidebar-wrap main.content, .testimonials.content-left .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .search-results.content-left .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy.content-left .site-inner .content-sidebar-wrap main.content, .testimonials.content-left .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .search-results.content-left .site-inner .content-sidebar-wrap main.content, .page-template-default.content-left .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
   background: url(../images/content-left.svg) top right no-repeat;
   background-size: 100% auto;
   padding-right: 30%;
   padding-bottom: 0;
   min-height: 18.5em; }
+
+.single-msd_casestudy.bkg-white .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-white .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .search-results.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
+  background-color: #FFF; }
 
 .single-msd_casestudy .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
@@ -2169,6 +2172,8 @@ article.type-post .entry-header {
     padding-right: 30%;
     padding-bottom: 0;
     min-height: 18.5em; }
+  .home.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.bkg-white .site-inner .content-sidebar-wrap main.content, .team_member-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
+    background-color: #FFF; }
   .home.transform .page-title-area .texturize .gradient .container, .page-template-template-secondary.transform .page-title-area .texturize .gradient .container, .team_member-template-default.transform .page-title-area .texturize .gradient .container {
     background-image: url(../images/icons/core-values-w.svg); }
   .home.operate .page-title-area .texturize .gradient .container, .page-template-template-secondary.operate .page-title-area .texturize .gradient .container, .team_member-template-default.operate .page-title-area .texturize .gradient .container {

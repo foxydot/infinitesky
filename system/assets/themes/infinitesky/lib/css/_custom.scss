@@ -88,7 +88,7 @@ article.type-post{
     }
   }
 }
-.single-msd_casestudy,.testimonials,.post-type-archive-msd_news,.search-results{
+.single-msd_casestudy,.testimonials,.post-type-archive-msd_news,.search-results,.page-template-default{
   .site-inner {
     .content-sidebar-wrap {
       main.content {
@@ -121,6 +121,15 @@ article.type-post{
           padding-right: 30%;
           padding-bottom: 0;
           min-height: 18.5em;
+        }
+      }
+    }
+  }
+  &.bkg-white{
+    .site-inner {
+      .content-sidebar-wrap {
+        main.content {
+          background-color: $white;
         }
       }
     }
@@ -227,6 +236,15 @@ article.type-post{
           padding-right: 30%;
           padding-bottom: 0;
           min-height: 18.5em;
+        }
+      }
+    }
+  }
+  &.bkg-white{
+    .site-inner {
+      .content-sidebar-wrap {
+        main.content {
+          background-color: $white;
         }
       }
     }
