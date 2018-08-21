@@ -8,6 +8,7 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             add_shortcode('latest',array(&$this,'msdlab_latest_shortcode_handler'));
             add_shortcode('rollbox_set',array(&$this,'rollbox_set_shortcode_handler'));
             add_shortcode('rollbox',array(&$this,'rollbox_shortcode_handler'));
+            add_image_size('tatamithumb',400,200);
         }
 
         function msdlab_latest_shortcode_handler($atts){
@@ -20,7 +21,7 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             ob_start();
             while ( $my_query->have_posts() ) : $my_query->the_post();
                 print '<article>';
-                //printf( '<a href="%s" title="%s" class="latest_image_wrapper alignleft">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image(array('size' => 'thumbnail')) );
+                printf( '<a href="%s" title="%s" class="latest_image_wrapper aligncenter">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image(array('size' => 'tatamithumb')) );
                 print '<div>';
                 printf( '<a href="%s" title="%s" class="latest-title"><h3>%s</h3></a>', get_permalink(), the_title_attribute('echo=0'), get_the_title() );
                 print msdlab_get_excerpt(get_the_ID());
