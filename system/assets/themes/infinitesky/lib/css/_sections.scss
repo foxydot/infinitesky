@@ -355,3 +355,17 @@
   .sectioned-page-wrapper {
   }
 }
+
+@media only screen and (max-width:767px) {
+  .sectioned-page-wrapper {
+    .section.hasbutton {
+      .section-body {
+        .container {
+          .section-content{
+            padding-bottom: 3em;
+          }
+        }
+      }
+    }
+  }
+}

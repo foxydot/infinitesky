@@ -62,4 +62,10 @@ jQuery(document).ready(function($) {
     if($('.search-form input[type=search]').val() == search_term){
         $('.search-form input[type=search]').val('').attr('placeholder','Search');
     }
+
+    $('.sectioned-page-wrapper .section').each(function(){
+        if($(this).find('a.btn')){
+            $(this).addClass('hasbutton');
+        }
+    });
 });

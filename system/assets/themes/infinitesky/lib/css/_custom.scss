@@ -92,7 +92,6 @@ article.type-post{
   .site-inner {
     .content-sidebar-wrap {
       main.content {
-        padding: 3em 5em;
         background-color: $white;
       }
     }
@@ -214,13 +213,6 @@ article.type-post{
           background-position: right center;
           background-size: 15% auto;
         }
-      }
-    }
-  }
-  .site-inner {
-    .content-sidebar-wrap {
-      main.content {
-        padding: 3em 5em;
       }
     }
   }
@@ -560,6 +552,7 @@ article.team_member{
         background-position: 0.5em 0.5em;
         background-size: 4.25em auto;
         background-repeat: no-repeat;
+        padding-left: 6em;
       }
     }
 
