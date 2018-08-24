@@ -677,6 +677,8 @@ article.team_member{
         font-size: 3em;
       }
       .rollbox-on{
+        height: 0;
+        overflow: hidden;
         .rollbox-wrapper-on{
           padding: 1em;
         }

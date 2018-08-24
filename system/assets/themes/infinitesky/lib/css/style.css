@@ -2577,12 +2577,15 @@ article.team_member {
       font-weight: 800;
       margin-bottom: 0;
       font-size: 3em; }
-    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on .rollbox-wrapper-on {
-      padding: 1em; }
-    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on a {
-      color: #FFF; }
-    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on img.icon {
-      display: none; }
+    .rollbox-set .rollbox .rollbox-wrapper .rollbox-on {
+      height: 0;
+      overflow: hidden; }
+      .rollbox-set .rollbox .rollbox-wrapper .rollbox-on .rollbox-wrapper-on {
+        padding: 1em; }
+      .rollbox-set .rollbox .rollbox-wrapper .rollbox-on a {
+        color: #FFF; }
+      .rollbox-set .rollbox .rollbox-wrapper .rollbox-on img.icon {
+        display: none; }
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set.cols-5 .rollbox {
