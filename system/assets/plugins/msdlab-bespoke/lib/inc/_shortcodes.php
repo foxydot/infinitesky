@@ -39,7 +39,7 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
                 'size' => 3,
             ), $atts ));
             $this->size = $size;
-            return '<div class="rollbox-set cols-'.$size.'">'.do_shortcode($content).'</div>';
+            return '<div class="rollbox-set cols-'.$size.' row">'.do_shortcode($content).'</div>';
         }
 
         function rollbox_shortcode_handler($atts,$content){
@@ -48,6 +48,12 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
                 'icon' => false,
             ), $atts ));
             switch($this->size){
+                case 6:
+                    $class = 'rollbox col-md-2 col-xs-12';
+                    break;
+                case 5:
+                    $class = 'rollbox col-md-2 col-xs-12';
+                    break;
                 case 4:
                     $class = 'rollbox col-md-3 col-sm-6 col-xs-12';
                     break;

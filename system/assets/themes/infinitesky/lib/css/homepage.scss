@@ -101,8 +101,31 @@
               height: 0;
             }
             .section-content {
+              h4{
+                font-weight: 700;
+                text-transform: none;
+                margin-bottom: 0;
+                margin-top: 0.5em;
+                font-size: 1.2em;
+              }
               ul {
                 width: auto;
+              }
+              .rollbox{
+                .rollbox-wrapper {
+                  padding-top: 2em;
+                  font-size: 1.2em;
+                  position: relative;
+                  min-height: 12em;
+                  &:before{
+                    @include fontawesome;
+                    position: absolute;
+                    top: 0.25em;
+                    right: 0.5em;
+                    content: "\f0a9";
+                    color: $white;
+                  }
+                }
               }
             }
           }
@@ -129,7 +152,7 @@
     .section.section-where-we-focus {
       .section-body {
         .container {
-          background-image: url(../images/icons/focus.svg);
+          //background-image: url(../images/icons/focus.svg);
           background-position: center center;
           background-repeat: no-repeat;
           background-size: 15% auto;

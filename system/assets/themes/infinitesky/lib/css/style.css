@@ -2584,6 +2584,10 @@ article.team_member {
     .rollbox-set .rollbox .rollbox-wrapper .rollbox-on img.icon {
       display: none; }
 
+@media only screen and (min-width: 1024px) {
+  .rollbox-set.cols-5 .rollbox {
+    width: 20%; } }
+
 .page-template-template-secondary.content-left.media-publishing .site-inner .content-sidebar-wrap main.content {
   padding-right: 39%;
   min-height: 18.5em; }

@@ -92,14 +92,33 @@
 .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-title h3:after {
   height: 0; }
 
+.home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content h4 {
+  font-weight: 700;
+  text-transform: none;
+  margin-bottom: 0;
+  margin-top: 0.5em;
+  font-size: 1.2em; }
+
 .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content ul {
   width: auto; }
+
+.home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper {
+  padding-top: 2em;
+  font-size: 1.2em;
+  position: relative;
+  min-height: 12em; }
+  .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper:before {
+    font-family: FontAwesome;
+    position: absolute;
+    top: 0.25em;
+    right: 0.5em;
+    content: "\f0a9";
+    color: #FFF; }
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
     width: calc(50% - 2em); }
   .sectioned-page-wrapper .section.section-where-we-focus .section-body .container {
-    background-image: url(../images/icons/focus.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 15% auto; }

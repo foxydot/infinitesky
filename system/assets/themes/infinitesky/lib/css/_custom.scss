@@ -691,6 +691,14 @@ article.team_member{
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .rollbox-set.cols-5{
+    .rollbox{
+      width: 20%;
+    }
+  }
+}
+
 // INDUSTRIES
 
 .page-template-template-secondary.content-left {
