@@ -116,6 +116,13 @@
     color: #FFF; }
   .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper .rollbox-wrapper-on {
     padding-top: 2em; }
+    .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper .rollbox-wrapper-on:before {
+      font-family: FontAwesome;
+      position: absolute;
+      top: 0.25em;
+      right: 0.5em;
+      content: "\f0a9";
+      color: #FFF; }
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
