@@ -114,6 +114,8 @@
     right: 0.5em;
     content: "\f0a9";
     color: #FFF; }
+  .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper .rollbox-wrapper-on {
+    padding-top: 2em; }
 
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
