@@ -278,10 +278,24 @@ class MSDCaseStudyCPT {
     }
 
     function msdlab_casestudies_special_loop(){
+        global $wp_query;
+        $queried_object = $wp_query->get_queried_object();
+        //ts_data($wp_query->tax_query);
         $args = array(
+            'posts_per_page' => -1,
+            'post_type' => 'msd_casestudy',
         );
+        switch(get_class($queried_object)){
+            case 'WP_Term':
+                $args['tax_query'] = $wp_query->tax_query->queries;
+                break;
+            case 'WP_Post_Type':
+            default:
+                break;
+        }
         print self::msdlab_casestudies_special($args);
     }
+
     function msdlab_casestudies_special_loop_shortcode_handler($atts){
         $args = shortcode_atts( array(
         ), $atts );
@@ -297,6 +311,7 @@ class MSDCaseStudyCPT {
             'post_type' => 'msd_casestudy',
         );
         $args = array_merge($defaults,$args);
+        //ts_data($args);
         //set up result array
         $results = new WP_Query($args);
         //format result
