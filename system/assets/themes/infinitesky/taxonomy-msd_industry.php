@@ -8,7 +8,7 @@ function msdlab_custom_case_study_header()
 {
     $qo = get_queried_object();
     print '<h2 class="chapter-title">Thought Leadership</h2>
-<h1 class="entry-title">Case Studies</h1>
+<h1 class="entry-title">Case Studies: '.$qo->name.'</h1>
 ';
 }
 function msdlab_add_cs_styles() {
