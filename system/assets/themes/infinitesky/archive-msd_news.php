@@ -7,7 +7,7 @@ function msdlab_add_press_scripts() {
 
 remove_action('genesis_loop','genesis_do_loop');
 add_action('genesis_loop',array('MSDNewsCPT','special_loop'));
-add_action('wp_enqueue_scripts', 'msdlab_add_press_scripts');
+//add_action('wp_enqueue_scripts', 'msdlab_add_press_scripts');
 
 add_action('wp_enqueue_scripts', 'msdlab_add_press_styles');
 

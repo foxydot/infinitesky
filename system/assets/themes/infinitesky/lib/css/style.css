@@ -1952,9 +1952,9 @@ p.entry-meta {
     background-image: url(../images/icons/maximize-dmp.svg); }
     .icon.icon-maximize-dmp.icon-white {
       background-image: url(../images/icons/maximize-dmp-w.svg); }
-  .icon.icon-media, .iconicon-media-publishing {
+  .icon.icon-media, .icon.icon-media-publishing {
     background-image: url(../images/icons/media.svg); }
-    .icon.icon-media.icon-white, .iconicon-media-publishing.icon-white {
+    .icon.icon-media.icon-white, .icon.icon-media-publishing.icon-white {
       background-image: url(../images/icons/media-w.svg); }
   .icon.icon-mortgage-provider, .icon.icon-mortgage {
     background-image: url(../images/icons/mortgage-provider.svg); }
