@@ -1896,10 +1896,10 @@ p.entry-meta {
     background-image: url(../images/icons/dmp.svg); }
     .icon.icon-dmp.icon-white {
       background-image: url(../images/icons/dmp-w.svg); }
-  .icon.icon-educationsvg {
-    background-image: url(../images/icons/educationsvg.svg); }
-    .icon.icon-educationsvg.icon-white {
-      background-image: url(../images/icons/educationsvg-w.svg); }
+  .icon.icon-education {
+    background-image: url(../images/icons/education.svg); }
+    .icon.icon-education.icon-white {
+      background-image: url(../images/icons/education-w.svg); }
   .icon.icon-entertainment {
     background-image: url(../images/icons/entertainment.svg); }
     .icon.icon-entertainment.icon-white {
@@ -2457,8 +2457,8 @@ article.team_member {
     background-image: url(../images/icons/dmp.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_education-w:before {
     background-image: url(../images/icons/education-w.svg); }
-  .sectioned-page-wrapper .section ul li.icon.icon_educationsvg:before {
-    background-image: url(../images/icons/educationsvg.svg); }
+  .sectioned-page-wrapper .section ul li.icon.icon_education:before {
+    background-image: url(../images/icons/education.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_entertainment:before {
     background-image: url(../images/icons/entertainment.svg); }
   .sectioned-page-wrapper .section ul li.icon.icon_finance-w:before {
