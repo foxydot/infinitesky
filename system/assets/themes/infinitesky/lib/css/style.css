@@ -895,6 +895,9 @@ img.alignright,
 
 /* ## Gravity Forms
 --------------------------------------------- */
+.sectioned-page-wrapper .section .gform_wrapper ul li:before {
+  background: none; }
+
 .site-inner .gform_wrapper {
   max-width: 101%;
   background-color: #D1D3D4;
@@ -910,6 +913,8 @@ img.alignright,
     font-style: italic;
     font-weight: 400;
     font-size: 1.6em; }
+  .site-inner .gform_wrapper .gform_body ul.gform_fields li {
+    background: none; }
   .site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield {
     margin-bottom: 0.5em;
     text-indent: 0; }
@@ -2651,6 +2656,10 @@ a.hs-button {
   .rollbox-set .rollbox:hover .rollbox-wrapper .rollbox-on {
     height: 100%;
     top: 0; } }
+
+body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.chrome.content-left .site-inner .content-sidebar-wrap main.content {
+  margin-left: -15.5px;
+  margin-right: -17px; }
 
 @media only screen and (min-width: 768px) {
   .mobile-trigger1 {

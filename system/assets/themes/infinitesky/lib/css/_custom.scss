@@ -802,3 +802,17 @@ a.hs-button{
     }
   }
 }
+
+//chrome only
+body.chrome{
+  &.content-right,&.content-left{
+    .site-inner {
+      .content-sidebar-wrap {
+        main.content {
+          margin-left: -15.5px;
+          margin-right: -17px;
+        }
+      }
+    }
+  }
+}

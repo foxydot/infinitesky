@@ -65,6 +65,9 @@
 
 /* ## Gravity Forms
 --------------------------------------------- */
+.sectioned-page-wrapper .section .gform_wrapper ul li:before{
+  background: none;
+}
 .site-inner {
   .gform_wrapper {
     max-width: 101%;
@@ -87,6 +90,9 @@
     }
     .gform_body {
       ul.gform_fields {
+        li{
+          background: none;
+        }
         li.gfield {
           margin-bottom: 0.5em;
           text-indent: 0;
