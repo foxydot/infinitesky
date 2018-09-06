@@ -8,7 +8,63 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             add_shortcode('latest',array(&$this,'msdlab_latest_shortcode_handler'));
             add_shortcode('rollbox_set',array(&$this,'rollbox_set_shortcode_handler'));
             add_shortcode('rollbox',array(&$this,'rollbox_shortcode_handler'));
+            add_action('admin_head', array(&$this,'codex_custom_help_tab'));
+
             add_image_size('tatamithumb',400,200);
+        }
+
+
+        function codex_custom_help_tab() {
+            global $current_screen;
+            if($current_screen->base != 'post')
+                return;
+
+            // Setup help tab args.
+            $args = array(
+                'id'      => 'msdlab_shortcodes', //unique id for the tab
+                'title'   => 'MSDLab Shortcodes', //unique visible title for the tab
+                'content' => '<h3>[latest]</h3>
+                          <p>Displays the latest content from the Posts archive.</p>
+                          <p>Attributes (Defaults)
+                          <dl>
+                          <dt>post_type (post)</dt>
+                          <dd>(str) selects post type to display</dd>
+                          <dt>posts_per_page (1)</dt>
+                          <dd>(int) determines number of posts selected</dd>
+                            </dl>
+                          </p>
+                          <h3>[rollbox_set][/rollbox_set]</h3>
+                          <p>Creates a set of rollboxes</p>
+                          <p>Attributes (Defaults)
+                          <dl>
+                          <dt>size (3)</dt>
+                          <dd>(int) determines the number of columns for the set</dd>
+                            </dl>
+                          </p>
+                          <h3>[rollbox][/rollbox]</h3>
+                          <p>Adds rollboxes. Must be nested in [rollbox_set]</p>
+                          <p>Attributes (Defaults)
+                          <dl>
+                          <dt>url (false)</dt>
+                          <dd>(str) the url to link the rollbox to</dd>
+                          <dt>icon (false)</dt>
+                          <dd>(str) the icon name to add</dd>
+                          <dt>swap_white (false)</dt>
+                          <dd>(bool) wether to swap the icon to the white version on rollover</dd>
+                            </dl>
+                          </p>
+                          <p><b>Subshortcodes</b>
+                          <dl>
+                          <dt>[on][/on]</dt>
+                          <dd>wraps content to be shown on the "over" state on non-mobile devices</dd>
+                            </dl>
+                            </p>
+                          
+                          ',  //actual help text
+            );
+
+            // Add the help tab.
+            $current_screen->add_help_tab( $args );
         }
 
         function msdlab_latest_shortcode_handler($atts){
