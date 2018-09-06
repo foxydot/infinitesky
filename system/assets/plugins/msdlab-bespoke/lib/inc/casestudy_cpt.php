@@ -337,7 +337,7 @@ class MSDCaseStudyCPT {
                     'echo' => false,
                 ) );
                 if($term)
-                $ret .= '<a class="icon icon-'.$term->slug.'" href="'.get_term_link($term->term_id).'"><span class="screen-reader-text">More '.$term->name.' ></span></a>';
+                $ret .= '<a class="icon icon-'.$term->slug.'" href="'.get_permalink($post->ID).'"><span class="screen-reader-text">More '.$term->name.' ></span></a>';
                 $ret .= genesis_markup( array(
                     'html5' => '</header>',
                     'xhtml' => '</div>',

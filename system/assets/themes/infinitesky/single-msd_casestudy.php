@@ -20,7 +20,7 @@ function msdlab_cat_tag_display($content){
     $ret[] = '<div class="wrapper">';
     if(isset($industries[0])) {
         $ret[] = '<h6>Industry</h6>';
-        $ret[] = '<a class="icon icon-' . $industries[0]->slug . '" href="">' . $industries[0]->name . '</a>';
+        $ret[] = '<a class="icon icon-' . $industries[0]->slug . '">' . $industries[0]->name . '</a>';
     }
     if(isset($solutions[0])) {
         $ret[] = '<h6>Solutions</h6>';
