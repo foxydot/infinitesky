@@ -40,7 +40,7 @@ function msdlab_cat_tag_display($content){
 
 add_action('genesis_entry_footer', 'msdlab_just_back_to_case_study_nav_link' );
 
-add_filter('the_content','msdlab_cat_tag_display');
+//add_filter('the_content','msdlab_cat_tag_display');
 
 remove_action('genesis_entry_header','genesis_do_post_title');
 remove_action('genesis_entry_header','genesis_post_info',12);
