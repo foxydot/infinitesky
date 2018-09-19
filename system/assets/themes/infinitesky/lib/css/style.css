@@ -1909,13 +1909,13 @@ p.entry-meta {
     background-image: url(../images/icons/entertainment.svg); }
     .icon.icon-entertainment.icon-white {
       background-image: url(../images/icons/entertainment-w.svg); }
-  .icon.icon-finance, .icon.icon-banking {
+  .icon.icon-finance {
     background-image: url(../images/icons/finance.svg); }
-    .icon.icon-finance.icon-white, .icon.icon-banking.icon-white {
+    .icon.icon-finance.icon-white {
       background-image: url(../images/icons/finance-w.svg); }
-  .icon.icon-financial-services {
+  .icon.icon-financial-services, .icon.icon-banking {
     background-image: url(../images/icons/financial-services.svg); }
-    .icon.icon-financial-services.icon-white {
+    .icon.icon-financial-services.icon-white, .icon.icon-banking.icon-white {
       background-image: url(../images/icons/financial-services-w.svg); }
   .icon.icon-focus {
     background-image: url(../images/icons/focus.svg); }
