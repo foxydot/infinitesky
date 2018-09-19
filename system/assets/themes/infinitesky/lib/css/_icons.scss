@@ -95,13 +95,13 @@
       background-image: url(../images/icons/entertainment-w.svg);
     }
   }
-  &.icon-finance,&.icon-banking{
+  &.icon-finance{
     background-image: url(../images/icons/finance.svg);
     &.icon-white{
       background-image: url(../images/icons/finance-w.svg);
     }
   }
-  &.icon-financial-services{
+  &.icon-financial-services,&.icon-banking{
     background-image: url(../images/icons/financial-services.svg);
     &.icon-white{
       background-image: url(../images/icons/financial-services-w.svg);
