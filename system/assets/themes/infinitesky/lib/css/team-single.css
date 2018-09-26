@@ -30,6 +30,9 @@
   border-bottom: 4px solid #ff6600;
   margin-bottom: 2em;
   background: #FFF; }
+.single-team_member .team_member-header article {
+  line-height: 1.3;
+  padding-bottom: .75em; }
 .single-team_member .team_member-header a {
   color: #333; }
 .single-team_member .team_member-header h3 {
