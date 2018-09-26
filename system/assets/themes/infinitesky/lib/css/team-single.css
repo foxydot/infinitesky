@@ -3,15 +3,17 @@
 @media print {
   a[href]:after {
     content: "" !important; }
+
   div.pre-header, #sticky-wrapper, header.site-header, aside.sidebar {
     display: none !important; }
+
   div.print-header {
     margin-bottom: 1em; }
+
   main.content {
     width: 100% !important; }
     main.content p {
       page-break-inside: avoid; } }
-
 /* Import Fonts
 ------------------------------------------------------------ */
 /* Font Stacks */
@@ -23,26 +25,21 @@
   font-size: 2.4em;
   font-weight: 400;
   color: #FFF; }
-
 .single-team_member .team_member-header.container {
   padding: 3em 5em;
   border-bottom: 4px solid #ff6600;
   margin-bottom: 2em;
   background: #FFF; }
-
 .single-team_member .team_member-header a {
   color: #333; }
-
 .single-team_member .team_member-header h3 {
   color: #ff6600;
   font-size: 1.6em;
   font-weight: 600; }
-
 .single-team_member .team_member-header ul.team-contact li {
   display: inline-block;
   font-size: 1.6em;
   margin-right: 0.5em; }
-
 .single-team_member .site-inner .content-sidebar-wrap {
   background: url(../images/content-left.svg) top right no-repeat;
   background-size: 100% auto;
