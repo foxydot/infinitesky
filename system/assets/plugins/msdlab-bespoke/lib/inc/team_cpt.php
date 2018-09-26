@@ -470,7 +470,7 @@ if (!class_exists('MSDTeamCPT')) {
          * @return array $attributes The element attributes
          */
         function custom_add_team_member_attr( $attributes ){
-            $attributes['class'] .= ' equalize col-xs-12 col-sm-6 col-md-4';
+            $attributes['class'] .= ' equalize col-xs-12 col-sm-6 col-md-3';
             $attributes['itemtype']  = 'http://schema.org/Person';
             // return the attributes
             return $attributes;
