@@ -140,17 +140,30 @@ function msdlab_archive_description(){
 function msdlab_do_chapter_title(){
     if(is_front_page()){
     } elseif(is_page()) {
-        global $post;
-        print '<h2 class="chapter-title">';
-        if(get_section() == 'industries-functions'){
-            foreach (wp_get_post_terms($post->ID,'post_tag') AS $term ){
-                $terms[] = $term->name;
-            }
-            print implode(', ',$terms);
-        } else {
-            print get_section_title();
+        global $post,$chaptertitle_metabox;
+        $chaptertitle = false;
+        if(class_exists('MSDLab_Chapter_Title_Support')){
+            $chaptertitle = $chaptertitle_metabox->get_the_value('chapter_title')!=''?$chaptertitle_metabox->get_the_value('chapter_title'):false;
         }
-        print '</h2>';
+        if($chaptertitle){
+            $title = $chaptertitle;
+        } else {
+            if (get_section() == 'industries-functions') {
+                foreach (wp_get_post_terms($post->ID, 'post_tag') AS $term) {
+                    $terms[] = $term->name;
+                }
+                $title =  implode(', ', $terms);
+            } else {
+                if (get_section_title() != $post->post_title) {
+                    $title = get_section_title();
+                }
+            }
+        }
+        if($title) {
+            print '<h2 class="chapter-title">';
+            print $title;
+            print '</h2>';
+        }
     } elseif(is_archive()) {
         if(is_cpt('msd_news')){
             print '<h2 class="chapter-title">Company</h2>';

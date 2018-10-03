@@ -86,6 +86,7 @@ if (!class_exists('MSDLabThemeTools')) {
                 require_once(plugin_dir_path(__FILE__) . '/lib/inc/genesis_bootstrap_hooks.php');
                 require_once(plugin_dir_path(__FILE__).'/lib/inc/genesis_tweaks.php');
                 require_once(plugin_dir_path(__FILE__).'/lib/inc/subtitle_support.php');
+                require_once(plugin_dir_path(__FILE__).'/lib/inc/chapter_title_support.php');
             }
         }
 

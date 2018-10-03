@@ -99,6 +99,11 @@ if(class_exists('MSDLab_Subtitle_Support')){
     $options = array();
     $subtitle_support = new MSDLab_Subtitle_Support($options);
 }
+if(class_exists('MSDLab_Chapter_Title_Support')){
+    global $chaptertitle_support;
+    $options = array();
+    $chaptertitle_support = new MSDLab_Chapter_Title_Support($options);
+}
 
 
 /*** HEADER ***/
