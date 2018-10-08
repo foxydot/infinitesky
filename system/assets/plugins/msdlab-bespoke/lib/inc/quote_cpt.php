@@ -300,7 +300,7 @@ if (!class_exists('MSDQuoteCPT')) {
                     $recents->the_post();
                     $quote_info->the_meta();
                     print '<li class="single-quote animated fadeInUp">
-<div class="quote-content">'.get_the_content().'</div>
+<div class="quote-content">&ldquo;'.get_the_content().'&rdquo;</div>
 <div class="quote-attribution">'.$quote_info->get_the_value("attribute").'</div>
 </li>';
                 } //end loop
