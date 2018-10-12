@@ -60,7 +60,7 @@
         }
         a.fa:hover {
           color: $white;
-          background-color: $offwhite;
+          background-color: $ltgrey;
         }
 
         a.fa-facebook:hover {
@@ -101,6 +101,9 @@
         }
         a.fa-share-alt:hover {
           background-color: $sharethis;
+        }
+        a.fa-phone:hover {
+          background-color: $contact;
         }
         a.fa-envelope:hover {
           background-color: $contact;
