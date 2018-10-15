@@ -28,7 +28,7 @@ if(!function_exists('my_msdlab_trace_actions')) {
     {
         global $wp_filter,$shortcode_tags;
         global $allowedposttags;
-        //ts_var($wp_filter['genesis_after_endwhile']);
-        ts_var($shortcode_tags);
+        ts_var($wp_filter['genesis_header']);
+        //ts_var($shortcode_tags);
     }
 }

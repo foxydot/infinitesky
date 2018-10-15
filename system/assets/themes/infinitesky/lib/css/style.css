@@ -1300,6 +1300,9 @@ img.alignright,
       font-size: 1.2em;
       padding: 0.5em 1em;
       cursor: context-menu; }
+    .nav-primary .menu li.menu-item.contact, .nav-primary .menu li.hs-menu-item.contact, .nav-primary .hs-menu-wrapper > ul li.menu-item.contact, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item.contact {
+      background: #ff6600;
+      color: #FFF; }
     .nav-primary .menu li.menu-item .sub-menu, .nav-primary .menu li.menu-item ul.hs-menu-children-wrapper, .nav-primary .menu li.hs-menu-item .sub-menu, .nav-primary .menu li.hs-menu-item ul.hs-menu-children-wrapper, .nav-primary .hs-menu-wrapper > ul li.menu-item .sub-menu, .nav-primary .hs-menu-wrapper > ul li.menu-item ul.hs-menu-children-wrapper, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item .sub-menu, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item ul.hs-menu-children-wrapper {
       background-color: rgba(102, 102, 102, 0.8);
       width: 22em; }
@@ -2611,6 +2614,12 @@ a.hs-button {
   display: block;
   float: right;
   margin: 1em 0; }
+
+.mobile-call-button {
+  height: 2em;
+  width: 2em;
+  float: right;
+  padding: 0.5em; }
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set .rollbox .rollbox-wrapper {

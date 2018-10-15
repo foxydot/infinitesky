@@ -442,3 +442,23 @@ function msdlab_icon_sc_callback($atts){
     $ret = '<span class="icon icon-'.$img.'"><span class="screen-reader-text">'.$img.'</span></span>';
     return $ret;
 }
+
+function msdlab_add_mobile_phone_button(){
+    if(wp_is_mobile()) {
+        if(get_option('msdsocial_show_phone')!=""){
+            if(get_option('msdsocial_tracking_tollfree')!=''){
+                $phone = get_option('msdsocial_tracking_tollfree');
+            } elseif (get_option('msdsocial_tracking_phone')!=''){
+                $phone = get_option('msdsocial_tracking_phone');
+            } elseif(get_option('msdsocial_tollfree')!=''){
+                $phone = get_option('msdsocial_tollfree');
+            } elseif (get_option('msdsocial_phone')!='') {
+                $phone = get_option('msdsocial_phone');
+            }
+            if($phone != '') {
+                $ret .= '<a href="tel:+1' . $phone . '" class="fa fa-phone fa-2x mobile-call-button"><span class="screen-reader-text">Call</span></a>';
+            }
+        }
+        print $ret;
+    }
+}

@@ -127,6 +127,8 @@ add_action( 'genesis_header', 'genesis_do_subnav' );
  */
 remove_action( 'genesis_after_header', 'genesis_do_nav' );
 add_action( 'genesis_header', 'msdlab_do_nav');
+add_action('genesis_header','msdlab_add_mobile_phone_button');
+
 
 /*** SIDEBARS ***/
 add_filter('widget_text', 'do_shortcode');//shortcodes in widgets

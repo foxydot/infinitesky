@@ -760,6 +760,12 @@ a.hs-button{
   margin: 1em 0;
 }
 
+.mobile-call-button{
+  height: 2em;
+  width: 2em;
+  float: right;
+  padding: 0.5em;
+}
 
 @media only screen and (min-width: 1024px) {
   .rollbox-set {
