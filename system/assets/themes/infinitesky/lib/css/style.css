@@ -2083,10 +2083,10 @@ article.type-post .entry-header {
   background-size: cover;
   background-attachment: fixed; }
 
-.single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .testimonials .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news .site-inner .content-sidebar-wrap main.content, .search-results .site-inner .content-sidebar-wrap main.content, .page-template-default .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .single-msd_news .site-inner .content-sidebar-wrap main.content, .testimonials .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news .site-inner .content-sidebar-wrap main.content, .search-results .site-inner .content-sidebar-wrap main.content, .page-template-default .site-inner .content-sidebar-wrap main.content {
   background-color: #FFF; }
 
-.single-msd_casestudy.content-right .site-inner .content-sidebar-wrap main.content, .testimonials.content-right .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-right .site-inner .content-sidebar-wrap main.content, .search-results.content-right .site-inner .content-sidebar-wrap main.content, .page-template-default.content-right .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy.content-right .site-inner .content-sidebar-wrap main.content, .single-msd_news.content-right .site-inner .content-sidebar-wrap main.content, .testimonials.content-right .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-right .site-inner .content-sidebar-wrap main.content, .search-results.content-right .site-inner .content-sidebar-wrap main.content, .page-template-default.content-right .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
   background: url(../images/content-right.svg) top left no-repeat;
   background-size: 100% auto;
@@ -2094,7 +2094,7 @@ article.type-post .entry-header {
   padding-bottom: 0;
   min-height: 18.5em; }
 
-.single-msd_casestudy.content-left .site-inner .content-sidebar-wrap main.content, .testimonials.content-left .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .search-results.content-left .site-inner .content-sidebar-wrap main.content, .page-template-default.content-left .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy.content-left .site-inner .content-sidebar-wrap main.content, .single-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .testimonials.content-left .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .search-results.content-left .site-inner .content-sidebar-wrap main.content, .page-template-default.content-left .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
   background: url(../images/content-left.svg) top right no-repeat;
   background-size: 100% auto;
@@ -2102,46 +2102,46 @@ article.type-post .entry-header {
   padding-bottom: 0;
   min-height: 18.5em; }
 
-.single-msd_casestudy.bkg-white .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-white .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .search-results.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy.bkg-white .site-inner .content-sidebar-wrap main.content, .single-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-white .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .search-results.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
   background-color: #FFF; }
 
-.single-msd_casestudy.bkg-clear .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-clear .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-clear .site-inner .content-sidebar-wrap main.content, .search-results.bkg-clear .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-clear .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy.bkg-clear .site-inner .content-sidebar-wrap main.content, .single-msd_news.bkg-clear .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-clear .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-clear .site-inner .content-sidebar-wrap main.content, .search-results.bkg-clear .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-clear .site-inner .content-sidebar-wrap main.content {
   background-color: transparent !important;
   padding: 0em !important; }
 
-.single-msd_casestudy .site-inner .content-sidebar-wrap main.content {
+.single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .single-msd_news .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
   background: url(../images/content-left.svg) top left no-repeat;
   background-size: 100% auto; }
-  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-header {
+  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-header, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-header {
     display: inline-block;
     float: right;
     min-height: 16em;
     min-width: 16em; }
-  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content h2 {
+  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content h2, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content h2 {
     font-size: 1.6em;
     color: #ff6600;
     font-weight: 700; }
-  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar {
+  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar {
     background-color: rgba(209, 211, 212, 0.5);
     padding: 2em;
     float: right;
     margin: 2em 0 2em 2em; }
-    .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper {
+    .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper {
       min-height: 16em;
       min-width: 25%;
       text-align: center; }
-      .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper h6 {
+      .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper h6, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper h6 {
         font-size: 1em;
         font-weight: 600;
         margin-bottom: 0; }
-      .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a {
+      .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a {
         display: block; }
-        .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a.icon {
+        .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a.icon, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper a.icon {
           padding-top: 4.2em;
           background-size: 4.2em auto;
           background-position: center top; }
-  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .btn.all-case-studies {
+  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .btn.all-case-studies, .single-msd_news .site-inner .content-sidebar-wrap main.content .btn.all-case-studies {
     float: right; }
 
 .home, .page-template-template-secondary, .team_member-template-default {
@@ -2655,7 +2655,7 @@ body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.c
     min-height: 10em; }
   .page-title-area .texturize .gradient .container .entry-title {
     max-width: 80%; }
-  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .testimonials .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news .site-inner .content-sidebar-wrap main.content, .search-results .site-inner .content-sidebar-wrap main.content, .page-template-default .site-inner .content-sidebar-wrap main.content {
+  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content, .single-msd_news .site-inner .content-sidebar-wrap main.content, .testimonials .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news .site-inner .content-sidebar-wrap main.content, .search-results .site-inner .content-sidebar-wrap main.content, .page-template-default .site-inner .content-sidebar-wrap main.content {
     padding: 3em 5em; }
   .home .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary .site-inner .content-sidebar-wrap main.content, .team_member-template-default .site-inner .content-sidebar-wrap main.content {
     padding: 3em 5em; }
