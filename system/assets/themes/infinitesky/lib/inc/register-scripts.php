@@ -18,13 +18,13 @@ function msdlab_add_styles() {
         wp_enqueue_style('dashicons');
         // wp_enqueue_style('font-awesome-style',get_stylesheet_directory_uri().'/lib/font-awesome/css/font-awesome.css',array('bootstrap-style'));
         $queue[] = 'font-awesome-style';
-        wp_enqueue_style('msd-style',get_stylesheet_directory_uri().'/lib/css/style.css',$queue);
+        wp_enqueue_style('msd-style',get_stylesheet_directory_uri().'/lib/css/style.css',$queue,'20181014');
         $queue[] = 'msd-style';
         if(is_front_page()){
-            wp_enqueue_style('msd-homepage-style',get_stylesheet_directory_uri().'/lib/css/homepage.css',$queue);
+            wp_enqueue_style('msd-homepage-style',get_stylesheet_directory_uri().'/lib/css/homepage.css',$queue,'20181014');
             $queue[] = 'msd-homepage-style';
         }
-        wp_enqueue_style('ie-style',get_stylesheet_directory_uri().'/lib/css/ie.css',$queue);
+        wp_enqueue_style('ie-style',get_stylesheet_directory_uri().'/lib/css/ie.css',$queue,'20181014');
         $queue[] = 'ie-style';
     }
 }
