@@ -1300,9 +1300,6 @@ img.alignright,
       font-size: 1.2em;
       padding: 0.5em 1em;
       cursor: context-menu; }
-    .nav-primary .menu li.menu-item.contact, .nav-primary .menu li.hs-menu-item.contact, .nav-primary .hs-menu-wrapper > ul li.menu-item.contact, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item.contact {
-      background: #ff6600;
-      color: #FFF; }
     .nav-primary .menu li.menu-item .sub-menu, .nav-primary .menu li.menu-item ul.hs-menu-children-wrapper, .nav-primary .menu li.hs-menu-item .sub-menu, .nav-primary .menu li.hs-menu-item ul.hs-menu-children-wrapper, .nav-primary .hs-menu-wrapper > ul li.menu-item .sub-menu, .nav-primary .hs-menu-wrapper > ul li.menu-item ul.hs-menu-children-wrapper, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item .sub-menu, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item ul.hs-menu-children-wrapper {
       background-color: rgba(102, 102, 102, 0.8);
       width: 22em; }
@@ -1311,6 +1308,9 @@ img.alignright,
         width: 100%; }
         .nav-primary .menu li.menu-item .sub-menu .menu-item a, .nav-primary .menu li.menu-item .sub-menu a a, .nav-primary .menu li.menu-item .sub-menu .hs-menu-item a, .nav-primary .menu li.menu-item ul.hs-menu-children-wrapper .menu-item a, .nav-primary .menu li.menu-item ul.hs-menu-children-wrapper a a, .nav-primary .menu li.menu-item ul.hs-menu-children-wrapper .hs-menu-item a, .nav-primary .menu li.hs-menu-item .sub-menu .menu-item a, .nav-primary .menu li.hs-menu-item .sub-menu a a, .nav-primary .menu li.hs-menu-item .sub-menu .hs-menu-item a, .nav-primary .menu li.hs-menu-item ul.hs-menu-children-wrapper .menu-item a, .nav-primary .menu li.hs-menu-item ul.hs-menu-children-wrapper a a, .nav-primary .menu li.hs-menu-item ul.hs-menu-children-wrapper .hs-menu-item a, .nav-primary .hs-menu-wrapper > ul li.menu-item .sub-menu .menu-item a, .nav-primary .hs-menu-wrapper > ul li.menu-item .sub-menu a a, .nav-primary .hs-menu-wrapper > ul li.menu-item .sub-menu .hs-menu-item a, .nav-primary .hs-menu-wrapper > ul li.menu-item ul.hs-menu-children-wrapper .menu-item a, .nav-primary .hs-menu-wrapper > ul li.menu-item ul.hs-menu-children-wrapper a a, .nav-primary .hs-menu-wrapper > ul li.menu-item ul.hs-menu-children-wrapper .hs-menu-item a, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item .sub-menu .menu-item a, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item .sub-menu a a, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item .sub-menu .hs-menu-item a, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item ul.hs-menu-children-wrapper .menu-item a, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item ul.hs-menu-children-wrapper a a, .nav-primary .hs-menu-wrapper > ul li.hs-menu-item ul.hs-menu-children-wrapper .hs-menu-item a {
           cursor: pointer; }
+    .nav-primary .menu li.menu-item.contact, .nav-primary .hs-menu-wrapper > ul li.menu-item.contact {
+      background: #ff6600;
+      color: #FFF; }
 
 /* ## Foooter Widget Nav */
 .footer-widgets .footer-widget-area .widget_nav_menu .menu {
