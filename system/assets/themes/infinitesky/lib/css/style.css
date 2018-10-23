@@ -2092,7 +2092,7 @@ article.type-post .entry-header {
   background-size: 100% auto;
   padding-left: 30%;
   padding-bottom: 0;
-  min-height: 18.5em; }
+  min-height: 19.5em; }
 
 .single-msd_casestudy.content-left .site-inner .content-sidebar-wrap main.content, .single-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .testimonials.content-left .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .search-results.content-left .site-inner .content-sidebar-wrap main.content, .page-template-default.content-left .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
@@ -2100,7 +2100,7 @@ article.type-post .entry-header {
   background-size: 100% auto;
   padding-right: 30%;
   padding-bottom: 0;
-  min-height: 18.5em; }
+  min-height: 19.5em; }
 
 .single-msd_casestudy.bkg-white .site-inner .content-sidebar-wrap main.content, .single-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-white .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .search-results.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
   background-color: #FFF; }
@@ -2645,8 +2645,8 @@ a.hs-button {
     top: 0; } }
 
 body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.chrome.content-left .site-inner .content-sidebar-wrap main.content {
-  margin-left: -15.5px;
-  margin-right: -17px; }
+  margin-left: -17px;
+  margin-right: -19px; }
 
 @media only screen and (min-width: 768px) {
   .mobile-trigger1 {
