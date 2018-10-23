@@ -2730,10 +2730,9 @@ body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.c
     .site-inner .sidebar .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .sidebar .gform_wrapper .gform_body li.gfield .ginput_container textarea {
       background: rgba(234, 243, 251, 0); }
     .site-inner .sidebar .gform_wrapper .gform_body li.gfield.white {
-      background: none; } }
-
-.header-image .site-title a {
-  width: 6em; }
+      background: none; }
+  .header-image .site-title a {
+    width: 6em; } }
 
 @media only screen and (min-width: 1024px) {
   /* # Defaults
