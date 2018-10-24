@@ -1612,6 +1612,9 @@ p.entry-meta {
 .site-footer p {
   margin-bottom: 0; }
 
+.no-main main.content {
+  display: none; }
+
 .sectioned-page-wrapper {
   position: relative;
   z-index: 10;
