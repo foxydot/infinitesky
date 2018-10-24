@@ -132,8 +132,19 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
                 do_action( 'genesis_after_entry' );
             endwhile;
             print '</div>';
+
+                add_action('genesis_entry_content', 'genesis_do_post_content');
+                add_action('genesis_entry_content', 'genesis_do_post_image',8);
+                add_action( 'genesis_entry_header', 'msdlab_do_post_subtitle', 13);
+                add_action( 'genesis_entry_header', 'genesis_do_post_title');
+                remove_action( 'genesis_entry_header', array(&$this,'msdlab_shortcode_grid_header'),1);
+                remove_action( 'genesis_entry_footer', array(&$this,'msdlab_shortcode_grid_footer'),100);
+                remove_action( 'genesis_entry_header', 'genesis_do_post_title');
+                remove_filter( 'post_class', array(&$this,'msdlab_shortcode_grid_post_classes') );
+                remove_filter( 'genesis_get_image_default_args', array(&$this,'msdlab_shortcode_grid_image' ));
             endif;
             $ret = ob_get_contents();
+            wp_reset_postdata();
             ob_end_clean();
 
             return $ret;

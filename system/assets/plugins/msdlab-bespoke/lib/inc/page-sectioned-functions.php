@@ -199,6 +199,7 @@ class MSDSectionedPage{
         $i = 0;
         $meta = $sectioned_page_metabox->the_meta();
         if(is_object($sectioned_page_metabox)){
+            $sections = array();
             while($sectioned_page_metabox->have_fields('sections')){
                 $hide = $sectioned_page_metabox->get_the_value('section-hidden-bool');
                 if($hide){$i++;continue;}

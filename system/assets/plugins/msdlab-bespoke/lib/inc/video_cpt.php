@@ -204,10 +204,10 @@ class MSDVideoCPT {
             </style>
             <?php
         }
-        function get_video_items($tags){
+        function get_video_items($tags, $posts_per_page = -1){
             $args = array( 
                 'post_type' => 'msd_video', 
-                'numberposts' => -1,
+                'numberposts' => $posts_per_page,
                 'order' => 'ASC',
                 'orderby' => 'menu_order',
             );
@@ -327,10 +327,11 @@ class MSDVideoCPT {
             extract( shortcode_atts( array(
             'tags' => array(),
             'cols' => 2,
+            'posts_per_page' => 4,
             ), $atts ) );
             $ID = $tags[0];
                 
-            $items = $this->get_video_items($tags);
+            $items = $this->get_video_items($tags, $posts_per_page);
             //$count = (floor(count($items)/$cols))*$cols; //kill the orphans
             $count = count($items);
                         
