@@ -6,6 +6,7 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
         function __construct()
         {
             add_shortcode('latest',array(&$this,'msdlab_latest_shortcode_handler'));
+            add_shortcode('blog',array(&$this,'msdlab_blog_shortcode_handler'));
             add_shortcode('rollbox_set',array(&$this,'rollbox_set_shortcode_handler'));
             add_shortcode('rollbox',array(&$this,'rollbox_shortcode_handler'));
             add_action('admin_head', array(&$this,'codex_custom_help_tab'));
@@ -88,6 +89,84 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             $ret = ob_get_contents();
             ob_end_clean();
             return $ret;
+        }
+
+
+        function msdlab_blog_shortcode_handler($atts){
+            $args = (shortcode_atts( array(
+                'post_type' => 'post',
+                'posts_per_page' => '1',
+            ), $atts ));
+            global $post;
+            $my_query = new WP_Query($args);
+            ob_start();
+            if( $my_query->have_posts() ) :
+                print '<div class="blog-sc-grid">';
+            remove_action('genesis_entry_content', 'genesis_do_post_content');
+            remove_action('genesis_entry_content', 'genesis_do_post_image',8);
+            remove_action( 'genesis_entry_header', 'msdlab_do_post_subtitle', 13);
+            remove_action( 'genesis_entry_header', 'genesis_do_post_title');
+            add_action( 'genesis_entry_header', array(&$this,'msdlab_shortcode_grid_header'),1);
+            add_action( 'genesis_entry_footer', array(&$this,'msdlab_shortcode_grid_footer'),100);
+            add_action( 'genesis_entry_header', 'genesis_do_post_title');
+            add_filter( 'post_class', array(&$this,'msdlab_shortcode_grid_post_classes') );
+            add_filter( 'genesis_get_image_default_args', array(&$this,'msdlab_shortcode_grid_image' ));
+
+                while ( $my_query->have_posts() ) : $my_query->the_post();
+                do_action( 'genesis_before_entry' );
+                genesis_markup( array(
+                    'open'    => '<article %s>',
+                    'context' => 'entry',
+                ) );
+                do_action( 'genesis_entry_header' );
+                do_action( 'genesis_before_entry_content' );
+                printf( '<div %s>', genesis_attr( 'entry-content' ) );
+                do_action( 'genesis_entry_content' );
+                echo '</div>';
+                do_action( 'genesis_after_entry_content' );
+                do_action( 'genesis_entry_footer' );
+                genesis_markup( array(
+                    'close'   => '</article>',
+                    'context' => 'entry',
+                ) );
+                do_action( 'genesis_after_entry' );
+            endwhile;
+            print '</div>';
+            endif;
+            $ret = ob_get_contents();
+            ob_end_clean();
+
+            return $ret;
+        }
+
+        function msdlab_shortcode_grid_header(){
+            global $post;
+            print '<div class="entry-wrap">';
+            printf( '<a href="%s" title="%s" class="grid_image_wrapper">%s</a>', get_permalink(), the_title_attribute('echo=0'), genesis_get_image() );
+        }
+
+        function msdlab_shortcode_grid_footer(){
+            print '<hr class="clear" /></div>';
+        }
+
+        function msdlab_shortcode_grid_content(){
+            global $post;
+            the_excerpt();
+            printf( '<a href="%s" title="%s" class="readmore-button alignright">%s</a>', get_permalink(), the_title_attribute('echo=0'), 'Read more >' );
+
+        }
+
+        function msdlab_shortcode_grid_post_classes( $classes ) {
+                remove_action( 'genesis_entry_footer', 'genesis_post_meta');
+                    $classes[] = 'genesis-teaser';
+                    $classes[] = 'col-sm-4';
+                    $classes[] = 'col-xs-12';
+            return $classes;
+        }
+
+        function msdlab_shortcode_grid_image( $defaults ) {
+            $defaults['size'] = 'child_thumbnail';
+            return $defaults;
         }
 
         function rollbox_set_shortcode_handler($atts,$content){

@@ -2069,11 +2069,11 @@ article.type-post .entry-header {
   background: rgba(209, 211, 212, 0.6);
   padding-bottom: 2em; }
 
-.genesis-blog-grid .genesis-teaser {
+.genesis-blog-grid .genesis-teaser, .blog-sc-grid .genesis-teaser {
   padding-left: 15px;
   padding-right: 15px; }
 
-.genesis-blog-grid .entry-wrap {
+.genesis-blog-grid .entry-wrap, .blog-sc-grid .entry-wrap {
   background: rgba(209, 211, 212, 0.6);
   min-height: 100%; }
 
