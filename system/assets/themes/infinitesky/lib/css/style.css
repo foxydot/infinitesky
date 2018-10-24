@@ -1861,10 +1861,10 @@ p.entry-meta {
       position: absolute;
       bottom: 0;
       right: -2em; }
-  .sectioned-page-wrapper .section.section-adtech-martech .section-content .section-content {
+  .sectioned-page-wrapper .section.section-adtech-martech .section-content {
     background-color: rgba(0, 153, 255, 0.8);
     background-image: url(../images/icons/marketing-w.svg); }
-    .sectioned-page-wrapper .section.section-adtech-martech .section-content .section-content h2:after {
+    .sectioned-page-wrapper .section.section-adtech-martech .section-content h2:after {
       content: '\f0a9';
       font-family: FontAwesome;
       position: absolute;
