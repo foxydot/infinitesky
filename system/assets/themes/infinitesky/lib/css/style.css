@@ -1823,6 +1823,53 @@ p.entry-meta {
       right: -15px; }
   .sectioned-page-wrapper .section.section-space {
     min-height: 12em; }
+  .sectioned-page-wrapper .section.section-transform .section-content, .sectioned-page-wrapper .section.section-operate .section-content, .sectioned-page-wrapper .section.section-adtech-martech .section-content {
+    border-top: 4px solid #ff6600;
+    color: #FFF;
+    margin: 0 1em;
+    padding: 1.5em 7em 4em 1.5em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 20% auto;
+    position: relative;
+    min-height: 20em; }
+    .sectioned-page-wrapper .section.section-transform .section-content h2, .sectioned-page-wrapper .section.section-operate .section-content h2, .sectioned-page-wrapper .section.section-adtech-martech .section-content h2 {
+      font-weight: 700;
+      position: relative; }
+    .sectioned-page-wrapper .section.section-transform .section-content a.cover-link, .sectioned-page-wrapper .section.section-operate .section-content a.cover-link, .sectioned-page-wrapper .section.section-adtech-martech .section-content a.cover-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-decoration: none; }
+  .sectioned-page-wrapper .section.section-transform .section-content {
+    background-color: rgba(0, 153, 255, 0.8);
+    background-image: url(../images/icons/core-values-w.svg); }
+    .sectioned-page-wrapper .section.section-transform .section-content h2:after {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      position: absolute;
+      bottom: 0;
+      right: -2em; }
+  .sectioned-page-wrapper .section.section-operate .section-content {
+    background-color: rgba(102, 102, 102, 0.8);
+    background-image: url(../images/icons/operational-excellence-w.svg); }
+    .sectioned-page-wrapper .section.section-operate .section-content h2:after {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      position: absolute;
+      bottom: 0;
+      right: -2em; }
+  .sectioned-page-wrapper .section.section-adtech-martech .section-content .section-content {
+    background-color: rgba(0, 153, 255, 0.8);
+    background-image: url(../images/icons/marketing-w.svg); }
+    .sectioned-page-wrapper .section.section-adtech-martech .section-content .section-content h2:after {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      position: absolute;
+      bottom: 0;
+      right: -2em; }
 
 @media only screen and (max-width: 767px) {
   .sectioned-page-wrapper .section.hasbutton .section-body .container .section-content {
