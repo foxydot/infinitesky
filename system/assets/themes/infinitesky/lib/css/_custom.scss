@@ -512,6 +512,76 @@ article.team_member{
     }
   }
 }
+//case studies
+
+.post-type-archive-msd_casestudy,.tax-msd_practice-area,.tax-msd_industry{
+  .site-inner{
+    .container{
+      article {
+        padding: 1em;
+        &:after{
+          content: " ";
+          display: table;
+          clear:both;
+          zoom: 1;
+        }
+        .wrapper{
+          background: $ltgrey;
+          padding: 1em;
+          min-height: 27em;
+          position: relative;
+          padding-bottom: 3em;
+        }
+        header{
+          text-align: center;
+        }
+        content{
+          h3.entry-title{
+            font-size: 1.4em;
+          }
+          .readmore{
+            position: absolute;
+            right: 0;
+            bottom: 1em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.case-studies-sc-wrapper{
+  article {
+    padding: 1em;
+    &:after{
+      content: " ";
+      display: table;
+      clear:both;
+      zoom: 1;
+    }
+    .wrapper{
+      background: $ltgrey;
+      padding: 1em;
+      min-height: 27em;
+      position: relative;
+      padding-bottom: 3em;
+    }
+    header{
+      text-align: center;
+    }
+    content{
+      h3.entry-title{
+        font-size: 1.4em;
+      }
+      .readmore{
+        position: absolute;
+        right: 0;
+        bottom: 1em;
+      }
+    }
+  }
+}
+
 
 //video library
 .video-library{

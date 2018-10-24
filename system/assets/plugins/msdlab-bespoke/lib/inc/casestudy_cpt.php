@@ -298,9 +298,10 @@ class MSDCaseStudyCPT {
 
     function msdlab_casestudies_special_loop_shortcode_handler($atts){
         $args = shortcode_atts( array(
+            'posts_per_page' => -1,
         ), $atts );
         remove_filter('the_content','wpautop',12);
-        return self::msdlab_casestudies_special($args);
+        return '<div class="case-studies-sc-wrapper">'.self::msdlab_casestudies_special($args).'</div>';
     }
     
     function msdlab_casestudies_special($args){

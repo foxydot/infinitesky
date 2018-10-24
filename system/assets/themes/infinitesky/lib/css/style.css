@@ -2358,6 +2358,50 @@ article.team_member {
       article.team_member > .wrap main footer .readmore {
         float: right; }
 
+.post-type-archive-msd_casestudy .site-inner .container article, .tax-msd_practice-area .site-inner .container article, .tax-msd_industry .site-inner .container article {
+  padding: 1em; }
+  .post-type-archive-msd_casestudy .site-inner .container article:after, .tax-msd_practice-area .site-inner .container article:after, .tax-msd_industry .site-inner .container article:after {
+    content: " ";
+    display: table;
+    clear: both;
+    zoom: 1; }
+  .post-type-archive-msd_casestudy .site-inner .container article .wrapper, .tax-msd_practice-area .site-inner .container article .wrapper, .tax-msd_industry .site-inner .container article .wrapper {
+    background: #D1D3D4;
+    padding: 1em;
+    min-height: 27em;
+    position: relative;
+    padding-bottom: 3em; }
+  .post-type-archive-msd_casestudy .site-inner .container article header, .tax-msd_practice-area .site-inner .container article header, .tax-msd_industry .site-inner .container article header {
+    text-align: center; }
+  .post-type-archive-msd_casestudy .site-inner .container article content h3.entry-title, .tax-msd_practice-area .site-inner .container article content h3.entry-title, .tax-msd_industry .site-inner .container article content h3.entry-title {
+    font-size: 1.4em; }
+  .post-type-archive-msd_casestudy .site-inner .container article content .readmore, .tax-msd_practice-area .site-inner .container article content .readmore, .tax-msd_industry .site-inner .container article content .readmore {
+    position: absolute;
+    right: 0;
+    bottom: 1em; }
+
+.case-studies-sc-wrapper article {
+  padding: 1em; }
+  .case-studies-sc-wrapper article:after {
+    content: " ";
+    display: table;
+    clear: both;
+    zoom: 1; }
+  .case-studies-sc-wrapper article .wrapper {
+    background: #D1D3D4;
+    padding: 1em;
+    min-height: 27em;
+    position: relative;
+    padding-bottom: 3em; }
+  .case-studies-sc-wrapper article header {
+    text-align: center; }
+  .case-studies-sc-wrapper article content h3.entry-title {
+    font-size: 1.4em; }
+  .case-studies-sc-wrapper article content .readmore {
+    position: absolute;
+    right: 0;
+    bottom: 1em; }
+
 .video-library ul.grid li.video-item {
   text-indent: 0;
   margin-left: 0;
