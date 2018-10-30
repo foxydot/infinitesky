@@ -2674,7 +2674,7 @@ article.team_member {
 
 .page-template-template-secondary.content-left.media-publishing .site-inner .content-sidebar-wrap main.content {
   padding-right: 39%;
-  min-height: 18.5em; }
+  min-height: 305px; }
 
 .page-template-template-secondary.content-left.media-publishing .sectioned-page-wrapper .section.section-what-we-deliver .section-title h3:after {
   display: none; }
@@ -2950,9 +2950,9 @@ body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.c
     float: right;
     text-align: right; }
   .page-title-area {
-    margin-bottom: -260px; }
+    margin-bottom: -360px; }
     .page-title-area .texturize .gradient {
-      padding-bottom: 300px; }
+      padding-bottom: 400px; }
   /* # Nav
   ---------------------------------------------------------------------------------------------------- */
   .nav-primary {
