@@ -1826,53 +1826,6 @@ p.entry-meta {
       right: -15px; }
   .sectioned-page-wrapper .section.section-space {
     min-height: 12em; }
-  .sectioned-page-wrapper .section.section-transform .section-content, .sectioned-page-wrapper .section.section-operate .section-content, .sectioned-page-wrapper .section.section-adtech-martech .section-content {
-    border-top: 4px solid #ff6600;
-    color: #FFF;
-    margin: 0 1em;
-    padding: 1.5em 7em 4em 1.5em;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-size: 20% auto;
-    position: relative;
-    min-height: 20em; }
-    .sectioned-page-wrapper .section.section-transform .section-content h2, .sectioned-page-wrapper .section.section-operate .section-content h2, .sectioned-page-wrapper .section.section-adtech-martech .section-content h2 {
-      font-weight: 700;
-      position: relative; }
-    .sectioned-page-wrapper .section.section-transform .section-content a.cover-link, .sectioned-page-wrapper .section.section-operate .section-content a.cover-link, .sectioned-page-wrapper .section.section-adtech-martech .section-content a.cover-link {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      text-decoration: none; }
-  .sectioned-page-wrapper .section.section-transform .section-content {
-    background-color: rgba(0, 153, 255, 0.8);
-    background-image: url(../images/icons/core-values-w.svg); }
-    .sectioned-page-wrapper .section.section-transform .section-content h2:after {
-      content: '\f0a9';
-      font-family: FontAwesome;
-      position: absolute;
-      bottom: 0;
-      right: -2em; }
-  .sectioned-page-wrapper .section.section-operate .section-content {
-    background-color: rgba(102, 102, 102, 0.8);
-    background-image: url(../images/icons/operational-excellence-w.svg); }
-    .sectioned-page-wrapper .section.section-operate .section-content h2:after {
-      content: '\f0a9';
-      font-family: FontAwesome;
-      position: absolute;
-      bottom: 0;
-      right: -2em; }
-  .sectioned-page-wrapper .section.section-adtech-martech .section-content {
-    background-color: rgba(0, 153, 255, 0.8);
-    background-image: url(../images/icons/marketing-w.svg); }
-    .sectioned-page-wrapper .section.section-adtech-martech .section-content h2:after {
-      content: '\f0a9';
-      font-family: FontAwesome;
-      position: absolute;
-      bottom: 0;
-      right: -2em; }
 
 @media only screen and (max-width: 767px) {
   .sectioned-page-wrapper .section.hasbutton .section-body .container .section-content {
@@ -2667,6 +2620,82 @@ article.team_member {
         color: #FFF; }
       .rollbox-set .rollbox .rollbox-wrapper .rollbox-on img.icon {
         display: none; }
+
+.infinitive-solutions .page-title-area {
+  margin-top: 3em; }
+  .infinitive-solutions .page-title-area .texturize .gradient .container {
+    background-color: transparent;
+    background: url(../images/content-left.svg) top right no-repeat;
+    background-size: 100% auto;
+    padding: 4em 35% 4em 5em; }
+    .infinitive-solutions .page-title-area .texturize .gradient .container h1.entry-title {
+      color: #666;
+      line-height: 1.2;
+      margin-bottom: 0.3em;
+      position: relative; }
+      .infinitive-solutions .page-title-area .texturize .gradient .container h1.entry-title:before {
+        content: '';
+        display: inline-block;
+        height: 0.5em;
+        width: 0.75em;
+        background-color: #ff6600;
+        position: absolute;
+        left: -1em;
+        top: 0.5em; }
+    .infinitive-solutions .page-title-area .texturize .gradient .container h2.entry-subtitle {
+      color: #ff6600;
+      font-weight: 700;
+      font-size: 4.2em; }
+
+.infinitive-solutions .section.section-transform .container, .infinitive-solutions .section.section-operate .container, .infinitive-solutions .section.section-adtech-martech .container {
+  border-top: 4px solid #ff6600;
+  color: #FFF;
+  padding: 1.5em 7em 4em 1.5em;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 20% auto;
+  position: relative;
+  min-height: 20em; }
+  .infinitive-solutions .section.section-transform .container h2, .infinitive-solutions .section.section-operate .container h2, .infinitive-solutions .section.section-adtech-martech .container h2 {
+    font-weight: 700;
+    position: relative; }
+  .infinitive-solutions .section.section-transform .container a.cover-link, .infinitive-solutions .section.section-operate .container a.cover-link, .infinitive-solutions .section.section-adtech-martech .container a.cover-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-decoration: none; }
+
+.infinitive-solutions .section.section-transform .container {
+  background-color: rgba(0, 153, 255, 0.8);
+  background-image: url(../images/icons/core-values-w.svg); }
+  .infinitive-solutions .section.section-transform .container h2:after {
+    content: '\f0a9';
+    font-family: FontAwesome;
+    position: absolute;
+    bottom: 0;
+    right: -2em; }
+
+.infinitive-solutions .section.section-operate .container {
+  background-color: rgba(102, 102, 102, 0.8);
+  background-image: url(../images/icons/operational-excellence-w.svg); }
+  .infinitive-solutions .section.section-operate .container h2:after {
+    content: '\f0a9';
+    font-family: FontAwesome;
+    position: absolute;
+    bottom: 0;
+    right: -2em; }
+
+.infinitive-solutions .section.section-adtech-martech .container {
+  background-color: rgba(0, 153, 255, 0.8);
+  background-image: url(../images/icons/marketing-w.svg); }
+  .infinitive-solutions .section.section-adtech-martech .container h2:after {
+    content: '\f0a9';
+    font-family: FontAwesome;
+    position: absolute;
+    bottom: 0;
+    right: -2em; }
 
 @media only screen and (min-width: 992px) {
   .rollbox-set.cols-5 .rollbox {
