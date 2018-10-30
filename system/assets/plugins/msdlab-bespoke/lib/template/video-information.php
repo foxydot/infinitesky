@@ -7,7 +7,7 @@
 <li class='gfield' ><label class='gfield_label'>Team Members</label>
 <div class='ginput_container'>
     <?php 
-    $team = new MSDTeamDisplay;
+    $team = new MSDTeamCPT;
     $team_members = $team->get_all_team_members();
     foreach ($team_members as $item):
     $mb->the_field('team_members'); ?>
