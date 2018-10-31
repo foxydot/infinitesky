@@ -2095,7 +2095,7 @@ article.type-post .entry-header {
   background-size: 100% auto;
   padding-left: 30%;
   padding-bottom: 0;
-  min-height: 19.5em; }
+  min-height: 305px; }
 
 .single-msd_casestudy.content-left .site-inner .content-sidebar-wrap main.content, .single-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .testimonials.content-left .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.content-left .site-inner .content-sidebar-wrap main.content, .search-results.content-left .site-inner .content-sidebar-wrap main.content, .page-template-default.content-left .site-inner .content-sidebar-wrap main.content {
   background-color: transparent;
@@ -2103,7 +2103,7 @@ article.type-post .entry-header {
   background-size: 100% auto;
   padding-right: 30%;
   padding-bottom: 0;
-  min-height: 19.5em; }
+  min-height: 305px; }
 
 .single-msd_casestudy.bkg-white .site-inner .content-sidebar-wrap main.content, .single-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .testimonials.bkg-white .site-inner .content-sidebar-wrap main.content, .post-type-archive-msd_news.bkg-white .site-inner .content-sidebar-wrap main.content, .search-results.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
   background-color: #FFF; }
@@ -2164,13 +2164,13 @@ article.type-post .entry-header {
     background-size: 100% auto;
     padding-left: 30%;
     padding-bottom: 0;
-    min-height: 18.5em; }
+    min-height: 305px; }
   .home.content-left .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.content-left .site-inner .content-sidebar-wrap main.content, .team_member-template-default.content-left .site-inner .content-sidebar-wrap main.content {
     background: url(../images/content-left.svg) top right no-repeat;
     background-size: 100% auto;
     padding-right: 30%;
     padding-bottom: 0;
-    min-height: 18.5em; }
+    min-height: 305px; }
   .home.bkg-white .site-inner .content-sidebar-wrap main.content, .page-template-template-secondary.bkg-white .site-inner .content-sidebar-wrap main.content, .team_member-template-default.bkg-white .site-inner .content-sidebar-wrap main.content {
     background-color: #FFF; }
   .home.transform .page-title-area .texturize .gradient .container, .page-template-template-secondary.transform .page-title-area .texturize .gradient .container, .team_member-template-default.transform .page-title-area .texturize .gradient .container {
