@@ -26,6 +26,7 @@
     </style>
 </head>
 <body>
+<div>
 <?php
 if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     while (false !== ($entry = readdir($dir))) {
@@ -37,8 +38,9 @@ if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     }
     closedir($dir);
 }
-
-print '<textarea>';
+print '</div><div style="clear:both;">';
+print 'For _custom.scss, around line 645';
+print '<textarea style="width: 100%; height: 300px;">';
 if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     while (false !== ($entry = readdir($dir))) {
         if ($entry != "." && $entry != "..") {
@@ -48,7 +50,8 @@ if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     closedir($dir);
 }
 print '</textarea>';
-print '<textarea>';
+print 'For _icons.scss (careful, might need some hand editing)';
+print '<textarea style="width: 100%; height: 300px;">';
 if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     while (false !== ($entry = readdir($dir))) {
         if ($entry != "." && $entry != "..") {
@@ -66,7 +69,8 @@ if($dir = opendir(dirname(__FILE__).'/lib/images/icons/')){
     }
     closedir($dir);
 }
-print '</textarea>';
+print '</textarea>
+</div>';
 ?>
 </body>
 </html>
