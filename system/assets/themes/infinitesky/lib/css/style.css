@@ -2964,7 +2964,7 @@ body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.c
   /* # Site Header
   ---------------------------------------------------------------------------------------------------- */
   .site-header .title-area, .site-header .nav-primary {
-    padding: 3em; }
+    padding: 3em 0; }
   .site-header .widget-area {
     display: block; }
   /* ## Title Area
