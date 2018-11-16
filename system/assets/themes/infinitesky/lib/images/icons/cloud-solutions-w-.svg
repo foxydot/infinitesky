@@ -1,0 +1,51 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>cloud-solutions-w-</title>
+  <g id="cloud">
+    <g>
+      <path class="cls-1" d="M32.29,27.33H30.23v-1h2.06A5.67,5.67,0,0,0,38,20.64c0-2.94-2-5.15-4.63-5.15H32.8V15a3.83,3.83,0,0,0-4.12-4.12h-.82l-.15-.27A7.56,7.56,0,0,0,21,6.73a7.74,7.74,0,0,0-7.72,7.73V15h-.52a5.67,5.67,0,0,0,0,11.33h2.06v1H12.71A6.69,6.69,0,0,1,12.21,14,8.77,8.77,0,0,1,21,5.7a8.59,8.59,0,0,1,7.51,4.12h.22a4.78,4.78,0,0,1,5.13,4.66c3,.25,5.17,2.82,5.17,6.16A6.7,6.7,0,0,1,32.29,27.33Z"/>
+      <path class="cls-1" d="M27.14,28.36H17.86V19.09h9.28Zm-8.25-1h7.22V20.12H18.89Z"/>
+      <rect class="cls-1" x="18.89" y="17.03" width="1.03" height="2.58"/>
+      <rect class="cls-1" x="20.95" y="17.03" width="1.03" height="2.58"/>
+      <rect class="cls-1" x="23.02" y="17.03" width="1.03" height="2.58"/>
+      <rect class="cls-1" x="25.08" y="17.03" width="1.03" height="2.58"/>
+      <rect class="cls-1" x="20.95" y="27.85" width="1.03" height="10.82"/>
+      <rect class="cls-1" x="23.02" y="27.85" width="1.03" height="10.82"/>
+      <rect class="cls-1" x="26.62" y="20.12" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="26.62" y="22.18" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="26.62" y="24.24" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="26.62" y="26.3" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="15.8" y="20.12" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="15.8" y="22.18" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="15.8" y="24.24" width="2.58" height="1.03"/>
+      <rect class="cls-1" x="15.8" y="26.3" width="2.58" height="1.03"/>
+      <path class="cls-1" d="M24.05,25.27H21V22.18h3.1Zm-2.07-1h1v-1H22Z"/>
+      <polygon class="cls-1" points="19.93 33.51 6.02 33.51 6.02 32.48 18.89 32.48 18.89 27.85 19.93 27.85 19.93 33.51"/>
+      <polygon class="cls-1" points="38.98 33.51 25.07 33.51 25.07 27.85 26.11 27.85 26.11 32.48 38.98 32.48 38.98 33.51"/>
+      <rect class="cls-1" x="18.89" y="14.97" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="20.95" y="14.97" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="20.95" y="12.91" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="23.02" y="12.91" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="23.02" y="14.97" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="25.08" y="14.97" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="13.74" y="20.12" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="11.68" y="20.12" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="13.74" y="22.18" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="11.68" y="22.18" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="13.74" y="24.24" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="9.62" y="20.12" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="30.23" y="20.12" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="32.29" y="20.12" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="30.23" y="22.18" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="32.29" y="22.18" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="30.23" y="24.24" width="1.03" height="1.03"/>
+      <rect class="cls-1" x="34.35" y="20.12" width="1.03" height="1.03"/>
+    </g>
+  </g>
+</svg>
