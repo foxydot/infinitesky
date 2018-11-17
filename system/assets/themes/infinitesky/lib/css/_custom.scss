@@ -808,58 +808,7 @@ article.team_member{
   }
 
   .section {
-    /*this bit possibly removed?
-    &.section-transform,&.section-operate,&.section-adtech-martech{
-      .container {
-        border-top: 4px solid $orange;
-        color: $white;
-        padding: 1.5em 7em 4em 1.5em;
-        background-position: bottom right;
-        background-repeat: no-repeat;
-        background-size: 15% auto;
-        position: relative;
-        min-height: 20em;
-        h2 {
-          font-weight: 700;
-          position: relative;
-        }
-        .button{
-          background: $orange;
-          position: absolute;
-          bottom: 1em;
-          left: 0;
-        }
-        a.cover-link {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          text-decoration: none;
-        }
-      }
-    }
-    &.section-transform{
-      .container {
-        background-color: rgba($blue, 0.8);
-        background-image: url(../images/icons/core-values-w.svg);
-      }
-    }
-    &.section-operate{
-      .container {
-        background-color: rgba($medgrey, 0.8);
-        background-image: url(../images/icons/operational-excellence-w.svg);
-      }
-    }
-    &.section-adtech-martech{
-      .container {
-        background-color: rgba($blue, 0.8);
-        background-image: url(../images/icons/marketing-w.svg);
-      }
-    }
-  }
-  //end this bit*/
-    &.section-transform-operate-adtechmartech {
+    &.section-transform-operate-adtechmartech, &.section-cloud-data {
       .section-body {
         .container {
           padding: 1em 0 2em 0;
@@ -893,15 +842,46 @@ article.team_member{
                 bottom: 0;
                 text-decoration: none;
               }
+              &.column-2 {
+                background-color: rgba($medgrey, 0.8);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.section-transform-operate-adtechmartech {
+      .section-body {
+        .container {
+          .row {
+            .section-content {
               &.column-1 {
                 background-image: url(../images/icons/core-values-w.svg);
               }
               &.column-2 {
-                background-color: rgba($medgrey, 0.8);
                 background-image: url(../images/icons/operational-excellence-w.svg);
               }
               &.column-3 {
                 background-image: url(../images/icons/marketing-w.svg);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.section-cloud-data {
+      .section-body {
+        .container {
+          .row {
+            .section-content {
+              &.column-1 {
+                background-image: url(../images/icons/cloud-solutions-w.svg);
+              }
+              &.column-2 {
+                background-image: url(/images/icons/data-science-w.svg);
+              }
+              &.column-3 {
               }
             }
           }

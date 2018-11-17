@@ -2667,93 +2667,51 @@ article.team_member {
       font-weight: 700;
       font-size: 4.2em; }
 
-.infinitive-solutions .section {
-  /*this bit possibly removed?
-    &.section-transform,&.section-operate,&.section-adtech-martech{
-      .container {
-        border-top: 4px solid $orange;
-        color: $white;
-        padding: 1.5em 7em 4em 1.5em;
-        background-position: bottom right;
-        background-repeat: no-repeat;
-        background-size: 15% auto;
-        position: relative;
-        min-height: 20em;
-        h2 {
-          font-weight: 700;
-          position: relative;
-        }
-        .button{
-          background: $orange;
-          position: absolute;
-          bottom: 1em;
-          left: 0;
-        }
-        a.cover-link {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          text-decoration: none;
-        }
-      }
-    }
-    &.section-transform{
-      .container {
-        background-color: rgba($blue, 0.8);
-        background-image: url(../images/icons/core-values-w.svg);
-      }
-    }
-    &.section-operate{
-      .container {
-        background-color: rgba($medgrey, 0.8);
-        background-image: url(../images/icons/operational-excellence-w.svg);
-      }
-    }
-    &.section-adtech-martech{
-      .container {
-        background-color: rgba($blue, 0.8);
-        background-image: url(../images/icons/marketing-w.svg);
-      }
-    }
-  }
-  //end this bit*/ }
-  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container {
-    padding: 1em 0 2em 0; }
-    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content {
-      border-top: 4px solid #ff6600;
-      background-color: rgba(0, 153, 255, 0.8);
-      color: #FFF;
-      margin: 0 1em;
-      padding: 1.5em 7em 4em 1.5em;
-      background-position: bottom right;
-      background-repeat: no-repeat;
-      background-size: 40% auto;
-      position: relative;
-      min-height: 24em; }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2 {
-        font-weight: 700;
-        position: relative; }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content .button {
-        background: #ff6600;
-        position: absolute;
-        bottom: 1em;
-        left: 0; }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content a.cover-link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        text-decoration: none; }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1 {
-        background-image: url(../images/icons/core-values-w.svg); }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2 {
-        background-color: rgba(102, 102, 102, 0.8);
-        background-image: url(../images/icons/operational-excellence-w.svg); }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3 {
-        background-image: url(../images/icons/marketing-w.svg); }
+.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container, .infinitive-solutions .section.section-cloud-data .section-body .container {
+  padding: 1em 0 2em 0; }
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content {
+    border-top: 4px solid #ff6600;
+    background-color: rgba(0, 153, 255, 0.8);
+    color: #FFF;
+    margin: 0 1em;
+    padding: 1.5em 7em 4em 1.5em;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    position: relative;
+    min-height: 24em; }
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content h2 {
+      font-weight: 700;
+      position: relative; }
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content .button, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content .button {
+      background: #ff6600;
+      position: absolute;
+      bottom: 1em;
+      left: 0; }
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content a.cover-link, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content a.cover-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      text-decoration: none; }
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2 {
+      background-color: rgba(102, 102, 102, 0.8); }
+
+.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1 {
+  background-image: url(../images/icons/core-values-w.svg); }
+
+.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2 {
+  background-image: url(../images/icons/operational-excellence-w.svg); }
+
+.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3 {
+  background-image: url(../images/icons/marketing-w.svg); }
+
+.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-1 {
+  background-image: url(../images/icons/cloud-solutions-w.svg); }
+
+.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2 {
+  background-image: url(/images/icons/data-science-w.svg); }
 
 @media only screen and (min-width: 992px) {
   .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content {
