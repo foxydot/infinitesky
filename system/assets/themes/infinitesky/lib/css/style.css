@@ -2698,14 +2698,14 @@ article.team_member {
     .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2 {
       background-color: rgba(102, 102, 102, 0.8); }
 
-.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1 {
-  background-image: url(../images/icons/core-values-w.svg); }
-
-.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2 {
-  background-image: url(../images/icons/operational-excellence-w.svg); }
-
-.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3 {
-  background-image: url(../images/icons/marketing-w.svg); }
+.infinitive-solutions .section.section-transform-operate-adtechmartech {
+  margin-bottom: 0; }
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1 {
+    background-image: url(../images/icons/core-values-w.svg); }
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2 {
+    background-image: url(../images/icons/operational-excellence-w.svg); }
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3 {
+    background-image: url(../images/icons/marketing-w.svg); }
 
 .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-1 {
   background-image: url(../images/icons/cloud-solutions-w.svg); }
@@ -2714,7 +2714,10 @@ article.team_member {
   background-image: url(../images/icons/data-science-w.svg); }
 
 @media only screen and (min-width: 992px) {
-  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content {
+  .sectioned-page-wrapper .section.twoIntoThree .section-body .container .row .section-content.first-child {
+    margin-left: calc(16.66666666%); }
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content,
+  .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content {
     width: calc(33.33333333% - 2em); }
   .rollbox-set.cols-5 .rollbox {
     width: 20%; } }

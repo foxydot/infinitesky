@@ -852,6 +852,7 @@ article.team_member{
     }
 
     &.section-transform-operate-adtechmartech {
+      margin-bottom: 0;
       .section-body {
         .container {
           .row {
@@ -893,8 +894,24 @@ article.team_member{
 
 
 @media only screen and (min-width: 992px) {
+  .sectioned-page-wrapper{
+    .section{
+      &.twoIntoThree{
+        .section-body{
+          .container{
+            .row{
+              .section-content.first-child{
+                margin-left: calc(16.66666666%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   .infinitive-solutions{
-    .section.section-transform-operate-adtechmartech{
+    .section.section-transform-operate-adtechmartech,
+    .section.section-cloud-data{
       .section-body{
         .container{
           .row{
