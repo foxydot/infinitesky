@@ -2129,10 +2129,10 @@ article.type-post .entry-header {
     background-color: rgba(209, 211, 212, 0.5);
     padding: 2em;
     float: right;
-    margin: 2em 0 2em 2em; }
+    margin: 2em 0 2em 2em;
+    min-width: 25%; }
     .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper {
-      min-height: 16em;
-      min-width: 25%;
+      min-height: 8em;
       text-align: center; }
       .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper h6, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content .sidecar .wrapper h6 {
         font-size: 1em;

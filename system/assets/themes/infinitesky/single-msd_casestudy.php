@@ -31,7 +31,7 @@ function msdlab_cat_tag_display($content){
     $r = implode("\n",$ret);
     $c = explode("\n",$content);
     $str1 = $str2 = '';
-    while(strlen($str1) < 500){
+    while(strlen($str1) < 900){
         $str1 .= array_shift($c) . "\n";
     }
     $str2 = implode("\n",$c);
