@@ -2121,6 +2121,8 @@ article.type-post .entry-header {
     float: right;
     min-height: 16em;
     min-width: 16em; }
+  .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content ul, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content ul {
+    display: inline; }
   .single-msd_casestudy .site-inner .content-sidebar-wrap main.content .entry-content h2, .single-msd_news .site-inner .content-sidebar-wrap main.content .entry-content h2 {
     font-size: 1.6em;
     color: #ff6600;

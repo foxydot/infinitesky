@@ -159,6 +159,9 @@ article.type-post{
           min-width: 16em;
         }
         .entry-content{
+          ul{
+            display: inline;
+          }
           h2{
             font-size: 1.6em;
             color: $orange;
