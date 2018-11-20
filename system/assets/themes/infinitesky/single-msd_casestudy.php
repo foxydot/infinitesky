@@ -20,12 +20,12 @@ function msdlab_cat_tag_display($content){
     $ret[] = '<div class="wrapper">';
     if(isset($industries[0])) {
         $ret[] = '<h6>Industry</h6>';
-        $ret[] = '<a class="icon icon-' . $industries[0]->slug . '">' . $industries[0]->name . '</a>';
+        $ret[] = '<a class="icon icon-' . $industries[0]->slug . '" href="'.get_term_link($industries[0]->slug,'msd_industry').'">' . $industries[0]->name . '</a>';
     }
-    if(isset($solutions[0])) {
+    /*if(isset($solutions[0])) {
         $ret[] = '<h6>Solutions</h6>';
         $ret[] = '<a>' . $solutions[0]->name . '</a>';
-    }
+    }*/
     $ret[] = '</div>';
     $ret[] = '</div>';
     $r = implode("\n",$ret);
@@ -40,7 +40,7 @@ function msdlab_cat_tag_display($content){
 
 add_action('genesis_entry_footer', 'msdlab_just_back_to_case_study_nav_link' );
 
-//add_filter('the_content','msdlab_cat_tag_display');
+add_filter('the_content','msdlab_cat_tag_display');
 
 remove_action('genesis_entry_header','genesis_do_post_title');
 remove_action('genesis_entry_header','genesis_post_info',12);
