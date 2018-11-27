@@ -101,7 +101,7 @@ if (!class_exists('MSDTeamCPT')) {
                 'labels' => $labels,
                 'hierarchical' => false,
                 'description' => 'Team',
-                'supports' => array( 'title', 'editor', 'thumbnail', 'genesis-cpt-archives-settings' ),
+                'supports' => array( 'title', 'editor', 'thumbnail', 'genesis-cpt-archives-settings', 'excerpt' ),
                 'taxonomies' => array( 'team_category' ),
                 'public' => true,
                 'show_ui' => true,
