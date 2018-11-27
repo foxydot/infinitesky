@@ -2401,7 +2401,8 @@ article.team_member {
   .case-studies-sc-wrapper article header {
     text-align: center; }
   .case-studies-sc-wrapper article content h3.entry-title {
-    font-size: 1.4em; }
+    font-size: 1.4em;
+    margin-bottom: .8em; }
   .case-studies-sc-wrapper article content .readmore {
     position: absolute;
     right: 0;
