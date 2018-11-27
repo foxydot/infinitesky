@@ -2379,7 +2379,7 @@ article.team_member {
     text-align: center; }
   .post-type-archive-msd_casestudy .site-inner .container article content h3.entry-title, .tax-msd_practice-area .site-inner .container article content h3.entry-title, .tax-msd_industry .site-inner .container article content h3.entry-title {
     font-size: 1.4em;
-	margin-bottom: .8em;}
+    margin-bottom: .8em; }
   .post-type-archive-msd_casestudy .site-inner .container article content .readmore, .tax-msd_practice-area .site-inner .container article content .readmore, .tax-msd_industry .site-inner .container article content .readmore {
     position: absolute;
     right: 0;
