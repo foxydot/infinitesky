@@ -7,7 +7,6 @@ function msdlab_excerpt($content){
 function msdlab_get_excerpt( $post_id, $excerpt_length = 50, $trailing_character = '&nbsp;<i class="fa fa-angle-right"></i>' ) {
     $the_post = get_post( $post_id );
     $the_excerpt = strip_tags( strip_shortcodes( $the_post->post_excerpt ) );
-     
     if ( empty( $the_excerpt ) )
         $the_excerpt = strip_tags( strip_shortcodes( $the_post->post_content ) );
      
