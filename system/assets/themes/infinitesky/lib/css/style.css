@@ -2378,7 +2378,8 @@ article.team_member {
   .post-type-archive-msd_casestudy .site-inner .container article header, .tax-msd_practice-area .site-inner .container article header, .tax-msd_industry .site-inner .container article header {
     text-align: center; }
   .post-type-archive-msd_casestudy .site-inner .container article content h3.entry-title, .tax-msd_practice-area .site-inner .container article content h3.entry-title, .tax-msd_industry .site-inner .container article content h3.entry-title {
-    font-size: 1.4em; }
+    font-size: 1.4em;
+	margin-bottom: .8em;}
   .post-type-archive-msd_casestudy .site-inner .container article content .readmore, .tax-msd_practice-area .site-inner .container article content .readmore, .tax-msd_industry .site-inner .container article content .readmore {
     position: absolute;
     right: 0;
