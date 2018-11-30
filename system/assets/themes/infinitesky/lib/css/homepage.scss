@@ -41,6 +41,7 @@
   .sectioned-page-wrapper {
     .section {
       &.section-transform-and-operate {
+        margin-bottom: 0;
         .section-body {
           .container {
             padding: 1em 0 2em 0;
@@ -88,6 +89,70 @@
                   bottom: 0;
                   right: -2em;
                 }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.section-adtechmartech-cloud-data {
+        .section-body {
+          .container {
+            padding: 1em 0 2em 0;
+            .row {
+              .section-content {
+                border-top: 4px solid $orange;
+                background-color: rgba($blue, 0.8);
+                color: $white;
+                margin: 0 1em;
+                padding: 1.5em 7em 4em 1.5em;
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                background-size: 40% auto;
+                position: relative;
+                min-height: 24em;
+                h2 {
+                  font-weight: 700;
+                  position: relative;
+                }
+                .button{
+                  background: $orange;
+                  position: absolute;
+                  bottom: 1em;
+                  left: 0;
+                }
+                a.cover-link {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  text-decoration: none;
+                }
+                &.column-2 {
+                  background-color: rgba($medgrey, 0.8);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.section-adtechmartech-cloud-data {
+        .section-body {
+          .container {
+            .row {
+              .section-content {
+                &.column-1 {
+                  background-image: url(../images/icons/marketing-w.svg);
+                }
+                &.column-2 {
+                  background-image: url(../images/icons/cloud-solutions-w.svg);
+                  background-color: rgba($medgrey, 0.8);
+                }
+                &.column-3 {
+                  background-image: url(../images/icons/data-science-w.svg);
+                  background-color: rgba($blue, 0.8);
                 }
               }
             }
@@ -155,6 +220,17 @@
           .row{
             .section-content{
               width: calc(50% - 2em);
+            }
+          }
+        }
+      }
+    }
+    .section.section-adtechmartech-cloud-data{
+      .section-body{
+        .container{
+          .row{
+            .section-content{
+              width: calc(33.33333333% - 2em);
             }
           }
         }
