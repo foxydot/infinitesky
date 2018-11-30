@@ -115,6 +115,13 @@
                   font-weight: 700;
                   position: relative;
                 }
+                h2:after {
+                  content: '\f0a9';
+                  @include fontawesome;
+                  position: absolute;
+                  bottom: 0;
+                  right: -2em;
+                }
                 .button{
                   background: $orange;
                   position: absolute;

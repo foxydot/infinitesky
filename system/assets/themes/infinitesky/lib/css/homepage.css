@@ -107,6 +107,12 @@
     .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content h2 {
       font-weight: 700;
       position: relative; }
+    .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content h2:after {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      position: absolute;
+      bottom: 0;
+      right: -2em; }
     .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content .button {
       background: #ff6600;
       position: absolute;
