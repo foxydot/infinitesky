@@ -397,7 +397,7 @@ if (!class_exists('MSDTeamCPT')) {
                     'xhtml' => '<div class="content">',
                     'echo' => false,
                 ) );
-                $ret[] = msdlab_get_excerpt($post->ID,40,'');
+                $ret[] = msdlab_get_excerpt($post->ID,40000,'');
                 $ret[] = genesis_markup( array(
                     'html5' => '</content>',
                     'xhtml' => '</div>',
