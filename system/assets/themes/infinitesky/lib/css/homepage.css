@@ -48,9 +48,52 @@
 .home .content-sidebar-wrap {
   display: none; }
 
-.home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container {
+.home .sectioned-page-wrapper .section.section-transform-and-operate {
+  margin-bottom: 0; }
+  .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container {
+    padding: 1em 0 2em 0; }
+    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
+      border-top: 4px solid #ff6600;
+      background-color: rgba(0, 153, 255, 0.8);
+      color: #FFF;
+      margin: 0 1em;
+      padding: 1.5em 7em 4em 1.5em;
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      background-size: 20% auto;
+      position: relative;
+      min-height: 20em; }
+      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content h2 {
+        font-weight: 700;
+        position: relative; }
+      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content a.cover-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-decoration: none; }
+      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 {
+        background-image: url(../images/icons/core-values-w.svg); }
+        .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 h2:after {
+          content: '\f0a9';
+          font-family: FontAwesome;
+          position: absolute;
+          bottom: 0;
+          right: -2em; }
+      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 {
+        background-color: rgba(102, 102, 102, 0.8);
+        background-image: url(../images/icons/operational-excellence-w.svg); }
+        .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 h2:after {
+          content: '\f0a9';
+          font-family: FontAwesome;
+          position: absolute;
+          bottom: 0;
+          right: -2em; }
+
+.home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container {
   padding: 1em 0 2em 0; }
-  .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
+  .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content {
     border-top: 4px solid #ff6600;
     background-color: rgba(0, 153, 255, 0.8);
     color: #FFF;
@@ -58,36 +101,43 @@
     padding: 1.5em 7em 4em 1.5em;
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 20% auto;
+    background-size: 40% auto;
     position: relative;
-    min-height: 20em; }
-    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content h2 {
+    min-height: 24em; }
+    .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content h2 {
       font-weight: 700;
       position: relative; }
-    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content a.cover-link {
+    .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content h2:after {
+      content: '\f0a9';
+      font-family: FontAwesome;
+      position: absolute;
+      bottom: 0;
+      right: -2em; }
+    .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content .button {
+      background: #ff6600;
+      position: absolute;
+      bottom: 1em;
+      left: 0; }
+    .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content a.cover-link {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       text-decoration: none; }
-    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 {
-      background-image: url(../images/icons/core-values-w.svg); }
-      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-1 h2:after {
-        content: '\f0a9';
-        font-family: FontAwesome;
-        position: absolute;
-        bottom: 0;
-        right: -2em; }
-    .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 {
-      background-color: rgba(102, 102, 102, 0.8);
-      background-image: url(../images/icons/operational-excellence-w.svg); }
-      .home .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content.column-2 h2:after {
-        content: '\f0a9';
-        font-family: FontAwesome;
-        position: absolute;
-        bottom: 0;
-        right: -2em; }
+    .home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content.column-2 {
+      background-color: rgba(102, 102, 102, 0.8); }
+
+.home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content.column-1 {
+  background-image: url(../images/icons/marketing-w.svg); }
+
+.home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content.column-2 {
+  background-image: url(../images/icons/cloud-solutions-w.svg);
+  background-color: rgba(102, 102, 102, 0.8); }
+
+.home .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content.column-3 {
+  background-image: url(../images/icons/data-science-w.svg);
+  background-color: rgba(0, 153, 255, 0.8); }
 
 .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-title h3:after {
   height: 0; }
@@ -127,6 +177,8 @@
 @media only screen and (min-width: 768px) {
   .sectioned-page-wrapper .section.section-transform-and-operate .section-body .container .row .section-content {
     width: calc(50% - 2em); }
+  .sectioned-page-wrapper .section.section-adtechmartech-cloud-data .section-body .container .row .section-content {
+    width: calc(33.33333333% - 2em); }
   .sectioned-page-wrapper .section.section-where-we-focus .section-body .container {
     background-position: center center;
     background-repeat: no-repeat;
