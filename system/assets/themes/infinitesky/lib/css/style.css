@@ -2709,6 +2709,9 @@ article.team_member {
 .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2 {
   background-image: url(../images/icons/data-science-w.svg);
   background-color: rgba(0, 153, 255, 0.8); }
+.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-3 {
+  background-image: url(../images/icons/cyber-security-w.svg);
+  background-color: rgba(102, 102, 102, 0.8); }
 
 @media only screen and (min-width: 992px) {
   .sectioned-page-wrapper .section.twoIntoThree .section-body .container .row .section-content.first-child {
