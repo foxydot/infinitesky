@@ -829,6 +829,13 @@ article.team_member{
               h2 {
                 font-weight: 700;
                 position: relative;
+                &:after{
+                  content: '\f0a9';
+                  @include fontawesome;
+                  position: absolute;
+                  bottom: 0;
+                  right: -2em;
+                }
               }
               .button{
                 background: $orange;
@@ -1006,6 +1013,30 @@ a.hs-button{
       .rollbox-wrapper {
         position: relative;
         min-height: 17em;
+        a{
+          min-height: 13em;
+          padding-bottom: 2em;
+          &:after{
+            content: '\f0a9';
+            @include fontawesome;
+            position: absolute;
+            bottom: 0.5em;
+            right: 0.5em;
+            display: block;
+            font-size: 2em;
+            color: $white;
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            -ms-transition: all 1s ease-in-out;
+            -o-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+          }
+          &:hover{
+            &:after{
+              color: $orange;
+            }
+          }
+        }
         .rollbox-on {
           color: $white;
           background: $orange;
