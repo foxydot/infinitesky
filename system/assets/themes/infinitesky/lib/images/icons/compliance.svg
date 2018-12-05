@@ -1,0 +1,42 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f47722;
+      }
+
+      .cls-2 {
+        fill: #666766;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>compliance</title>
+  <g>
+    <path class="cls-1" d="M29.72,28l-5-5,2.61-2.62,2.38,2.37,5.33-5.33,2.62,2.61Zm-3.32-5,3.32,3.31L36,20.08l-.94-.94-5.33,5.34-2.38-2.37Z"/>
+    <path class="cls-1" d="M29.72,32a8.31,8.31,0,1,1,0-16.61,8.11,8.11,0,0,1,3.19.64l-.45,1.09a7.12,7.12,0,1,0,4.37,6.57H38A8.32,8.32,0,0,1,29.72,32Z"/>
+    <g>
+      <path class="cls-2" d="M29.45,14.13h.27l.75,0V11.06a.51.51,0,0,0-.15-.36L26.23,6.61a.55.55,0,0,0-.36-.15H7.47A.51.51,0,0,0,7,7V38.67a.51.51,0,0,0,.51.51H30a.51.51,0,0,0,.51-.51V33.14l-.75,0h-.27v5H8V7.49H25.66l.72.72,2.34,2.34.73.73Z"/>
+      <rect class="cls-2" x="9.58" y="15.15" width="5.11" height="1.02"/>
+      <rect class="cls-2" x="9.58" y="17.2" width="8.18" height="1.02"/>
+      <polygon class="cls-2" points="20.48 21.29 9.58 21.29 9.58 20.27 20.81 20.27 20.48 21.29"/>
+      <rect class="cls-2" x="9.58" y="22.31" width="4.09" height="1.02"/>
+      <path class="cls-2" d="M20.6,26.4h-11v-1H20.35A8.44,8.44,0,0,0,20.6,26.4Z"/>
+      <rect class="cls-2" x="9.58" y="27.42" width="6.13" height="1.02"/>
+      <rect class="cls-2" x="9.58" y="30.49" width="7.16" height="1.02"/>
+      <rect class="cls-2" x="9.58" y="32.53" width="11.25" height="1.02"/>
+      <path class="cls-2" d="M20.29,22.31a8.41,8.41,0,0,0-.09,1H14.69v-1Z"/>
+      <rect class="cls-2" x="15.71" y="15.15" width="5.11" height="1.02"/>
+      <rect class="cls-2" x="17.76" y="30.49" width="3.07" height="1.02"/>
+      <path class="cls-2" d="M30,11.58H25.87a.51.51,0,0,1-.51-.52V7h1v3.57H30Z"/>
+      <rect class="cls-2" x="10.02" y="8.51" width="1.02" height="1.02"/>
+      <rect class="cls-2" x="12.07" y="8.51" width="1.02" height="1.02"/>
+      <rect class="cls-2" x="14.11" y="8.51" width="1.02" height="1.02"/>
+      <rect class="cls-2" x="10.02" y="10.55" width="13.29" height="1.02"/>
+    </g>
+    <path class="cls-3" d="M20.81,20.27a8.67,8.67,0,0,0-.33,1"/>
+  </g>
+</svg>
