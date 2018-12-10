@@ -188,3 +188,7 @@
     .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content ul {
       width: auto;
       margin: 0 30%; } }
+
+@media only screen and (min-width: 1024px) {
+  .home .page-title-area .texturize .gradient .container {
+    padding-right: 32em; } }

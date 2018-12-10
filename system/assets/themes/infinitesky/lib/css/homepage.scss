@@ -265,5 +265,16 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
+  .home {
+    .page-title-area {
+      .texturize {
+        .gradient {
+          .container {
+            padding-right: 32em;
+          }
+        }
+      }
+    }
+  }
 }

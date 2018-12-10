@@ -3091,7 +3091,9 @@ body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.c
     body.core-values .sectioned-page-wrapper .section.zebra.bkg-dkgrey {
       background-image: linear-gradient(to right, #333 0%, #333 49.99%, #FFF 50%, #FFF 100%); }
       body.core-values .sectioned-page-wrapper .section.zebra.bkg-dkgrey .column-2 {
-        color: #333; } }
+        color: #333; }
+  .home .page-title-area .texturize .gradient .container, .page-template-template-secondary .page-title-area .texturize .gradient .container, .team_member-template-default .page-title-area .texturize .gradient .container {
+    padding-right: 32em; } }
 
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
