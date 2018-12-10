@@ -2669,9 +2669,9 @@ article.team_member {
       font-weight: 700;
       font-size: 4.2em; }
 
-.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container, .infinitive-solutions .section.section-cloud-data .section-body .container {
+.infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container, .infinitive-solutions .section.section-cloud-data .section-body .container, .home .section.section-transform-operate-adtechmartech .section-body .container, .home .section.section-cloud-data .section-body .container {
   padding: 1em 0 2em 0; }
-  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content {
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content, .home .section.section-cloud-data .section-body .container .row .section-content {
     border-top: 4px solid #ff6600;
     background-color: rgba(0, 153, 255, 0.8);
     color: #FFF;
@@ -2682,47 +2682,48 @@ article.team_member {
     background-size: 40% auto;
     position: relative;
     min-height: 24em; }
-    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content h2 {
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content h2, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2, .home .section.section-cloud-data .section-body .container .row .section-content h2 {
       font-weight: 700;
       position: relative; }
-      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2:after, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content h2:after {
+      .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2:after, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content h2:after, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content h2:after, .home .section.section-cloud-data .section-body .container .row .section-content h2:after {
         content: '\f0a9';
         font-family: FontAwesome;
         position: absolute;
         bottom: 0;
         right: -2em; }
-    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content .button, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content .button {
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content .button, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content .button, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content .button, .home .section.section-cloud-data .section-body .container .row .section-content .button {
       background: #ff6600;
       position: absolute;
       bottom: 1em;
       left: 0; }
-    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content a.cover-link, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content a.cover-link {
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content a.cover-link, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content a.cover-link, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content a.cover-link, .home .section.section-cloud-data .section-body .container .row .section-content a.cover-link {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       text-decoration: none; }
-    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2 {
+    .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2, .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2, .home .section.section-cloud-data .section-body .container .row .section-content.column-2 {
       background-color: rgba(102, 102, 102, 0.8); }
 
-.infinitive-solutions .section.section-transform-operate-adtechmartech {
+.infinitive-solutions .section.section-transform-operate-adtechmartech, .home .section.section-transform-operate-adtechmartech {
   margin-bottom: 0; }
-  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1 {
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-1 {
     background-image: url(../images/icons/core-values-w.svg); }
-  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2 {
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-2 {
     background-image: url(../images/icons/operational-excellence-w.svg); }
-  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3 {
+  .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content.column-3 {
     background-image: url(../images/icons/marketing-w.svg); }
 
-.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-1 {
+.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-1, .home .section.section-cloud-data .section-body .container .row .section-content.column-1 {
   background-image: url(../images/icons/cloud-solutions-w.svg);
   background-color: rgba(102, 102, 102, 0.8); }
 
-.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2 {
+.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-2, .home .section.section-cloud-data .section-body .container .row .section-content.column-2 {
   background-image: url(../images/icons/data-science-w.svg);
   background-color: rgba(0, 153, 255, 0.8); }
-.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-3 {
+
+.infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content.column-3, .home .section.section-cloud-data .section-body .container .row .section-content.column-3 {
   background-image: url(../images/icons/cyber-security-w.svg);
   background-color: rgba(102, 102, 102, 0.8); }
 
@@ -2730,7 +2731,8 @@ article.team_member {
   .sectioned-page-wrapper .section.twoIntoThree .section-body .container .row .section-content.first-child {
     margin-left: calc(16.66666666%); }
   .infinitive-solutions .section.section-transform-operate-adtechmartech .section-body .container .row .section-content,
-  .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content {
+  .infinitive-solutions .section.section-cloud-data .section-body .container .row .section-content, .home .section.section-transform-operate-adtechmartech .section-body .container .row .section-content,
+  .home .section.section-cloud-data .section-body .container .row .section-content {
     width: calc(33.33333333% - 2em); }
   .rollbox-set.cols-5 .rollbox {
     width: 20%; } }
