@@ -2727,6 +2727,21 @@ article.team_member {
   background-image: url(../images/icons/cyber-security-w.svg);
   background-color: rgba(102, 102, 102, 0.8); }
 
+.error404 .content-sidebar-wrap input[type=search] {
+  max-width: 80%; }
+
+.error404 .content-sidebar-wrap > .sitemap {
+  background-color: #FFF;
+  padding: 5em;
+  margin: 0 -15px 5em; }
+  .error404 .content-sidebar-wrap > .sitemap ul.sitemap {
+    -webkit-columns: 3;
+            columns: 3; }
+
+.search-form input[type=submit] {
+  padding: 1em 1.5em;
+  font-family: FontAwesome; }
+
 @media only screen and (min-width: 992px) {
   .sectioned-page-wrapper .section.twoIntoThree .section-body .container .row .section-content.first-child {
     margin-left: calc(16.66666666%); }
@@ -2816,7 +2831,10 @@ a.hs-button {
           display: block; }
   .rollbox-set .rollbox:hover .rollbox-wrapper .rollbox-on {
     height: 100%;
-    top: 0; } }
+    top: 0; }
+  .error404 .entry-content > ul {
+    -webkit-columns: 3;
+            columns: 3; } }
 
 body.chrome.content-right .site-inner .content-sidebar-wrap main.content, body.chrome.content-left .site-inner .content-sidebar-wrap main.content {
   margin-left: -15px;

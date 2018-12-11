@@ -905,6 +905,27 @@ article.team_member{
     }
   }
 }
+.error404{
+  .content-sidebar-wrap{
+    input[type=search]{
+      max-width: 80%;
+    }
+    >.sitemap{
+      background-color: $white;
+      padding: 5em;
+      margin: 0 -15px 5em;
+      ul.sitemap{
+        columns: 3;
+      }
+    }
+  }
+}
+.search-form{
+  input[type=submit]{
+    padding: 1em 1.5em;
+    @include fontawesome;
+  }
+}
 
 
 @media only screen and (min-width: 992px) {
@@ -1071,6 +1092,13 @@ a.hs-button{
             top: 0;
           }
         }
+      }
+    }
+  }
+  .error404{
+    .entry-content{
+      >ul{
+        columns: 3;
       }
     }
   }

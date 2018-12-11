@@ -38,7 +38,7 @@ new MSDLab_Video_Background_Support(array());
 
 
 // Child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'InfinitieSky' );
+define( 'CHILD_THEME_NAME', 'InfiniteSky' );
 define( 'CHILD_THEME_URL', 'http://msdlab.com/' );
 define( 'CHILD_THEME_VERSION', '2.3.0' );
 
@@ -173,7 +173,7 @@ remove_action('genesis_footer','genesis_do_footer'); //replace the footer
 add_action('genesis_footer','msdlab_do_social_footer');//with a msdsocial support one
 
 /*** SITEMAP ***/
-add_action('after_404','msdlab_sitemap');
+//add_action('after_404','msdlab_sitemap');
 
 /*** MEDIA ***/
 /**

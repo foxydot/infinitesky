@@ -462,3 +462,14 @@ function msdlab_add_mobile_phone_button(){
         print $ret;
     }
 }
+
+add_action('template_redirect','handle_404',15);
+function handle_404(){
+    add_filter('body_class','body_classes_404');
+
+}
+function body_classes_404($classes){
+    $classes[] = 'page-template-template-secondary';
+    $classes[] = 'content-left';
+    return $classes;
+}
