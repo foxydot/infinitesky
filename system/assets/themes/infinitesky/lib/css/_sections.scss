@@ -150,12 +150,16 @@
     }
   }
   .section.bkg-dna{
+    background: linear-gradient(45deg, rgb(66, 22, 226),rgb(22, 83, 226), $blue, #23A6D5);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
     &.full-width-bkg {
-      background-image: url(../images/dna.svg);
-      background-position: center center;
-      background-repeat: repeat-x;
-      background-size: auto 80%;
       .section-body{
+        background-image: url(../images/dna.svg);
+        background-position: center center;
+        background-repeat: repeat-x;
+        background-size: auto 80%;
+        animation: none;
         .container{
           background: none;
         }
@@ -374,5 +378,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
   }
 }
