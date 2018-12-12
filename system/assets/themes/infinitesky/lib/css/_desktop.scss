@@ -76,7 +76,17 @@
   .content-sidebar-sidebar .sidebar-secondary {
     float: right;
   }
-
+  .home,.page-template-template-secondary,.team_member-template-default {
+    .page-title-area {
+      .texturize {
+        .gradient {
+          .container {
+            padding-right: 32em;
+          }
+        }
+      }
+    }
+  }
   /* # Common
   ---------------------------------------------------------------------------------------------------- */
 
@@ -298,18 +308,6 @@
             .column-2{
               color: $dkgrey;
             }
-          }
-        }
-      }
-    }
-  }
-
-  .home,.page-template-template-secondary,.team_member-template-default {
-    .page-title-area {
-      .texturize {
-        .gradient {
-          .container {
-            padding-right: 32em;
           }
         }
       }
