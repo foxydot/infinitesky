@@ -469,7 +469,9 @@ function handle_404(){
 
 }
 function body_classes_404($classes){
-    $classes[] = 'page-template-template-secondary';
-    $classes[] = 'content-left';
+    if(is_404()) {
+        $classes[] = 'page-template-template-secondary';
+        $classes[] = 'content-left';
+    }
     return $classes;
 }
