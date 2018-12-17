@@ -1703,38 +1703,46 @@ p.entry-meta {
     background-color: #0099ff; }
   .sectioned-page-wrapper .section.bkg-blue .section-body .container {
     background-color: #0099ff; }
-  .sectioned-page-wrapper .section.bkg-dna.full-width-bkg {
-    background-image: url(../images/dna.svg);
-    background-position: center center;
-    background-repeat: repeat-x;
-    background-size: auto 80%;
-    font-size: 1.4em;
-    text-align: center;
-    color: #FFF; }
-    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-body .container {
-      background: none; }
-    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-title h3 {
-      font-weight: 300;
-      font-size: 3em; }
-      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-title h3:after {
-        display: none; }
-    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content {
-      position: relative; }
-      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper {
-        width: 100%;
-        position: absolute;
-        bottom: -4.2em;
-        text-align: center; }
-        .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper a.btn {
-          text-decoration: none;
-          background-color: rgba(51, 51, 51, 0.8); }
-          .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper a.btn:hover {
-            background-color: rgba(51, 51, 51, 0.5); }
-  .sectioned-page-wrapper .section.bkg-dna .section-body .container {
-    background-image: url(../images/dna.svg);
-    background-position: center center;
-    background-repeat: repeat-x;
-    background-size: auto 80%; }
+  .sectioned-page-wrapper .section.bkg-dna {
+    background: linear-gradient(45deg, #4216e2, #1653e2, #0099ff, #23A6D5);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite; }
+    .sectioned-page-wrapper .section.bkg-dna.full-width-bkg {
+      font-size: 1.4em;
+      text-align: center;
+      color: #FFF; }
+      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-body {
+        background-image: url(../images/dna.svg);
+        background-position: center center;
+        background-repeat: repeat-x;
+        background-size: auto 80%;
+        -webkit-animation: none;
+                animation: none; }
+        .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-body .container {
+          background: none; }
+      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-title h3 {
+        font-weight: 300;
+        font-size: 3em; }
+        .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-title h3:after {
+          display: none; }
+      .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content {
+        position: relative; }
+        .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper {
+          width: 100%;
+          position: absolute;
+          bottom: -4.2em;
+          text-align: center; }
+          .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper a.btn {
+            text-decoration: none;
+            background-color: rgba(51, 51, 51, 0.8); }
+            .sectioned-page-wrapper .section.bkg-dna.full-width-bkg .section-content .btn-wrapper a.btn:hover {
+              background-color: rgba(51, 51, 51, 0.5); }
+    .sectioned-page-wrapper .section.bkg-dna .section-body .container {
+      background-image: url(../images/dna.svg);
+      background-position: center center;
+      background-repeat: repeat-x;
+      background-size: auto 80%; }
   .sectioned-page-wrapper .section.cta {
     margin-top: 2em; }
     .sectioned-page-wrapper .section.cta .container {
@@ -1830,6 +1838,22 @@ p.entry-meta {
 @media only screen and (max-width: 767px) {
   .sectioned-page-wrapper .section.hasbutton .section-body .container .section-content {
     padding-bottom: 3em; } }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
 
 .icon {
   display: inline-block;

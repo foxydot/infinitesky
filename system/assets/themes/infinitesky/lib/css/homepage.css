@@ -156,14 +156,15 @@
   padding-top: 2em;
   font-size: 1.2em;
   position: relative;
-  min-height: 12em; }
-  .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper:before {
-    font-family: FontAwesome;
-    position: absolute;
-    top: 0.25em;
-    right: 0.5em;
-    content: "\f0a9";
-    color: #FFF; }
+  min-height: 12em;
+  /*&:before{
+                    @include fontawesome;
+                    position: absolute;
+                    top: 0.25em;
+                    right: 0.5em;
+                    content: "\f0a9";
+                    color: $white;
+                  }*/ }
   .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper .rollbox-wrapper-on {
     padding-top: 2em; }
     .home .sectioned-page-wrapper .section.section-where-we-focus .section-body .container .section-content .rollbox .rollbox-wrapper .rollbox-wrapper-on:before {
