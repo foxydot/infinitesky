@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
         console.log(arrayLength);
         var classes = new Array();
         for (var i = 0; i < arrayLength; i++) {
-            classes[i] = '.site-inner .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li.gchoice_1_1_' + formshow[i];
+            classes[i] = '.site-inner .section.section-what-can-we-solve-with-you .gform_wrapper .gform_body ul.gform_fields li.gfield .ginput_container ul.gfield_checkbox li.gchoice_1_1_' + formshow[i];
         }
         var string = '<style>' + classes.join() + '{display: block;}</style>';
         $('.section-what-can-we-solve-with-you').append(string);
