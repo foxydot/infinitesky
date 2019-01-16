@@ -132,6 +132,9 @@
   /* ## Gravity Forms
 --------------------------------------------- */
   .site-inner {
+    .sectioned-page-wrapper{
+      .section.section-what-can-we-solve-with-you{
+
     .gform_wrapper {
       padding: 3em 5em;
       .gform_body {
@@ -171,6 +174,9 @@
           display: inline-block;
           margin: 0 !important;
         }
+      }
+    }
+
       }
     }
     .sidebar{
