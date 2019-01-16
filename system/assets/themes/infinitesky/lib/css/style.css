@@ -1818,6 +1818,8 @@ p.entry-meta {
     background-size: cover;
     padding: 21em 0 3em 0;
     margin-bottom: 0; }
+  .sectioned-page-wrapper .section.merge-up {
+    margin-top: -3em; }
   .sectioned-page-wrapper .section.no-h-padding .section-body .container {
     padding-right: 0;
     padding-left: 0; }
