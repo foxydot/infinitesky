@@ -917,6 +917,9 @@ img.alignright,
     display: inline-block;
     margin: 0 !important; }
 
+.site-inner .gform_wrapper.hide-labels_wrapper .gform_body ul.gform_fields li.gfield .gfield_label {
+  display: none; }
+
 .site-inner .sidebar .gform_wrapper .gform_body li.gfield {
   background: #eaf3fb; }
   .site-inner .sidebar .gform_wrapper .gform_body li.gfield .ginput_container input, .site-inner .sidebar .gform_wrapper .gform_body li.gfield .ginput_container textarea {

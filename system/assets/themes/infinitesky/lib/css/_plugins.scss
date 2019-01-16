@@ -108,6 +108,17 @@
         margin: 0 !important;
       }
     }
+    &.hide-labels_wrapper{
+      .gform_body {
+        ul.gform_fields {
+          li.gfield {
+            .gfield_label{
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
   .sidebar{
     .gform_wrapper {
