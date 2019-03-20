@@ -1037,7 +1037,7 @@ a.hs-button{
       .rollbox-wrapper {
         position: relative;
         min-height: 17em;
-        a{
+        >a{
           min-height: 13em;
           padding-bottom: 2em;
           &:after{
