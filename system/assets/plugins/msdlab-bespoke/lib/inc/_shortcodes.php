@@ -9,6 +9,7 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             add_shortcode('blog',array(&$this,'msdlab_blog_shortcode_handler'));
             add_shortcode('rollbox_set',array(&$this,'rollbox_set_shortcode_handler'));
             add_shortcode('rollbox',array(&$this,'rollbox_shortcode_handler'));
+            add_shortcode('jazz-jobboard',array(&$this,'jazz_jobboard_shortcode_handler'));
             add_action('admin_head', array(&$this,'codex_custom_help_tab'));
 
             add_image_size('tatamithumb',400,200);
@@ -225,7 +226,15 @@ if(!class_exists('MSDLab_Bespoke_Shortcodes')){
             $content = '<div class="'.$class.'"><div class="rollbox-wrapper">'.$content.'</div></div>';
             return $content;
         }
+
+        function jazz_jobboard_shortcode_handler($atts){
+            extract(shortcode_atts( array(
+                'src' => '//app.jazz.co/widgets/basic/create/Infinitive',
+            ), $atts ));
+            return '<script type="text/javascript" src="'.$src.'" charset="utf-8"></script>';
+        }
     }
+
 }
 
 new MSDLab_Bespoke_Shortcodes();
