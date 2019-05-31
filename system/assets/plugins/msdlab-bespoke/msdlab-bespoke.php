@@ -51,6 +51,10 @@ class MSDLabClientCustom
         if(class_exists('MSDTeamCPT')){
             $this->team_class = new MSDTeamCPT();
         }
+        require_once(plugin_dir_path(__FILE__) . 'lib/inc/msd_team_display.php');
+        if(class_exists('MSDTeamDisplay')){
+            $this->team_display_class = new MSDTeamDisplay();
+        }
         require_once(plugin_dir_path(__FILE__) . 'lib/inc/sectioned-pages.php');
         if(class_exists('MSDSectionedPage')){
             $this->section_class = new MSDSectionedPage();

@@ -1,26 +1,18 @@
 <table class="form-table">
-    <tbody>
-
-    <?php while($mb->have_fields_and_multi('articles')): ?>
-    <?php $mb->the_group_open('tr'); ?>
-
-        <?php $mb->the_field('newsurl'); ?>
-
-            <th scope="row"><label for="<?php $mb->the_name(); ?>">URL to News Article</label></th>
-            <td>
-                <p><input class="large-text" type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>" placeholder="http://" /></p>
-            </td>
-
-    <?php $mb->the_group_close(); ?>
-    <?php endwhile; ?>
-
-    <tr valign="top">
-        <th scope="row">
-        </th>
-        <td>
-            <p><a href="#" class="docopy-articles button">Add Article URL</a></p>
-        </td>
+    <tr>
+        <th><label>URL to News Article</label></th><?php $mb->the_field('newsurl'); ?>
+        <td><input  class="large-text" type="text" name="<?php $mb->the_name(); ?>" value="<?php $mb->the_value(); ?>" placeholder="http://" /></td>
     </tr>
-
-    </tbody>
+    <tr>
+        <th><label>Team Members</label></th>
+            <td>
+                <?php
+                $team = new MSDTeamDisplay;
+                $team_members = $team->get_all_team_members();
+                foreach ($team_members as $item):
+                    $mb->the_field('team_members'); ?>
+                    <input type="checkbox" name="<?php $mb->the_name(); ?>[]" value="<?php echo $item->ID; ?>"<?php $mb->the_checkbox_state($item->ID); ?>/> <?php echo $item->post_title; ?><br/>
+                <?php endforeach; ?>
+            </td>
+    </tr>
 </table>

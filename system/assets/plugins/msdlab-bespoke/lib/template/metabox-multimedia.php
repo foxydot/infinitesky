@@ -28,13 +28,6 @@
             <?php echo $wpalchemy_media_access->getButton(array('label' => 'Add Image')); ?>
         </td>
     </tr>
-    <?php $mb->the_field('videomemberinnews'); ?>
-    <tr valign="top">
-        <th scope="row"><label for="videomemberinnews">PNHP Members in the News</label></th>
-        <td>
-            <p><input type="checkbox" name="<?php $mb->the_name(); ?>" value="true"<?php $mb->the_checkbox_state('true'); ?>/></p>
-        </td>
-    </tr>
     <tr>
         <td colspan="2"><hr></td>
     </tr>

@@ -156,7 +156,7 @@ if (!class_exists('MSDNewsCPT')) {
             global $news_info,$multimedia_info;
             $news_info = new WPAlchemy_MetaBox(array
             (
-                'id' => '_news_information',
+                'id' => '_news',
                 'title' => 'News Info',
                 'types' => array($this->cpt),
                 'context' => 'normal',
