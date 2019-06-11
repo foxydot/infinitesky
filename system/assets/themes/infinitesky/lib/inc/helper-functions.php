@@ -170,7 +170,7 @@ function msdlab_do_chapter_title(){
         }
     } elseif(is_home() || is_single()) {
         if(is_cpt('msd_news')){
-            print '<h2 class="chapter-title">Company</h2>';
+            print '<h2 class="chapter-title">Press</h2>';
         } else {
             $blog_home = get_post(get_option('page_for_posts'));
             $parent = get_post(get_topmost_parent($blog_home->ID));
