@@ -1,4 +1,14 @@
-<?php global $wpalchemy_media_access; ?>
+<?php global $wpalchemy_media_access;
+$location = array(
+    'washington-d-c' => 'Washington, D.C.',
+    'chicago'        => 'Chicago',
+    'new-york'       => 'New York',
+    'denver'         => 'Denver',
+    'philadelphia'   => 'Philadelphia',
+    'boston'         => 'Boston',
+    'richmond-wv'    => 'Richmond, VA',
+);
+?>
 <ul class="" id="gform_fields_4">
 	<?php $mb->the_field('_team_last_name'); ?>
     <li class="gfield"
@@ -32,13 +42,17 @@
                 id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>">
         </div>
     </li>    
-    <?php $mb->the_field('_team_position'); ?>
+    <?php $mb->the_field('_team_location'); ?>
     <li class="gfield"
-        id="field_team_position"><label for="<?php $mb->the_name(); ?>" class="gfield_label">Leadership?
+        id="field_team_location"><label for="<?php $mb->the_name(); ?>" class="gfield_label">Location
     </label>
     <div class="ginput_container">
-            <input type="checkbox" tabindex="28" class="medium" value="true"
-                id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>"<?php $mb->the_checkbox_state('true'); ?>/>
+        <select id="<?php $mb->the_name(); ?>" name="<?php $mb->the_name(); ?>">
+            <option value=0>Don't Show</option>
+            <?php foreach($location AS $k => $v){ ?>
+                <option value="<?php print $k; ?>"<?php $mb->the_select_state($k); ?>><?php print $v; ?></option>
+            <?php } ?>
+        </select>
         </div>
     </li>
     <?php $mb->the_field('_team_phone'); ?>

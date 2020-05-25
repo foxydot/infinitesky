@@ -453,61 +453,63 @@ body.core-values{
     }
 
 //--Team--//
+@media only screen and (min-width: 768px){
+  body.team.page-template-default .site-inner .content-sidebar-wrap main.content {
+      padding: 0;
+  }
+}
+.team-modal-content{
+  display: none;
+}
+h3.team-category-banner{
+  background: $ltgrey;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.5em 0;
+  &:after{
+    display: none;
+  }
+}
+grid.team{
+  margin-top:1em;
+  display: block;
+}
 article.team_member{
-  margin-bottom: 2em;
-  >.wrap{
-    background: $ltgrey;
-    height: 100%;
-    position: relative;
-    main{
-      header{
-        padding: 1em;
-        .entry-title{
-          font-size: 2em;
-          margin: 0;
-        }
-        .team-title{
-          font-size: 1.6em;
-          font-weight: 700;
-          color: $orange;
-        }
+  position: relative;
+  main{
+    content{
+      img{
+        border: 1px solid $dkgrey;
+        margin-bottom: 0.5em;
       }
-      content{
-        padding: 0 1em;
+      .title-wrapper{
         display: block;
-        padding-bottom: 8em;
-      }
-      footer{
-        position: absolute;
-        bottom:0;
-        padding: 1em 0;
-        width: 100%;
-        ul{
-          float:left;
-          margin: 0 0 0 1em;
-          li{
-            text-indent: 0;
-            list-style: none outside none;
-            display: inline-block;
-            margin: 0;
-            &:before{
-              display: none;
-              background-image: none;
-            }
-            a{
-              display: inline-block;
-              color: $dkgrey;
-              font-size: 2em;
-              padding: 0 0.25em;
-              &:hover{
-                opacity: 0.8;
-              }
-            }
+        background-color: $dkblue;
+        margin: 0;
+        color: $white;
+        padding: 0.5em;
+        h3,h4{
+          text-align: center;
+          margin: 0;
+          color: $white;
+          font-size: 1em;
+          text-transform: none;
+          &:after{
+            display:none;
           }
         }
-        .readmore{
-          float:right;
+        h4{
+          font-style: italic;
         }
+      }
+      a.cover-link{
+        position: absolute;
+        display: block;
+        top:0;
+        left:0;
+        right: 0;
+        bottom: 0;
       }
     }
   }

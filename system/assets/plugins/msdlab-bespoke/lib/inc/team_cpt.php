@@ -3,6 +3,16 @@ if (!class_exists('MSDTeamCPT')) {
     class MSDTeamCPT {
         //Properties
         var $cpt = 'team_member';
+
+        var $location = array(
+            'washington-d-c' => 'Washington, D.C.',
+            'chicago'        => 'Chicago',
+            'new-york'       => 'New York',
+            'denver'         => 'Denver',
+            'philadelphia'   => 'Philadelphia',
+            'boston'         => 'Boston',
+            'richmond-wv'    => 'Richmond, VA',
+        );
         //Methods
         /**
          * PHP 4 Compatible Constructor
@@ -29,6 +39,12 @@ if (!class_exists('MSDTeamCPT')) {
             add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
             //add_action('template_redirect', array(&$this,'my_theme_redirect'));
             //add_action('admin_head', array(&$this,'codex_custom_help_tab'));
+
+
+            //add cols to manage panel
+            add_filter( 'manage_edit-'.$this->cpt.'_columns', array(&$this,'my_edit_columns' ));
+            add_action( 'manage_'.$this->cpt.'_posts_custom_column', array(&$this,'my_manage_columns'), 10, 2 );
+
 
             //Filters
             //add_filter( 'pre_get_posts', array(&$this,'custom_query') );
@@ -333,13 +349,26 @@ if (!class_exists('MSDTeamCPT')) {
 
         function msdlab_team_member_special_loop_shortcode_handler($atts){
             $args = shortcode_atts( array(
+                    'cat' => false,
             ), $atts );
             remove_filter('the_content','wpautop',12);
             return $this->msdlab_team_member_special($args);
         }
         function msdlab_team_member_special($args){
             global $post,$contact_info;
+            $cat = false;
             $origpost = $post;
+            if(isset($args['cat'])){
+                $cat = $args['cat'];
+                unset($args['cat']);
+                $args['tax_query'] = array(
+                        array(
+                            'taxonomy' => 'team_category',
+                            'field' => 'slug',
+                            'terms' => $cat,
+                        ),
+                );
+            }
             $defaults = array(
                 'posts_per_page' => -1,
                 'post_type' => 'team_member',
@@ -352,105 +381,110 @@ if (!class_exists('MSDTeamCPT')) {
             $results = array();
             $results = get_posts($args);
             //format result
-            $i = 0;
-            foreach($results AS $result){
-                $post = $result;
-                $i++;
-                $titlearray = explode(" ",$post->post_title);
-                $firstname = $titlearray[0];
-                $firstname = (substr($firstname, -1) == 's')?$firstname."'":$firstname."'s";
-                $contact_info->the_meta($result->ID);
-                $ret[] = genesis_markup( array(
-                    'html5'   => '<article %s>',
-                    'xhtml'   => '<div class="team_member type-team_member status-publish has-post-thumbnail entry">',
-                    'context' => 'team_member',
-                    'echo' => false,
-                ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '<div class="wrap">',
-                    'xhtml' => '<div class="wrap">',
-                    'echo' => false,
-                ) );
-
-                $ret[] = genesis_markup( array(
-                    'html5' => '<main>',
-                    'xhtml' => '<div class="main">',
-                    'echo' => false,
-                ) );
-                $ret[] = get_the_post_thumbnail($result->ID,'team-headshot',array('itemprop'=>'image'));
-
-                $ret[] = genesis_markup( array(
-                    'html5' => '<header>',
-                    'xhtml' => '<div class="header">',
-                    'echo' => false,
-                ) );
-                $ret[] = '<h3 class="entry-title" itemprop="name">'.$post->post_title.'</h3>
-                            <h4 class="team-title" itemprop="jobTitle">'.$contact_info->get_the_value('_team_title').'</h4>';
-
-                $ret[] = genesis_markup( array(
-                    'html5' => '</header>',
-                    'xhtml' => '</div>',
-                    'echo' => false,
-                ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '<content>',
-                    'xhtml' => '<div class="content">',
-                    'echo' => false,
-                ) );
-                $ret[] = msdlab_get_excerpt($post->ID,40000,'');
-                $ret[] = genesis_markup( array(
-                    'html5' => '</content>',
-                    'xhtml' => '</div>',
-                    'echo' => false,
-                ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '<footer>',
-                    'xhtml' => '<div class="footer">',
-                    'echo' => false,
-                ) );
-                $ret[] = '
-                                <ul>';
-                if($contact_info->get_the_value('_team_linked_in')){
-                    $ret[] = '<li class="linkedin"><a href="'.$contact_info->get_the_value('_team_linked_in').'" target="_linkedin">
-          <i class="fa fa-linkedin"><span class="screen-reader-text">LinkedIn</span></i>
-        </a></li>';
+            if($results) {
+                $i = 0;
+                if($cat){
+                    $tax = get_term_by('slug',$cat,'team_category');
+                    $title = sprintf('<h3 class="team-category-banner">%s</h3>',$tax->name);
                 }
-                if($contact_info->get_the_value('_team_user_id')!=0){
-                    $ret[] = '<li class="insights-header"><a href="'.get_permalink($result->ID).'#insights">
-          <i class="fa fa-rss"><span class="screen-reader-text">'.$firstname.' Insights</span></i>
-        </a></li>';
-                }
+                foreach ($results AS $result) {
+                    $popinfo = array();
+                    $post = $result;
+                    $i++;
+                    $titlearray = explode(" ", $post->post_title);
+                    $firstname = $titlearray[0];
+                    $firstname = (substr($firstname, -1) == 's') ? $firstname . "'" : $firstname . "'s";
+                    $contact_info->the_meta($result->ID);
+                    //make the content for the popup
+                    $popinfo[] = '<div id="'.$post->post_name.'" class="team-modal-content">';
+                        $popinfo[] = '<div class="table">';
+                            $popinfo[] = '<div class="picntitle col-xs-4">
+'.get_the_post_thumbnail($result->ID, 'team-headshot', array('itemprop' => 'image')).'
+<div class="titlebox">
+<h3 class="entry-title" itemprop="name">' . $post->post_title . '</h3>
+<h4 class="team-title" itemprop="jobTitle">' . $contact_info->get_the_value('_team_title') . '</h4></div>
+</div>';
+                            $popinfo[] = '<div class="bio col-xs-8">'.$post->post_content.'</div>';
+                            $popinfo[] = '<div class="location col-xs-4">';
+                            if ($contact_info->get_the_value('_team_location')) {
+                        $popinfo[] = '
+                      <i class="fa fa-map-marker"></i> ' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area
+                   ';
+                    }
+                            $popinfo[] = '</div>';
+                            $popinfo[] = '<div class="social col-xs-8"><ul>';
+                    if ($contact_info->get_the_value('_team_linked_in')) {
+                        $popinfo[] = '<li class="email"><a href="mailto:' . $contact_info->get_the_value('_team_email') . '">
+                      <i class="fa fa-envelope"><span class="screen-reader-text">' . $contact_info->get_the_value('_team_email') . '</span></i>
+                    </a></li>';
+                    }
+                                if ($contact_info->get_the_value('_team_linked_in')) {
+                                    $popinfo[] = '<li class="linkedin"><a href="' . $contact_info->get_the_value('_team_linked_in') . '" target="_linkedin">
+                      <i class="fa fa-linkedin"><span class="screen-reader-text">LinkedIn</span></i>
+                    </a></li>';
+                                }
+                    if ($contact_info->get_the_value('_team_phone')) {
+                        $popinfo[] = '<li class="phone"><a href="tel:' . $contact_info->get_the_value('_team_phone') . '" target="_phone">
+                                  <i class="fa fa-phone"><span class="screen-reader-text">'. $contact_info->get_the_value('_team_phone') .'</span></i>
+                                </a></li>';
+                    }
+                            $popinfo[] = '</ul></div>';
+                        $popinfo[] = '</div>';
+                    $popinfo[] = '</div>';
+                    $ret[] = implode("\n",$popinfo);
+                    //make the display square
+                    $ret[] = genesis_markup(array(
+                        'html5' => '<article %s>',
+                        'xhtml' => '<div class="team_member type-team_member status-publish has-post-thumbnail entry">',
+                        'context' => 'team_member',
+                        'echo' => false,
+                    ));
+                    $ret[] = genesis_markup(array(
+                        'html5' => '<div class="wrap">',
+                        'xhtml' => '<div class="wrap">',
+                        'echo' => false,
+                    ));
 
-                $ret[] = '</ul>';
-
-                if($contact_info->get_the_value('_team_position')=='true'){ $ret[] = '
-                           <a href="'.get_permalink($post->ID).'" class="readmore button">Read More ></a>';
+                    $ret[] = genesis_markup(array(
+                        'html5' => '<main>',
+                        'xhtml' => '<div class="main">',
+                        'echo' => false,
+                    ));
+                    $ret[] = genesis_markup(array(
+                        'html5' => '<content>',
+                        'xhtml' => '<div class="content">',
+                        'echo' => false,
+                    ));
+                    $ret[] = get_the_post_thumbnail($result->ID, 'team-headshot', array('itemprop' => 'image'));
+                    $ret[] = '<div class="title-wrapper equalize"><h3 class="entry-title" itemprop="name">' . $post->post_title . '</h3>
+                            <h4 class="team-title" itemprop="jobTitle">' . $contact_info->get_the_value('_team_title') . '</h4></div>';
+                    $ret[] = '<a href="#'.$post->post_name.'" class="cover-link"><span class="screen-reader-text">more</span></a>';
+                    $ret[] = genesis_markup(array(
+                        'html5' => '</content>',
+                        'xhtml' => '</div>',
+                        'echo' => false,
+                    ));
+                    $ret[] = genesis_markup(array(
+                        'html5' => '</main>',
+                        'xhtml' => '</div>',
+                        'echo' => false,
+                    ));
+                    $ret[] = genesis_markup(array(
+                        'html5' => '</div>',
+                        'xhtml' => '</div>',
+                        'echo' => false,
+                    ));
+                    $ret[] = genesis_markup(array(
+                        'html5' => '</article>',
+                        'xhtml' => '</div>',
+                        'context' => 'team_member',
+                        'echo' => false,
+                    ));
                 }
-                $ret[] = genesis_markup( array(
-                    'html5' => '</footer>',
-                    'xhtml' => '</div>',
-                    'echo' => false,
-                ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '</main>',
-                    'xhtml' => '</div>',
-                    'echo' => false,
-                ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '</div>',
-                    'xhtml' => '</div>',
-                    'echo' => false,
-                ) );
-                $ret[] = genesis_markup( array(
-                    'html5' => '</article>',
-                    'xhtml' => '</div>',
-                    'context' => 'team_member',
-                    'echo' => false,
-                ) );
             }
             //return
             $post = $origpost;
-            return implode("\n",$ret);
+            return $title.'<grid class="team">'.implode("\n",$ret).'</grid>';
         }
 
         function sort_by_lastname( $a, $b ) {
@@ -470,10 +504,85 @@ if (!class_exists('MSDTeamCPT')) {
          * @return array $attributes The element attributes
          */
         function custom_add_team_member_attr( $attributes ){
-            $attributes['class'] .= ' equalize col-xs-12 col-sm-6 col-md-4';
+            $attributes['class'] .= ' equalize col-xs-12 col-sm-6 col-md-3';
             $attributes['itemtype']  = 'http://schema.org/Person';
             // return the attributes
             return $attributes;
         }
+
+
+        function my_edit_columns( $columns ) {
+
+            $mycolumns = array(
+                'cb' => '<input type="checkbox" />',
+                'title' => __( 'Title' ),
+                $this->cpt.'_category' => __( 'Category' ),
+                'author' => __( 'Author' ),
+                'date' => __( 'Date' )
+            );
+            $columns = array_merge($mycolumns,$columns);
+
+            return $columns;
+        }
+
+        function my_manage_columns( $column, $post_id ) {
+            global $post;
+
+            switch( $column ) {
+                /* If displaying the 'logo' column. */
+                case $this->cpt.'_category' :
+                case $this->cpt.'_tag' :
+                    $taxonomy = $column;
+                    if ( $taxonomy ) {
+                        $taxonomy_object = get_taxonomy( $taxonomy );
+                        $terms = get_the_terms( $post->ID, $taxonomy );
+                        if ( is_array( $terms ) ) {
+                            $out = array();
+                            foreach ( $terms as $t ) {
+                                $posts_in_term_qv = array();
+                                if ( 'post' != $post->post_type ) {
+                                    $posts_in_term_qv['post_type'] = $post->post_type;
+                                }
+                                if ( $taxonomy_object->query_var ) {
+                                    $posts_in_term_qv[ $taxonomy_object->query_var ] = $t->slug;
+                                } else {
+                                    $posts_in_term_qv['taxonomy'] = $taxonomy;
+                                    $posts_in_term_qv['term'] = $t->slug;
+                                }
+
+                                $label = esc_html( sanitize_term_field( 'name', $t->name, $t->term_id, $taxonomy, 'display' ) );
+                                $out[] = $this->get_edit_link( $posts_in_term_qv, $label );
+                            }
+                            /* translators: used between list items, there is a space after the comma */
+                            echo join( __( ', ' ), $out );
+                        } else {
+                            echo '<span aria-hidden="true">&#8212;</span><span class="screen-reader-text">' . $taxonomy_object->labels->no_terms . '</span>';
+                        }
+                    }
+                    break;
+                default :
+                    break;
+            }
+        }
+
+        function get_edit_link( $args, $label, $class = '' ) {
+            $url = add_query_arg( $args, 'edit.php' );
+
+            $class_html = '';
+            if ( ! empty( $class ) ) {
+                $class_html = sprintf(
+                    ' class="%s"',
+                    esc_attr( $class )
+                );
+            }
+
+            return sprintf(
+                '<a href="%s"%s>%s</a>',
+                esc_url( $url ),
+                $class_html,
+                $label
+            );
+        }
+
     } //End Class
 } //End if class exists statement
