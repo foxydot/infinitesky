@@ -13,6 +13,8 @@ if (!class_exists('MSDTeamCPT')) {
             'boston'         => 'Boston',
             'richmond-wv'    => 'Richmond, VA',
         );
+
+        var $has_shortcode = false;
         //Methods
         /**
          * PHP 4 Compatible Constructor
@@ -39,6 +41,7 @@ if (!class_exists('MSDTeamCPT')) {
             add_action('admin_print_footer_scripts',array(&$this,'print_footer_scripts'),99);
             //add_action('template_redirect', array(&$this,'my_theme_redirect'));
             //add_action('admin_head', array(&$this,'codex_custom_help_tab'));
+            add_action('wp_footer',array(&$this,'modal_goodness'));
 
 
             //add cols to manage panel
@@ -348,6 +351,7 @@ if (!class_exists('MSDTeamCPT')) {
         }
 
         function msdlab_team_member_special_loop_shortcode_handler($atts){
+            $this->has_shortcode = true;
             $args = shortcode_atts( array(
                     'cat' => false,
             ), $atts );
@@ -582,6 +586,35 @@ if (!class_exists('MSDTeamCPT')) {
                 $class_html,
                 $label
             );
+        }
+
+        function modal_goodness(){
+            if(!$this->has_shortcode){return;} //escape if the shortcode isn't on the page
+            $modal = array();
+            $jq = array();
+            //add modal structure
+            $modal[] =  '<div id="globalModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"><span class="screen-reader-text">Close</span></i></div>
+        <div class="modal-content"></div>
+    </div>
+</div>';
+            //add javascript
+            $jq[] = '$(\'.team_member .cover-link\').click(function(e){
+        e.preventDefault();
+        var target = $(this).attr(\'href\');
+        var bio = $(target).html();
+        console.log(bio);
+        $(\'#globalModal .modal-content\').html(bio);
+        $(\'#globalModal\').modal(\'show\');
+    });';
+            //print them both out
+            print implode("\n",$modal);
+            print '<script type="text/javascript" id="modal-scripts">
+  jQuery(document).ready(function($) {
+      '.implode("\n",$jq).'
+  });
+</script>';
         }
 
     } //End Class
