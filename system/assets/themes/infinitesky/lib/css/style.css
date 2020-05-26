@@ -2367,7 +2367,12 @@ h3.team-category-banner {
 
 grid.team {
   margin-top: 1em;
+  margin-bottom: 2em;
   display: block; }
+  grid.team:after {
+    content: "";
+    clear: both;
+    display: table; }
 
 article.team_member {
   position: relative; }
