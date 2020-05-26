@@ -514,6 +514,129 @@ article.team_member{
     }
   }
 }
+body.team{
+  #globalModal{
+    .modal-dialog{
+      &.modal-dialog-centered {
+        display: flex;
+        align-items: center;
+        min-height: calc(100% - (30px * 2));
+
+        &::before {
+          height: calc(100vh - (30px * 2));
+          height: min-content;
+        }
+      }
+      .modal-content{
+        position: relative;
+        background: $white;
+        padding: 10px;
+        border-radius: 0;
+        .modal-close{
+          background: $white;
+          position: absolute;
+          right: -15px;
+          top: -15px;
+          border: 1px solid $dkgrey;
+          border-radius: 50%;
+          height: 30px;
+          width: 30px;
+          font-size: 2em;
+          text-align: center;
+          line-height: 1.2;
+        }
+        .modal-body {
+          border: 1px solid $dkgrey;
+          box-shadow: none;
+          padding: 4em 4em 0 4em;
+          .table {
+            display: table;
+            margin-bottom: 0;
+            tbody {
+              border: 0;
+            }
+            td{
+              display: table-cell;
+              border: 0;
+            }
+            .picntitle{
+              img{
+                margin: 0 0 2px 0;
+              }
+              .titlebox{
+                background: $dkblue;
+                text-align: center;
+                padding: 0.5em;
+                h3,h4{
+                  font-size: 1.2em;
+                  color: $white;
+                  text-align: center;
+                  margin: 0;
+                  text-transform: none;
+                }
+                h3{
+                  font-weight: 700;
+                }
+                h4{
+                  font-style: italic;
+                }
+              }
+            }
+            .bio{
+              border-top: 1px solid $dkgrey;
+              border-bottom: 1px solid $dkgrey;
+              font-size: 1.4em;
+              &:before{
+                content: '';
+                width: 48px;
+                height: 40px;
+                background: white url(/system/assets/uploads/2018/05/orange-bug.svg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: block;
+                position: relative;
+                margin: -29px auto;
+                border-left: 4px solid $white;
+                border-right: 4px solid $white;
+              }
+              ul{
+                margin-top: 4em;
+                margin-left: 2em;
+                li{
+                  margin-bottom: 0.5em;
+                  list-style: disc outside none;
+                  &:before{content: '';}
+                }
+              }
+            }
+            .location{
+              text-align: center;
+              vertical-align: baseline;
+              .fa{
+                font-size: 3.8em;
+                color: $orange;
+              }
+            }
+            .social{
+              ul{
+                text-align: center;
+                li{
+                  display: inline-block;
+                  a{
+                    padding: 0 0.5em;
+                    font-size: 2.8em;
+                    color: $orange;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 //case studies
 
 .post-type-archive-msd_casestudy,.tax-msd_practice-area,.tax-msd_industry{

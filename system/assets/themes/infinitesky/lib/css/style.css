@@ -2398,6 +2398,100 @@ article.team_member {
     right: 0;
     bottom: 0; }
 
+body.team #globalModal .modal-dialog.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - (30px * 2)); }
+  body.team #globalModal .modal-dialog.modal-dialog-centered::before {
+    height: calc(100vh - (30px * 2));
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content; }
+
+body.team #globalModal .modal-dialog .modal-content {
+  position: relative;
+  background: #FFF;
+  padding: 10px;
+  border-radius: 0; }
+  body.team #globalModal .modal-dialog .modal-content .modal-close {
+    background: #FFF;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.2; }
+  body.team #globalModal .modal-dialog .modal-content .modal-body {
+    border: 1px solid #333;
+    box-shadow: none;
+    padding: 4em 4em 0 4em; }
+    body.team #globalModal .modal-dialog .modal-content .modal-body .table {
+      display: table;
+      margin-bottom: 0; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table tbody {
+        border: 0; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table td {
+        display: table-cell;
+        border: 0; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle img {
+        margin: 0 0 2px 0; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle .titlebox {
+        background: #005c99;
+        text-align: center;
+        padding: 0.5em; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle .titlebox h3, body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle .titlebox h4 {
+          font-size: 1.2em;
+          color: #FFF;
+          text-align: center;
+          margin: 0;
+          text-transform: none; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle .titlebox h3 {
+          font-weight: 700; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle .titlebox h4 {
+          font-style: italic; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio {
+        border-top: 1px solid #333;
+        border-bottom: 1px solid #333;
+        font-size: 1.4em; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio:before {
+          content: '';
+          width: 48px;
+          height: 40px;
+          background: white url(/system/assets/uploads/2018/05/orange-bug.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: block;
+          position: relative;
+          margin: -29px auto;
+          border-left: 4px solid #FFF;
+          border-right: 4px solid #FFF; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul {
+          margin-top: 4em;
+          margin-left: 2em; }
+          body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li {
+            margin-bottom: 0.5em;
+            list-style: disc outside none; }
+            body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li:before {
+              content: ''; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .location {
+        text-align: center;
+        vertical-align: baseline; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .fa {
+          font-size: 3.8em;
+          color: #ff6600; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul {
+        text-align: center; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul li {
+          display: inline-block; }
+          body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul li a {
+            padding: 0 0.5em;
+            font-size: 2.8em;
+            color: #ff6600; }
+
 .post-type-archive-msd_casestudy .site-inner .container article, .tax-msd_practice-area .site-inner .container article, .tax-msd_industry .site-inner .container article {
   padding: 1em; }
   .post-type-archive-msd_casestudy .site-inner .container article:after, .tax-msd_practice-area .site-inner .container article:after, .tax-msd_industry .site-inner .container article:after {

@@ -401,22 +401,23 @@ if (!class_exists('MSDTeamCPT')) {
                     $contact_info->the_meta($result->ID);
                     //make the content for the popup
                     $popinfo[] = '<div id="'.$post->post_name.'" class="team-modal-content">';
-                        $popinfo[] = '<div class="table">';
-                            $popinfo[] = '<div class="picntitle col-xs-4">
+                        $popinfo[] = '<table class="table"><tr class="row">';
+                            $popinfo[] = '<td class="picntitle equalize col-xs-4">
 '.get_the_post_thumbnail($result->ID, 'team-headshot', array('itemprop' => 'image')).'
 <div class="titlebox">
 <h3 class="entry-title" itemprop="name">' . $post->post_title . '</h3>
 <h4 class="team-title" itemprop="jobTitle">' . $contact_info->get_the_value('_team_title') . '</h4></div>
-</div>';
-                            $popinfo[] = '<div class="bio col-xs-8">'.$post->post_content.'</div>';
-                            $popinfo[] = '<div class="location col-xs-4">';
+</td>';
+                            $popinfo[] = '<td class="bio equalize col-xs-8">'.$post->post_content.'</td>';
+                            $popinfo[] = '</tr><tr class="row">';
+                            $popinfo[] = '<td class="location col-xs-4">';
                             if ($contact_info->get_the_value('_team_location')) {
                         $popinfo[] = '
                       <i class="fa fa-map-marker"></i> ' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area
                    ';
                     }
-                            $popinfo[] = '</div>';
-                            $popinfo[] = '<div class="social col-xs-8"><ul>';
+                            $popinfo[] = '</td>';
+                            $popinfo[] = '<td class="social col-xs-8"><ul>';
                     if ($contact_info->get_the_value('_team_linked_in')) {
                         $popinfo[] = '<li class="email"><a href="mailto:' . $contact_info->get_the_value('_team_email') . '">
                       <i class="fa fa-envelope"><span class="screen-reader-text">' . $contact_info->get_the_value('_team_email') . '</span></i>
@@ -432,8 +433,8 @@ if (!class_exists('MSDTeamCPT')) {
                                   <i class="fa fa-phone"><span class="screen-reader-text">'. $contact_info->get_the_value('_team_phone') .'</span></i>
                                 </a></li>';
                     }
-                            $popinfo[] = '</ul></div>';
-                        $popinfo[] = '</div>';
+                            $popinfo[] = '</ul></td>';
+                        $popinfo[] = '</tr></table>';
                     $popinfo[] = '</div>';
                     $ret[] = implode("\n",$popinfo);
                     //make the display square
@@ -593,10 +594,12 @@ if (!class_exists('MSDTeamCPT')) {
             $modal = array();
             $jq = array();
             //add modal structure
-            $modal[] =  '<div id="globalModal" class="modal">
-    <div class="modal-dialog">
-        <div class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"><span class="screen-reader-text">Close</span></i></div>
-        <div class="modal-content"></div>
+            $modal[] =  '<div id="globalModal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"><span class="screen-reader-text">Close</span></i></div> 
+            <div class="modal-body"></div>
+        </div>
     </div>
 </div>';
             //add javascript
@@ -605,7 +608,7 @@ if (!class_exists('MSDTeamCPT')) {
         var target = $(this).attr(\'href\');
         var bio = $(target).html();
         console.log(bio);
-        $(\'#globalModal .modal-content\').html(bio);
+        $(\'#globalModal .modal-body\').html(bio);
         $(\'#globalModal\').modal(\'show\');
     });';
             //print them both out
