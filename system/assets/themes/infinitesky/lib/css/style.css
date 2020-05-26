@@ -2456,7 +2456,9 @@ body.team #globalModal .modal-dialog .modal-content {
       body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio {
         border-top: 1px solid #333;
         border-bottom: 1px solid #333;
-        font-size: 1.4em; }
+        font-size: 1.4em;
+        padding-top: 4em;
+        padding-left: 2em; }
         body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio:before {
           content: '';
           width: 48px;
@@ -2466,17 +2468,14 @@ body.team #globalModal .modal-dialog .modal-content {
           background-repeat: no-repeat;
           display: block;
           position: relative;
-          margin: -29px auto;
+          margin: -76px auto 0.5em;
           border-left: 4px solid #FFF;
           border-right: 4px solid #FFF; }
-        body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul {
-          margin-top: 4em;
-          margin-left: 2em; }
-          body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li {
-            margin-bottom: 0.5em;
-            list-style: disc outside none; }
-            body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li:before {
-              content: ''; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li {
+          margin-bottom: 0.5em;
+          list-style: disc outside none; }
+          body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li:before {
+            content: ''; }
       body.team #globalModal .modal-dialog .modal-content .modal-body .table .location {
         text-align: center;
         vertical-align: baseline; }
