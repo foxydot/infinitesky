@@ -554,7 +554,7 @@ body.team{
         .modal-body {
           border: 1px solid $dkgrey;
           box-shadow: none;
-          padding: 4em 4em 0 4em;
+          padding: 4em 1em 0 1em;
           .table {
             display: table;
             margin-bottom: 0;
@@ -566,6 +566,7 @@ body.team{
               border: 0;
             }
             .picntitle{
+              padding: 0 1em 0 0;
               img{
                 margin: 0 0 2px 0;
               }
@@ -584,6 +585,7 @@ body.team{
                   font-weight: 700;
                 }
                 h4{
+                  font-weight: 500;
                   font-style: italic;
                 }
               }
@@ -594,6 +596,7 @@ body.team{
               font-size: 1.4em;
               padding-top: 4em;
               padding-left: 2em;
+              position: relative;
               &:before{
                 content: '';
                 width: 48px;
@@ -607,6 +610,11 @@ body.team{
                 border-left: 4px solid $white;
                 border-right: 4px solid $white;
               }
+              .vertical-center{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+              }
               ul{
                 li{
                   margin-bottom: 0.5em;
@@ -616,11 +624,15 @@ body.team{
               }
             }
             .location{
-              text-align: center;
-              vertical-align: baseline;
-              .fa{
+              position: relative;
+              .inficon-location{
                 font-size: 3.8em;
                 color: $orange;
+              }
+              .text{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
               }
             }
             .social{

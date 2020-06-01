@@ -408,29 +408,29 @@ if (!class_exists('MSDTeamCPT')) {
 <h3 class="entry-title" itemprop="name">' . $post->post_title . '</h3>
 <h4 class="team-title" itemprop="jobTitle">' . $contact_info->get_the_value('_team_title') . '</h4></div>
 </td>';
-                            $popinfo[] = '<td class="bio equalize col-xs-8">'.$post->post_content.'</td>';
+                            $popinfo[] = '<td class="bio equalize col-xs-8"><div class="vertical-center">'.$post->post_content.'</div></td>';
                             $popinfo[] = '</tr><tr class="row">';
                             $popinfo[] = '<td class="location col-xs-4">';
                             if ($contact_info->get_the_value('_team_location')) {
                         $popinfo[] = '
-                      <i class="fa fa-map-marker"></i> ' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area
+                      <i class="inficon-location"></i><span class="text">' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area</span>
                    ';
                     }
                             $popinfo[] = '</td>';
                             $popinfo[] = '<td class="social col-xs-8"><ul>';
                     if ($contact_info->get_the_value('_team_linked_in')) {
                         $popinfo[] = '<li class="email"><a href="mailto:' . $contact_info->get_the_value('_team_email') . '">
-                      <i class="fa fa-envelope"><span class="screen-reader-text">' . $contact_info->get_the_value('_team_email') . '</span></i>
+                      <i class="inficon-envelope"><span class="screen-reader-text">' . $contact_info->get_the_value('_team_email') . '</span></i>
                     </a></li>';
                     }
                                 if ($contact_info->get_the_value('_team_linked_in')) {
                                     $popinfo[] = '<li class="linkedin"><a href="' . $contact_info->get_the_value('_team_linked_in') . '" target="_linkedin">
-                      <i class="fa fa-linkedin"><span class="screen-reader-text">LinkedIn</span></i>
+                      <i class="inficon-linked-in"><span class="screen-reader-text">LinkedIn</span></i>
                     </a></li>';
                                 }
                     if ($contact_info->get_the_value('_team_phone')) {
                         $popinfo[] = '<li class="phone"><a href="tel:' . $contact_info->get_the_value('_team_phone') . '" target="_phone">
-                                  <i class="fa fa-phone"><span class="screen-reader-text">'. $contact_info->get_the_value('_team_phone') .'</span></i>
+                                  <i class="inficon-phone"><span class="screen-reader-text">'. $contact_info->get_the_value('_team_phone') .'</span></i>
                                 </a></li>';
                     }
                             $popinfo[] = '</ul></td>';
