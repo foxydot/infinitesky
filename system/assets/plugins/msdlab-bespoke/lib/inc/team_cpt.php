@@ -402,22 +402,22 @@ if (!class_exists('MSDTeamCPT')) {
                     //make the content for the popup
                     $popinfo[] = '<div id="'.$post->post_name.'" class="team-modal-content">';
                         $popinfo[] = '<table class="table"><tr class="row">';
-                            $popinfo[] = '<td class="picntitle equalize col-xs-4">
+                            $popinfo[] = '<td class="picntitle equalize col-sm-4 col-xs-12">
 '.get_the_post_thumbnail($result->ID, 'team-headshot', array('itemprop' => 'image')).'
 <div class="titlebox">
 <h3 class="entry-title" itemprop="name">' . $post->post_title . '</h3>
 <h4 class="team-title" itemprop="jobTitle">' . $contact_info->get_the_value('_team_title') . '</h4></div>
 </td>';
-                            $popinfo[] = '<td class="bio equalize col-xs-8"><div class="vertical-center">'.$post->post_content.'</div></td>';
+                            $popinfo[] = '<td class="bio equalize col-sm-8 col-xs-12"><div class="vertical-center">'.$post->post_content.'</div></td>';
                             $popinfo[] = '</tr><tr class="row">';
-                            $popinfo[] = '<td class="location col-xs-4">';
+                            $popinfo[] = '<td class="location col-sm-4 col-xs-12"><div class="location-wrapper">';
                             if ($contact_info->get_the_value('_team_location')) {
                         $popinfo[] = '
                       <i class="inficon-location"></i><span class="text">' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area</span>
                    ';
                     }
-                            $popinfo[] = '</td>';
-                            $popinfo[] = '<td class="social col-xs-8"><ul>';
+                            $popinfo[] = '</div></td>';
+                            $popinfo[] = '<td class="social col-sm-8 col-xs-12"><ul>';
                     if ($contact_info->get_the_value('_team_linked_in')) {
                         $popinfo[] = '<li class="email"><a href="mailto:' . $contact_info->get_the_value('_team_email') . '">
                       <i class="inficon-envelope"><span class="screen-reader-text">' . $contact_info->get_the_value('_team_email') . '</span></i>

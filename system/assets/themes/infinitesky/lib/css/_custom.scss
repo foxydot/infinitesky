@@ -524,7 +524,7 @@ body.team{
   #globalModal{
     .modal-dialog{
       &.modal-dialog-centered {
-        display: flex;
+        display: block;
         align-items: center;
         min-height: calc(100% - (30px * 2));
 
@@ -556,13 +556,13 @@ body.team{
           box-shadow: none;
           padding: 4em 1em 0 1em;
           .table {
-            display: table;
+            display: block;
             margin-bottom: 0;
             tbody {
               border: 0;
             }
             td{
-              display: table-cell;
+              display: block;
               border: 0;
             }
             .picntitle{
@@ -597,6 +597,7 @@ body.team{
               padding-top: 4em;
               padding-left: 2em;
               position: relative;
+              margin-top: 2em;
               &:before{
                 content: '';
                 width: 48px;
@@ -611,9 +612,7 @@ body.team{
                 border-right: 4px solid $white;
               }
               .vertical-center{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
+                padding: 1em 0;
               }
               ul{
                 li{
@@ -624,15 +623,17 @@ body.team{
               }
             }
             .location{
-              position: relative;
-              .inficon-location{
-                font-size: 3.8em;
-                color: $orange;
-              }
-              .text{
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
+              text-align: center;
+              .location-wrapper {
+                position: relative;
+                .inficon-location {
+                  font-size: 3.8em;
+                  color: $orange;
+                }
+                .text {
+                  position: relative;
+                  top: -1.5em;
+                }
               }
             }
             .social{
@@ -644,6 +645,53 @@ body.team{
                     padding: 0 0.5em;
                     font-size: 2.8em;
                     color: $orange;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  body.team{
+    #globalModal{
+      .modal-dialog{
+        &.modal-dialog-centered {
+          display: flex;
+          align-items: center;
+          min-height: calc(100% - (30px * 2));
+
+          &::before {
+            height: calc(100vh - (30px * 2));
+            height: min-content;
+          }
+        }
+        .modal-content{
+          .modal-body {
+            .table {
+              display: table;
+              td{
+                display: table-cell;
+              }
+              .bio{
+                margin-top:0;
+                .vertical-center{
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+              .location{
+                text-align: left;
+                .location-wrapper {
+                  .text {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
                   }
                 }
               }
