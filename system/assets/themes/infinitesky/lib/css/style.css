@@ -2480,15 +2480,16 @@ body.team #globalModal .modal-dialog .modal-content {
   body.team #globalModal .modal-dialog .modal-content .modal-close {
     background: #FFF;
     position: absolute;
-    right: -15px;
-    top: -15px;
+    right: -10px;
+    top: -10px;
     border: 1px solid #333;
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
-    font-size: 2em;
+    height: 60px;
+    width: 60px;
+    font-size: 4em;
     text-align: center;
-    line-height: 1.2; }
+    line-height: 1.2;
+    z-index: 10; }
   body.team #globalModal .modal-dialog .modal-content .modal-body {
     border: 1px solid #333;
     box-shadow: none;
@@ -2576,6 +2577,13 @@ body.team #globalModal .modal-dialog .modal-content {
       height: -webkit-min-content;
       height: -moz-min-content;
       height: min-content; }
+  body.team #globalModal .modal-dialog .modal-content .modal-close {
+    right: -15px;
+    top: -15px;
+    height: 30px;
+    width: 30px;
+    font-size: 2em;
+    line-height: 1.2; }
   body.team #globalModal .modal-dialog .modal-content .modal-body .table {
     display: table; }
     body.team #globalModal .modal-dialog .modal-content .modal-body .table td {

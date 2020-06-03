@@ -541,15 +541,16 @@ body.team{
         .modal-close{
           background: $white;
           position: absolute;
-          right: -15px;
-          top: -15px;
+          right: -10px;
+          top: -10px;
           border: 1px solid $dkgrey;
           border-radius: 50%;
-          height: 30px;
-          width: 30px;
-          font-size: 2em;
+          height: 60px;
+          width: 60px;
+          font-size: 4em;
           text-align: center;
           line-height: 1.2;
+          z-index: 10;
         }
         .modal-body {
           border: 1px solid $dkgrey;
@@ -671,6 +672,14 @@ body.team{
           }
         }
         .modal-content{
+          .modal-close{
+            right: -15px;
+            top: -15px;
+            height: 30px;
+            width: 30px;
+            font-size: 2em;
+            line-height: 1.2;
+          }
           .modal-body {
             .table {
               display: table;
