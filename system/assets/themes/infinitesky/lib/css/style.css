@@ -2478,6 +2478,7 @@ body.team #globalModal .modal-dialog .modal-content {
   padding: 10px;
   border-radius: 0; }
   body.team #globalModal .modal-dialog .modal-content .modal-close {
+    font-weight: 300;
     background: #FFF;
     position: absolute;
     right: -10px;
@@ -2486,7 +2487,7 @@ body.team #globalModal .modal-dialog .modal-content {
     border-radius: 50%;
     height: 60px;
     width: 60px;
-    font-size: 4em;
+    font-size: 4.5em;
     text-align: center;
     line-height: 1.2;
     z-index: 10; }
@@ -2503,9 +2504,10 @@ body.team #globalModal .modal-dialog .modal-content {
         display: block;
         border: 0; }
       body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle {
-        padding: 0 1em 0 0; }
+        padding: 0; }
         body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle img {
-          margin: 0 0 2px 0; }
+          margin: 0 0 2px 0;
+          padding: 0 auto; }
         body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle .titlebox {
           background: #005c99;
           text-align: center;
@@ -2527,6 +2529,7 @@ body.team #globalModal .modal-dialog .modal-content {
         font-size: 1.4em;
         padding-top: 4em;
         padding-left: 2em;
+        padding-right: 2em;
         position: relative;
         margin-top: 2em; }
         body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio:before {
@@ -2549,23 +2552,26 @@ body.team #globalModal .modal-dialog .modal-content {
           body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio ul li:before {
             content: ''; }
       body.team #globalModal .modal-dialog .modal-content .modal-body .table .location {
-        text-align: center; }
-        body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .location-wrapper {
-          position: relative; }
-          body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .location-wrapper .inficon-location {
-            font-size: 3.8em;
-            color: #ff6600; }
-          body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .location-wrapper .text {
-            position: relative;
-            top: -1.5em; }
-      body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul {
-        text-align: center; }
-        body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul li {
-          display: inline-block; }
-          body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul li a {
-            padding: 0 0.5em;
-            font-size: 2.8em;
-            color: #ff6600; }
+        line-height: 0.625;
+        position: relative;
+        text-align: center;
+        padding: 1em 0; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .inficon-location {
+          font-size: 3em;
+          display: block; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .social {
+        padding: 1em 0 1.5em;
+        text-align: center;
+        position: relative;
+        line-height: 0; }
+        body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul {
+          text-align: center; }
+          body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul li {
+            display: inline-block; }
+            body.team #globalModal .modal-dialog .modal-content .modal-body .table .social ul li a {
+              padding: 0 0.5em;
+              font-size: 2.8em;
+              color: #ff6600; }
 
 @media only screen and (min-width: 768px) {
   body.team #globalModal .modal-dialog.modal-dialog-centered {
@@ -2582,12 +2588,14 @@ body.team #globalModal .modal-dialog .modal-content {
     top: -15px;
     height: 30px;
     width: 30px;
-    font-size: 2em;
-    line-height: 1.2; }
+    font-size: 4em;
+    line-height: 0.625; }
   body.team #globalModal .modal-dialog .modal-content .modal-body .table {
     display: table; }
     body.team #globalModal .modal-dialog .modal-content .modal-body .table td {
       display: table-cell; }
+    body.team #globalModal .modal-dialog .modal-content .modal-body .table .picntitle {
+      padding: 0 1em 0 0; }
     body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio {
       margin-top: 0; }
       body.team #globalModal .modal-dialog .modal-content .modal-body .table .bio .vertical-center {
@@ -2595,11 +2603,13 @@ body.team #globalModal .modal-dialog .modal-content {
         top: 50%;
         transform: translateY(-50%); }
     body.team #globalModal .modal-dialog .modal-content .modal-body .table .location {
-      text-align: left; }
-      body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .location-wrapper .text {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%); } }
+      vertical-align: middle;
+      padding: 0; }
+      body.team #globalModal .modal-dialog .modal-content .modal-body .table .location .inficon-location {
+        margin-top: -10px; }
+    body.team #globalModal .modal-dialog .modal-content .modal-body .table .social {
+      vertical-align: middle;
+      padding: 1.5em 0; } }
 
 .post-type-archive-msd_casestudy .site-inner .container article, .tax-msd_practice-area .site-inner .container article, .tax-msd_industry .site-inner .container article {
   padding: 1em; }

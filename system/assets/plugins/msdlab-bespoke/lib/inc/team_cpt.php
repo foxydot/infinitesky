@@ -410,13 +410,13 @@ if (!class_exists('MSDTeamCPT')) {
 </td>';
                             $popinfo[] = '<td class="bio equalize col-sm-8 col-xs-12"><div class="vertical-center">'.$post->post_content.'</div></td>';
                             $popinfo[] = '</tr><tr class="row">';
-                            $popinfo[] = '<td class="location col-sm-4 col-xs-12"><div class="location-wrapper">';
+                            $popinfo[] = '<td class="location col-sm-4 col-xs-12">';
                             if ($contact_info->get_the_value('_team_location')) {
                         $popinfo[] = '
-                      <i class="inficon-location"></i><span class="text">' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area</span>
+                      <i class="inficon-location"></i>' . $this->location[$contact_info->get_the_value('_team_location')] . ' Area
                    ';
                     }
-                            $popinfo[] = '</div></td>';
+                            $popinfo[] = '</td>';
                             $popinfo[] = '<td class="social col-sm-8 col-xs-12"><ul>';
                     if ($contact_info->get_the_value('_team_linked_in')) {
                         $popinfo[] = '<li class="email"><a href="mailto:' . $contact_info->get_the_value('_team_email') . '">
@@ -597,7 +597,7 @@ if (!class_exists('MSDTeamCPT')) {
             $modal[] =  '<div id="globalModal" class="modal fade">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fa fa-close"><span class="screen-reader-text">Close</span></i></div> 
+            <div class="modal-close" data-dismiss="modal" aria-label="Close">×</div> 
             <div class="modal-body"></div>
         </div>
     </div>

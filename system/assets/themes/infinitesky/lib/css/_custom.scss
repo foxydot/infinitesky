@@ -539,6 +539,7 @@ body.team{
         padding: 10px;
         border-radius: 0;
         .modal-close{
+          font-weight: 300;
           background: $white;
           position: absolute;
           right: -10px;
@@ -547,7 +548,7 @@ body.team{
           border-radius: 50%;
           height: 60px;
           width: 60px;
-          font-size: 4em;
+          font-size: 4.5em;
           text-align: center;
           line-height: 1.2;
           z-index: 10;
@@ -567,9 +568,10 @@ body.team{
               border: 0;
             }
             .picntitle{
-              padding: 0 1em 0 0;
+              padding: 0;
               img{
                 margin: 0 0 2px 0;
+                padding: 0 auto;
               }
               .titlebox{
                 background: $dkblue;
@@ -597,6 +599,7 @@ body.team{
               font-size: 1.4em;
               padding-top: 4em;
               padding-left: 2em;
+              padding-right: 2em;
               position: relative;
               margin-top: 2em;
               &:before{
@@ -624,20 +627,20 @@ body.team{
               }
             }
             .location{
+              line-height: 0.625;
+              position: relative;
               text-align: center;
-              .location-wrapper {
-                position: relative;
-                .inficon-location {
-                  font-size: 3.8em;
-                  color: $orange;
-                }
-                .text {
-                  position: relative;
-                  top: -1.5em;
-                }
+              padding: 1em 0;
+              .inficon-location {
+                font-size: 3em;
+                display: block;
               }
             }
             .social{
+              padding: 1em 0 1.5em;
+              text-align: center;
+              position: relative;
+              line-height: 0;
               ul{
                 text-align: center;
                 li{
@@ -677,14 +680,17 @@ body.team{
             top: -15px;
             height: 30px;
             width: 30px;
-            font-size: 2em;
-            line-height: 1.2;
+            font-size: 4em;
+            line-height: 0.625;
           }
           .modal-body {
             .table {
               display: table;
               td{
                 display: table-cell;
+              }
+              .picntitle{
+                padding: 0 1em 0 0;
               }
               .bio{
                 margin-top:0;
@@ -695,14 +701,15 @@ body.team{
                 }
               }
               .location{
-                text-align: left;
-                .location-wrapper {
-                  .text {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                  }
+                vertical-align: middle;
+                padding: 0;
+                .inficon-location{
+                  margin-top: -10px;
                 }
+              }
+              .social{
+                vertical-align: middle;
+                padding: 1.5em 0;
               }
             }
           }
