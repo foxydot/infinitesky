@@ -55,6 +55,7 @@ if (!class_exists('MSDTeamCPT')) {
             add_filter( 'genesis_attr_team_member', array(&$this,'custom_add_team_member_attr') );
 
             //Shortcodes
+            add_shortcode('teammembers-old', array(&$this,'msdlab_team_member_special_loop_old_shortcode_handler'));
             add_shortcode('teammembers', array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
             add_shortcode('team-members', array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
             add_shortcode('team',array(&$this,'msdlab_team_member_special_loop_shortcode_handler'));
@@ -349,6 +350,133 @@ if (!class_exists('MSDTeamCPT')) {
             usort($posts,array(&$this,'sort_by_lastname'));
             return $posts;
         }
+
+        //old stuff
+    function msdlab_team_member_special_loop_old_shortcode_handler($atts){
+    $this->has_shortcode = true;
+    $args = shortcode_atts( array(
+    'cat' => false,
+    ), $atts );
+    remove_filter('the_content','wpautop',12);
+    return $this->msdlab_team_member_special_old($args);
+    }
+        function msdlab_team_member_special_old($args){
+            global $post,$contact_info;
+            $origpost = $post;
+            $defaults = array(
+                'posts_per_page' => -1,
+                'post_type' => 'team_member',
+                'orderby' => 'meta_value',
+                'meta_key' => '_team_member__team_last_name',
+                'order' => 'ASC'
+            );
+            $args = array_merge($defaults,$args);
+            //set up result array
+            $results = array();
+            $results = get_posts($args);
+            //format result
+            $i = 0;
+            foreach($results AS $result){
+                $post = $result;
+                $i++;
+                $titlearray = explode(" ",$post->post_title);
+                $firstname = $titlearray[0];
+                $firstname = (substr($firstname, -1) == 's')?$firstname."'":$firstname."'s";
+                $contact_info->the_meta($result->ID);
+                $ret[] = genesis_markup( array(
+                    'html5'   => '<article %s>',
+                    'xhtml'   => '<div class="team_member type-team_member status-publish has-post-thumbnail entry">',
+                    'context' => 'team_member',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<div class="wrap">',
+                    'xhtml' => '<div class="wrap">',
+                    'echo' => false,
+                ) );
+
+                $ret[] = genesis_markup( array(
+                    'html5' => '<main>',
+                    'xhtml' => '<div class="main">',
+                    'echo' => false,
+                ) );
+                $ret[] = get_the_post_thumbnail($result->ID,'team-headshot',array('itemprop'=>'image'));
+
+                $ret[] = genesis_markup( array(
+                    'html5' => '<header>',
+                    'xhtml' => '<div class="header">',
+                    'echo' => false,
+                ) );
+                $ret[] = '<h3 class="entry-title" itemprop="name">'.$post->post_title.'</h3>
+                            <h4 class="team-title" itemprop="jobTitle">'.$contact_info->get_the_value('_team_title').'</h4>';
+
+                $ret[] = genesis_markup( array(
+                    'html5' => '</header>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<content>',
+                    'xhtml' => '<div class="content">',
+                    'echo' => false,
+                ) );
+                $ret[] = msdlab_get_excerpt($post->ID,40000,'');
+                $ret[] = genesis_markup( array(
+                    'html5' => '</content>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '<footer>',
+                    'xhtml' => '<div class="footer">',
+                    'echo' => false,
+                ) );
+                $ret[] = '
+                                <ul>';
+                if($contact_info->get_the_value('_team_linked_in')){
+                    $ret[] = '<li class="linkedin"><a href="'.$contact_info->get_the_value('_team_linked_in').'" target="_linkedin">
+          <i class="fa fa-linkedin"><span class="screen-reader-text">LinkedIn</span></i>
+        </a></li>';
+                }
+                if($contact_info->get_the_value('_team_user_id')!=0){
+                    $ret[] = '<li class="insights-header"><a href="'.get_permalink($result->ID).'#insights">
+          <i class="fa fa-rss"><span class="screen-reader-text">'.$firstname.' Insights</span></i>
+        </a></li>';
+                }
+
+                $ret[] = '</ul>';
+
+                if($contact_info->get_the_value('_team_position')=='true'){ $ret[] = '
+                           <a href="'.get_permalink($post->ID).'" class="readmore button">Read More ></a>';
+                }
+                $ret[] = genesis_markup( array(
+                    'html5' => '</footer>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '</main>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '</div>',
+                    'xhtml' => '</div>',
+                    'echo' => false,
+                ) );
+                $ret[] = genesis_markup( array(
+                    'html5' => '</article>',
+                    'xhtml' => '</div>',
+                    'context' => 'team_member',
+                    'echo' => false,
+                ) );
+            }
+            //return
+            $post = $origpost;
+            return implode("\n",$ret);
+        }
+
+    //end old stuff
 
         function msdlab_team_member_special_loop_shortcode_handler($atts){
             $this->has_shortcode = true;
